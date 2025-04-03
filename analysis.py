@@ -11,10 +11,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 
-# Importing the dataset
-
-
-# Load the dataset from a CSV file
+# Into terminal: pip install ucimlrepo
 
 
 # Basic data checks - check for missing values, duplicates, and data types
