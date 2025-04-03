@@ -1,4 +1,4 @@
-# analysis.py
+ analysis.py
 # This program will import and analyse the data from the iris dataset. 
 # Figures will be output and saved as appropriate.
 # author: Kyra Menai Hamilton
@@ -30,6 +30,11 @@ y = iris.data.targets
 
 # Exporting iris to .csv in pands-project
 iris.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv')
+
+# Traceback (most recent call last):
+#   File "d:\Data_Analytics\Modules\PandS\pands-project\analysis.py", line 32, in <module>
+#     iris.to_csv('iris.csv')
+# TypeError: 'NoneType' object is not callable
 
 # Basic data checks - check for missing values, duplicates, and data types
 
