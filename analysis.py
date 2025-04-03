@@ -13,21 +13,20 @@ import numpy as np
 
 # Into terminal: pip install ucimlrepo
 
-# Importing the dataset
+# Importing the dataset, fetch the dataset, define the data (as pandas dataframes), print metadata, and print the variable information to check that it worked.
 from ucimlrepo import fetch_ucirepo 
 
-# fetch dataset 
 iris = fetch_ucirepo(id=53) 
 
 # data (as pandas dataframes) 
 X = iris.data.features 
 y = iris.data.targets 
 
-# metadata 
-print(iris.metadata) 
+# metadata - print was to check
+# print(iris.metadata) 
 
-# variable information 
-print(iris.variables) 
+# variable information - print was to check
+# print(iris.variables) 
 
 
 
