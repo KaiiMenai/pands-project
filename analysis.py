@@ -23,4 +23,10 @@ import numpy as np
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
 
 
-# Histograms, scatter plots 
+# Histograms - plot and save histograms for each variable in the dataset as a png file.
+# Use seaborn for better aesthetics
+
+
+# Scatter plots - plot and save scatter plots for each pair of variables in the dataset as a png file.
+# Use seaborn for better aesthetics
+# Use a loop to create scatter plots for each pair of variables
