@@ -1,4 +1,4 @@
- analysis.py
+# analysis.py
 # This program will import and analyse the data from the iris dataset. 
 # Figures will be output and saved as appropriate.
 # author: Kyra Menai Hamilton
@@ -28,13 +28,16 @@ y = iris.data.targets
 # variable information - print was to check
 # print(iris.variables) 
 
-# Exporting iris to .csv in pands-project
-iris.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv')
+# Combine the features and targets into a single DataFrame (df) so it can be exported as a CSV
+iris_df = pd.concat([X, y], axis=1)
 
-# Traceback (most recent call last):
-#   File "d:\Data_Analytics\Modules\PandS\pands-project\analysis.py", line 32, in <module>
-#     iris.to_csv('iris.csv')
-# TypeError: 'NoneType' object is not callable
+# Exporting the DataFrame (df) to a CSV file - REFERENCE - https://medium.com/data-and-beyond/export-data-in-python-with-one-line-of-code-caed817c90fd ; https://thinkingneuron.com/exporting-data-out-of-python/
+iris_df.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
+
+print("Iris dataset has been successfully exported to a CSV!")
+# Output - Iris dataset has been successfully exported to a CSV!
+
+
 
 # Basic data checks - check for missing values, duplicates, and data types
 
