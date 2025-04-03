@@ -31,7 +31,7 @@ import numpy as np
 # Use seaborn for better aesthetics
 # Use a loop to create scatter plots for each pair of variables
 
-# Other analysis types that may be apprropriate
+# Other analysis types that may be apprropriate - for each ensure that the figure is saved as a png file.
 # - Box plots
 # - Pair plots
 # - Correlation matrix
