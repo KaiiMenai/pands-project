@@ -41,3 +41,9 @@ import numpy as np
 
 
 # This is a placeholder for the other analysis types that may be appropriate. - DELETE THIS LINE
+
+
+# This dataset has previously been used for machine learning and classification tasks, so it may be useful to explore some of those techniques as well.
+# - Linear Regression
+# - Logistic Regression
+# Discuss the pros and cons of each technique and how they may be applied to this dataset.
