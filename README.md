@@ -1,7 +1,11 @@
-# pands-project
-PandS Project
-
 # Project for the Programming and Scripting Module
+
+## What is it all about?
+
+The iris dataset has been a tool used for machine learning and for learning the basics of data analytics and programming.
+This repository will 
+
+
 
 ## Problem statement - DELETE
 This project concerns the well-known Fisher’s Iris data set [3]. You must research the data set
@@ -18,3 +22,6 @@ You might do that for this project as follows:
         3. Outputs a scatter plot of each pair of variables.
         4. Performs any other analysis you think is appropriate.
 
+# References
+
+UC Irvine Machine Learning Repository: Iris Data Set - https://archive.ics.uci.edu/ml/datasets/iris
