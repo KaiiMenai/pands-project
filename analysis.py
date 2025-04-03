@@ -18,7 +18,7 @@ from ucimlrepo import fetch_ucirepo
 
 iris = fetch_ucirepo(id=53) 
 
-# data (as pandas dataframes) 
+# data - extracting x and y (as pandas dataframes) 
 X = iris.data.features 
 y = iris.data.targets 
 
@@ -28,7 +28,8 @@ y = iris.data.targets
 # variable information - print was to check
 # print(iris.variables) 
 
-
+# Exporting iris to .csv in pands-project
+iris.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv')
 
 # Basic data checks - check for missing values, duplicates, and data types
 

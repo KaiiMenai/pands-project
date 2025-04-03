@@ -3,7 +3,7 @@
 ## What is it all about?
 
 The iris dataset has been a tool used for machine learning and for learning the basics of data analytics and programming.
-This repository will 
+This repository will be used to save the iris dataset as a csv
 
 
 
