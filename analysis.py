@@ -30,3 +30,11 @@ import numpy as np
 # Scatter plots - plot and save scatter plots for each pair of variables in the dataset as a png file.
 # Use seaborn for better aesthetics
 # Use a loop to create scatter plots for each pair of variables
+
+# Other analysis types that may be apprropriate
+# - Box plots
+# - Pair plots
+# - Correlation matrix
+# - Heatmaps
+# - PCA (Principal Component Analysis)
+# - Clustering analysis (e.g., K-means clustering)
