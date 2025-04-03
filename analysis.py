@@ -19,7 +19,7 @@ from ucimlrepo import fetch_ucirepo
 iris = fetch_ucirepo(id=53) 
 
 # data - extracting x and y (as pandas dataframes) 
-X = iris.data.features 
+x = iris.data.features 
 y = iris.data.targets 
 
 # metadata - print was to check
@@ -29,11 +29,11 @@ y = iris.data.targets
 # print(iris.variables) 
 
 # Combine the features and targets into a single DataFrame (df) so it can be exported as a CSV
-iris_df = pd.concat([X, y], axis=1)
+iris_df = pd.concat([x, y], axis=1)
 
 # Exporting the DataFrame (df) to a CSV file
-# iris_df.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
-# print("Iris dataset has been successfully exported to a CSV!") # Output - Iris dataset has been successfully exported to a CSV!
+iris_df.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
+print("Iris dataset has been successfully exported to a CSV!") # Output - Iris dataset has been successfully exported to a CSV!
 
 
 
