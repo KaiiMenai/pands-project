@@ -31,11 +31,9 @@ y = iris.data.targets
 # Combine the features and targets into a single DataFrame (df) so it can be exported as a CSV
 iris_df = pd.concat([X, y], axis=1)
 
-# Exporting the DataFrame (df) to a CSV file - REFERENCE - https://medium.com/data-and-beyond/export-data-in-python-with-one-line-of-code-caed817c90fd ; https://thinkingneuron.com/exporting-data-out-of-python/
-iris_df.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
-
-print("Iris dataset has been successfully exported to a CSV!")
-# Output - Iris dataset has been successfully exported to a CSV!
+# Exporting the DataFrame (df) to a CSV file
+# iris_df.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
+# print("Iris dataset has been successfully exported to a CSV!") # Output - Iris dataset has been successfully exported to a CSV!
 
 
 

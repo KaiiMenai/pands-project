@@ -3,7 +3,7 @@
 ## What is it all about?
 
 The iris dataset has been a tool used for machine learning and for learning the basics of data analytics and programming.
-This repository will be used to save the iris dataset as a csv
+This repository will be used to save the iris dataset as a csv and then also run analysis in a seperate python file.
 
 
 
@@ -25,3 +25,4 @@ You might do that for this project as follows:
 # References
 
 UC Irvine Machine Learning Repository: Iris Data Set - https://archive.ics.uci.edu/ml/datasets/iris
+Exporting the DataFrame (df) to a CSV file https://medium.com/data-and-beyond/export-data-in-python-with-one-line-of-code-caed817c90fd ; https://thinkingneuron.com/exporting-data-out-of-python/
