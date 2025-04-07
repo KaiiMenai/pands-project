@@ -43,15 +43,19 @@ print(iris_df) # This will print the dataframe into the terminal and also gi ve 
 
 # Basic data checks - check for missing values, duplicates, and data types
 ## Using the 'with' statement to handle file operations
-print("Basic data checks:")
-print("The shape of the dataset:")
-print(iris_df.shape)
 
-print("The first 5 rows of the dataset:")
-print(iris_df.head()) # This will print the first 5 rows of the dataset.
-print("The last 5 rows of the dataset:")
-print(iris_df.tail()) # This will print the last 5 rows of the dataset.
 
+with open("basic_data_explore.txt", "w") as file:
+    print("Basic data checks:")
+    print("The shape of the dataset:")
+    print(iris_df.shape)
+    print("The first 5 rows of the dataset:")
+    print(iris_df.head()) # This will print the first 5 rows of the dataset.
+    print("The last 5 rows of the dataset:")
+    print(iris_df.tail()) # This will print the last 5 rows of the dataset.
+
+    print("Created on: 07/04/2025", file=file)
+    
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
 
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
@@ -83,9 +87,7 @@ print(iris_df.tail()) # This will print the last 5 rows of the dataset.
 
 # FOR SAVING AS A TXT FILE AND APPENDING AS WE GO ON 
 ## First, create a file with some initial content
-with open("append_example.txt", "w") as file:
-    print("This is the initial content of the file.", file=file)
-    print("Created on: 2023-09-01", file=file)
+
 
 print("Initial content has been written to append_example.txt")
 
