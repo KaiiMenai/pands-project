@@ -16,3 +16,21 @@ The last 5 rows of the dataset:
 148           6.2          3.4           5.4          2.3  Iris-virginica
 149           5.9          3.0           5.1          1.8  Iris-virginica
 Created on: 07/04/2025
+The number of rows and columns in the dataset:
+None
+The number of missing values in the dataset:
+sepal length    0
+sepal width     0
+petal length    0
+petal width     0
+class           0
+dtype: int64
+3
+The data types of each column in the dataset:
+sepal length    float64
+sepal width     float64
+petal length    float64
+petal width     float64
+class            object
+dtype: object
+Created on: 07/04/2025

@@ -56,6 +56,19 @@ with open("basic_data_explore.txt", "w") as file:
     print("Created on: 07/04/2025", file=file)
 
 print("Basic data checks have been written to basic_data_explore.txt")
+
+with open("basic_data_explore.txt", "a") as file:
+    print("The number of rows and columns in the dataset:", file=file)
+    print(iris_df.info(), file=file) # This will print the number of rows and columns in the dataset.
+    print("The number of missing values in the dataset:", file=file)
+    print(iris_df.isnull().sum(), file=file) # This will print the number of missing values in the dataset.
+    print("The number of duplicate rows in the dataset:")
+    print(iris_df.duplicated().sum(), file=file) # This will print the number of duplicate rows in the dataset.
+    print("The data types of each column in the dataset:", file=file)
+    print(iris_df.dtypes, file=file) # This will print the data types of each column in the dataset.print("This is the initial content of the file.", file=file)
+    print("Created on: 07/04/2025", file=file)
+    
+print("Basic data checks have been appended to basic_data_explore.txt")
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
 
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
