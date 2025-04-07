@@ -1,0 +1,3 @@
+This line is written using the 'with' statement.
+The file will be automatically closed after this block.
+Numbers and other data types: 100 3.14159 True

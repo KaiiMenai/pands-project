@@ -42,7 +42,13 @@ iris_df = pd.read_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv')
 print(iris_df) # This will print the dataframe into the terminal and also gi ve a brief summary of (150 rows x 5 columns).
 
 # Basic data checks - check for missing values, duplicates, and data types
+## Using the 'with' statement to handle file operations
+with open("output_with.txt", "w") as output_file:
+    print("This line is written using the 'with' statement.", file=output_file)
+    print("The file will be automatically closed after this block.", file=output_file)
+    print("Numbers and other data types:", 100, 3.14159, True, file=output_file)
 
+print("Output has been written to output_with.txt")
 
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
 
