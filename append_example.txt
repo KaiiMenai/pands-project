@@ -1,8 +1,0 @@
-This is the initial content of the file.
-Created on: 2023-09-01
-
-This content is being appended to the file.
-Appended on: 2023-09-02
-
-This content is being appended to the file.
-Appended on: 2023-09-02
