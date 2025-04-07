@@ -71,8 +71,9 @@ with open("basic_data_explore.txt", "a") as file:
 print("Basic data checks have been appended to basic_data_explore.txt")
 
 # Need to make sure tha any duplicates are removed and that the data types are correct before conducting any analysis.
+# Already checked for missing values and we know there are 0, but there are 3 duplicate rows in the dataset.
 data = iris_df.drop_duplicates(subset="class",) # This will remove any duplicate rows in the dataset, based on the class(species) column.
-# Already checked
+
 
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
 
