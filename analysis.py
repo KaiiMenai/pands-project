@@ -52,7 +52,24 @@ print("Output has been written to output_with.txt")
 
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
 
+## First, create a file with some initial content
+with open("append_example.txt", "w") as file:
+    print("This is the initial content of the file.", file=file)
+    print("Created on: 2023-09-01", file=file)
 
+print("Initial content has been written to append_example.txt")
+
+## Now, append to the file
+with open("append_example.txt", "a") as file:
+    print("\nThis content is being appended to the file.", file=file)
+    print("Appended on: 2023-09-02", file=file)
+
+print("Additional content has been appended to append_example.txt")
+
+## Let's check the final content
+print("\nFinal content of the file:")
+with open("append_example.txt", "r") as file:
+    print(file.read())
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
 # Use seaborn for better aesthetics
 
