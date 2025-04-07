@@ -35,7 +35,11 @@ iris_df = pd.concat([x, y], axis=1)
 iris_df.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
 print("Iris dataset has been successfully exported to a CSV!") # Output - Iris dataset has been successfully exported to a CSV!
 
+# now to retrieve dataset for making plots and analysis
+# Import the dataset from the CSV file
+iris_df = pd.read_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv')
 
+print(iris_df)
 
 # Basic data checks - check for missing values, duplicates, and data types
 
