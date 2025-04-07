@@ -39,7 +39,7 @@ print("Iris dataset has been successfully exported to a CSV!") # Output - Iris d
 # Import the dataset from the CSV file
 iris_df = pd.read_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv')
 
-print(iris_df)
+print(iris_df) # This will print the dataframe into the terminal and also gi ve a brief summary of (150 rows x 5 columns).
 
 # Basic data checks - check for missing values, duplicates, and data types
 
@@ -71,3 +71,4 @@ print(iris_df)
 # - Linear Regression
 # - Logistic Regression
 # Discuss the pros and cons of each technique and how they may be applied to this dataset.
+# printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
