@@ -47,6 +47,11 @@ print("Basic data checks:")
 print("The shape of the dataset:")
 print(iris_df.shape)
 
+print("The first 5 rows of the dataset:")
+print(iris_df.head()) # This will print the first 5 rows of the dataset.
+print("The last 5 rows of the dataset:")
+print(iris_df.tail()) # This will print the last 5 rows of the dataset.
+
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
 
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
