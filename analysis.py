@@ -43,6 +43,9 @@ print(iris_df) # This will print the dataframe into the terminal and also gi ve 
 
 # Basic data checks - check for missing values, duplicates, and data types
 ## Using the 'with' statement to handle file operations
+print("Basic data checks:")
+print("The shape of the dataset:")
+print(iris_df.shape)
 
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
 
