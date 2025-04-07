@@ -25,6 +25,7 @@ petal length    0
 petal width     0
 class           0
 dtype: int64
+The number of duplicate rows in the dataset:
 3
 The data types of each column in the dataset:
 sepal length    float64
