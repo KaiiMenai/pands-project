@@ -43,33 +43,9 @@ print(iris_df) # This will print the dataframe into the terminal and also gi ve 
 
 # Basic data checks - check for missing values, duplicates, and data types
 ## Using the 'with' statement to handle file operations
-with open("output_with.txt", "w") as output_file:
-    print("This line is written using the 'with' statement.", file=output_file)
-    print("The file will be automatically closed after this block.", file=output_file)
-    print("Numbers and other data types:", 100, 3.14159, True, file=output_file)
-
-print("Output has been written to output_with.txt")
 
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
 
-## First, create a file with some initial content
-with open("append_example.txt", "w") as file:
-    print("This is the initial content of the file.", file=file)
-    print("Created on: 2023-09-01", file=file)
-
-print("Initial content has been written to append_example.txt")
-
-## Now, append to the file
-with open("append_example.txt", "a") as file:
-    print("\nThis content is being appended to the file.", file=file)
-    print("Appended on: 2023-09-02", file=file)
-
-print("Additional content has been appended to append_example.txt")
-
-## Let's check the final content
-print("\nFinal content of the file:")
-with open("append_example.txt", "r") as file:
-    print(file.read())
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
 # Use seaborn for better aesthetics
 
@@ -95,3 +71,23 @@ with open("append_example.txt", "r") as file:
 # - Logistic Regression
 # Discuss the pros and cons of each technique and how they may be applied to this dataset.
 # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
+
+
+# FOR SAVING AS A TXT FILE AND APPENDING AS WE GO ON 
+## First, create a file with some initial content
+with open("append_example.txt", "w") as file:
+    print("This is the initial content of the file.", file=file)
+    print("Created on: 2023-09-01", file=file)
+
+print("Initial content has been written to append_example.txt")
+
+## Now, append to the file
+with open("append_example.txt", "a") as file:
+    print("\nThis content is being appended to the file.", file=file)
+    print("Appended on: 2023-09-02", file=file)
+
+print("Additional content has been appended to append_example.txt")
+
+## Let's check the final content
+print("\nFinal content of the file:")
+with open("append_example.txt", "r") as file:    print(file.read())
