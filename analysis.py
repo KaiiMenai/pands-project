@@ -46,16 +46,16 @@ print(iris_df) # This will print the dataframe into the terminal and also gi ve 
 
 
 with open("basic_data_explore.txt", "w") as file:
-    print("Basic data checks:")
-    print("The shape of the dataset:")
-    print(iris_df.shape)
-    print("The first 5 rows of the dataset:")
-    print(iris_df.head()) # This will print the first 5 rows of the dataset.
-    print("The last 5 rows of the dataset:")
-    print(iris_df.tail()) # This will print the last 5 rows of the dataset.
-
+    print("Basic data checks:", file=file)
+    print("The shape of the dataset:", file=file)
+    print(iris_df.shape, file=file)
+    print("The first 5 rows of the dataset:", file=file)
+    print(iris_df.head(), file=file) # This will print the first 5 rows of the dataset.
+    print("The last 5 rows of the dataset:", file=file)
+    print(iris_df.tail(), file=file) # This will print the last 5 rows of the dataset.
     print("Created on: 07/04/2025", file=file)
-    
+
+print("Basic data checks have been written to basic_data_explore.txt")
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
 
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
@@ -89,15 +89,14 @@ with open("basic_data_explore.txt", "w") as file:
 ## First, create a file with some initial content
 
 
-print("Initial content has been written to append_example.txt")
 
 ## Now, append to the file
-with open("append_example.txt", "a") as file:
-    print("\nThis content is being appended to the file.", file=file)
-    print("Appended on: 2023-09-02", file=file)
+#with open("append_example.txt", "a") as file:
+#    print("\nThis content is being appended to the file.", file=file)
+#    print("Appended on: 2023-09-02", file=file)
 
-print("Additional content has been appended to append_example.txt")
+#print("Additional content has been appended to append_example.txt")
 
 ## Let's check the final content
-print("\nFinal content of the file:")
-with open("append_example.txt", "r") as file:    print(file.read())
+#print("\nFinal content of the file:")
+#with open("append_example.txt", "r") as file:    print(file.read())
