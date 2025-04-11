@@ -106,6 +106,30 @@ print(versicolor_stats)
 print("\nVirginica Statistics:")
 print(virginica_stats)
 
+# Function to detect outliers using the IQR method
+def detect_outliers(df, column):
+    Q1 = df[column].quantile(0.25)  # First quartile
+    Q3 = df[column].quantile(0.75)  # Third quartile
+    IQR = Q3 - Q1  # Interquartile range
+    lower_bound = Q1 - 1.5 * IQR
+    upper_bound = Q3 + 1.5 * IQR
+    outliers = df[(df[column] < lower_bound) | (df[column] > upper_bound)]
+    return outliers
+
+# Check for outliers in each numeric column for each species
+numeric_columns = iris_df.select_dtypes(include=[np.number]).columns
+
+print("\nOutliers detected for each species:")
+for species in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
+    print(f"\nOutliers for {species}:")
+    species_data = iris_df[iris_df['class'] == species]
+    for column in numeric_columns:
+        outliers = detect_outliers(species_data, column)
+        if not outliers.empty:
+            print(f"  Column '{column}': {len(outliers)} outliers")
+        else:
+            print(f"  Column '{column}': No outliers detected")
+
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
 # Use seaborn for better aesthetics
 
