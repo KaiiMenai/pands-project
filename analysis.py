@@ -7,9 +7,19 @@
 
 # Importing libraries
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-import numpy as np
+import sklearn as skl
+from sklearn.decomposition import PCA
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 # Into terminal: pip install ucimlrepo
 
@@ -72,6 +82,7 @@ print("Basic data checks have been appended to basic_data_explore.txt")
 
 # Need to make sure tha any duplicates are removed and that the data types are correct before conducting any analysis.
 # Already checked for missing values and we know there are 0, but there are 3 duplicate rows in the dataset.
+
 data = iris_df.drop_duplicates(subset="class",) # This will remove any duplicate rows in the dataset, based on the class(species) column.
 
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
