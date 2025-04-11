@@ -76,6 +76,25 @@ data = iris_df.drop_duplicates(subset="class",) # This will remove any duplicate
 
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
 
+
+# Summary statistics for each species
+print("\nSummary statistics for each species:")
+
+# Separate the dataset by species
+setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
+versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
+virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
+
+# Display the statistics for each species
+print("Setosa Statistics:")
+print(setosa_stats)
+
+print("\nVersicolor Statistics:")
+print(versicolor_stats)
+
+print("\nVirginica Statistics:")
+print(virginica_stats)
+
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
 # Use seaborn for better aesthetics
 
