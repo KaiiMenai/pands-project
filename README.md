@@ -27,6 +27,10 @@ The iris dataset contains 150 samples of 3 species, there are 50 samples for eac
 
 ## Histograms and scatter plots - what do we see?
 
+## Write about why chose to do PCA, correlation matrix, pairplot, and k means - what benefit is there from running this analysis? 
+
+## LRM and logRM - why run these? what is each type designed for - how did conducting the previous analysis aid in determining the use of predictive modelling? 
+
 # References
 
 UC Irvine Machine Learning Repository: Iris Data Set - https://archive.ics.uci.edu/ml/datasets/iris
