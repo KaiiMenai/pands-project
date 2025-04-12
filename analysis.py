@@ -165,6 +165,28 @@ plt.show()
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
 # Use seaborn for better aesthetics
 
+# Set up the figure
+fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+
+# Plot histogram for Sepal Length
+sns.histplot(data=df, x="sepal_length", hue="species", kde=False, ax=axes[0, 0], bins=15)
+axes[0, 0].set_title("Sepal Length Distribution by Species")
+
+# Plot histogram for Sepal Width
+sns.histplot(data=df, x="sepal_width", hue="species", kde=False, ax=axes[0, 1], bins=15)
+axes[0, 1].set_title("Sepal Width Distribution by Species")
+
+# Plot histogram for Petal Length
+sns.histplot(data=df, x="petal_length", hue="species", kde=False, ax=axes[1, 0], bins=15)
+axes[1, 0].set_title("Petal Length Distribution by Species")
+
+# Plot histogram for Petal Width
+sns.histplot(data=df, x="petal_width", hue="species", kde=False, ax=axes[1, 1], bins=15)
+axes[1, 1].set_title("Petal Width Distribution by Species")
+
+# Adjust layout for better spacing
+plt.tight_layout()
+plt.show()
 
 # Scatter plots - plot and save scatter plots for each pair of variables in the dataset as a png file.
 # Use seaborn for better aesthetics
