@@ -233,6 +233,12 @@ plt.savefig('pairplot_by_species.png')
 plt.show()
 
 # - Correlation matrix
+corr_matrix = iris_df.iloc[:, :4].corr()
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+plt.title("Feature Correlation Matrix")
+plt.savefig('correlation_matrix_by_feature.png')
+plt.show()
+
 # - Heatmaps
 # - PCA (Principal Component Analysis)
 # - Clustering analysis (e.g., K-means clustering)
