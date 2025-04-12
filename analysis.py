@@ -97,40 +97,46 @@ with open("summary_statistics.txt", "w") as file:  # New file for summary stats
     virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
 
     # Display the statistics for each species
-    print("Setosa Statistics:")
-    print(setosa_stats)
+    print("Setosa Statistics:", file=file)
+    print(setosa_stats, file=file)
 
-    print("\nVersicolor Statistics:")
-    print(versicolor_stats)
+    print("\nVersicolor Statistics:", file=file)
+    print(versicolor_stats, file=file)
 
-    print("\nVirginica Statistics:")
-    print(virginica_stats)
+    print("\nVirginica Statistics:", file=file)
+    print(virginica_stats, file=file)
 
 print("Summary statistics for each species has been written to summary_statistics.txt")
 
-# Function to detect outliers using the inter-quartile range method
-def detect_outliers(df, column):
-    Q1 = df[column].quantile(0.25)  # First quartile
-    Q3 = df[column].quantile(0.75)  # Third quartile
-    IQR = Q3 - Q1  # Interquartile range
-    lower_bound = Q1 - 1.5 * IQR
-    upper_bound = Q3 + 1.5 * IQR
-    outliers = df[(df[column] < lower_bound) | (df[column] > upper_bound)]
-    return outliers
+with open("summary_statistics.txt", "a") as file:  # Append to summary stats file
+    # Summary statistics for each species
+    print("\nChecking for outliers for each species:", file=file)
 
-# Check for outliers in each numeric column for each species
-numeric_columns = iris_df.select_dtypes(include=[np.number]).columns
+    # Function to detect outliers using the inter-quartile range method
+    def detect_outliers(df, column):
+        Q1 = df[column].quantile(0.25)  # First quartile
+        Q3 = df[column].quantile(0.75)  # Third quartile
+        IQR = Q3 - Q1  # Interquartile range
+        lower_bound = Q1 - 1.5 * IQR
+        upper_bound = Q3 + 1.5 * IQR
+        outliers = df[(df[column] < lower_bound) | (df[column] > upper_bound)]
+        return outliers
 
-print("\nOutliers detected for each species:")
-for species in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
-    print(f"\nOutliers for {species}:")
-    species_data = iris_df[iris_df['class'] == species]
-    for column in numeric_columns:
-        outliers = detect_outliers(species_data, column)
-        if not outliers.empty:
-            print(f"  Column '{column}': {len(outliers)} outliers")
-        else:
-            print(f"  Column '{column}': No outliers detected")
+    # Check for outliers in each numeric column for each species
+    numeric_columns = iris_df.select_dtypes(include=[np.number]).columns
+
+    print("\nOutliers detected for each species:", file=file)
+    for species in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
+        print(f"\nOutliers for {species}:")
+        species_data = iris_df[iris_df['class'] == species]
+        for column in numeric_columns:
+            outliers = detect_outliers(species_data, column)
+            if not outliers.empty:
+                print(f"  Column '{column}': {len(outliers)} outliers", file=file)
+            else:
+                print(f"  Column '{column}': No outliers detected", file=file)
+
+print("Checks for data outliers has been appended to summary_statistics.txt")
 
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
 # Use seaborn for better aesthetics
