@@ -24,13 +24,13 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 # Into terminal: pip install ucimlrepo
 
 # Importing the dataset, fetch the dataset, define the data (as pandas dataframes), print metadata, and print the variable information to check that it worked.
-from ucimlrepo import fetch_ucirepo 
+# from ucimlrepo import fetch_ucirepo 
 
-iris = fetch_ucirepo(id=53) 
+# iris = fetch_ucirepo(id=53) 
 
 # data - extracting x and y (as pandas dataframes) 
-x = iris.data.features 
-y = iris.data.targets 
+# x = iris.data.features 
+# y = iris.data.targets 
 
 # metadata - print was to check
 # print(iris.metadata) 
@@ -39,11 +39,11 @@ y = iris.data.targets
 # print(iris.variables) 
 
 # Combine the features and targets into a single DataFrame (df) so it can be exported as a CSV
-iris_df = pd.concat([x, y], axis=1)
+# iris_df = pd.concat([x, y], axis=1)
 
 # Exporting the DataFrame (df) to a CSV file
-iris_df.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
-print("Iris dataset has been successfully exported to a CSV!") # Output - Iris dataset has been successfully exported to a CSV!
+# iris_df.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
+# print("Iris dataset has been successfully exported to a CSV!") # Output - Iris dataset has been successfully exported to a CSV!
 
 # now to retrieve dataset for making plots and analysis
 # Import the dataset from the CSV file
