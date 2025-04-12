@@ -137,6 +137,31 @@ with open("summary_statistics.txt", "a") as file:  # Append to summary stats fil
 
 print("Checks for data outliers has been appended to summary_statistics.txt")
 
+# Here good to do boxplots to illustrate the outliers in the dataset.
+# Box plots - plot and save box plots for each variable in the dataset and save as a png file.
+
+# Boxplots by species
+
+# Define feature names and their corresponding titles
+features = ['sepal length', 'sepal width', 'petal length', 'petal width']
+titles = ['Sepal Length by Species', 'Sepal Width by Species', 
+          'Petal Length by Species', 'Petal Width by Species']
+
+# Create boxplots for each feature by species
+plt.figure(figsize=(12, 8))
+for i, feature in enumerate(features):
+    ax = plt.subplot(2, 2, i+1)
+    sns.boxplot(x='class', y=feature, hue='class', data=iris_df, ax=ax)
+    ax.set_title(titles[i])
+    ax.set_xlabel('Species')  # Update x-axis label for clarity
+    ax.set_ylabel(feature.replace('_', ' ').title())  # Format y-axis label
+plt.tight_layout()
+
+# Save the figure as a PNG file
+plt.savefig('boxplots_by_species.png')
+plt.show()
+
+
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
 # Use seaborn for better aesthetics
 
@@ -146,7 +171,7 @@ print("Checks for data outliers has been appended to summary_statistics.txt")
 # Use a loop to create scatter plots for each pair of variables
 
 # Other analysis types that may be apprropriate - for each ensure that the figure is saved as a png file.
-# - Box plots
+# - Box plots - good for checking for outliers and distributions
 # - Pair plots
 # - Correlation matrix
 # - Heatmaps
