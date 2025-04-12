@@ -239,7 +239,6 @@ plt.title("Feature Correlation Matrix")
 plt.savefig('correlation_matrix_by_feature.png')
 plt.show()
 
-# - Heatmaps
 # - PCA (Principal Component Analysis)
 # - Clustering analysis (e.g., K-means clustering)
 
@@ -251,6 +250,9 @@ plt.show()
 # - Linear Regression
 # - Logistic Regression
 # Discuss the pros and cons of each technique and how they may be applied to this dataset.
+
+
+
 # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
 
 
