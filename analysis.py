@@ -169,8 +169,10 @@ plt.show()
 fig, axes = plt.subplots(2, 2, figsize=(12, 10))
 
 # Plot histogram for Sepal Length
-sns.histplot(data=df, x="sepal_length", hue="species", kde=False, ax=axes[0, 0], bins=15)
+sns.histplot(data=iris_df, x="sepal length", hue="class", kde=False, ax=axes[0, 0], bins=15)
 axes[0, 0].set_title("Sepal Length Distribution by Species")
+axes[0, 0].set_xlabel("Sepal Length")
+axes[0, 0].set_ylabel("Frequency")
 
 # Plot histogram for Sepal Width
 sns.histplot(data=df, x="sepal_width", hue="species", kde=False, ax=axes[0, 1], bins=15)
