@@ -199,7 +199,6 @@ plt.show()
 
 # Scatter plots - plot and save scatter plots for each pair of variables in the dataset as a png file.
 
-
 # Use a loop to create scatter plots for each pair of variables
 
 # Other analysis types that may be apprropriate - for each ensure that the figure is saved as a png file.
