@@ -1,3 +1,4 @@
+Summary statistics for each species:
 Setosa Statistics:
        sepal length  sepal width  petal length  petal width
 count      50.00000    50.000000     50.000000     50.00000
@@ -31,17 +32,21 @@ min         4.90000     2.200000      4.500000      1.40000
 75%         6.90000     3.175000      5.875000      2.30000
 max         7.90000     3.800000      6.900000      2.50000
 
-Checking for outliers for each species:
-
 Outliers detected for each species:
+
+Outliers for Iris-setosa:
   Column 'sepal length': No outliers detected
   Column 'sepal width': No outliers detected
   Column 'petal length': 4 outliers
   Column 'petal width': 2 outliers
+
+Outliers for Iris-versicolor:
   Column 'sepal length': No outliers detected
   Column 'sepal width': No outliers detected
   Column 'petal length': 1 outliers
   Column 'petal width': No outliers detected
+
+Outliers for Iris-virginica:
   Column 'sepal length': 1 outliers
   Column 'sepal width': 3 outliers
   Column 'petal length': No outliers detected

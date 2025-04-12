@@ -89,7 +89,7 @@ data = iris_df.drop_duplicates(subset="class",) # This will remove any duplicate
 
 with open("summary_statistics.txt", "w") as file:  # New file for summary stats
     # Summary statistics for each species
-    print("\nSummary statistics for each species:")
+    print("Summary statistics for each species:", file=file)
     
     # Separate the dataset by species
     setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
@@ -109,8 +109,7 @@ with open("summary_statistics.txt", "w") as file:  # New file for summary stats
 print("Summary statistics for each species has been written to summary_statistics.txt")
 
 with open("summary_statistics.txt", "a") as file:  # Append to summary stats file
-    # Summary statistics for each species
-    print("\nChecking for outliers for each species:", file=file)
+    # Checking for outliers in the dataset
 
     # Function to detect outliers using the inter-quartile range method
     def detect_outliers(df, column):
@@ -127,7 +126,7 @@ with open("summary_statistics.txt", "a") as file:  # Append to summary stats fil
 
     print("\nOutliers detected for each species:", file=file)
     for species in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
-        print(f"\nOutliers for {species}:")
+        print(f"\nOutliers for {species}:", file=file)
         species_data = iris_df[iris_df['class'] == species]
         for column in numeric_columns:
             outliers = detect_outliers(species_data, column)
