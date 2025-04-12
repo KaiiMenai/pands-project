@@ -153,7 +153,7 @@ for i, feature in enumerate(features):
     ax = plt.subplot(2, 2, i+1)
     sns.boxplot(x='class', y=feature, hue='class', data=iris_df, ax=ax)
     ax.set_title(titles[i])
-    ax.set_xlabel('Species')  # Update x-axis label for clarity
+    ax.set_xlabel("Species")  # Update x-axis label for clarity
     ax.set_ylabel(feature.replace('_', ' ').title())  # Format y-axis label
 plt.tight_layout()
 
@@ -163,7 +163,6 @@ plt.show()
 
 
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
-
 # Set up the figure
 fig, axes = plt.subplots(2, 2, figsize=(12, 10))
 
@@ -172,28 +171,28 @@ sns.histplot(data=iris_df, x="sepal length", hue="class", kde=False, ax=axes[0, 
 axes[0, 0].set_title("Sepal Length Distribution by Species")
 axes[0, 0].set_xlabel("Sepal Length")
 axes[0, 0].set_ylabel("Frequency")
-axes[0, 0].legend(title='Species')  # Ensure legend title is set
+axes[0, 0].legend(title="Species")  # Ensure legend title is set
 
 # Plot histogram for Sepal Width
 sns.histplot(data=iris_df, x="sepal width", hue="class", kde=False, ax=axes[0, 1], bins=15)
 axes[0, 1].set_title("Sepal Width Distribution by Species")
 axes[0, 1].set_xlabel("Sepal Width")
 axes[0, 1].set_ylabel("Frequency")
-axes[0, 1].legend(title='Species')  # Ensure legend title is set
+axes[0, 1].legend(title="Species")  # Ensure legend title is set
 
 # Plot histogram for Petal Length
 sns.histplot(data=iris_df, x="petal length", hue="class", kde=False, ax=axes[1, 0], bins=15)
 axes[1, 0].set_title("Petal Length Distribution by Species")
 axes[1, 0].set_xlabel("Petal Length")
 axes[1, 0].set_ylabel("Frequency")
-axes[1, 0].legend(title='Species')  # Ensure legend title is set
+axes[1, 0].legend(title="Species")  # Ensure legend title is set
 
 # Plot histogram for Petal Width
 sns.histplot(data=iris_df, x="petal width", hue="class", kde=False, ax=axes[1, 1], bins=15)
 axes[1, 1].set_title("Petal Width Distribution by Species")
 axes[1, 1].set_xlabel("Petal Width")
 axes[1, 1].set_ylabel("Frequency")
-axes[1, 1].legend(title='Species')  # Ensure legend title is set
+axes[1, 1].legend(title="Species")  # Ensure legend title is set
 
 
 # Adjust layout for better spacing
@@ -212,7 +211,7 @@ sns.scatterplot(ax=axes[0], data=iris_df, x='sepal length', y='sepal width', hue
 axes[0].set_title('Sepal Length vs Sepal Width by Species')
 axes[0].set_xlabel('Sepal Length (cm)')
 axes[0].set_ylabel('Sepal Width (cm)')
-axes[0].legend(title='Species')
+axes[0].legend(title="Species")
 axes[0].grid(True)
 
 # Scatter plot for petal length vs width
@@ -220,7 +219,7 @@ sns.scatterplot(ax=axes[1], data=iris_df, x='petal length', y='petal width', hue
 axes[1].set_title('Petal Length vs Petal Width by Species')
 axes[1].set_xlabel('Petal Length (cm)')
 axes[1].set_ylabel('Petal Width (cm)')
-axes[1].legend(title='Species')
+axes[1].legend(title="Species")
 axes[1].grid(True)
 
 plt.tight_layout()
@@ -233,6 +232,7 @@ plt.show()
 sns.pairplot(iris_df, hue='class', height=2.5)
 # give the plot a title
 plt.suptitle("Pairwise Feature Relationship", y=1.02)
+# Save the figure for pairplot as a PNG file and show
 plt.savefig('pairplot_by_species.png')
 plt.show()
 
