@@ -170,27 +170,31 @@ fig, axes = plt.subplots(2, 2, figsize=(12, 10))
 # Plot histogram for Sepal Length
 sns.histplot(data=iris_df, x="sepal length", hue="class", kde=False, ax=axes[0, 0], bins=15)
 axes[0, 0].set_title("Sepal Length Distribution by Species")
-axes[0, 0].legend(title='Species')
 axes[0, 0].set_xlabel("Sepal Length")
 axes[0, 0].set_ylabel("Frequency")
+axes[0, 0].legend(title='Species')  # Ensure legend title is set
 
 # Plot histogram for Sepal Width
 sns.histplot(data=iris_df, x="sepal width", hue="class", kde=False, ax=axes[0, 1], bins=15)
 axes[0, 1].set_title("Sepal Width Distribution by Species")
 axes[0, 1].set_xlabel("Sepal Width")
 axes[0, 1].set_ylabel("Frequency")
+axes[0, 1].legend(title='Species')  # Ensure legend title is set
 
 # Plot histogram for Petal Length
 sns.histplot(data=iris_df, x="petal length", hue="class", kde=False, ax=axes[1, 0], bins=15)
 axes[1, 0].set_title("Petal Length Distribution by Species")
 axes[1, 0].set_xlabel("Petal Length")
 axes[1, 0].set_ylabel("Frequency")
+axes[1, 0].legend(title='Species')  # Ensure legend title is set
 
 # Plot histogram for Petal Width
 sns.histplot(data=iris_df, x="petal width", hue="class", kde=False, ax=axes[1, 1], bins=15)
 axes[1, 1].set_title("Petal Width Distribution by Species")
 axes[1, 1].set_xlabel("Petal Width")
 axes[1, 1].set_ylabel("Frequency")
+axes[1, 1].legend(title='Species')  # Ensure legend title is set
+
 
 # Adjust layout for better spacing
 plt.tight_layout()
