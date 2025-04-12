@@ -262,7 +262,36 @@ plt.savefig('pca_by_species.png')
 plt.show()
 
 # - Clustering analysis (e.g., K-means clustering)
+# clustering analysis is a technique used to group similar data points together.
+# In this case, we will use K-means clustering to group the iris dataset into three clusters (corresponding to the three species).
+from sklearn.cluster import KMeans 
 
+# Perform K-means clustering
+kmeans = KMeans(n_clusters=3, random_state=42)  # 3 clusters for the 3 species
+iris_df['cluster'] = kmeans.fit_predict(iris_df.iloc[:, :4])  # Fit on the first 4 columns (features)
+
+# Map cluster labels to species for consistent coloring
+cluster_to_species = {
+    0: 'Iris-setosa',
+    1: 'Iris-versicolor',
+    2: 'Iris-virginica'
+}
+iris_df['cluster_species'] = iris_df['cluster'].map(cluster_to_species)
+
+# Plot the K-means clustering results
+plt.figure(figsize=(8, 6))
+sns.scatterplot(
+    x=iris_df['sepal length'], 
+    y=iris_df['sepal width'], 
+    hue=iris_df['class'], 
+    s=100
+)
+plt.title("K-means Clustering of Iris Dataset")
+plt.xlabel("Sepal Length")
+plt.ylabel("Sepal Width")
+plt.legend(title="Cluster (Species)")
+plt.savefig('kmeans_clustering_by_species.png')
+plt.show()
 
 # This is a placeholder for the other analysis types that may be appropriate. - DELETE THIS LINE
 
