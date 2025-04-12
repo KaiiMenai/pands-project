@@ -163,7 +163,6 @@ plt.show()
 
 
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
-# Use seaborn for better aesthetics
 
 # Set up the figure
 fig, axes = plt.subplots(2, 2, figsize=(12, 10))
@@ -199,7 +198,8 @@ plt.savefig('histograms_by_species.png')
 plt.show()
 
 # Scatter plots - plot and save scatter plots for each pair of variables in the dataset as a png file.
-# Use seaborn for better aesthetics
+
+
 # Use a loop to create scatter plots for each pair of variables
 
 # Other analysis types that may be apprropriate - for each ensure that the figure is saved as a png file.
