@@ -87,26 +87,28 @@ data = iris_df.drop_duplicates(subset="class",) # This will remove any duplicate
 
 # Summarise each variable in the dataset and check for outliers - export to a single text file.
 
+with open("summary_statistics.txt", "w") as file:  # New file for summary stats
+    # Summary statistics for each species
+    print("\nSummary statistics for each species:")
+    
+    # Separate the dataset by species
+    setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
+    versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
+    virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
 
-# Summary statistics for each species
-print("\nSummary statistics for each species:")
+    # Display the statistics for each species
+    print("Setosa Statistics:")
+    print(setosa_stats)
 
-# Separate the dataset by species
-setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
-versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
-virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
+    print("\nVersicolor Statistics:")
+    print(versicolor_stats)
 
-# Display the statistics for each species
-print("Setosa Statistics:")
-print(setosa_stats)
+    print("\nVirginica Statistics:")
+    print(virginica_stats)
 
-print("\nVersicolor Statistics:")
-print(versicolor_stats)
+print("Summary statistics for each species has been written to summary_statistics.txt")
 
-print("\nVirginica Statistics:")
-print(virginica_stats)
-
-# Function to detect outliers using the IQR method
+# Function to detect outliers using the inter-quartile range method
 def detect_outliers(df, column):
     Q1 = df[column].quantile(0.25)  # First quartile
     Q3 = df[column].quantile(0.75)  # Third quartile
