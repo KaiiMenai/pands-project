@@ -199,6 +199,29 @@ plt.show()
 
 # Scatter plots - plot and save scatter plots for each pair of variables in the dataset as a png file.
 
+# Create a figure with two subplots
+fig, axes = plt.subplots(1, 2, figsize=(20, 8))
+
+# Scatter plot for sepal length vs width
+sns.scatterplot(ax=axes[0], data=iris_df, x='sepal length', y='sepal width', hue='class', s=100)
+axes[0].set_title('Sepal Length vs Sepal Width by Species')
+axes[0].set_xlabel('Sepal Length (cm)')
+axes[0].set_ylabel('Sepal Width (cm)')
+axes[0].legend(title='Species')
+axes[0].grid(True)
+
+# Scatter plot for petal length vs width
+sns.scatterplot(ax=axes[1], data=iris_df, x='petal length', y='petal width', hue='class', s=100)
+axes[1].set_title('Petal Length vs Petal Width by Species')
+axes[1].set_xlabel('Petal Length (cm)')
+axes[1].set_ylabel('Petal Width (cm)')
+axes[1].legend(title='Species')
+axes[1].grid(True)
+
+plt.tight_layout()
+plt.savefig('scatterplot_by_species.png')
+plt.show()
+
 # Use a loop to create scatter plots for each pair of variables
 
 # Other analysis types that may be apprropriate - for each ensure that the figure is saved as a png file.
