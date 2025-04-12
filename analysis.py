@@ -222,8 +222,6 @@ plt.tight_layout()
 plt.savefig('scatterplot_by_species.png')
 plt.show()
 
-# Use a loop to create scatter plots for each pair of variables
-
 # Other analysis types that may be apprropriate - for each ensure that the figure is saved as a png file.
 # - Box plots - good for checking for outliers and distributions
 # - Pair plots
