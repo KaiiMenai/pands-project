@@ -224,6 +224,13 @@ plt.show()
 
 # Other analysis types that may be apprropriate - for each ensure that the figure is saved as a png file.
 # - Pair plots
+
+sns.pairplot(iris_df, hue='class', height=2.5)
+# give the plot a title
+plt.suptitle("Pairwise Feature Relationship", y=1.02)
+plt.savefig('pairplot_by_species.png')
+plt.show()
+
 # - Correlation matrix
 # - Heatmaps
 # - PCA (Principal Component Analysis)
