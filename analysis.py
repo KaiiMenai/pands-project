@@ -175,19 +175,27 @@ axes[0, 0].set_xlabel("Sepal Length")
 axes[0, 0].set_ylabel("Frequency")
 
 # Plot histogram for Sepal Width
-sns.histplot(data=df, x="sepal_width", hue="species", kde=False, ax=axes[0, 1], bins=15)
+sns.histplot(data=iris_df, x="sepal width", hue="class", kde=False, ax=axes[0, 1], bins=15)
 axes[0, 1].set_title("Sepal Width Distribution by Species")
+axes[0, 1].set_xlabel("Sepal Width")
+axes[0, 1].set_ylabel("Frequency")
 
 # Plot histogram for Petal Length
-sns.histplot(data=df, x="petal_length", hue="species", kde=False, ax=axes[1, 0], bins=15)
+sns.histplot(data=iris_df, x="petal length", hue="class", kde=False, ax=axes[1, 0], bins=15)
 axes[1, 0].set_title("Petal Length Distribution by Species")
+axes[1, 0].set_xlabel("Petal Length")
+axes[1, 0].set_ylabel("Frequency")
 
 # Plot histogram for Petal Width
-sns.histplot(data=df, x="petal_width", hue="species", kde=False, ax=axes[1, 1], bins=15)
+sns.histplot(data=iris_df, x="petal width", hue="class", kde=False, ax=axes[1, 1], bins=15)
 axes[1, 1].set_title("Petal Width Distribution by Species")
+axes[1, 1].set_xlabel("Petal Width")
+axes[1, 1].set_ylabel("Frequency")
 
 # Adjust layout for better spacing
 plt.tight_layout()
+# Save the figure for histogram as a PNG file and show
+plt.savefig('histograms_by_species.png')
 plt.show()
 
 # Scatter plots - plot and save scatter plots for each pair of variables in the dataset as a png file.
