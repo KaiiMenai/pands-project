@@ -237,6 +237,7 @@ plt.show()
 # - Correlation matrix
 corr_matrix = iris_df.iloc[:, :4].corr()
 sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+plt.legend(title="Species")
 plt.title("Feature Correlation Matrix")
 plt.savefig('correlation_matrix_by_feature.png')
 plt.show()
