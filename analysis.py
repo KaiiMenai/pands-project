@@ -171,7 +171,6 @@ axes[0, 0].set_title("Sepal Length Distribution by Species")
 axes[0, 0].set_xlabel("Sepal Length")
 axes[0, 0].set_ylabel("Frequency")
 
-
 # Plot histogram for Sepal Width
 sns.histplot(data=iris_df, x="sepal width", hue="class", kde=False, ax=axes[0, 1], bins=15)
 axes[0, 1].set_title("Sepal Width Distribution by Species")
@@ -222,7 +221,7 @@ plt.tight_layout()
 plt.savefig('scatterplot_by_species.png')
 plt.show()
 
-# Other analysis types that may be apprropriate - for each ensure that the figure is saved as a png file.
+# Other analysis types that may be appropriate - for each ensure that the figure is saved as a png file.
 # - Pair plots
 
 sns.pairplot(iris_df, hue='class', height=2.5)
@@ -296,8 +295,30 @@ plt.show()
 
 # This dataset has previously been used for machine learning and classification tasks, so it may be useful to explore some of those techniques as well.
 # - Linear Regression
+## First for the sepal length and width, then for the petal length and width.
+## For each, ensure that the figure is saved as a png file.
 
+# Sepal Length vs Sepal Width
+# Sepal Length vs Sepal Width
+plt.figure(figsize=(10, 6))
+X_sepal = iris_df[['sepal_length']]
+y_sepal = iris_df['sepal_width']
+model_sepal = LinearRegression()
+model_sepal.fit(X_sepal, y_sepal)
+y_sepal_pred = model_sepal.predict(X_sepal)
+r2_sepal = r2_score(y_sepal, y_sepal_pred)
 
+sns.scatterplot(data=iris_df, x='sepal_length', y='sepal_width', hue='class', s=100)
+sns.regplot(data=iris_df, x='sepal_length', y='sepal_width', scatter=False, color='red')
+plt.title('Sepal Length vs Sepal Width by Species')
+plt.xlabel('Sepal Length (cm)')
+plt.ylabel('Sepal Width (cm)')
+plt.legend(title='Species')
+plt.grid(True)
+plt.text(0.05, 0.95, f'R² = {r2_sepal:.2f}', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top', bbox=dict(boxstyle="round", facecolor="white", alpha=0.5))
+plt.tight_layout()
+plt.savefig('sepal_length_vs_width.png')  # Save the plot as a PNG file
+plt.show()
 
 # - Logistic Regression
 
