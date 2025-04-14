@@ -299,17 +299,16 @@ plt.show()
 ## For each, ensure that the figure is saved as a png file.
 
 # Sepal Length vs Sepal Width
-# Sepal Length vs Sepal Width
 plt.figure(figsize=(10, 6))
-X_sepal = iris_df[['sepal_length']]
-y_sepal = iris_df['sepal_width']
+X_sepal = iris_df[['sepal length']]
+y_sepal = iris_df['sepal width']
 model_sepal = LinearRegression()
 model_sepal.fit(X_sepal, y_sepal)
 y_sepal_pred = model_sepal.predict(X_sepal)
 r2_sepal = r2_score(y_sepal, y_sepal_pred)
 
-sns.scatterplot(data=iris_df, x='sepal_length', y='sepal_width', hue='class', s=100)
-sns.regplot(data=iris_df, x='sepal_length', y='sepal_width', scatter=False, color='red')
+sns.scatterplot(data=iris_df, x='sepal length', y='sepal width', hue='class', s=100)
+sns.regplot(data=iris_df, x='sepal length', y='sepal width', scatter=False, color='red')
 plt.title('Sepal Length vs Sepal Width by Species')
 plt.xlabel('Sepal Length (cm)')
 plt.ylabel('Sepal Width (cm)')
@@ -318,6 +317,27 @@ plt.grid(True)
 plt.text(0.05, 0.95, f'R² = {r2_sepal:.2f}', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top', bbox=dict(boxstyle="round", facecolor="white", alpha=0.5))
 plt.tight_layout()
 plt.savefig('sepal_length_vs_width.png')  # Save the plot as a PNG file
+plt.show()
+
+# Petal Length vs Petal Width
+plt.figure(figsize=(10, 6))
+X_petal = iris_df[['petal length']]
+y_petal = iris_df['petal width']
+model_petal = LinearRegression()
+model_petal.fit(X_petal, y_petal)
+y_petal_pred = model_petal.predict(X_petal)
+r2_petal = r2_score(y_petal, y_petal_pred)
+
+sns.scatterplot(data=iris_df, x='petal length', y='petal width', hue='class', s=100)
+sns.regplot(data=iris_df, x='petal length', y='petal width', scatter=False, color='red')
+plt.title('Petal Length vs Petal Width by Species')
+plt.xlabel('Petal Length (cm)')
+plt.ylabel('Petal Width (cm)')
+plt.legend(title='Species')
+plt.grid(True)
+plt.text(0.05, 0.95, f'R² = {r2_petal:.2f}', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top', bbox=dict(boxstyle="round", facecolor="white", alpha=0.5))
+plt.tight_layout()
+plt.savefig('petal_length_vs_width.png')  # Save the plot as a PNG file
 plt.show()
 
 # - Logistic Regression
