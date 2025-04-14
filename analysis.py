@@ -314,7 +314,7 @@ plt.legend(title='Species')
 plt.grid(True)
 plt.text(0.05, 0.95, f'R² = {r2_sepal:.2f}', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top', bbox=dict(boxstyle="round", facecolor="white", alpha=0.5))
 plt.tight_layout()
-plt.savefig('sepal_length_vs_width.png')  # Save the plot as a PNG file
+plt.savefig('lrm_sepal_length_vs_width.png')  # Save the plot as a PNG file
 plt.show()
 
 # Petal Length vs Petal Width
@@ -335,7 +335,7 @@ plt.legend(title='Species')
 plt.grid(True)
 plt.text(0.05, 0.95, f'R² = {r2_petal:.2f}', transform=plt.gca().transAxes, fontsize=12, verticalalignment='top', bbox=dict(boxstyle="round", facecolor="white", alpha=0.5))
 plt.tight_layout()
-plt.savefig('petal_length_vs_width.png')  # Save the plot as a PNG file
+plt.savefig('lrm_petal_length_vs_width.png')  # Save the plot as a PNG file
 plt.show()
 
 # - Logistic Regression
