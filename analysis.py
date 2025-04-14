@@ -288,7 +288,7 @@ sns.scatterplot(
 plt.title("K-means Clustering of Iris Dataset")
 plt.xlabel("Sepal Length")
 plt.ylabel("Sepal Width")
-plt.legend(title="Cluster (Species)")
+plt.legend(title="Species")
 plt.savefig('kmeans_clustering_by_species.png')
 plt.show()
 
