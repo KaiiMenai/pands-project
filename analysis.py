@@ -256,6 +256,7 @@ sns.scatterplot(x=principal_components[:, 0], y=principal_components[:, 1],
                 hue=iris_df['class'], s=100) # Scatter plot of the first two principal components
 plt.xlabel(f'PC1 ({pca.explained_variance_ratio_[0]:.1%})') # PC1 is the first principal component, which is the petal length and width
 plt.ylabel(f'PC2 ({pca.explained_variance_ratio_[1]:.1%})') # PC2 is the second principal component, which is the sepal length and width
+plt.legend(title="Species")
 plt.title("Principal Component Analysis of the Iris Dataset")
 plt.savefig('pca_by_species.png')
 plt.show()
