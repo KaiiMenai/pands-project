@@ -295,8 +295,6 @@ plt.show()
 
 # This dataset has previously been used for machine learning and classification tasks, so it may be useful to explore some of those techniques as well.
 # - Linear Regression
-## First for the sepal length and width, then for the petal length and width.
-## For each, ensure that the figure is saved as a png file.
 
 # Sepal Length vs Sepal Width
 plt.figure(figsize=(10, 6))
