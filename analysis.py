@@ -170,28 +170,24 @@ sns.histplot(data=iris_df, x="sepal length", hue="class", kde=False, ax=axes[0, 
 axes[0, 0].set_title("Sepal Length Distribution by Species")
 axes[0, 0].set_xlabel("Sepal Length")
 axes[0, 0].set_ylabel("Frequency")
-axes[0, 0].legend(title="Species")
 
 # Plot histogram for Sepal Width
 sns.histplot(data=iris_df, x="sepal width", hue="class", kde=False, ax=axes[0, 1], bins=15)
 axes[0, 1].set_title("Sepal Width Distribution by Species")
 axes[0, 1].set_xlabel("Sepal Width")
 axes[0, 1].set_ylabel("Frequency")
-axes[0, 1].legend(title="Species")
 
 # Plot histogram for Petal Length
 sns.histplot(data=iris_df, x="petal length", hue="class", kde=False, ax=axes[1, 0], bins=15)
 axes[1, 0].set_title("Petal Length Distribution by Species")
 axes[1, 0].set_xlabel("Petal Length")
 axes[1, 0].set_ylabel("Frequency")
-axes[1, 0].legend(title="Species")
 
 # Plot histogram for Petal Width
 sns.histplot(data=iris_df, x="petal width", hue="class", kde=False, ax=axes[1, 1], bins=15)
 axes[1, 1].set_title("Petal Width Distribution by Species")
 axes[1, 1].set_xlabel("Petal Width")
 axes[1, 1].set_ylabel("Frequency")
-axes[1, 1].legend(title="Species")
 
 # Adjust layout for better spacing
 plt.tight_layout()
@@ -237,7 +233,6 @@ plt.show()
 # - Correlation matrix
 corr_matrix = iris_df.iloc[:, :4].corr()
 sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
-plt.legend(title="Species")
 plt.title("Feature Correlation Matrix")
 plt.savefig('correlation_matrix_by_feature.png')
 plt.show()
