@@ -120,7 +120,6 @@ with open("summary_statistics.txt", "a") as file:  # Append to summary stats fil
         upper_bound = Q3 + 1.5 * IQR
         outliers = df[(df[column] < lower_bound) | (df[column] > upper_bound)]
         return outliers
-
     # Check for outliers in each numeric column for each species
     numeric_columns = iris_df.select_dtypes(include=[np.number]).columns
 
