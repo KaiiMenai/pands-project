@@ -413,9 +413,9 @@ plt.show()
 # - Classification techniques to predict the species of iris flowers based on their features.
 # - Regression techniques to predict continuous values based on features.
 # Exploratory Data Analysis (EDA):
-# Pros: Helps understand the data, identify patterns, and detect outliers.
-# Cons: May not provide insights into relationships between features and target variable.
-# Application: Can be used to visualize the distribution of features and their relationships with the target variable.
+# Pros: Helps understand the data, identify patterns, and detect any outliers.
+# Cons: May not provide insights into relationships between features and the target variable.
+# Application: Can be used to visualise the distribution of features (sepal length/width, petal length/width) and their relationships with the target variable (species).
 # It can help identify potential features for modeling and inform feature engineering decisions.
 
 
