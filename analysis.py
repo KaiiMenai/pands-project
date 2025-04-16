@@ -412,6 +412,11 @@ plt.show()
 # - K-means clustering to group similar data points and identify potential clusters in the data.
 # - Classification techniques to predict the species of iris flowers based on their features.
 # - Regression techniques to predict continuous values based on features.
+# Exploratory Data Analysis (EDA):
+# Pros: Helps understand the data, identify patterns, and detect outliers.
+# Cons: May not provide insights into relationships between features and target variable.
+# Application: Can be used to visualize the distribution of features and their relationships with the target variable.
+# It can help identify potential features for modeling and inform feature engineering decisions.
 
 
 # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
