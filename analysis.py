@@ -417,7 +417,11 @@ plt.show()
 # Cons: May not provide insights into relationships between features and the target variable.
 # Application: Can be used to visualise the distribution of features (sepal length/width, petal length/width) and their relationships with the target variable (species).
 # It can help identify potential features for modeling and inform feature engineering decisions.
-
+# Principal Component Analysis (PCA):
+# Pros: Reduces the complexity of the data, helps visualise high-dimensional data, captures any variance in the data.
+# Cons: May lose some information, sensitive to scaling, may not be interpretable.
+# Application: Can be used to visualize the data in a lower-dimensional space, identify clusters, and reduce noise.
+# It can help improve the performance of machine learning algorithms by reducing complexity and removing noise.
 
 # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
 
