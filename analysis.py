@@ -63,8 +63,9 @@ with open("basic_data_explore.txt", "w") as file:
     print(iris_df.head(), file=file) # This will print the first 5 rows of the dataset.
     print("The last 5 rows of the dataset:", file=file)
     print(iris_df.tail(), file=file) # This will print the last 5 rows of the dataset.
-    print("Created on: 07/04/2025", file=file)
-
+    print("The column names of the dataset:", file=file)
+    print(iris_df.columns, file=file) # This will print the column names of the dataset.
+    
 print("Basic data checks have been written to basic_data_explore.txt")
 
 with open("basic_data_explore.txt", "a") as file:
@@ -76,7 +77,6 @@ with open("basic_data_explore.txt", "a") as file:
     print(iris_df.duplicated().sum(), file=file) # This will print the number of duplicate rows in the dataset.
     print("The data types of each column in the dataset:", file=file)
     print(iris_df.dtypes, file=file) # This will print the data types of each column in the dataset.print("This is the initial content of the file.", file=file)
-    print("Created on: 07/04/2025", file=file)
     
 print("Basic data checks have been appended to basic_data_explore.txt")
 
@@ -167,28 +167,28 @@ fig, axes = plt.subplots(2, 2, figsize=(12, 10))
 # Plot histogram for Sepal Length
 sns.histplot(data=iris_df, x="sepal length", hue="class", kde=False, ax=axes[0, 0], bins=15)
 axes[0, 0].set_title("Sepal Length Distribution by Species")
-axes[0, 0].set_xlabel("Sepal Length")
+axes[0, 0].set_xlabel("Sepal Length (cm)")
 axes[0, 0].set_ylabel("Frequency")
 axes[0, 0].legend(title="Species", labels=iris_df['class'].unique(), loc='upper right')
 
 # Plot histogram for Sepal Width
 sns.histplot(data=iris_df, x="sepal width", hue="class", kde=False, ax=axes[0, 1], bins=15)
 axes[0, 1].set_title("Sepal Width Distribution by Species")
-axes[0, 1].set_xlabel("Sepal Width")
+axes[0, 1].set_xlabel("Sepal Width (cm)")
 axes[0, 1].set_ylabel("Frequency")
 axes[0, 1].legend(title="Species", labels=iris_df['class'].unique(), loc='upper right')
 
 # Plot histogram for Petal Length
 sns.histplot(data=iris_df, x="petal length", hue="class", kde=False, ax=axes[1, 0], bins=15)
 axes[1, 0].set_title("Petal Length Distribution by Species")
-axes[1, 0].set_xlabel("Petal Length")
+axes[1, 0].set_xlabel("Petal Length (cm)")
 axes[1, 0].set_ylabel("Frequency")
 axes[1, 0].legend(title="Species", labels=iris_df['class'].unique(), loc='upper right')
 
 # Plot histogram for Petal Width
 sns.histplot(data=iris_df, x="petal width", hue="class", kde=False, ax=axes[1, 1], bins=15)
 axes[1, 1].set_title("Petal Width Distribution by Species")
-axes[1, 1].set_xlabel("Petal Width")
+axes[1, 1].set_xlabel("Petal Width (cm)")
 axes[1, 1].set_ylabel("Frequency")
 axes[1, 1].legend(title="Species", labels=iris_df['class'].unique(), loc='upper right')
 
@@ -290,8 +290,8 @@ sns.scatterplot(
     s=100
 )
 plt.title("K-means Clustering of Iris Dataset")
-plt.xlabel("Sepal Length")
-plt.ylabel("Sepal Width")
+plt.xlabel("Sepal Length (cm)")
+plt.ylabel("Sepal Width (cm)")
 plt.legend(title="Species")
 plt.savefig('kmeans_clustering_by_species.png')
 plt.show()
