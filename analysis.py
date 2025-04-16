@@ -404,14 +404,14 @@ plt.show()
 # The pros and cons of each technique and how they may be applied to this dataset.
 # Why do any of these techniques?
 # - Basic EDA (Exploratory Data Analysis) to understand the data and its distribution.
-# - Visualisation to identify patterns and relationships between features and the target variable.
+# - Visualisation to identify patterns and relationships between features (sepal length/width, petal length/width) and their relationships with the target variable (species)..
 # - PCA to reduce dimensionality and visualize the data in a lower-dimensional space.
 # - Clustering to group similar data points and identify potential clusters in the data.
-# - Linear Regression to model the relationship between features and a continuous target variable.
-# - Logistic Regression to model the relationship between features and a binary or categorical target variable.
+# - Linear Regression to model the relationship between features and a continuous target variable (species).
+# - Logistic Regression to model the relationship between features and a binary or categorical target variable (species).
 # - K-means clustering to group similar data points and identify potential clusters in the data.
-# - Classification techniques to predict the species of iris flowers based on their features.
-# - Regression techniques to predict continuous values based on features.
+# - Classification techniques to predict the species of iris flowers based on their features (sepal length/width, petal length/width).
+# - Regression techniques to predict continuous values based on features (sepal length/width, petal length/width).
 # Exploratory Data Analysis (EDA):
 # Pros: Helps understand the data, identify patterns, and detect any outliers.
 # Cons: May not provide insights into relationships between features and the target variable.
@@ -434,9 +434,11 @@ plt.show()
 # It can help identify the most important features for classification and inform feature decisions.
 # Regression:
 # Linear Regression:
-
+# Pros: Simple to implement, interpretable coefficients, works well for linear relationships (iris dataset is linear).
+# Cons: Assumes linear relationship between features and target, sensitive to outliers, may not perform well with non-linear data.
+# Application: Can be used to predict continuous values (e.g., sepal width / petal width) based on other features (sepal length, petal length) .
+# It can be used to understand the relationship between features and the target variable (species).
 # Logistic Regression:
-
 
 # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
 
