@@ -342,6 +342,60 @@ plt.tight_layout()
 plt.savefig('lrm_petal_length_vs_width.png')  # Save the plot as a PNG file
 plt.show()
 
+# Linear Regression and R² values for Sepal Length vs Sepal Width and Petal Length vs Petal Width
+# The R² value indicates how well the model explains the variance in the data.
+# A higher R² value indicates a better fit.
+
+# Create a figure with two subplots
+fig, axes = plt.subplots(1, 2, figsize=(20, 8))
+
+# Sepal Length vs Sepal Width
+sns.scatterplot(ax=axes[0], data=df, x='sepal_length', y='sepal_width', hue='species', s=100)
+axes[0].set_title('Sepal Length vs Sepal Width by Species')
+axes[0].set_xlabel('Sepal Length (cm)')
+axes[0].set_ylabel('Sepal Width (cm)')
+axes[0].grid(True)
+
+# Fit and plot regression lines for each species
+for species in df['species'].unique():
+    subset = df[df['species'] == species]
+    X = subset[['sepal_length']]
+    y = subset['sepal_width']
+    model = LinearRegression()
+    model.fit(X, y)
+    y_pred = model.predict(X)
+    r2 = r2_score(y, y_pred)
+    sns.lineplot(ax=axes[0], x=subset['sepal_length'], y=y_pred, label=f'{species} (R²={r2:.2f})')
+    
+# Add legend title for the first subplot
+axes[0].legend(title='Species and Regression')
+
+# Petal Length vs Petal Width
+sns.scatterplot(ax=axes[1], data=df, x='petal_length', y='petal_width', hue='species', s=100)
+axes[1].set_title('Petal Length vs Petal Width by Species')
+axes[1].set_xlabel('Petal Length (cm)')
+axes[1].set_ylabel('Petal Width (cm)')
+axes[1].grid(True)
+
+# Fit and plot regression lines for each species
+for species in df['species'].unique():
+    subset = df[df['species'] == species]
+    X = subset[['petal_length']]
+    y = subset['petal_width']
+    model = LinearRegression()
+    model.fit(X, y)
+    y_pred = model.predict(X)
+    r2 = r2_score(y, y_pred)
+    sns.lineplot(ax=axes[1], x=subset['petal_length'], y=y_pred, label=f'{species} (R²={r2:.2f})')
+
+# Add legend title for the second subplot
+axes[1].legend(title='Species and Regression')
+
+plt.tight_layout()
+plt.savefig('linear_regression_and_r2_by_species.png')  # Save the plot as a PNG file
+plt.show()
+
+
 # - Logistic Regression
 
 
