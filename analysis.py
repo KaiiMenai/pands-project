@@ -425,6 +425,11 @@ plt.show()
 # Cons: May not work well with high-dimensional data, may not capture complex relationships.
 # Application: Can be used to visualize the relationship between features (sepal length/width, petal length/width) and the target variable (species).
 # It can help identify potential features for modeling and inform feature engineering decisions.
+# Box Plots:
+# Pros: Helps identify outliers, visualises the distribution of features by species.
+# Cons: May not work well with high-dimensional data, may not capture complex relationships.
+# Application: Can be used to visualize the distribution of features (sepal length/width, petal length/width) by species.
+# It can help identify potential features for modeling and inform feature engineering decisions.
 
 # Principal Component Analysis (PCA):
 # Pros: Reduces the complexity of the data, helps visualise high-dimensional data, captures any variance in the data.
