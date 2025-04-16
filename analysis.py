@@ -401,6 +401,8 @@ plt.show()
 
 
 # Discuss the pros and cons of each technique and how they may be applied to this dataset. - do this in a text file called 'analysis.txt'.
+# The pros and cons of each technique and how they may be applied to this dataset.
+# Why do any of these techniques?
 
 
 # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
