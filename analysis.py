@@ -439,6 +439,10 @@ plt.show()
 # Application: Can be used to predict continuous values (e.g., sepal width / petal width) based on other features (sepal length, petal length) .
 # It can be used to understand the relationship between features and the target variable (species).
 # Logistic Regression:
+# Pros: Simple to implement, interpretable coefficients, works well for binary classification.
+# Cons: Assumes linear relationship between features and log-odds, may not perform well with non-linear data.
+# Application: Can be used to predict the probability of a specific species based on features (sepal length/width, petal length/width).
+# It can be extended to multi-class classification using other techniques, like One-vs-Rest (OvR) or Softmax regression.
 
 # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
 
