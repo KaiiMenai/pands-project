@@ -422,6 +422,12 @@ plt.show()
 # Cons: May lose some information, sensitive to scaling, may not be interpretable.
 # Application: Can be used to visualize the data in a lower-dimensional space, identify clusters, and reduce noise.
 # It can help improve the performance of machine learning algorithms by reducing complexity and removing noise.
+# K-means Clustering:
+# Pros: Groups similar data points together, helps identify patterns and relationships in the data.
+# Cons: Sensitive to the choice of parameters, may not work well with non-spherical clusters.
+# Application: Can be used to identify clusters in the data, which may correspond to different iris flower species.
+# It can help identify potential subgroups within the data and inform feature engineering decisions.
+
 
 # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
 
