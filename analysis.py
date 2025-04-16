@@ -406,6 +406,12 @@ plt.show()
 # - Basic EDA (Exploratory Data Analysis) to understand the data and its distribution.
 # - Visualisation to identify patterns and relationships between features and the target variable.
 # - PCA to reduce dimensionality and visualize the data in a lower-dimensional space.
+# - Clustering to group similar data points and identify potential clusters in the data.
+# - Linear Regression to model the relationship between features and a continuous target variable.
+# - Logistic Regression to model the relationship between features and a binary or categorical target variable.
+# - K-means clustering to group similar data points and identify potential clusters in the data.
+# - Classification techniques to predict the species of iris flowers based on their features.
+# - Regression techniques to predict continuous values based on features.
 
 
 # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
