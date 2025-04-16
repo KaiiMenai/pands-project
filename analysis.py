@@ -432,7 +432,10 @@ plt.show()
 # Cons: Sensitive to the choice of parameters, may not work well with imbalanced data (luckily the iris dataset is balanced).
 # Application: Can be used to predict the iris flower species based on their features.
 # It can help identify the most important features for classification and inform feature decisions.
+# Regression:
+# Linear Regression:
 
+# Logistic Regression:
 
 
 # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
