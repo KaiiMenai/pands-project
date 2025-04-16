@@ -169,24 +169,28 @@ sns.histplot(data=iris_df, x="sepal length", hue="class", kde=False, ax=axes[0, 
 axes[0, 0].set_title("Sepal Length Distribution by Species")
 axes[0, 0].set_xlabel("Sepal Length")
 axes[0, 0].set_ylabel("Frequency")
+axes[0, 0].legend(title="Species", labels=iris_df['class'].unique(), loc='upper right')
 
 # Plot histogram for Sepal Width
 sns.histplot(data=iris_df, x="sepal width", hue="class", kde=False, ax=axes[0, 1], bins=15)
 axes[0, 1].set_title("Sepal Width Distribution by Species")
 axes[0, 1].set_xlabel("Sepal Width")
 axes[0, 1].set_ylabel("Frequency")
+axes[0, 1].legend(title="Species", labels=iris_df['class'].unique(), loc='upper right')
 
 # Plot histogram for Petal Length
 sns.histplot(data=iris_df, x="petal length", hue="class", kde=False, ax=axes[1, 0], bins=15)
 axes[1, 0].set_title("Petal Length Distribution by Species")
 axes[1, 0].set_xlabel("Petal Length")
 axes[1, 0].set_ylabel("Frequency")
+axes[1, 0].legend(title="Species", labels=iris_df['class'].unique(), loc='upper right')
 
 # Plot histogram for Petal Width
 sns.histplot(data=iris_df, x="petal width", hue="class", kde=False, ax=axes[1, 1], bins=15)
 axes[1, 1].set_title("Petal Width Distribution by Species")
 axes[1, 1].set_xlabel("Petal Width")
 axes[1, 1].set_ylabel("Frequency")
+axes[1, 1].legend(title="Species", labels=iris_df['class'].unique(), loc='upper right')
 
 # Adjust layout for better spacing
 plt.tight_layout()
@@ -222,9 +226,10 @@ plt.show()
 # Other analysis types that may be appropriate - for each ensure that the figure is saved as a png file.
 # - Pair plots
 
-sns.pairplot(iris_df, hue='class', height=2.5)
+pairplot = sns.pairplot(iris_df, hue='class', height=2.5)
 # give the plot a title
 plt.suptitle("Pairwise Feature Relationship", y=1.02)
+pairplot._legend.set_title('Species')
 # Save the figure for pairplot as a PNG file and show
 plt.savefig('pairplot_by_species.png')
 plt.show()
