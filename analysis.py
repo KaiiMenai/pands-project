@@ -357,7 +357,7 @@ axes[0].set_ylabel('Sepal Width (cm)')
 axes[0].grid(True)
 
 # Fit and plot regression lines for each species
-for species in df['class'].unique():
+for species in iris_df['class'].unique():
     subset = iris_df[iris_df['class'] == species]
     X = subset[['sepal length']]
     y = subset['sepal width']
@@ -378,7 +378,7 @@ axes[1].set_ylabel('Petal Width (cm)')
 axes[1].grid(True)
 
 # Fit and plot regression lines for each species
-for species in df['class'].unique():
+for species in iris_df['class'].unique():
     subset = iris_df[iris_df['class'] == species]
     X = subset[['petal length']]
     y = subset['petal width']
