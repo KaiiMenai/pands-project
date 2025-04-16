@@ -427,6 +427,12 @@ plt.show()
 # Cons: Sensitive to the choice of parameters, may not work well with non-spherical clusters.
 # Application: Can be used to identify clusters in the data, which may correspond to different iris flower species.
 # It can help identify potential subgroups within the data and inform feature engineering decisions.
+# Classification:
+# Pros: Can be used to predict categorical outcomes (i.e. species), interpretable results.
+# Cons: Sensitive to the choice of parameters, may not work well with imbalanced data (luckily the iris dataset is balanced).
+# Application: Can be used to predict the iris flower species based on their features.
+# It can help identify the most important features for classification and inform feature decisions.
+
 
 
 # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
