@@ -421,6 +421,10 @@ plt.show()
 # Application: Can be used to visualise the distribution of features (sepal length/width, petal length/width) and their relationships with the target variable (species).
 # It can help identify potential features for modeling and inform feature engineering decisions.
 # Scatter Plots:
+# Pros: Visualises the relationship between features and the target variable, helps identify patterns and relationships.
+# Cons: May not work well with high-dimensional data, may not capture complex relationships.
+# Application: Can be used to visualize the relationship between features (sepal length/width, petal length/width) and the target variable (species).
+# It can help identify potential features for modeling and inform feature engineering decisions.
 
 # Principal Component Analysis (PCA):
 # Pros: Reduces the complexity of the data, helps visualise high-dimensional data, captures any variance in the data.
