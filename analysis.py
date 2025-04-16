@@ -406,7 +406,10 @@ plt.show()
 # - Basic EDA (Exploratory Data Analysis) to understand the data and its distribution.
 # - Visualisation to identify patterns and relationships between features (sepal length/width, petal length/width) and their relationships with the target variable (species)..
 # - PCA to reduce dimensionality and visualize the data in a lower-dimensional space.
+# - Scatter plots to visualize the relationship between features (sepal length/width, petal length/width) and the target variable (species).
+# - Box plots to identify outliers and understand the distribution of features (sepal length/width, petal length/width) by species.
 # - Clustering to group similar data points and identify potential clusters in the data.
+# - Pair plots to visualize the relationships between all pairs of features and the target variable (species).
 # - Linear Regression to model the relationship between features and a continuous target variable (species).
 # - Logistic Regression to model the relationship between features and a binary or categorical target variable (species).
 # - K-means clustering to group similar data points and identify potential clusters in the data.
@@ -417,6 +420,8 @@ plt.show()
 # Cons: May not provide insights into relationships between features and the target variable.
 # Application: Can be used to visualise the distribution of features (sepal length/width, petal length/width) and their relationships with the target variable (species).
 # It can help identify potential features for modeling and inform feature engineering decisions.
+# Scatter Plots:
+
 # Principal Component Analysis (PCA):
 # Pros: Reduces the complexity of the data, helps visualise high-dimensional data, captures any variance in the data.
 # Cons: May lose some information, sensitive to scaling, may not be interpretable.
