@@ -401,8 +401,10 @@ plt.show()
 
 
 # Discuss the pros and cons of each technique and how they may be applied to this dataset. - do this in a text file called 'analysis.txt'.
+
 # The pros and cons of each technique and how they may be applied to this dataset.
 # Why do any of these techniques?
+
 # - Basic EDA (Exploratory Data Analysis) to understand the data and its distribution.
 # - Visualisation to identify patterns and relationships between features (sepal length/width, petal length/width) and their relationships with the target variable (species)..
 # - PCA to reduce dimensionality and visualise the data in a lower-dimensional space.
@@ -415,47 +417,57 @@ plt.show()
 # - K-means clustering to group similar data points and identify potential clusters in the data.
 # - Classification techniques to predict the species of iris flowers based on their features (sepal length/width, petal length/width).
 # - Regression techniques to predict continuous values based on features (sepal length/width, petal length/width).
+
 # Exploratory Data Analysis (EDA):
 # Pros: Helps understand the data, identify patterns, and detect any outliers.
 # Cons: May not provide insights into relationships between features and the target variable.
 # Application: Can be used to visualise the distribution of features (sepal length/width, petal length/width) and their relationships with the target variable (species).
 # It can help identify potential features for modeling and inform feature engineering decisions.
+
 # Scatter Plots:
 # Pros: Visualises the relationship between features and the target variable, helps identify patterns and relationships.
 # Cons: May not work well with high-dimensional data, may not capture complex relationships.
 # Application: Can be used to visualise the relationship between features (sepal length/width, petal length/width) and the target variable (species).
 # It can help identify potential features for modeling and inform feature engineering decisions.
+
 # Box Plots:
 # Pros: Helps identify outliers, visualises the distribution of features by species.
 # Cons: May not work well with high-dimensional data, may not capture complex relationships.
 # Application: Can be used to visualise the distribution of features (sepal length/width, petal length/width) by species.
 # It can help identify potential features for modeling and inform feature engineering decisions.
+
 # Correlation Matrix:
 # Pros: Helps identify relationships between features, visualises the correlation between features and the target variable.
 # Cons: May not work well with high-dimensional data, may not capture complex relationships.
 # Application: Can be used to visualise the correlation between features (sepal length/width, petal length/width) and the target variable (species).
 # It can help identify potential features for modeling and inform feature engineering decisions.
+
 # Principal Component Analysis (PCA):
 # Pros: Reduces the complexity of the data, helps visualise high-dimensional data, captures any variance in the data.
 # Cons: May lose some information, sensitive to scaling, may not be interpretable.
 # Application: Can be used to visualise the data in a lower-dimensional space, identify clusters, and reduce noise.
 # It can help improve the performance of machine learning algorithms by reducing complexity and removing noise.
+
 # K-means Clustering:
 # Pros: Groups similar data points together, helps identify patterns and relationships in the data.
 # Cons: Sensitive to the choice of parameters, may not work well with non-spherical clusters.
 # Application: Can be used to identify clusters in the data, which may correspond to different iris flower species.
 # It can help identify potential subgroups within the data and inform feature engineering decisions.
+
 # Classification:
 # Pros: Can be used to predict categorical outcomes (i.e. species), interpretable results.
 # Cons: Sensitive to the choice of parameters, may not work well with imbalanced data (luckily the iris dataset is balanced).
 # Application: Can be used to predict the iris flower species based on their features.
 # It can help identify the most important features for classification and inform feature decisions.
+
 # Regression:
+
 # Linear Regression:
 # Pros: Simple to implement, interpretable coefficients, works well for linear relationships (iris dataset is linear).
 # Cons: Assumes linear relationship between features and target, sensitive to outliers, may not perform well with non-linear data.
 # Application: Can be used to predict continuous values (e.g., sepal width / petal width) based on other features (sepal length, petal length) .
 # It can be used to understand the relationship between features and the target variable (species).
+
 # Logistic Regression:
 # Pros: Simple to implement, interpretable coefficients, works well for binary classification.
 # Cons: Assumes linear relationship between features and log-odds, may not perform well with non-linear data.
