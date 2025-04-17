@@ -51,6 +51,19 @@ iris_df = pd.read_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv')
 
 print(iris_df) # This will print the dataframe into the terminal and also gi ve a brief summary of (150 rows x 5 columns).
 
+    # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
+
+    # FOR SAVING AS A TXT FILE AND APPENDING AS WE GO ON 
+    ## First, create a file with some initial content
+    ## Now, append to the file
+#with open("append_example.txt", "a") as file:
+#    print("\nThis content is being appended to the file.", file=file)
+#    print("Appended on: 2023-09-02", file=file)
+#print("Additional content has been appended to append_example.txt")
+    ## Check the final content
+#print("\nFinal content of the file:")
+#with open("append_example.txt", "r") as file:    print(file.read())
+
 # Basic data checks - check for missing values, duplicates, and data types
 ## Using the 'with' statement to handle file operations
 
@@ -473,25 +486,3 @@ plt.show()
 # Cons: Assumes linear relationship between features and log-odds, may not perform well with non-linear data.
 # Application: Can be used to predict the probability of a specific species based on features (sepal length/width, petal length/width).
 # It can be extended to multi-class classification using other techniques, like One-vs-Rest (OvR) or Softmax regression.
-
-
-
-
-# printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
-
-
-# FOR SAVING AS A TXT FILE AND APPENDING AS WE GO ON 
-## First, create a file with some initial content
-
-
-
-## Now, append to the file
-#with open("append_example.txt", "a") as file:
-#    print("\nThis content is being appended to the file.", file=file)
-#    print("Appended on: 2023-09-02", file=file)
-
-#print("Additional content has been appended to append_example.txt")
-
-## Let's check the final content
-#print("\nFinal content of the file:")
-#with open("append_example.txt", "r") as file:    print(file.read())
