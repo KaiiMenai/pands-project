@@ -67,8 +67,7 @@ print(iris_df) # This will print the dataframe into the terminal and also gi ve 
 # Basic data checks - check for missing values, duplicates, and data types
 ## Using the 'with' statement to handle file operations
 
-
-with open("basic_data_explore.txt", "w") as file:
+with open("basic_data_explore.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
     print("Basic data checks:", file=file)
     print("The shape of the dataset:", file=file)
     print(iris_df.shape, file=file)
