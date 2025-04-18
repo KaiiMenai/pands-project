@@ -431,19 +431,19 @@ y_species_pred = model_species.predict(X_species_test)
 # Calculate accuracy - here the predicted species (y_species_pred) with the actual species (y_species_test) are compared, to see how many were predicted correctly.
 accuracy = accuracy_score(y_species_test, y_species_pred)
 
-print("\nLogistic Regression for Species Classification Results:") # How to do it - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
-print(f"Accuracy: {accuracy:.4f}")
-print("\nClassification Report:")
-print(classification_report(y_species_test, y_species_pred, target_names=le.classes_))
-
-# Example prediction - predict species based on sepal and petal measurements.
-print("\nExample Prediction (measurements in cm):")
+with open("logistic_regression.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
+    print("\nLogistic Regression for Species Classification Results:", file=file) # How to do it - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
+    print(f"Accuracy: {accuracy:.4f}", file=file)
+    print("\nClassification Report:", file=file)
+    print(classification_report(y_species_test, y_species_pred, target_names=le.classes_), file=file)
+    # Example prediction - predict species based on sepal and petal measurements.
+    print("\nExample Prediction (measurements in cm).", file=file)
 example_data = pd.DataFrame([[5.1, 3.5, 1.4, 0.2]], 
                             columns=['sepal length', 'sepal width', 'petal length', 'petal width'])  # Match feature names to those in the training set
 predicted_species = model_species.predict(example_data)
+    print(f"\nPredicted species for {example_data.iloc[0].tolist()}: {le.inverse_transform(predicted_species)[0]}", file=file) # This will print the last 5 rows of the dataset.
 
-print(f"\nPredicted species for {example_data.iloc[0].tolist()}: {le.inverse_transform(predicted_species)[0]}")
-
+print("Logistic regression results have been written to logistic_regression.txt")
 # Discuss the pros and cons of each technique and how they may be applied to this dataset. - do this in a text file called 'analysis.txt'.
 
 # The pros and cons of each technique and how they may be applied to this dataset.
