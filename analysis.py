@@ -438,9 +438,9 @@ with open("logistic_regression.txt", "w") as file: # The (file=file) argument is
     print(classification_report(y_species_test, y_species_pred, target_names=le.classes_), file=file)
     # Example prediction - predict species based on sepal and petal measurements.
     print("\nExample Prediction (measurements in cm).", file=file)
-example_data = pd.DataFrame([[5.1, 3.5, 1.4, 0.2]], 
-                            columns=['sepal length', 'sepal width', 'petal length', 'petal width'])  # Match feature names to those in the training set
-predicted_species = model_species.predict(example_data)
+    example_data = pd.DataFrame([[5.1, 3.5, 1.4, 0.2]], 
+                                columns=['sepal length', 'sepal width', 'petal length', 'petal width'])  # Match feature names to those in the training set
+    predicted_species = model_species.predict(example_data)
     print(f"\nPredicted species for {example_data.iloc[0].tolist()}: {le.inverse_transform(predicted_species)[0]}", file=file) # This will print the last 5 rows of the dataset.
 
 print("Logistic regression results have been written to logistic_regression.txt")
