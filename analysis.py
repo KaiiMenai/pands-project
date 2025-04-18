@@ -432,7 +432,7 @@ y_species_pred = model_species.predict(X_species_test)
 accuracy = accuracy_score(y_species_test, y_species_pred)
 
 with open("logistic_regression.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
-    print("\nLogistic Regression for Species Classification Results:", file=file) # How to do it - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
+    print("Logistic Regression for Species Classification Results:", file=file) # How to do it - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
     print(f"Accuracy: {accuracy:.4f}", file=file)
     print("\nClassification Report:", file=file)
     print(classification_report(y_species_test, y_species_pred, target_names=le.classes_), file=file)
