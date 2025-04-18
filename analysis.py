@@ -408,9 +408,41 @@ plt.savefig('linear_regression_and_r2_by_species.png')  # Save the plot as a PNG
 plt.show()
 
 
-# - Logistic Regression
+# - Logistic Regression - model taken from my PoDA project, but adapted for this dataset. (https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb)
 
+# Prepare data for species classification
+X_species = iris_df[['sepal length', 'sepal width', 'petal length', 'petal width']] # These are the features that will be used during the classification.
+y_species = iris_df['class'] # This is the target variable that is aimed to be predicted.
 
+# Encode species names to numerical values - Encoding species as numerical values (https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html )
+le = LabelEncoder()
+y_species = le.fit_transform(y_species) # setosa = 0, versicolor = 1, virginica = 2
+
+# Split the dataset into an 80 % (training) and 20 % (testing) split.
+X_species_train, X_species_test, y_species_train, y_species_test = train_test_split(X_species, y_species, test_size=0.2, random_state=42)
+
+# Create and fit the model
+model_species = LogisticRegression(max_iter=200)
+model_species.fit(X_species_train, y_species_train)
+
+# Make predictions on the x_species_test set.
+y_species_pred = model_species.predict(X_species_test)
+
+# Calculate accuracy - here the predicted species (y_species_pred) with the actual species (y_species_test) are compared, to see how many were predicted correctly.
+accuracy = accuracy_score(y_species_test, y_species_pred)
+
+print("\nLogistic Regression for Species Classification Results:") # How to do it - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
+print(f"Accuracy: {accuracy:.4f}")
+print("\nClassification Report:")
+print(classification_report(y_species_test, y_species_pred, target_names=le.classes_))
+
+# Example prediction - predict species based on sepal and petal measurements.
+print("\nExample Prediction (measurements in cm):")
+example_data = pd.DataFrame([[5.1, 3.5, 1.4, 0.2]], 
+                            columns=['sepal length', 'sepal width', 'petal length', 'petal width'])  # Match feature names to those in the training set
+predicted_species = model_species.predict(example_data)
+
+print(f"\nPredicted species for {example_data.iloc[0].tolist()}: {le.inverse_transform(predicted_species)[0]}")
 
 # Discuss the pros and cons of each technique and how they may be applied to this dataset. - do this in a text file called 'analysis.txt'.
 
