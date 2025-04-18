@@ -276,9 +276,8 @@ plt.title("Principal Component Analysis of the Iris Dataset")
 plt.savefig('pca_by_species.png')
 plt.show()
 
-# - Clustering analysis (e. K-means clustering)
-# clustering analysis is a technique used to group similar data points together.
-# In this case, we will use K-means clustering to group the iris dataset into three clusters (corresponding to the three species).
+# - Clustering analysis (e. K-means clustering) is used to group similar data points together.
+# In this case, K-means clustering is used to group the iris dataset into three clusters (corresponding to the three species).
 from sklearn.cluster import KMeans 
 
 # Perform K-means clustering
