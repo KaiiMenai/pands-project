@@ -464,15 +464,14 @@ with open("analysis.txt", "w") as file:
     print("\n\t- Logistic Regression to model the relationship between features and a binary or categorical target variable (species).", file=file)
     print("\n", file=file)
     print("\nEach technique used and short notes on them.", file=file)
+    print("\n", file=file)
+    print("\nExploratory Data Analysis (EDA):", file=file)
+    print("\n\tPros: Helps understand the data, identify patterns, and detect any outliers.", file=file)
+    print("\n\tCons: May not provide insights into relationships between features and the target variable.", file=file)
+    print("\n\tApplication: Can be used to visualise the distribution of features (sepal length/width, petal length/width) and their relationships with the target variable (species).", file=file)
+    print("\nIt can help identify potential features for modeling and inform feature engineering decisions.", file=file)
 
 
-
-
-# Exploratory Data Analysis (EDA):
-# Pros: Helps understand the data, identify patterns, and detect any outliers.
-# Cons: May not provide insights into relationships between features and the target variable.
-# Application: Can be used to visualise the distribution of features (sepal length/width, petal length/width) and their relationships with the target variable (species).
-# It can help identify potential features for modeling and inform feature engineering decisions.
 
 # Scatter Plots:
 # Pros: Visualises the relationship between features and the target variable, helps identify patterns and relationships.
