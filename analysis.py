@@ -183,7 +183,7 @@ print("Checks for data outliers has been appended to summary_statistics.txt")
 # Write summary stats observations to the analysis.txt file.
 
 with open("analysis.txt", "a") as file:
-    print("\ndata = iris_df.drop_duplicates(subset="'class'",)", file=file) 
+    print("\ndata = iris_df.drop_duplicates(subset="'class'".)", file=file) 
     print("\nDuplicates were removed from the data using the drop_duplicates function.", file=file)
     print("\nThe code used for this was")
     print("Summary statistics for each species:", file=file)
