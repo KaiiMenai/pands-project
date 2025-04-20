@@ -99,38 +99,40 @@ with open("analysis.txt", "w") as file: # The (file=file) argument is important 
     print("\n", file=file)
     print("The shape of the dataset:", file=file)
     print(iris_df.shape, file=file)
-    print("\n", file=file)
+
     print("The dataset contains 150 rows of data and 5 columns. The 5 columns are the species of isis flower (here noted as 'class'), and sepal length, sepal width, petal length, and petal width.", file=file)
     print("The first and last five rows of the dataset are printed below, as well as the column names within the dataset.", file=file)
-    print("\n", file=file)
+
     print("The first 5 rows of the dataset:", file=file)
     print(iris_df.head(), file=file) # first 5 rows.
-    print("\n", file=file)
+
     print("The last 5 rows of the dataset:", file=file)
     print(iris_df.tail(), file=file) # last 5 rows.
-    print("\n", file=file)
+
     print("The column names of the dataset:", file=file)
     print(iris_df.columns, file=file) # column names.
-    print("\n", file=file)
+
     print("These print checks were conducted to ensure that the data was correctly imported and in the correct format.", file=file)
-    print("\n", file=file)
+
 print("Basic data explanation written to analysis.txt")
 
 with open("analysis.txt", "a") as file:
     print("The number of rows and columns in the dataset:", file=file)
-    print(iris_df.info(), file=file) # number of rows and columns.
-    print("\n", file=file)
+    print(iris_df.shape(), file=file) # number of rows and columns.
+
     print("The number of missing values in the dataset:", file=file)
     print(iris_df.isnull().sum(), file=file) # number of missing values.
-    print("\n", file=file)
+
     print("The number of duplicate rows in the dataset:", file=file)
     print(iris_df.duplicated().sum(), file=file) # number of duplicate rows.
-    print("\n", file=file)
+
     print("The data types of each column in the dataset:", file=file)
     print(iris_df.dtypes, file=file)
-    print("\n", file=file)
-    print("\nMissing values were checked for in the dataset, there were none. If there were missing values, the dataset would need to be cleaned and sorted further before any analysis could be conducted. There were no missing values in this dataset, so further cleaning was unnecessary.", file=file)
-    print("\nFrom the information table, it can be seen that where one column has categorical (object) data (class column - also referred to as species for this dataset) and the four other columns (sepal length, sepal width, petal length, and petal width) are of the float type (float64) (continuous variables) with non-Null entries. That is, there are no 0 / null~ entries in the dataset.", file=file)
+
+    print("Missing values were checked for in the dataset, there were none.", file=file)
+    print("If there were missing values, the dataset would need to be cleaned and sorted further before any analysis could be conducted.", file=file)
+    print("There were no missing values in this dataset, so further cleaning was unnecessary.", file=file)
+    print("\nFrom the information table, it can be seen that where one column has categorical (object) data (class column - also referred to as species for this dataset) \nand the four other columns (sepal length, sepal width, petal length, and petal width) are of the float type (float64) (continuous variables) with non-Null entries. That is, there are no 0 / null~ entries in the dataset.", file=file)
     
 print("Basic data checks explanation has been appended to analysis.txt")
 
