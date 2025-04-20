@@ -92,6 +92,36 @@ with open("basic_data_explore.txt", "a") as file:
     
 print("Basic data checks have been appended to basic_data_explore.txt")
 
+# Write observations from the basic data checks to a text file.
+
+with open("analysis.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
+    print("Data Analysis conducted on the Iris Dataset", file=file)
+    print("The shape of the dataset:", file=file)
+    print(iris_df.shape, file=file)
+    print("The dataset contains 150 rows of data and 5 columns. The 5 columns are of the categorical variable that is the species of isis flower (here noted as 'class'), and 4 continuous numerical variables (sepal length, sepal width, petal length, and petal width).", file=file)
+    print("The first and last five rows of the dataset are printed below, as well as the column names within the dataset.", file=file)
+    print("The first 5 rows of the dataset:", file=file)
+    print(iris_df.head(), file=file) # This will print the first 5 rows of the dataset.
+    print("The last 5 rows of the dataset:", file=file)
+    print(iris_df.tail(), file=file) # This will print the last 5 rows of the dataset.
+    print("The column names of the dataset:", file=file)
+    print(iris_df.columns, file=file) # This will print the column names of the dataset.
+    print("These print checks were conducted to ensure that the data was correctly imported and in the correct format.", file=file)
+    
+print("Basic data explanation written to analysis.txt")
+
+with open("analysis.txt", "a") as file:
+    print("The number of rows and columns in the dataset:", file=file)
+    print(iris_df.info(), file=file) # This will print the number of rows and columns in the dataset.
+    print("The number of missing values in the dataset:", file=file)
+    print(iris_df.isnull().sum(), file=file) # This will print the number of missing values in the dataset.
+    print("The number of duplicate rows in the dataset:", file=file)
+    print(iris_df.duplicated().sum(), file=file) # This will print the number of duplicate rows in the dataset.
+    print("The data types of each column in the dataset:", file=file)
+    print(iris_df.dtypes, file=file) # This will print the data types of each column in the dataset.print("This is the initial content of the file.", file=file)
+    
+print("Basic data checks explanation has been appended to analysis.txt")
+
 # Need to make sure tha any duplicates are removed and that the data types are correct before conducting any analysis.
 # Already checked for missing values and we know there are 0, but there are 3 duplicate rows in the dataset.
 
@@ -148,37 +178,28 @@ with open("summary_statistics.txt", "a") as file:  # Append to summary stats fil
 
 print("Checks for data outliers has been appended to summary_statistics.txt")
 
+# Write summary stats observations to the analysis.txt file.
+
+with open("analysis.txt", "a") as file:
+    print("Summary statistics for each species:", file=file)
+    print("\n")
+        # Separate the dataset by species
+    setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
+    versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
+    virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
+    # Display the statistics for each species
+    print("Setosa Statistics:", file=file)
+    print(setosa_stats, file=file)
+    print("\n")
+    print("\nVersicolor Statistics:", file=file)
+    print(versicolor_stats, file=file)
+    print("\n")
+    print("\nVirginica Statistics:", file=file)
+    print(virginica_stats, file=file)
+    
+print("Summary Stats has been appended to analysis.txt")
+
 # Here good to do boxplots to illustrate the outliers in the dataset.
-
-# Write observations from the basic data checks and summary stats to a text file.
-
-with open("analysis.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
-    print("Data Analysis conducted on the Iris Dataset", file=file)
-    print("The shape of the dataset:", file=file)
-    print(iris_df.shape, file=file)
-    print("The dataset contains 150 rows of data and 5 columns. The 5 columns are of the categorical variable that is the species of isis flower (here noted as 'class'), and 4 continuous numerical variables (sepal length, sepal width, petal length, and petal width).", file=file)
-    print("The first and last five rows of the dataset are printed below:", file=file)
-    print("The first 5 rows of the dataset:", file=file)
-    print(iris_df.head(), file=file) # This will print the first 5 rows of the dataset.
-    print("The last 5 rows of the dataset:", file=file)
-    print(iris_df.tail(), file=file) # This will print the last 5 rows of the dataset.
-    print("The column names of the dataset:", file=file)
-    print(iris_df.columns, file=file) # This will print the column names of the dataset.
-    
-print("Basic data checks have been written to basic_data_explore.txt")
-
-with open("basic_data_explore.txt", "a") as file:
-    print("The number of rows and columns in the dataset:", file=file)
-    print(iris_df.info(), file=file) # This will print the number of rows and columns in the dataset.
-    print("The number of missing values in the dataset:", file=file)
-    print(iris_df.isnull().sum(), file=file) # This will print the number of missing values in the dataset.
-    print("The number of duplicate rows in the dataset:", file=file)
-    print(iris_df.duplicated().sum(), file=file) # This will print the number of duplicate rows in the dataset.
-    print("The data types of each column in the dataset:", file=file)
-    print(iris_df.dtypes, file=file) # This will print the data types of each column in the dataset.print("This is the initial content of the file.", file=file)
-    
-print("Basic data checks have been appended to basic_data_explore.txt")
-
 # Box plots - plot and save box plots for each variable in the dataset and save as a png file.
 
 # Boxplots by species
