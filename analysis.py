@@ -153,9 +153,11 @@ print("Checks for data outliers has been appended to summary_statistics.txt")
 # Write observations from the basic data checks and summary stats to a text file.
 
 with open("analysis.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
-    print("Basic data checks:", file=file)
+    print("Data Analysis conducted on the Iris Dataset", file=file)
     print("The shape of the dataset:", file=file)
     print(iris_df.shape, file=file)
+    print("The dataset contains 150 rows of data and 5 columns. The 5 columns are of the categorical variable that is the species of isis flower (here noted as 'class'), and 4 continuous numerical variables (sepal length, sepal width, petal length, and petal width).", file=file)
+    print("The first and last five rows of the dataset are printed below:", file=file)
     print("The first 5 rows of the dataset:", file=file)
     print(iris_df.head(), file=file) # This will print the first 5 rows of the dataset.
     print("The last 5 rows of the dataset:", file=file)
