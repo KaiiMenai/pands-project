@@ -138,6 +138,8 @@ with open("summary_statistics.txt", "w") as file:  # New file for summary stats
     # Summary statistics for each species
     print("Value counts for each of the species:", file=file)
     print(iris_df['class'].value_counts(), file=file)  # Count of each species in the dataset
+    print("\nSummary statistics for the whole dataset:", file=file)
+    print(iris_df.describe(), file=file)  # Summary statistics for the entire dataset
     print("Summary statistics for each species:", file=file)
     
     # Separate the dataset by species
@@ -194,8 +196,8 @@ with open("analysis.txt", "a") as file:
     print(iris_df['class'].value_counts(), file=file)
     print("\nIt can be seen that there are 50 samples for each of the three classes (species) of iris, setosa, versicolor, and virginica.", file=file)
     print("\nIn the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.", file=file)
-    print("\nSummary statistics:")
-    print(iris_df.describe())
+    print("\nSummary statistics for the whole dataset:", file=file)
+    print(iris_df.describe(), file=file)
     print("\nSummary statistics for each species:", file=file)
         # Separate the dataset by species
     setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
