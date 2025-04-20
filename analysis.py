@@ -479,18 +479,12 @@ with open("analysis.txt", "w") as file:
     print("\n\tPros: Helps identify outliers, visualises the distribution of features by species.", file=file)
     print("\n\tCons: May not work well with high-dimensional data, may not capture complex relationships.", file=file)
     print("\n\tApplication: Can be used to visualise the distribution of features (sepal length/width, petal length/width) by species.", file=file)
+    print("\n", file=file)
+    print("\nCorrelation Matrix:", file=file)
+    print("\n\tPros: Helps identify relationships between features, visualises the correlation between features and the target variable.", file=file)
+    print("\n\tCons: May not work well with high-dimensional data, may not capture complex relationships.", file=file)
+    print("\n\tApplication: Can be used to visualise the correlation between features (sepal length/width, petal length/width) and the target variable (species).", file=file)
 
-
-# 
-# 
-# 
-# 
-
-# Correlation Matrix:
-# Pros: Helps identify relationships between features, visualises the correlation between features and the target variable.
-# Cons: May not work well with high-dimensional data, may not capture complex relationships.
-# Application: Can be used to visualise the correlation between features (sepal length/width, petal length/width) and the target variable (species).
-# It can help identify potential features for modeling and inform feature engineering decisions.
 
 # Principal Component Analysis (PCA):
 # Pros: Reduces the complexity of the data, helps visualise high-dimensional data, captures any variance in the data.
