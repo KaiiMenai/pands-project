@@ -113,7 +113,7 @@ print("Basic data explanation written to analysis.txt")
 
 with open("analysis.txt", "a") as file:
     print("The number of rows and columns in the dataset:", file=file)
-    print(iris_df.shape(), file=file) # number of rows and columns.
+    print(iris_df.info(), file=file) # number of rows and columns.
     print("\nThe number of missing values in the dataset:", file=file)
     print(iris_df.isnull().sum(), file=file) # number of missing values.
     print("\nThe number of duplicate rows in the dataset:", file=file)
@@ -189,7 +189,7 @@ with open("analysis.txt", "a") as file:
     print("\nDuplicates were removed from the data using the drop_duplicates function.", file=file)
     print("\nThe code used for this was: \ndata = iris_df.drop_duplicates(subset="'class'".)", file=file)
     print("Summary statistics for each species:", file=file)
-    print("\n", file=file)
+
         # Separate the dataset by species
     setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
     versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
@@ -197,13 +197,10 @@ with open("analysis.txt", "a") as file:
     # Display the statistics for each species
     print("Setosa Statistics:", file=file)
     print(setosa_stats, file=file)
-    print("\n")
     print("\nVersicolor Statistics:", file=file)
     print(versicolor_stats, file=file)
-    print("\n")
     print("\nVirginica Statistics:", file=file)
     print(virginica_stats, file=file)
-    print("\n")
     
     
 print("Summary Stats has been appended to analysis.txt")

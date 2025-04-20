@@ -4,10 +4,8 @@ Data Analysis conducted on the Iris Dataset
 The shape of the dataset:
 (150, 5)
 
-
 The dataset contains 150 rows of data and 5 columns. The 5 columns are the species of isis flower (here noted as 'class'), and sepal length, sepal width, petal length, and petal width.
 The first and last five rows of the dataset are printed below, as well as the column names within the dataset.
-
 
 The first 5 rows of the dataset:
    sepal length  sepal width  petal length  petal width        class
@@ -17,7 +15,6 @@ The first 5 rows of the dataset:
 3           4.6          3.1           1.5          0.2  Iris-setosa
 4           5.0          3.6           1.4          0.2  Iris-setosa
 
-
 The last 5 rows of the dataset:
      sepal length  sepal width  petal length  petal width           class
 145           6.7          3.0           5.2          2.3  Iris-virginica
@@ -26,17 +23,12 @@ The last 5 rows of the dataset:
 148           6.2          3.4           5.4          2.3  Iris-virginica
 149           5.9          3.0           5.1          1.8  Iris-virginica
 
-
 The column names of the dataset:
 Index(['sepal length', 'sepal width', 'petal length', 'petal width', 'class'], dtype='object')
 
-
 These print checks were conducted to ensure that the data was correctly imported and in the correct format.
-
-
 The number of rows and columns in the dataset:
 None
-
 
 The number of missing values in the dataset:
 sepal length    0
@@ -46,10 +38,8 @@ petal width     0
 class           0
 dtype: int64
 
-
 The number of duplicate rows in the dataset:
 3
-
 
 The data types of each column in the dataset:
 sepal length    float64
@@ -59,11 +49,12 @@ petal width     float64
 class            object
 dtype: object
 
+Missing values were checked for in the dataset, there were none.
+If there were missing values, the dataset would need to be cleaned and sorted further before any analysis could be conducted.
+There were no missing values in this dataset, so further cleaning was unnecessary.
 
-
-Missing values were checked for in the dataset, there were none. If there were missing values, the dataset would need to be cleaned and sorted further before any analysis could be conducted. There were no missing values in this dataset, so further cleaning was unnecessary.
-
-From the information table, it can be seen that where one column has categorical (object) data (class column - also referred to as species for this dataset) and the four other columns (sepal length, sepal width, petal length, and petal width) are of the float type (float64) (continuous variables) with non-Null entries. That is, there are no 0 / null~ entries in the dataset.
+From the information table, it can be seen that where one column has categorical (object) data (class column - also referred to as species for this dataset) 
+and the four other columns (sepal length, sepal width, petal length, and petal width) are of the float type (float64) (continuous variables) with non-Null entries. That is, there are no 0 / null~ entries in the dataset.
 
 Duplicates were removed from the data using the drop_duplicates function.
 
