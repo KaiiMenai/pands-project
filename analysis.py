@@ -499,20 +499,15 @@ with open("pros_cons_analysis.txt", "w") as file:
     print("\n\tPros: Can be used to predict categorical outcomes (i.e. species), interpretable results.", file=file)
     print("\n\tCons: Sensitive to the choice of parameters, may not work well with imbalanced data (luckily the iris dataset is balanced).", file=file)
     print("\n\tApplication: Can be used to predict the iris flower species based on their features.", file=file)
-
-
-
-
-# Regression:
-
-# Linear Regression:
-# Pros: Simple to implement, interpretable coefficients, works well for linear relationships (iris dataset is linear).
-# Cons: Assumes linear relationship between features and target, sensitive to outliers, may not perform well with non-linear data.
-# Application: Can be used to predict continuous values (e.g., sepal width / petal width) based on other features (sepal length, petal length) .
-# It can be used to understand the relationship between features and the target variable (species).
-
-# Logistic Regression:
-# Pros: Simple to implement, interpretable coefficients, works well for binary classification.
-# Cons: Assumes linear relationship between features and log-odds, may not perform well with non-linear data.
-# Application: Can be used to predict the probability of a specific species based on features (sepal length/width, petal length/width).
-# It can be extended to multi-class classification using other techniques, like One-vs-Rest (OvR) or Softmax regression.
+    print("\n", file=file)
+    print("\nRegression:", file=file)
+    print("\n", file=file)
+    print("\nLinear Regression:", file=file)
+    print("\n\tPros: Simple to implement, interpretable coefficients, works well for linear relationships (iris dataset is linear).", file=file)
+    print("\n\tCons: Assumes linear relationship between features and target, sensitive to outliers, may not perform well with non-linear data.", file=file)
+    print("\n\tApplication: Can be used to predict continuous values (e.g., sepal width / petal width) based on other features (sepal length, petal length).", file=file)
+    print("\n", file=file)
+    print("\nLogistic Regression:", file=file)
+    print("\n\tPros: Simple to implement, interpretable coefficients, works well for binary classification.", file=file)
+    print("\n\tCons: Assumes linear relationship between features and log-odds, may not perform well with non-linear data.", file=file)
+    print("\n\tApplication: Can be used to predict the probability of a specific species based on features (sepal length/width, petal length/width).", file=file)
