@@ -469,21 +469,18 @@ with open("analysis.txt", "w") as file:
     print("\n\tPros: Helps understand the data, identify patterns, and detect any outliers.", file=file)
     print("\n\tCons: May not provide insights into relationships between features and the target variable.", file=file)
     print("\n\tApplication: Can be used to visualise the distribution of features (sepal length/width, petal length/width) and their relationships with the target variable (species).", file=file)
-    print("\nIt can help identify potential features for modeling and inform feature engineering decisions.", file=file)
+    print("\n", file=file)
+    print("\nScatter Plots:", file=file)
+    print("\n\tPros: Visualises the relationship between features and the target variable, helps identify patterns and relationships.", file=file)
+    print("\n\tCons: May not work well with high-dimensional data, may not capture complex relationships.", file=file)
+    print("\n\tApplication: Can be used to visualise the relationship between features (sepal length/width, petal length/width) and the target variable (species).", file=file)
 
 
-
-# Scatter Plots:
-# Pros: Visualises the relationship between features and the target variable, helps identify patterns and relationships.
-# Cons: May not work well with high-dimensional data, may not capture complex relationships.
-# Application: Can be used to visualise the relationship between features (sepal length/width, petal length/width) and the target variable (species).
-# It can help identify potential features for modeling and inform feature engineering decisions.
 
 # Box Plots:
 # Pros: Helps identify outliers, visualises the distribution of features by species.
 # Cons: May not work well with high-dimensional data, may not capture complex relationships.
 # Application: Can be used to visualise the distribution of features (sepal length/width, petal length/width) by species.
-# It can help identify potential features for modeling and inform feature engineering decisions.
 
 # Correlation Matrix:
 # Pros: Helps identify relationships between features, visualises the correlation between features and the target variable.
