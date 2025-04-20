@@ -494,14 +494,14 @@ with open("pros_cons_analysis.txt", "w") as file:
     print("\n\tPros: Groups similar data points together, helps identify patterns and relationships in the data.", file=file)
     print("\n\tCons: Sensitive to the choice of parameters, may not work well with non-spherical clusters.", file=file)
     print("\n\tApplication: Can be used to identify clusters in the data, which may correspond to different iris flower species.", file=file)
+    print("\n", file=file)
+    print("\nClassification:", file=file)
+    print("\n\tPros: Can be used to predict categorical outcomes (i.e. species), interpretable results.", file=file)
+    print("\n\tCons: Sensitive to the choice of parameters, may not work well with imbalanced data (luckily the iris dataset is balanced).", file=file)
+    print("\n\tApplication: Can be used to predict the iris flower species based on their features.", file=file)
 
 
 
-# Classification:
-# Pros: Can be used to predict categorical outcomes (i.e. species), interpretable results.
-# Cons: Sensitive to the choice of parameters, may not work well with imbalanced data (luckily the iris dataset is balanced).
-# Application: Can be used to predict the iris flower species based on their features.
-# It can help identify the most important features for classification and inform feature decisions.
 
 # Regression:
 
