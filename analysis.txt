@@ -57,8 +57,17 @@ From the information table, it can be seen that where one column has categorical
 and the four other columns (sepal length, sepal width, petal length, and petal width) are of the float type (float64) (continuous variables) with non-Null entries. That is, there are no 0 / null~ entries in the dataset.
 
 Duplicates were removed from the data using the drop_duplicates function.
-The code used for this was: 
-data = iris_df.drop_duplicates(subset=class.)
+The code used for this was: 	data = iris_df.drop_duplicates(subset=class.)
+Value counts for each of the species:
+class
+Iris-setosa        50
+Iris-versicolor    50
+Iris-virginica     50
+Name: count, dtype: int64
+
+It can be seen that there are 50 samples for each of the three classes (species) of iris, setosa, versicolor, and virginica.
+
+In the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.
 
 Summary statistics for each species:
 
@@ -94,3 +103,11 @@ min         4.90000     2.200000      4.500000      1.40000
 50%         6.50000     3.000000      5.550000      2.00000
 75%         6.90000     3.175000      5.875000      2.30000
 max         7.90000     3.800000      6.900000      2.50000
+
+	Iris Setosa.
+
+The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class')).
+
+The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean.
+The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm from the mean.
+Petal length had a mean of

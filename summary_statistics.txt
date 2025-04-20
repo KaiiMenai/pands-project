@@ -1,3 +1,9 @@
+Value counts for each of the species:
+class
+Iris-setosa        50
+Iris-versicolor    50
+Iris-virginica     50
+Name: count, dtype: int64
 Summary statistics for each species:
 Setosa Statistics:
        sepal length  sepal width  petal length  petal width
