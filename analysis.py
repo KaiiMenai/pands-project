@@ -198,9 +198,11 @@ with open("analysis.txt", "a") as file:
     print("\nSummary statistics for the whole dataset:", file=file)
     print(iris_df.describe(), file=file)
     print("\nThe summary statistics for the whole dataset shows that there are 150 samples in the dataset for each of the variables, the value displayed is the non-missing values, and thus it can be verified that the dataset does not have any missing values. ", file=file) # Summary statistics observations taken from my own work for Principles of Data Analytics, with wording changed to match what was required for this project. https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb
-    print("\tPlease Note: Summary statistics observations taken from my own work for the Principles of Data Analytics Module, with wording changed to match what was required for this project. Link: https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb}", file=file)
+    print("\tPlease Note: Summary statistics observations taken from my own work for the Principles of Data Analytics Module, with wording changed to match what was required for this project. Link: https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb", file=file)
     print("The Mean, Standard Deviation (std), Minimum (min) and Maximum (max), and the Lower, Median, and Higher Inter-quartile Ranges (25%, 50%, and 75%, respectively) values are displayed for all four features (sepal length, sepal width, petal length, and petal width).", file=file)
-    print("The mean was calculated by dividing the sum of all the values (per feature) by the number of values (150 in this case). The mean for sepal length was 5.84 cm, sepal width was 3.05 cm, petal length was 3.76 cm, and for petal width was 1.20 cm. ", file=file)
+    print("The Mean was calculated by dividing the sum of all the values (per feature) by the number of values (150 in this case). The mean for sepal length was 5.84 cm, sepal width was 3.05 cm, petal length was 3.76 cm, and for petal width was 1.20 cm. ", file=file)
+    print("\nThe Standard Deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. Sepal length had a mean of 5.84 cm with a std of 0.83, therefore the majority of values deviate by 0.83 cm (+/-) from the mean.", file=file)
+    print("")
     print("\nIn the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.", file=file)
     print("\nSummary statistics for each species:", file=file)
         # Separate the dataset by species
