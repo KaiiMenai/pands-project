@@ -57,10 +57,11 @@ From the information table, it can be seen that where one column has categorical
 and the four other columns (sepal length, sepal width, petal length, and petal width) are of the float type (float64) (continuous variables) with non-Null entries. That is, there are no 0 / null~ entries in the dataset.
 
 Duplicates were removed from the data using the drop_duplicates function.
-
 The code used for this was: 
 data = iris_df.drop_duplicates(subset=class.)
+
 Summary statistics for each species:
+
 Setosa Statistics:
        sepal length  sepal width  petal length  petal width
 count      50.00000    50.000000     50.000000     50.00000
