@@ -443,23 +443,30 @@ with open("logistic_regression.txt", "w") as file: # The (file=file) argument is
     print(f"\nPredicted species for {example_data.iloc[0].tolist()}: {le.inverse_transform(predicted_species)[0]}", file=file) # This will print the last 5 rows of the dataset.
 
 print("Logistic regression results have been written to logistic_regression.txt")
+
+
 # Discuss the pros and cons of each technique and how they may be applied to this dataset. - do this in a text file called 'analysis.txt'.
 
-# The pros and cons of each technique and how they may be applied to this dataset.
-# Why do any of these techniques?
+with open("analysis.txt", "w") as file: 
+    print("The pros and cons of each technique and how they may be applied to this dataset.", file=file) 
+    print("\nWhy do any of these techniques?", file=file)
+    print("\n\t- Basic EDA (Exploratory Data Analysis) to understand the data and its distribution.", file=file)
+    print("\n\t- Visualisation to identify patterns and relationships between features (sepal length/width, petal length/width) and their relationships with the target variable (species).", file=file)
+    print("\n\t- PCA to reduce dimensionality and visualise the data in a lower-dimensional space.", file=file)
+    print("\n\t- Scatter plots to visualise the relationship between features (sepal length/width, petal length/width) and the target variable (species).", file=file)
+    print("\n\t- Box plots to identify outliers and understand the distribution of features (sepal length/width, petal length/width) by species.", file=file)
+    print("\n\t- Clustering to group similar data points and identify potential clusters in the data.", file=file)
+    print("\n\t- Pair plots to visualise the relationships between all pairs of features and the target variable (species).", file=file)
+    print("\n\t- K-means clustering to group similar data points and identify potential clusters in the data.", file=file)
+    print("\n\t- Classification techniques to predict the species of iris flowers based on their features (sepal length/width, petal length/width).", file=file)
+    print("\n\t- Regression techniques to predict continuous values based on features (sepal length/width, petal length/width).", file=file)
+    print("\n\t- Linear Regression to model the relationship between features and a continuous target variable (species).", file=file)
+    print("\n\t- Logistic Regression to model the relationship between features and a binary or categorical target variable (species).", file=file)
+    print("\n", file=file)
+    print("\nEach technique used and short notes on them.", file=file)
 
-# - Basic EDA (Exploratory Data Analysis) to understand the data and its distribution.
-# - Visualisation to identify patterns and relationships between features (sepal length/width, petal length/width) and their relationships with the target variable (species)..
-# - PCA to reduce dimensionality and visualise the data in a lower-dimensional space.
-# - Scatter plots to visualise the relationship between features (sepal length/width, petal length/width) and the target variable (species).
-# - Box plots to identify outliers and understand the distribution of features (sepal length/width, petal length/width) by species.
-# - Clustering to group similar data points and identify potential clusters in the data.
-# - Pair plots to visualise the relationships between all pairs of features and the target variable (species).
-# - Linear Regression to model the relationship between features and a continuous target variable (species).
-# - Logistic Regression to model the relationship between features and a binary or categorical target variable (species).
-# - K-means clustering to group similar data points and identify potential clusters in the data.
-# - Classification techniques to predict the species of iris flowers based on their features (sepal length/width, petal length/width).
-# - Regression techniques to predict continuous values based on features (sepal length/width, petal length/width).
+
+
 
 # Exploratory Data Analysis (EDA):
 # Pros: Helps understand the data, identify patterns, and detect any outliers.
