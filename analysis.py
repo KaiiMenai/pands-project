@@ -474,13 +474,17 @@ with open("analysis.txt", "w") as file:
     print("\n\tPros: Visualises the relationship between features and the target variable, helps identify patterns and relationships.", file=file)
     print("\n\tCons: May not work well with high-dimensional data, may not capture complex relationships.", file=file)
     print("\n\tApplication: Can be used to visualise the relationship between features (sepal length/width, petal length/width) and the target variable (species).", file=file)
+    print("\n", file=file)
+    print("\nBox Plots:", file=file)
+    print("\n\tPros: Helps identify outliers, visualises the distribution of features by species.", file=file)
+    print("\n\tCons: May not work well with high-dimensional data, may not capture complex relationships.", file=file)
+    print("\n\tApplication: Can be used to visualise the distribution of features (sepal length/width, petal length/width) by species.", file=file)
 
 
-
-# Box Plots:
-# Pros: Helps identify outliers, visualises the distribution of features by species.
-# Cons: May not work well with high-dimensional data, may not capture complex relationships.
-# Application: Can be used to visualise the distribution of features (sepal length/width, petal length/width) by species.
+# 
+# 
+# 
+# 
 
 # Correlation Matrix:
 # Pros: Helps identify relationships between features, visualises the correlation between features and the target variable.
