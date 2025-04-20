@@ -511,3 +511,5 @@ with open("pros_cons_analysis.txt", "w") as file:
     print("\n\tPros: Simple to implement, interpretable coefficients, works well for binary classification.", file=file)
     print("\n\tCons: Assumes linear relationship between features and log-odds, may not perform well with non-linear data.", file=file)
     print("\n\tApplication: Can be used to predict the probability of a specific species based on features (sepal length/width, petal length/width).", file=file)
+    
+print("Pros and Cons for each test written to pros_cons_analysis.txt")
