@@ -136,6 +136,8 @@ data = iris_df.drop_duplicates(subset="class",) # This will remove any duplicate
 
 with open("summary_statistics.txt", "w") as file:  # New file for summary stats
     # Summary statistics for each species
+    print("Value counts for each of the species:", file=file)
+    print(iris_df['class'].value_counts(), file=file)  # Count of each species in the dataset
     print("Summary statistics for each species:", file=file)
     
     # Separate the dataset by species
@@ -188,6 +190,12 @@ print("Checks for data outliers has been appended to summary_statistics.txt")
 with open("analysis.txt", "a") as file:
     print("\nDuplicates were removed from the data using the drop_duplicates function.", file=file)
     print("The code used for this was: \tdata = iris_df.drop_duplicates(subset="'class'".)", file=file)
+    print("Value counts for each of the species:", file=file)
+    print(iris_df['class'].value_counts(), file=file)
+    print("\nIt can be seen that there are 50 samples for each of the three classes (species) of iris, setosa, versicolor, and virginica.", file=file)
+    print("\nIn the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.", file=file)
+    print("\nSummary statistics:")
+    print(iris_df.describe())
     print("\nSummary statistics for each species:", file=file)
         # Separate the dataset by species
     setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
@@ -203,6 +211,17 @@ with open("analysis.txt", "a") as file:
     
     
 print("Summary Stats has been appended to analysis.txt")
+
+# Now to explain what the summary stats are and what they mean - tis will be done in the analysis.txt file.
+
+with open("analysis.txt", "a") as file:
+    print("\n\tIris Setosa.", file=file)
+    print("\nThe mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class')).", file=file)
+    print("\nThe standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean.",  file=file)
+    print("The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm from the mean.", file=file)
+    print("Petal length had a mean of", file=file)
+
+print("Summary Stats explanation has been appended to analysis.txt")
 
 # Here good to do boxplots to illustrate the outliers in the dataset.
 # Box plots - plot and save box plots for each variable in the dataset and save as a png file.
