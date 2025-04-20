@@ -489,14 +489,13 @@ with open("pros_cons_analysis.txt", "w") as file:
     print("\n\tPros: Reduces the complexity of the data, helps visualise high-dimensional data, captures any variance in the data.", file=file)
     print("\n\tCons: May lose some information, sensitive to scaling, may not be interpretable.", file=file)
     print("\n\tApplication: Can be used to visualise the data in a lower-dimensional space, identify clusters, and reduce noise.", file=file)
+    print("\n", file=file)
+    print("\nK-means Clustering:", file=file)
+    print("\n\tPros: Groups similar data points together, helps identify patterns and relationships in the data.", file=file)
+    print("\n\tCons: Sensitive to the choice of parameters, may not work well with non-spherical clusters.", file=file)
+    print("\n\tApplication: Can be used to identify clusters in the data, which may correspond to different iris flower species.", file=file)
 
 
-
-# K-means Clustering:
-# Pros: Groups similar data points together, helps identify patterns and relationships in the data.
-# Cons: Sensitive to the choice of parameters, may not work well with non-spherical clusters.
-# Application: Can be used to identify clusters in the data, which may correspond to different iris flower species.
-# It can help identify potential subgroups within the data and inform feature engineering decisions.
 
 # Classification:
 # Pros: Can be used to predict categorical outcomes (i.e. species), interpretable results.
