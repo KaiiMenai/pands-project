@@ -447,7 +447,7 @@ print("Logistic regression results have been written to logistic_regression.txt"
 
 # Discuss the pros and cons of each technique and how they may be applied to this dataset. - do this in a text file called 'analysis.txt'.
 
-with open("analysis.txt", "w") as file: 
+with open("pros_cons_analysis.txt", "w") as file: 
     print("The pros and cons of each technique and how they may be applied to this dataset.", file=file) 
     print("\nWhy do any of these techniques?", file=file)
     print("\n\t- Basic EDA (Exploratory Data Analysis) to understand the data and its distribution.", file=file)
@@ -484,13 +484,13 @@ with open("analysis.txt", "w") as file:
     print("\n\tPros: Helps identify relationships between features, visualises the correlation between features and the target variable.", file=file)
     print("\n\tCons: May not work well with high-dimensional data, may not capture complex relationships.", file=file)
     print("\n\tApplication: Can be used to visualise the correlation between features (sepal length/width, petal length/width) and the target variable (species).", file=file)
+    print("\n", file=file)
+    print("\nPrincipal Component Analysis (PCA):", file=file)
+    print("\n\tPros: Reduces the complexity of the data, helps visualise high-dimensional data, captures any variance in the data.", file=file)
+    print("\n\tCons: May lose some information, sensitive to scaling, may not be interpretable.", file=file)
+    print("\n\tApplication: Can be used to visualise the data in a lower-dimensional space, identify clusters, and reduce noise.", file=file)
 
 
-# Principal Component Analysis (PCA):
-# Pros: Reduces the complexity of the data, helps visualise high-dimensional data, captures any variance in the data.
-# Cons: May lose some information, sensitive to scaling, may not be interpretable.
-# Application: Can be used to visualise the data in a lower-dimensional space, identify clusters, and reduce noise.
-# It can help improve the performance of machine learning algorithms by reducing complexity and removing noise.
 
 # K-means Clustering:
 # Pros: Groups similar data points together, helps identify patterns and relationships in the data.
