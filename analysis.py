@@ -187,7 +187,7 @@ print("Checks for data outliers has been appended to summary_statistics.txt")
 
 with open("analysis.txt", "a") as file:
     print("\nDuplicates were removed from the data using the drop_duplicates function.", file=file)
-    print("The code used for this was: \ndata = iris_df.drop_duplicates(subset="'class'".)", file=file)
+    print("The code used for this was: \tdata = iris_df.drop_duplicates(subset="'class'".)", file=file)
     print("\nSummary statistics for each species:", file=file)
         # Separate the dataset by species
     setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
