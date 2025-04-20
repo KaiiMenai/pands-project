@@ -149,6 +149,34 @@ with open("summary_statistics.txt", "a") as file:  # Append to summary stats fil
 print("Checks for data outliers has been appended to summary_statistics.txt")
 
 # Here good to do boxplots to illustrate the outliers in the dataset.
+
+# Write observations from the basic data checks and summary stats to a text file.
+
+with open("analysis.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
+    print("Basic data checks:", file=file)
+    print("The shape of the dataset:", file=file)
+    print(iris_df.shape, file=file)
+    print("The first 5 rows of the dataset:", file=file)
+    print(iris_df.head(), file=file) # This will print the first 5 rows of the dataset.
+    print("The last 5 rows of the dataset:", file=file)
+    print(iris_df.tail(), file=file) # This will print the last 5 rows of the dataset.
+    print("The column names of the dataset:", file=file)
+    print(iris_df.columns, file=file) # This will print the column names of the dataset.
+    
+print("Basic data checks have been written to basic_data_explore.txt")
+
+with open("basic_data_explore.txt", "a") as file:
+    print("The number of rows and columns in the dataset:", file=file)
+    print(iris_df.info(), file=file) # This will print the number of rows and columns in the dataset.
+    print("The number of missing values in the dataset:", file=file)
+    print(iris_df.isnull().sum(), file=file) # This will print the number of missing values in the dataset.
+    print("The number of duplicate rows in the dataset:", file=file)
+    print(iris_df.duplicated().sum(), file=file) # This will print the number of duplicate rows in the dataset.
+    print("The data types of each column in the dataset:", file=file)
+    print(iris_df.dtypes, file=file) # This will print the data types of each column in the dataset.print("This is the initial content of the file.", file=file)
+    
+print("Basic data checks have been appended to basic_data_explore.txt")
+
 # Box plots - plot and save box plots for each variable in the dataset and save as a png file.
 
 # Boxplots by species
