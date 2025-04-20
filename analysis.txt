@@ -61,8 +61,6 @@ Duplicates were removed from the data using the drop_duplicates function.
 The code used for this was: 
 data = iris_df.drop_duplicates(subset=class.)
 Summary statistics for each species:
-
-
 Setosa Statistics:
        sepal length  sepal width  petal length  petal width
 count      50.00000    50.000000     50.000000     50.00000
