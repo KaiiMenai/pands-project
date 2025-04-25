@@ -232,7 +232,7 @@ with open("analysis.txt", "a") as file:
 print("Summary Stats explanation has been appended to analysis.txt")
 
 # Here good to do boxplots to illustrate the outliers in the dataset.
-# Box plots - plot and save box plots for each variable in the dataset and save as a png file.
+# Box plots - plot and save box plots for each variable in the dataset and save as a png file. https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html and https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.savefig.html and https://stackoverflow.com/questions/7906365/matplotlib-savefig-plots-different-from-show 
 
 # Boxplots by species
 
