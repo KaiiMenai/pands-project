@@ -94,24 +94,32 @@ print("Background Intro appended to analysis.txt")
 with open("basic_data_explore.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
     print("\tBasic data checks:", file=file)
     print("The shape of the dataset:", file=file)
+    print("", file=file)
     print(iris_df.shape, file=file)
     print("The first 5 rows of the dataset:", file=file)
+    print("", file=file)
     print(iris_df.head(), file=file) # This will print the first 5 rows of the dataset.
     print("The last 5 rows of the dataset:", file=file)
+    print("", file=file)
     print(iris_df.tail(), file=file) # This will print the last 5 rows of the dataset.
     print("The column names of the dataset:", file=file)
+    print("", file=file)
     print(iris_df.columns, file=file) # This will print the column names of the dataset.
     
 print("Basic data checks have been written to basic_data_explore.txt")
 
 with open("basic_data_explore.txt", "a") as file:
     print("The number of rows and columns in the dataset:", file=file)
+    print("", file=file)
     print(iris_df.info(), file=file) # This will print the number of rows and columns in the dataset.
     print("The number of missing values in the dataset:", file=file)
+    print("", file=file)
     print(iris_df.isnull().sum(), file=file) # This will print the number of missing values in the dataset.
     print("The number of duplicate rows in the dataset:", file=file)
+    print("", file=file)
     print(iris_df.duplicated().sum(), file=file) # This will print the number of duplicate rows in the dataset.
     print("The data types of each column in the dataset:", file=file)
+    print("", file=file)
     print(iris_df.dtypes, file=file) # This will print the data types of each column in the dataset.print("This is the initial content of the file.", file=file)
     
 print("Basic data checks have been appended to basic_data_explore.txt")
@@ -120,14 +128,18 @@ print("Basic data checks have been appended to basic_data_explore.txt")
 
 with open("analysis.txt", "a") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
     print("\nThe shape of the dataset:", file=file)
+    print("", file=file)
     print(iris_df.shape, file=file)
     print("\nThe dataset contains 150 rows of data and 5 columns. The 5 columns are the species of isis flower (here noted as 'class'), and sepal length, sepal width, petal length, and petal width.", file=file)
     print("The first and last five rows of the dataset are printed below, as well as the column names within the dataset.", file=file)
     print("\nThe first 5 rows of the dataset:", file=file)
+    print("", file=file)
     print(iris_df.head(), file=file) # first 5 rows.
     print("\nThe last 5 rows of the dataset:", file=file)
+    print("", file=file)
     print(iris_df.tail(), file=file) # last 5 rows.
     print("\nThe column names of the dataset:", file=file)
+    print("", file=file)
     print(iris_df.columns, file=file) # column names.
     print("\nThese print checks were conducted to ensure that the data was correctly imported and in the correct format.", file=file)
 
@@ -135,18 +147,26 @@ print("Basic data explanation written to analysis.txt")
 
 with open("analysis.txt", "a") as file:
     print("The number of rows and columns in the dataset:", file=file)
+    print("", file=file)
     print(iris_df.info(), file=file) # number of rows and columns.
     print("\nThe number of missing values in the dataset:", file=file)
+    print("", file=file)
     print(iris_df.isnull().sum(), file=file) # number of missing values.
     print("\nThe number of duplicate rows in the dataset:", file=file)
+    print("", file=file)
     print(iris_df.duplicated().sum(), file=file) # number of duplicate rows.
     print("\nThe data types of each column in the dataset:", file=file)
+    print("", file=file)
     print(iris_df.dtypes, file=file)
-    print("\nMissing values were checked for in the dataset, there were none.", file=file)
-    print("If there were missing values, the dataset would need to be cleaned and sorted further before any analysis could be conducted.", file=file)
-    print("There were no missing values in this dataset, so further cleaning was unnecessary.", file=file)
-    print("\nFrom the information table, it can be seen that where one column has categorical (object) data (class column - also referred to as species for this dataset) \nand the four other columns (sepal length, sepal width, petal length, and petal width) are of the float type (float64) (continuous variables) with non-Null entries. That is, there are no 0 / null~ entries in the dataset.", file=file)
-    
+    eda_text = (
+    "Missing values were checked for in the dataset, there were none."
+    "If there were missing values, the dataset would need to be cleaned and sorted further before any analysis could be conducted."
+    "There were no missing values in this dataset, so further cleaning was unnecessary."
+    "From the information table, it can be seen that where one column has categorical (object) data (class column - also referred to as species for this dataset) \nand the four other columns (sepal length, sepal width, petal length, and petal width) are of the float type (float64) (continuous variables) with non-Null entries. That is, there are no 0 / null~ entries in the dataset."
+    )
+    print("", file=file)
+    print(textwrap.fill(eda_text, width=210), file=file)
+
 print("Basic data checks explanation has been appended to analysis.txt")
 
 # Need to make sure tha any duplicates are removed and that the data types are correct before conducting any analysis.
@@ -158,11 +178,13 @@ data = iris_df.drop_duplicates(subset="class",) # This will remove any duplicate
 
 with open("summary_statistics.txt", "w") as file:  # New file for summary stats
     # Summary statistics for each species
-    print("Value counts for each of the species:", file=file)
+    print("\n\tValue counts for each of the species:", file=file)
+    print("", file=file)
     print(iris_df['class'].value_counts(), file=file)  # Count of each species in the dataset
-    print("\nSummary statistics for the whole dataset:", file=file)
+    print("\n\tSummary statistics for the whole dataset:", file=file)
+    print("", file=file)
     print(iris_df.describe(), file=file)  # Summary statistics for the entire dataset
-    print("Summary statistics for each species:", file=file)
+    print("\n\tSummary statistics for each species:", file=file)
     
     # Separate the dataset by species
     setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
@@ -240,8 +262,7 @@ with open("analysis.txt", "a") as file:
     print(versicolor_stats, file=file)
     print("\nVirginica Statistics:", file=file)
     print(virginica_stats, file=file)
-    
-    
+
 print("Summary Stats has been appended to analysis.txt")
 
 # Now to explain what the summary stats are and what they mean - this will be done in the analysis.txt file.
