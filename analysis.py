@@ -65,7 +65,7 @@ print(iris_df) # This will print the dataframe into the terminal and also gi ve 
 #print("\nFinal content of the file:")
 #with open("append_example.txt", "r") as file:    print(file.read())
 
-with open("analysis.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
+with open("analysis.md", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
     print("Data Analysis conducted on the Iris Dataset", file=file)
     print("\n\tSummary.", file=file)
     summary_text = (
@@ -76,9 +76,9 @@ with open("analysis.txt", "w") as file: # The (file=file) argument is important 
     print(textwrap.fill(summary_text, width=210), file=file)
     print("\n\tPlease Note: Some observations taken from my own work for the Principles of Data Analytics Module, with wording changed to match what was required for this project. Link: https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb", file=file)
 
-print("Summary of file made in the analysis.txt")
+print("Summary of file made in the analysis.md")
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\n\tBackground.", file=file)
     background1_text = (
     "Originally sourced by Anderson (1935), the Iris dataset has been used numerous times, with several different iterations available online. Some of these sources contain differing (and often noted as incorrect) data points, as noted in the UCI Machine Learning Repository (https://archive.ics.uci.edu/dataset/53/iris). The dataset contained 150 samples of Iris flower, each with five noted variables, four numeric (sepal and petal feature measurements), and one categorical (the three species), giving a total of 750 sample points throughout the entire dataset."
@@ -100,7 +100,7 @@ with open("analysis.txt", "a") as file:
     print("", file=file)
     print(textwrap.fill(background3_text, width=210), file=file)
 
-print("Background Intro appended to analysis.txt")
+print("Background Intro appended to analysis.md")
 
 # Basic data checks - check for missing values, duplicates, and data types
 ## Using the 'with' statement to handle file operations
@@ -132,7 +132,7 @@ print("Basic data checks have been appended to basic_data_explore.txt")
 
 # Write observations from the basic data checks to a text file.
 
-with open("analysis.txt", "a") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
+with open("analysis.md", "a") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
     print("\nThe shape of the dataset:", file=file)
     print(iris_df.shape, file=file)
     print("\nThe dataset contains 150 rows of data and 5 columns. The 5 columns are the species of isis flower (here noted as 'class'), and sepal length, sepal width, petal length, and petal width.", file=file)
@@ -146,9 +146,9 @@ with open("analysis.txt", "a") as file: # The (file=file) argument is important 
     print(iris_df.columns, file=file) # column names.
     print("\nThese print checks were conducted to ensure that the data was correctly imported and in the correct format.", file=file)
 
-print("Basic data explanation written to analysis.txt")
+print("Basic data explanation written to analysis.md")
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("The number of rows and columns in the dataset:", file=file)
     print(iris_df.info(), file=file) # number of rows and columns.
     print("\nThe number of missing values in the dataset:", file=file)
@@ -166,7 +166,7 @@ with open("analysis.txt", "a") as file:
     print("", file=file)
     print(textwrap.fill(eda_text, width=210), file=file)
 
-print("Basic data checks explanation has been appended to analysis.txt")
+print("Basic data checks explanation has been appended to analysis.md")
 
 # Need to make sure tha any duplicates are removed and that the data types are correct before conducting any analysis.
 # Already checked for missing values and we know there are 0, but there are 3 duplicate rows in the dataset.
@@ -230,7 +230,7 @@ print("Checks for data outliers has been appended to summary_statistics.txt")
 
 # Write summary stats observations to the analysis.txt file.
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\nDuplicates were removed from the data using the drop_duplicates function.", file=file)
     print("The code used for this was: \tdata = iris_df.drop_duplicates(subset="'class'".)", file=file)
     print("", file=file)
@@ -261,11 +261,11 @@ with open("analysis.txt", "a") as file:
     print("\nVirginica Statistics:", file=file)
     print(virginica_stats, file=file)
 
-print("Summary Stats has been appended to analysis.txt")
+print("Summary Stats has been appended to analysis.md")
 
 # Now to explain what the summary stats are and what they mean - this will be done in the analysis.txt file.
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\n\tIris Setosa.", file=file)
     setosa_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
@@ -297,7 +297,7 @@ with open("analysis.txt", "a") as file:
     print(textwrap.fill(virginica_stats_summary_text, width=210), file=file)
     print("", file=file)
 
-print("Summary Stats for each species has been appended to analysis.txt")
+print("Summary Stats for each species has been appended to analysis.md")
 
 # Here good to do boxplots to illustrate the outliers in the dataset.
 # Box plots - plot and save box plots for each variable in the dataset and save as a png file. https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html and https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.savefig.html and https://stackoverflow.com/questions/7906365/matplotlib-savefig-plots-different-from-show 
@@ -325,7 +325,7 @@ plt.show()
 
 # Describe what the boxplot shows in the analysis.txt file.
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\n\tBoxplots by Feature.", file=file)
     boxplot_text = (
     "Boxplots were plotted for each of the four measured features (sepal length/width and petal length/width), the data in each of these four plots is separated by species. Boxplots make visualising range, potential outliers, the inter-quartile range, and the median of the data more easily."
@@ -336,7 +336,7 @@ with open("analysis.txt", "a") as file:
     print("", file=file)
     print(textwrap.fill(boxplot_text, width=210), file=file)
     
-print("Boxplot observations appended to analysis.txt")
+print("Boxplot observations appended to analysis.md")
 
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
 # Set up the figure
@@ -376,7 +376,8 @@ plt.tight_layout()
 plt.savefig('histograms_by_species.png')
 plt.show()
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
+    print("![Histograms](histograms_by_species.png)", file=file)
     print("\n\tHistograms by Feature.", file=file)
     histogram_text = (
     "The histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica."
@@ -389,7 +390,7 @@ with open("analysis.txt", "a") as file:
     print("", file=file)
     print(textwrap.fill(histogram_text, width=210), file=file)
 
-print("Histogram observations appended to analysis.txt")
+print("Histogram observations appended to analysis.md")
 
 # Scatter plots - plot and save scatter plots for each pair of variables in the dataset as a png file.
 
@@ -416,7 +417,7 @@ plt.tight_layout()
 plt.savefig('scatterplot_by_species.png')
 plt.show()
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\n\tScatterplots.", file=file)
     scatter_plot_text = (
     ""
@@ -424,7 +425,7 @@ with open("analysis.txt", "a") as file:
     print("", file=file)
     print(textwrap.fill(scatter_plot_text, width=210), file=file)
 
-print("Scatter plot observations appended to analysis.txt")
+print("Scatter plot observations appended to analysis.md")
 
 # Other analysis types that may be appropriate - for each ensure that the figure is saved as a png file.
 # - Pair plots
@@ -437,7 +438,7 @@ pairplot._legend.set_title('Species')
 plt.savefig('pairplot_by_species.png')
 plt.show()
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\n\tPairplot.", file=file)
     pairplot_text = (
     ""
@@ -445,7 +446,7 @@ with open("analysis.txt", "a") as file:
     print("", file=file)
     print(textwrap.fill(pairplot_text, width=210), file=file)
 
-print("Pairplot observations appended to analysis.txt")
+print("Pairplot observations appended to analysis.md")
 
 # - Correlation matrix
 corr_matrix = iris_df.iloc[:, :4].corr()
@@ -454,7 +455,7 @@ plt.title("Feature Correlation Matrix")
 plt.savefig('correlation_matrix_by_feature.png')
 plt.show()
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\n\tCorrelation Matrix.", file=file)
     corr_matrix_text = (
     ""
@@ -462,7 +463,7 @@ with open("analysis.txt", "a") as file:
     print("", file=file)
     print(textwrap.fill(corr_matrix_text, width=210), file=file)
 
-print("Correlation Matrix observations appended to analysis.txt")
+print("Correlation Matrix observations appended to analysis.md")
 
 # - PCA (Principal Component Analysis)
 
@@ -487,7 +488,7 @@ plt.title("Principal Component Analysis of the Iris Dataset")
 plt.savefig('pca_by_species.png')
 plt.show()
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\n\tPrincipal Component Analysis (PCA).", file=file)
     pca_text = (
     "A way to conduct relationship investigations is through Principal Component Analysis (PCA) - I did this for my PhD research and found it was a great way to clearly look at multiple data aspects at once (https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html)."
@@ -498,7 +499,7 @@ with open("analysis.txt", "a") as file:
     print("", file=file)
     print(textwrap.fill(pca_text, width=210), file=file)
 
-print("Principal Component Analysis (PCA) observations appended to analysis.txt")
+print("Principal Component Analysis (PCA) observations appended to analysis.md")
 
 # - Clustering analysis (e. K-means clustering) is used to group similar data points together.
 # In this case, K-means clustering is used to group the iris dataset into three clusters (corresponding to the three species).
@@ -531,7 +532,7 @@ plt.legend(title="Species")
 plt.savefig('kmeans_clustering_by_species.png')
 plt.show()
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\n\tK-means Clustering.", file=file)
     k_means_text = (
     ""
@@ -539,7 +540,7 @@ with open("analysis.txt", "a") as file:
     print("", file=file)
     print(textwrap.fill(k_means_text, width=210), file=file)
 
-print("K-means Clustering observations appended to analysis.txt")
+print("K-means Clustering observations appended to analysis.md")
 
 # This dataset has previously been used for machine learning and classification tasks, so it may be useful to explore some of those techniques as well.
 # - Linear Regression
@@ -677,7 +678,7 @@ with open("logistic_regression.txt", "w") as file: # The (file=file) argument is
 
 print("Logistic regression results have been written to logistic_regression.txt")
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\n\tLogistic Regression Model", file=file)
     log_reason_text = (
     "Although a linear regression model has previously been used to analyse the data, it is possible to predict a species based on the measurements taken from a flower through using a logistic regression model."
@@ -688,9 +689,9 @@ with open("analysis.txt", "a") as file:
     print("", file=file)
     print(textwrap.fill(log_reason_text, width=210), file=file)
 
-print("Logistic regression reasoning has been appended to analysis.txt")
+print("Logistic regression reasoning has been appended to analysis.md")
 
-with open("analysis.txt", "a") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
+with open("analysis.md", "a") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
     print("\n\tLogistic Regression for Species Classification Results:", file=file) # How to do it - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
     print(f"Accuracy: {accuracy:.4f}", file=file)
     print("\n\tClassification Report:", file=file)
@@ -702,9 +703,9 @@ with open("analysis.txt", "a") as file: # The (file=file) argument is important 
     predicted_species = model_species.predict(example_data)
     print(f"\nPredicted species for {example_data.iloc[0].tolist()}: {le.inverse_transform(predicted_species)[0]}", file=file) # This will print the last 5 rows of the dataset.
 
-print("Logistic regression results have been written to analysis.txt")
+print("Logistic regression results have been written to analysis.md")
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     log_regression1_text = (
     "For the iris dataset, the Logistic Regression Model achieves high accuracy (~ 97 %), this is due to the simplicity and linear separability of the iris dataset. Accuracy for the Logistic Regression Model is calculated as the ratio of correct predictions to total predictions. The columns for precision and recall measure class specific performance in the model, and the f1-score column gives a balances metric for imbalanced classes (not a problem here as the iris dataset is balanced). In the support column, it can be seen that the Verginica species has a value of 9, demonstrating a slightly lower recall, this is likely due to the overlap with Versicolor. As seen throughout previous testing on the dataset, the majority of the confusion in the dataset occurs between the Versicolor and Virginica species."
     )
@@ -717,7 +718,7 @@ with open("analysis.txt", "a") as file:
     print(textwrap.fill(log_regression2_text, width=210), file=file)
     print("", file=file)
 
-print("Logistic Regression observations appended to analysis.txt")
+print("Logistic Regression observations appended to analysis.md")
 
 # Confusion matrix
 # Generate the confusion matrix
@@ -734,7 +735,7 @@ plt.tight_layout()
 plt.savefig('confusion_matrix_species.png')  # Save the plot as a PNG file
 plt.show()
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\n\tConfusion Matrix.", file=file)
     con_matrix_text = (
     "A confusion matrix was plotted to visualise the results. The confusion matrix is a performance evaluation tool for classification models. It provides a summary of the prediction results by comparing the actual values (rows) against the predicted values (columns)."
@@ -747,7 +748,7 @@ with open("analysis.txt", "a") as file:
     print(textwrap.fill(con_matrix_text, width=210), file=file)
     print("", file=file)
 
-print("Confusion Matrix observations appended to analysis.txt")
+print("Confusion Matrix observations appended to analysis.md")
 
 # Discuss the pros and cons of each technique and how they may be applied to this dataset. - do this in a text file called 'analysis.txt'.
 
@@ -820,7 +821,7 @@ print("Pros and Cons for each test written to pros_cons_analysis.txt")
 
 ## Conclusion - write a conclusion to the analysis.txt file.
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\n\tConclusion.", file=file)
     conclusion_text = (
     "The analysis of the Iris dataset has provided valuable insights into the relationships between features (sepal length/width, petal length/width) and the target variable (species)."
@@ -835,11 +836,11 @@ with open("analysis.txt", "a") as file:
     print("", file=file)
     print(textwrap.fill(conclusion_text, width=210), file=file)
 
-print("Conclusion appended to analysis.txt")
+print("Conclusion appended to analysis.md")
 
 # References - add references to the analysis.txt file.
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\n", file=file)
     print("\n\tReferences.", file=file)
     print("\n\tAcademic Sources", file=file)
@@ -908,11 +909,11 @@ with open("analysis.txt", "a") as file:
     print("\nWV State University (no date) ‘Scholarly vs. non-scholarly articles’. Available at: https://wvstateu.libguides.com/c.php?g=813217&p=5816022", file=file)
     print("\nWikipedia (no date) ‘Linear discriminant analysis’. Available at: https://en.wikipedia.org/wiki/Linear_discriminant_analysis", file=file)
 
-print("References appended to analysis.txt")
+print("References appended to analysis.md")
 
-with open("analysis.txt", "a") as file:
+with open("analysis.md", "a") as file:
     print("\nEND OF ANALYSIS DOCUMENT", file=file)
 
-print("End of Document appended to analysis.txt")
+print("End of Document appended to analysis.md")
 
 # END
