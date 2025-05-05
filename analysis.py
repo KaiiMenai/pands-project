@@ -173,7 +173,7 @@ with open("analysis.md", "a") as file:
     print(iris_df['class'].value_counts(), file=file)
     print("\nIt can be seen that there are 50 samples for each of the three classes (species) of iris flower: Setosa, Versicolor, and Virginica.", file=file)
     print("\nSummary statistics for the whole dataset:", file=file)
-    print(iris_df.describe().to_markdown, file=file)
+    print(iris_df.describe().to_markdown(), file=file)
     iris_summary_text = (
     "The summary statistics for the whole dataset shows that there are 150 samples in the dataset for each of the variables, the value displayed is the non-missing values, and thus it can be verified that the dataset does not have any missing values."
     " The Mean, Standard Deviation (std), Minimum (min) and Maximum (max), and the Lower, Median, and Higher Inter-quartile Ranges (25%, 50%, and 75%, respectively) values are displayed for all four features (sepal length, sepal width, petal length, and petal width)."
