@@ -630,7 +630,7 @@ with open("analysis.txt", "a") as file:
     print("", file=file)
     print(textwrap.fill(log_reason_text, width=210), file=file)
 
-print("Modified Logistic regression reasoning has been appended to analysis.txt")
+print("Logistic regression reasoning has been appended to analysis.txt")
 
 with open("analysis.txt", "a") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
     print("\n\tLogistic Regression for Species Classification Results:", file=file) # How to do it - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
@@ -657,6 +657,7 @@ with open("analysis.txt", "a") as file:
     print(textwrap.fill(log_regression1_text, width=210), file=file)
     print("", file=file)
     print(textwrap.fill(log_regression2_text, width=210), file=file)
+    print("", file=file)
 
 print("Logistic Regression observations appended to analysis.txt")
 
@@ -677,11 +678,16 @@ plt.show()
 
 with open("analysis.txt", "a") as file:
     print("\n\tConfusion Matrix.", file=file)
-    print("\nA confusion matrix was plotted to visualise the results. The confusion matrix is a performance evaluation tool for classification models. It provides a summary of the prediction results by comparing the actual values (rows) against the predicted values (columns).", file=file)
-    print("The confusion matrix helps with understanding how well the logistic regression model classifies the different species of iris and whether there are any species that are more prone to misclassification (https://www.analyticsvidhya.com/blog/2020/04/confusion-matrix-machine-learning/).", file=file)
-    print("To interpret the matrix, the structure and values within the matrix are important to understand what it shows. The rows within the matrix represent the Actual Classes (actual species of iris), whilst the columns represent the Predicted Classes (predicted species from the model output).",  file=file)
-    print("The matrix contains a number of values, on the diagonal line (from top left to bottom right) the values denote the Correct Predictions, where the actual and predicted classes (species) match. All other values from the diagonal are those denoting Misclassifications, where the actual and predicted species differ.",  file=file)
-    print("Although the Logistic Regression Model gives a value for Accuracy (1.000) for species classification, the classification report and confusion matrix aid in giving a clearer picture of the data and the accuracy of predictions made with the model.",  file=file)
+    con_matrix_text = (
+    "A confusion matrix was plotted to visualise the results. The confusion matrix is a performance evaluation tool for classification models. It provides a summary of the prediction results by comparing the actual values (rows) against the predicted values (columns)."
+    "The confusion matrix helps with understanding how well the logistic regression model classifies the different species of iris and whether there are any species that are more prone to misclassification (https://www.analyticsvidhya.com/blog/2020/04/confusion-matrix-machine-learning/)."
+    "To interpret the matrix, the structure and values within the matrix are important to understand what it shows. The rows within the matrix represent the Actual Classes (actual species of iris), whilst the columns represent the Predicted Classes (predicted species from the model output)."
+    "The matrix contains a number of values, on the diagonal line (from top left to bottom right) the values denote the Correct Predictions, where the actual and predicted classes (species) match. All other values from the diagonal are those denoting Misclassifications, where the actual and predicted species differ."
+    "Although the Logistic Regression Model gives a value for Accuracy (1.000) for species classification, the classification report and confusion matrix aid in giving a clearer picture of the data and the accuracy of predictions made with the model."
+    )
+    print("", file=file)
+    print(textwrap.fill(con_matrix_text, width=210), file=file)
+    print("", file=file)
 
 print("Confusion Matrix observations appended to analysis.txt")
 
