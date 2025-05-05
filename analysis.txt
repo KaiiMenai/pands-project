@@ -17,12 +17,14 @@ Although the dataset only includes flower measurements (sepal length/width and p
 Despite its age and simplicity, the Iris dataset remains a central teaching tool for introducing classification problems in machine learning.
 
 The shape of the dataset:
+
 (150, 5)
 
 The dataset contains 150 rows of data and 5 columns. The 5 columns are the species of isis flower (here noted as 'class'), and sepal length, sepal width, petal length, and petal width.
 The first and last five rows of the dataset are printed below, as well as the column names within the dataset.
 
 The first 5 rows of the dataset:
+
    sepal length  sepal width  petal length  petal width        class
 0           5.1          3.5           1.4          0.2  Iris-setosa
 1           4.9          3.0           1.4          0.2  Iris-setosa
@@ -31,6 +33,7 @@ The first 5 rows of the dataset:
 4           5.0          3.6           1.4          0.2  Iris-setosa
 
 The last 5 rows of the dataset:
+
      sepal length  sepal width  petal length  petal width           class
 145           6.7          3.0           5.2          2.3  Iris-virginica
 146           6.3          2.5           5.0          1.9  Iris-virginica
@@ -39,13 +42,16 @@ The last 5 rows of the dataset:
 149           5.9          3.0           5.1          1.8  Iris-virginica
 
 The column names of the dataset:
+
 Index(['sepal length', 'sepal width', 'petal length', 'petal width', 'class'], dtype='object')
 
 These print checks were conducted to ensure that the data was correctly imported and in the correct format.
 The number of rows and columns in the dataset:
+
 None
 
 The number of missing values in the dataset:
+
 sepal length    0
 sepal width     0
 petal length    0
@@ -54,9 +60,11 @@ class           0
 dtype: int64
 
 The number of duplicate rows in the dataset:
+
 3
 
 The data types of each column in the dataset:
+
 sepal length    float64
 sepal width     float64
 petal length    float64
@@ -64,12 +72,10 @@ petal width     float64
 class            object
 dtype: object
 
-Missing values were checked for in the dataset, there were none.
-If there were missing values, the dataset would need to be cleaned and sorted further before any analysis could be conducted.
-There were no missing values in this dataset, so further cleaning was unnecessary.
-
-From the information table, it can be seen that where one column has categorical (object) data (class column - also referred to as species for this dataset) 
-and the four other columns (sepal length, sepal width, petal length, and petal width) are of the float type (float64) (continuous variables) with non-Null entries. That is, there are no 0 / null~ entries in the dataset.
+Missing values were checked for in the dataset, there were none.If there were missing values, the dataset would need to be cleaned and sorted further before any analysis could be conducted.There were no missing
+values in this dataset, so further cleaning was unnecessary.From the information table, it can be seen that where one column has categorical (object) data (class column - also referred to as species for this
+dataset)  and the four other columns (sepal length, sepal width, petal length, and petal width) are of the float type (float64) (continuous variables) with non-Null entries. That is, there are no 0 / null~
+entries in the dataset.
 
 Duplicates were removed from the data using the drop_duplicates function.
 The code used for this was: 	data = iris_df.drop_duplicates(subset=class.)
