@@ -668,6 +668,24 @@ plt.tight_layout()
 plt.savefig('linear_regression_and_r2_by_species.png')  # Save the plot as a PNG file
 plt.show()
 
+with open("analysis.md", "a") as file:
+    print("\n## Linear Regression and R^2 by Species", file=file)
+    linear_regression_and_r2_by_species1_text = (
+    "For both plots the species are colour coded (Setosa is blue, Versicolor is orange, Verginica is green)."
+    )
+    linear_regression_and_r2_by_species2_text = (
+    "The left plot displays the Linear Regression for the Sepal features (Length vs Width). Setosa, shown in blue, had an R<sup>2<\sup> value of 0.56. Versicolor (orange), showed an R<sup>2<\sup> value of 0.28. Virginica, in green, had an R<sup>2<\sup> value of 0.21. Of the three species, Setosa is the species where sepal features, length and width, may influence the variance in one another. However, due to the overlap between Versicolor (R<sup>2<\sup> = 0.28) and Virginica (R<sup>2<\sup> = 0.21), other factors may be responsible for the variance observed between the Sepal features."
+    )
+    linear_regression_and_r2_by_species3_text = (
+    "In the right plot (Petal Length vs Petal Width), the three species Setosa (blue), Versicolor (orange), and Virginica (green) Linear Regression for the Petal Features is plotted. The three species have clearly separated from one another. However, although on a dataset wide basis Petal Features have influence over one another (R<sup>2<\sup> = 0.93), at species level, the results are quite different. Out of the three species, the only one to display influence on variance for petal features over one another was the Virginica species (R<sup>2<\sup> = 0.62), with the Setosa and Virginica species showing that other factors may be responsible for the variance between these features, with R<sup>2<\sup> values of 0.09 and 0.10, respectively. (James *et al*., 2013, https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html, https://medium.com/%40brandon93.w/regression-model-evaluation-metrics-r-squared-adjusted-r-squared-mse-rmse-and-mae-24dcc0e4cbd3, https://www.geeksforgeeks.org/ml-mathematical-explanation-of-rmse-and-r-squared-error/)"
+    )
+    print("", file=file)
+    print(textwrap.fill(linear_regression_and_r2_by_species1_text, width=210), file=file)
+    print("", file=file)
+    print(textwrap.fill(linear_regression_and_r2_by_species2_text, width=210), file=file)
+    print("", file=file)
+    print(textwrap.fill(linear_regression_and_r2_by_species3_text, width=210), file=file)
+
 # INSERT LINEAR OBSERVATION HERE
 
 # - Logistic Regression - model taken from my PoDA project, but adapted for this dataset. (https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb)
