@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import sklearn as skl
 import textwrap
-from sklearn.cluster import KMeans 
+from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -28,53 +28,57 @@ from sklearn.metrics import confusion_matrix
 
 # Into terminal: pip install ucimlrepo
 
-# Importing the dataset, fetch the dataset, define the data (as pandas dataframes), print metadata, and print the variable information to check that it worked.
-# from ucimlrepo import fetch_ucirepo 
+# Importing the dataset, fetch the dataset,
+# define the data (as pandas dataframes),
+# print metadata,
+# and print the variable information to check that it worked.
+# from ucimlrepo import fetch_ucirepo
 
-# iris = fetch_ucirepo(id=53) 
+# iris = fetch_ucirepo(id=53)
 
-# data - extracting x and y (as pandas dataframes) 
-# x = iris.data.features 
-# y = iris.data.targets 
+# data - extracting x and y (as pandas dataframes)
+# x = iris.data.features
+# y = iris.data.targets
 
 # metadata - print was to check
-# print(iris.metadata) 
+# print(iris.metadata)
 
 # variable information - print was to check
-# print(iris.variables) 
+# print(iris.variables)
 
-# Combine the features and targets into a single DataFrame (df) so it can be exported as a CSV
+# Combine the features and targets into a single df to export as CSV
 # iris_df = pd.concat([x, y], axis=1)
 
 # Exporting the DataFrame (df) to a CSV file
-# iris_df.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
-# print("Iris dataset has been successfully exported to a CSV!") # Output - Iris dataset has been successfully exported to a CSV!
+# iris_df.to_csv
+#   ('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
+# print("Iris dataset has been successfully exported to a CSV!")
+# Output - Iris dataset has been successfully exported to a CSV!
 
 # Now to retrieve dataset for making plots and analysis
 # Import the dataset from the CSV file
 
 iris_df = pd.read_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv')
-
-print(iris_df) # This will print the dataframe into the terminal and also gi ve a brief summary of (150 rows x 5 columns).
+print(iris_df)# This will print the df into the terminal and also give a brief summary of it (150 rows x 5 columns).
 
 # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
-    # FOR SAVING AS A TXT FILE AND APPENDING AS WE GO ON 
-    # First, create a file with some initial content
-    # Now, append to the file
-#with open("append_example.txt", "a") as file:
-#    print("\nThis content is being appended to the file.", file=file)
-#    print("Appended on: 2023-09-02", file=file)
-#print("Additional content has been appended to append_example.txt")
-    # Check the final content
-#print("\nFinal content of the file:")
-#with open("append_example.txt", "r") as file:    print(file.read())
+#    FOR SAVING AS A TXT FILE AND APPENDING AS WE GO ON
+#    First, create a file with some initial content
+#    Now, append to the file
+# with open("append_example.txt", "a") as file:
+#     print("\nThis content is being appended to the file.", file=file)
+#     print("Appended on: 2023-09-02", file=file)
+# print("Additional content has been appended to append_example.txt")
+#    Check the final content
+# print("\nFinal content of the file:")
+# with open("append_example.txt", "r") as file:    print(file.read())
 
 with open("analysis.md", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
     print("# Data Analysis conducted on the Iris Dataset", file=file)
     print("\n## Summary", file=file)
     summary_text = (
-    "The analysis used as a source for this document (analysis.py) was conducted using Python and the Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn libraries. The dataset was imported from the UCI Machine Learning Repository and is a well-known dataset for classification tasks."
-    " The dataset contained 150 samples of iris flowers, with 5 columns: sepal length, sepal width, petal length, petal width, and species (class). The dataset was used to conduct exploratory data analysis (EDA) and visualisation, as well as some machine learning tasks. Histogram, boxplot, scatterplot, PCA, pairplot, K-means clustering, correlation matrix, and linear regression analysis were conducted on the dataset, and the results of each were saved as a PNG file."
+    "The analysis used as a source for this document (analysis.py) was conducted using Python and the Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn libraries. The dataset was imported from the UCI Machine Learning Repository and is a well-known dataset for classification tasks. "
+    "The dataset contained 150 samples of iris flowers, with 5 columns: sepal length, sepal width, petal length, petal width, and species (class). The dataset was used to conduct exploratory data analysis (EDA) and visualisation, as well as some machine learning tasks. Histogram, boxplot, scatterplot, PCA, pairplot, K-means clustering, correlation matrix, and linear regression analysis were conducted on the dataset, and the results of each were saved as a PNG file."
     )
     print("", file=file)
     print(textwrap.fill(summary_text, width=210), file=file)
@@ -107,7 +111,7 @@ with open("analysis.md", "a") as file:
 print("Background Intro appended to analysis.md")
 
 # Basic data checks - check for missing values, duplicates, and data types
-## Using the 'with' statement to handle file operations
+# Using the 'with' statement to handle file operations
 
 with open("basic_data_explore.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
     print("\tBasic data checks:", file=file)
@@ -131,7 +135,7 @@ with open("basic_data_explore.txt", "a") as file:
     print(iris_df.duplicated().sum(), file=file) # This will print the number of duplicate rows in the dataset.
     print("The data types of each column in the dataset:", file=file)
     print(iris_df.dtypes, file=file) # This will print the data types of each column in the dataset.print("This is the initial content of the file.", file=file)
-    
+
 print("Basic data checks have been appended to basic_data_explore.txt")
 
 # Write observations from the basic data checks to a text file.
@@ -187,7 +191,7 @@ with open("summary_statistics.txt", "w") as file:  # New file for summary stats
     print("\n\tSummary statistics for the whole dataset:", file=file)
     print(iris_df.describe(), file=file)  # Summary statistics for the entire dataset
     print("\n\tSummary statistics for each species:", file=file)
-    
+
     # Separate the dataset by species
     setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
     versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
@@ -933,8 +937,7 @@ print("References appended to analysis.md")
 
 with open("analysis.md", "a") as file:
     print("\n# END OF ANALYSIS DOCUMENT", file=file)
-    print("", file=file)
-    
+
 print("End of Document appended to analysis.md")
 
 # END
