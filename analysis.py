@@ -264,6 +264,8 @@ with open("analysis.txt", "a") as file:
     print("On average, Setosa was found to have the shortest sepal length and widest sepal width. Setosa was also found to have the shortest petal length measurements and narrowest petal width. For Versicolor and Virginica, there were some differences visible in the measurements for the four features (sepal length/width, petal length/width), however, there were instances where the feature measurements converged, particularly for sepal length and sepal width. Petal length and petal width displayed differences between species, indicating that these feature measurements may be valuable for classification of Iris species.", file=file)
     print("(https://www.nickmccullum.com/python-visualization/boxplot/ , https://www.ncl.ac.uk/webtemplate/ask-assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plots.html).", file=file)
 
+print("Boxplot observations appended to analysis.txt")
+
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
 # Set up the figure
 fig, axes = plt.subplots(2, 2, figsize=(12, 10))
@@ -304,9 +306,9 @@ plt.show()
 
 with open("analysis.txt", "a") as file:
     print("\n\Histograms by Feature.", file=file)
-    print("\nBoxplots were plotted for each of the four measured features (sepal length/width and petal length/width), the data in each of these four plots is separated by species. Boxplots make visualising range, potential outliers, the inter-quartile range, and the median of the data more easily.", file=file)
-    print("\nThere were nine outliers in total within the dataset between the four sepal/petal features. The Setosa species had three outliers in the data for petal length, and two outliers in the data for petal width. The Virginica species had one outlier for sepal length and two outliers for sepal width. The Versicolor species had the fewest number of outliers with only one outlier throughout the whole dataset, this outlier was for petal length.",  file=file)
-    print("On average, Setosa was found to have the shortest sepal length and widest sepal width. Setosa was also found to have the shortest petal length measurements and narrowest petal width. For Versicolor and Virginica, there were some differences visible in the measurements for the four features (sepal length/width, petal length/width), however, there were instances where the feature measurements converged, particularly for sepal length and sepal width. Petal length and petal width displayed differences between species, indicating that these feature measurements may be valuable for classification of Iris species.", file=file)
+    print("\n ", file=file)
+    print("\n",  file=file)
+    print(".", file=file)
     print("(https://www.nickmccullum.com/python-visualization/boxplot/ , https://www.ncl.ac.uk/webtemplate/ask-assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plots.html).", file=file)
 
 # Scatter plots - plot and save scatter plots for each pair of variables in the dataset as a png file.
