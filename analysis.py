@@ -127,24 +127,24 @@ with open("analysis.md", "a") as file: # The (file=file) argument is important t
     print("", file=file)
     print("The first and last five rows of the dataset are printed below, as well as the column names within the dataset.", file=file)
     print("\nThe first 5 rows of the dataset:", file=file)
-    print(iris_df.head(), file=file) # first 5 rows.
+    print(iris_df.head().to_markdown(), file=file) # first 5 rows.
     print("\nThe last 5 rows of the dataset:", file=file)
-    print(iris_df.tail(), file=file) # last 5 rows.
+    print(iris_df.tail().to_markdown(), file=file) # last 5 rows.
     print("\nThe column names of the dataset:", file=file)
-    print(iris_df.columns, file=file) # column names.
+    print(iris_df.columns.to_markdown(), file=file) # column names.
     print("\nThese print checks were conducted to ensure that the data was correctly imported and in the correct format.", file=file)
 
 print("Basic data explanation written to analysis.md")
 
 with open("analysis.md", "a") as file:
     print("The number of rows and columns in the dataset:", file=file)
-    print(iris_df.info(), file=file) # number of rows and columns.
+    print(iris_df.info().to_markdown(), file=file) # number of rows and columns.
     print("\nThe number of missing values in the dataset:", file=file)
-    print(iris_df.isnull().sum(), file=file) # number of missing values.
+    print(iris_df.isnull().sum().to_markdown(), file=file) # number of missing values.
     print("\nThe number of duplicate rows in the dataset:", file=file)
-    print(iris_df.duplicated().sum(), file=file) # number of duplicate rows.
+    print(iris_df.duplicated().sum().to_markdown(), file=file) # number of duplicate rows.
     print("\nThe data types of each column in the dataset:", file=file)
-    print(iris_df.dtypes, file=file)
+    print(iris_df.dtypes.to_markdown(), file=file)
     eda_text = (
     "Missing values were checked for in the dataset, there were none."
     " If there were missing values, the dataset would need to be cleaned and sorted further before any analysis could be conducted."
@@ -221,7 +221,7 @@ with open("analysis.md", "a") as file:
     print("\n### Iris Setosa", file=file)
     print("", file=file)
     print("Setosa Statistics:", file=file)
-    print(setosa_stats, file=file)
+    print(setosa_stats.to_markdown(), file=file)
     setosa_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
     " The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
@@ -233,7 +233,7 @@ with open("analysis.md", "a") as file:
     print("\n### Iris Versicolor", file=file)
     print("", file=file)
     print("Versicolor Statistics:", file=file)
-    print(versicolor_stats, file=file)
+    print(versicolor_stats.to_markdown(), file=file)
     versicolor_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
     " The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
@@ -245,7 +245,7 @@ with open("analysis.md", "a") as file:
     print("\n### Iris Virginica", file=file)
     print("", file=file)
     print("\nVirginica Statistics:", file=file)
-    print(virginica_stats, file=file)    
+    print(virginica_stats.to_markdown(), file=file)    
     virginica_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
     " The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
