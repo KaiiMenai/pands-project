@@ -670,6 +670,9 @@ plt.show()
 
 with open("analysis.md", "a") as file:
     print("\n## Linear Regression and R^2 by Species", file=file)
+    print("", file=file)
+    print("![Linear Regression & R2 by species](linear_regression_and_r2_by_species.png)", file=file)
+    print("", file=file)
     linear_regression_and_r2_by_species1_text = (
     "For both plots the species are colour coded (Setosa is blue, Versicolor is orange, Verginica is green)."
     )
