@@ -254,14 +254,14 @@ seen in PC1 for the petal features, it could indicate that these are good determ
 
 For both plots the species are colour coded (Setosa is blue, Versicolor is orange, Verginica is green).
 
-The left plot displays the Linear Regression for the Sepal features (Length vs Width). Setosa, shown in blue, had an R<sup>2<\sup> value of 0.56. Versicolor (orange), showed an R<sup>2<\sup> value of 0.28.
-Virginica, in green, had an R<sup>2<\sup> value of 0.21. Of the three species, Setosa is the species where sepal features, length and width, may influence the variance in one another. However, due to the
-overlap between Versicolor (R<sup>2<\sup> = 0.28) and Virginica (R<sup>2<\sup> = 0.21), other factors may be responsible for the variance observed between the Sepal features.
+The left plot displays the Linear Regression for the Sepal features (Length vs Width). Setosa, shown in blue, had an R<sup>2</sup> value of 0.56. Versicolor (orange), showed an R<sup>2</sup> value of 0.28.
+Virginica, in green, had an R<sup>2</sup> value of 0.21. Of the three species, Setosa is the species where sepal features, length and width, may influence the variance in one another. However, due to the
+overlap between Versicolor (R<sup>2</sup> = 0.28) and Virginica (R<sup>2</sup> = 0.21), other factors may be responsible for the variance observed between the Sepal features.
 
 In the right plot (Petal Length vs Petal Width), the three species Setosa (blue), Versicolor (orange), and Virginica (green) Linear Regression for the Petal Features is plotted. The three species have clearly
-separated from one another. However, although on a dataset wide basis Petal Features have influence over one another (R<sup>2<\sup> = 0.93), at species level, the results are quite different. Out of the three
-species, the only one to display influence on variance for petal features over one another was the Virginica species (R<sup>2<\sup> = 0.62), with the Setosa and Virginica species showing that other factors may
-be responsible for the variance between these features, with R<sup>2<\sup> values of 0.09 and 0.10, respectively. (James *et al*., 2013, https://scikit-
+separated from one another. However, although on a dataset wide basis Petal Features have influence over one another (R<sup>2</sup> = 0.93), at species level, the results are quite different. Out of the three
+species, the only one to display influence on variance for petal features over one another was the Virginica species (R<sup>2</sup> = 0.62), with the Setosa and Virginica species showing that other factors may
+be responsible for the variance between these features, with R<sup>2</sup> values of 0.09 and 0.10, respectively. (James *et al*., 2013, https://scikit-
 learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html, https://medium.com/%40brandon93.w/regression-model-evaluation-metrics-r-squared-adjusted-r-squared-mse-rmse-and-mae-24dcc0e4cbd3,
 https://www.geeksforgeeks.org/ml-mathematical-explanation-of-rmse-and-r-squared-error/)
 
