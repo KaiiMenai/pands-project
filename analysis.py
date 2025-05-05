@@ -389,6 +389,8 @@ with open("analysis.txt", "a") as file:
     print("",  file=file)
     print("",  file=file)
 
+print("Pairplot observations appended to analysis.txt")
+
 # - Correlation matrix
 corr_matrix = iris_df.iloc[:, :4].corr()
 sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
@@ -403,6 +405,8 @@ with open("analysis.txt", "a") as file:
     print("",  file=file)
     print("",  file=file)
     print("",  file=file)
+
+print("Correlation Matrix observations appended to analysis.txt")
 
 # - PCA (Principal Component Analysis)
 
@@ -434,6 +438,8 @@ with open("analysis.txt", "a") as file:
     print("",  file=file)
     print("",  file=file)
     print("",  file=file)
+
+print("Principal Component Analysis (PCA) observations appended to analysis.txt")
 
 # - Clustering analysis (e. K-means clustering) is used to group similar data points together.
 # In this case, K-means clustering is used to group the iris dataset into three clusters (corresponding to the three species).
@@ -473,6 +479,8 @@ with open("analysis.txt", "a") as file:
     print("",  file=file)
     print("",  file=file)
     print("",  file=file)
+
+print("K-means Clustering observations appended to analysis.txt")
 
 # This dataset has previously been used for machine learning and classification tasks, so it may be useful to explore some of those techniques as well.
 # - Linear Regression
