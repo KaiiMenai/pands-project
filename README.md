@@ -25,11 +25,7 @@ You might do that for this project as follows:
 
 The iris dataset contains 150 samples of 3 species, there are 50 samples for each of the species. Each sample has 4 measurements taken (other than species/class), these are: petal length, petal width, sepal length, and sepal width.
 
-## Histograms and scatter plots - what do we see?
-
-## Write about why chose to do PCA, correlation matrix, pairplot, and k means - what benefit is there from running this analysis? 
-
-## LRM and logRM - why run these? what is each type designed for - how did conducting the previous analysis aid in determining the use of predictive modelling? 
+## Explain what the code does for the important tests
 
 # References
 
