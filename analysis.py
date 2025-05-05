@@ -64,6 +64,25 @@ print(iris_df) # This will print the dataframe into the terminal and also gi ve 
 #print("\nFinal content of the file:")
 #with open("append_example.txt", "r") as file:    print(file.read())
 
+with open("analysis.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
+    print("\tData Analysis conducted on the Iris Dataset", file=file)
+    print("\n\Summary.", file=file)
+
+
+with open("analysis.txt", "a") as file:
+    print("\n\tBackground.", file=file)
+    print("\nThe analysis of the Iris dataset has provided valuable insights into the relationships between features (sepal length/width, petal length/width) and the target variable (species).", file=file)
+    print("The dataset was found to be balanced, with 50 samples for each of the three species (Setosa, Versicolor, Virginica). The summary statistics showed that there were no missing values in the dataset, and the features had different means and standard deviations. The box plots and histograms provided visualisations of the distribution of features by species, and the scatter plots showed the relationships between features and the target variable.", file=file)
+    print("For a number of plots (histograms, scatter plots, linear regression, box plots) the Setosa species clearly clusters separately to the Versicolor and Virginica species, for both sepal and petal features. For petal features, all species separated from one another (with some minor overlap visible between the Versicolor and Virginica species), indicating that petal features were more distinguishable between species, and thus would be more useful in classification.", file=file)
+    print("The PCA and K-means clustering techniques were used to reduce the dimensionality of the data and identify clusters in the data, respectively. Following the principal component analysis (PCA) the observations about petal features being more distinguishable between species, commpared to sepal features was solidified as it was found that PC1 (first principal component) was responsible for 72.8 % of the variability seen within the data, the PC1 was referring to the petal length and width features.", file=file)
+    print("The feature correlation matrix heat map also displayed the difference between species based onn petal features, where petal length vs petal width resulted in r = 0.96 indicating that the petal length and width showed a strong positive correlation and that their measurements often varied together. The Logistic Regression (classification techniques) were used to predict the species of iris flowers based on their features, and the Linear Regression (regression techniques) were used to predict continuous values based on features.", file=file)
+    print("For the linear regression (LRM) analysis, petal length vs petal width gave an R^2 value of 0.93, indicating that most of the variance in petal width can be explained by petal length. Some predictions were made for petal width following an 80 - 20 split in the data for training and testing, respectively. The analysis has also shown that the dataset is suitable for classification and regression tasks, and the techniques used have provided valuable insights into the relationships between features and the target variable.", file=file)
+    print("The analysis has demonstrated that the features (sepal length/width, petal length/width) are valuable for classification of iris species, and the techniques used have provided valuable insights into the relationships between features and the target variable. However, in order to have a more reliable method for predicting the species using a linear regression (or logistic regression) model, a larger sample population is essential in order to accurately visualise and calculate the nuances between such species based on their features.", file=file)
+    print("\nIn terms of model accuracy, reliability, and consistent repeatability the size of the dataset may be considered a limiting factor. However, the data does efficiently demonstrate what a linear based dataset can show through various forms of analysis.", file=file)
+
+
+print("Background Introduction appended to analysis.txt")
+
 # Basic data checks - check for missing values, duplicates, and data types
 ## Using the 'with' statement to handle file operations
 
@@ -94,10 +113,8 @@ print("Basic data checks have been appended to basic_data_explore.txt")
 
 # Write observations from the basic data checks to a text file.
 
-with open("analysis.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
-    print("\tData Analysis conducted on the Iris Dataset", file=file)
-    print("\n", file=file)
-    print("The shape of the dataset:", file=file)
+with open("analysis.txt", "a") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
+    print("\nThe shape of the dataset:", file=file)
     print(iris_df.shape, file=file)
     print("\nThe dataset contains 150 rows of data and 5 columns. The 5 columns are the species of isis flower (here noted as 'class'), and sepal length, sepal width, petal length, and petal width.", file=file)
     print("The first and last five rows of the dataset are printed below, as well as the column names within the dataset.", file=file)
