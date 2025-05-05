@@ -68,7 +68,7 @@ print(iris_df) # This will print the dataframe into the terminal and also gi ve 
 ## Using the 'with' statement to handle file operations
 
 with open("basic_data_explore.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
-    print("Basic data checks:", file=file)
+    print("\tBasic data checks:", file=file)
     print("The shape of the dataset:", file=file)
     print(iris_df.shape, file=file)
     print("The first 5 rows of the dataset:", file=file)
@@ -95,7 +95,7 @@ print("Basic data checks have been appended to basic_data_explore.txt")
 # Write observations from the basic data checks to a text file.
 
 with open("analysis.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
-    print("Data Analysis conducted on the Iris Dataset", file=file)
+    print("\tData Analysis conducted on the Iris Dataset", file=file)
     print("\n", file=file)
     print("The shape of the dataset:", file=file)
     print(iris_df.shape, file=file)
@@ -148,13 +148,13 @@ with open("summary_statistics.txt", "w") as file:  # New file for summary stats
     virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
 
     # Display the statistics for each species
-    print("Setosa Statistics:", file=file)
+    print("\tSetosa Statistics:", file=file)
     print(setosa_stats, file=file)
 
-    print("\nVersicolor Statistics:", file=file)
+    print("\n\tVersicolor Statistics:", file=file)
     print(versicolor_stats, file=file)
 
-    print("\nVirginica Statistics:", file=file)
+    print("\n\tVirginica Statistics:", file=file)
     print(virginica_stats, file=file)
 
 print("Summary statistics for each species has been written to summary_statistics.txt")
@@ -195,7 +195,7 @@ with open("analysis.txt", "a") as file:
     print("Value counts for each of the species:", file=file)
     print(iris_df['class'].value_counts(), file=file)
     print("\nIt can be seen that there are 50 samples for each of the three classes (species) of iris, setosa, versicolor, and virginica.", file=file)
-    print("\nSummary statistics for the whole dataset:", file=file)
+    print("\n\tSummary statistics for the whole dataset:", file=file)
     print(iris_df.describe(), file=file)
     print("\nThe summary statistics for the whole dataset shows that there are 150 samples in the dataset for each of the variables, the value displayed is the non-missing values, and thus it can be verified that the dataset does not have any missing values. ", file=file) # Summary statistics observations taken from my own work for Principles of Data Analytics, with wording changed to match what was required for this project. https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb
     print("\tPlease Note: Summary statistics observations taken from my own work for the Principles of Data Analytics Module, with wording changed to match what was required for this project. Link: https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb", file=file)
@@ -204,7 +204,7 @@ with open("analysis.txt", "a") as file:
     print("\nThe Standard Deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. Sepal length had a mean of 5.84 cm with a std of 0.83, therefore the majority of values deviate by 0.83 cm (+/-) from the mean. \nThe mean for sepal width was 3.05 cm with a std of 0.43 cm, the sepal widths deviated by +/- 0.43 cm from the mean. The feature, sepal width, had less variability (std = 0.43) compared to that of sepal length (std = 0.83). \nFor petal length, the mean was 3.76 cm with a std of 1.76 cm, thus most values for petal length deviated by 1.76 cm (+/-). Petal width had a mean of 1.20 cm with a std of 0.76 cm, the width of petals deviated by +/- 0.76 cm. \nThe measurement with the largest deviation from the mean is the petal length (std = 1.76), this suggests that petal lengths vary more widely across samples compared to the other features.", file=file)
     print("")
     print("\nIn the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.", file=file)
-    print("\nSummary statistics for each species:", file=file)
+    print("\n\tSummary statistics for each species:", file=file)
     # Separate the dataset by species
     setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
     versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
@@ -260,7 +260,7 @@ plt.show()
 with open("analysis.txt", "a") as file:
     print("\n\tBoxplots by Feature.", file=file)
     print("\nBoxplots were plotted for each of the four measured features (sepal length/width and petal length/width), the data in each of these four plots is separated by species. Boxplots make visualising range, potential outliers, the inter-quartile range, and the median of the data more easily.", file=file)
-    print("\nThere were nine outliers in total within the dataset between the four sepal/petal features. The Setosa species had three outliers in the data for petal length, and two outliers in the data for petal width. The Virginica species had one outlier for sepal length and two outliers for sepal width. The Versicolor species had the fewest number of outliers with only one outlier throughout the whole dataset, this outlier was for petal length.",  file=file)
+    print("There were nine outliers in total within the dataset between the four sepal/petal features. The Setosa species had three outliers in the data for petal length, and two outliers in the data for petal width. The Virginica species had one outlier for sepal length and two outliers for sepal width. The Versicolor species had the fewest number of outliers with only one outlier throughout the whole dataset, this outlier was for petal length.",  file=file)
     print("On average, Setosa was found to have the shortest sepal length and widest sepal width. Setosa was also found to have the shortest petal length measurements and narrowest petal width. For Versicolor and Virginica, there were some differences visible in the measurements for the four features (sepal length/width, petal length/width), however, there were instances where the feature measurements converged, particularly for sepal length and sepal width. Petal length and petal width displayed differences between species, indicating that these feature measurements may be valuable for classification of Iris species.", file=file)
     print("(https://www.nickmccullum.com/python-visualization/boxplot/ , https://www.ncl.ac.uk/webtemplate/ask-assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plots.html).", file=file)
 
@@ -307,11 +307,11 @@ plt.show()
 with open("analysis.txt", "a") as file:
     print("\n\tHistograms by Feature.", file=file)
     print("\nThe histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
-    print("\nFrom the histogram plot for sepal length by species, the Setosa species showed a normal distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species has a broad range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species with the largest range in length of sepals and longest average sepal length is the Virginica species.",  file=file)
-    print("\nFor sepal width, it can be seen that overall, the data shows a normal distribution. Contrary to what was observed for sepal length, the narrowest sepal width is the Versicolor species, with the Virginica species being in the middle of the range. The Setosa species had the greatest width and the broadest range in values for sepal width.", file=file)
-    print("\nSimilar to what was observed for sepal length, for petal length Setosa was the species with the shortest average length and the smallest range in measurements. An average petal length of approximately 4.5 cm was observed for the Versicolor species and demonstrated a normal distribution. The Virginica species had, on average, the longest petal lengths, similar to what was observed for sepal lengths.", file=file)
-    print("\nSetosa species had the narrowest petal width on average. The species with the mid-width measurement was the Versicolor species, with values between 1.0 cm and 2.0 cm. The widest petal widths were observed in the Virginica species.", file=file)
-    print("\n It was observed that the sepal width and petal width for the Setosa species were contrary to one another. For the petal measurements of length and width, the Setosa species was the shortest and narrowest and the values for this species also separated away from the other two species.", file=file)
+    print("From the histogram plot for sepal length by species, the Setosa species showed a normal distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species has a broad range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species with the largest range in length of sepals and longest average sepal length is the Virginica species.",  file=file)
+    print("For sepal width, it can be seen that overall, the data shows a normal distribution. Contrary to what was observed for sepal length, the narrowest sepal width is the Versicolor species, with the Virginica species being in the middle of the range. The Setosa species had the greatest width and the broadest range in values for sepal width.", file=file)
+    print("Similar to what was observed for sepal length, for petal length Setosa was the species with the shortest average length and the smallest range in measurements. An average petal length of approximately 4.5 cm was observed for the Versicolor species and demonstrated a normal distribution. The Virginica species had, on average, the longest petal lengths, similar to what was observed for sepal lengths.", file=file)
+    print("Setosa species had the narrowest petal width on average. The species with the mid-width measurement was the Versicolor species, with values between 1.0 cm and 2.0 cm. The widest petal widths were observed in the Virginica species.", file=file)
+    print("It was observed that the sepal width and petal width for the Setosa species were contrary to one another. For the petal measurements of length and width, the Setosa species was the shortest and narrowest and the values for this species also separated away from the other two species.", file=file)
 
 print("Histogram observations appended to analysis.txt")
 
@@ -618,3 +618,10 @@ with open("pros_cons_analysis.txt", "w") as file:
     print("\n\tApplication: Can be used to predict the probability of a specific species based on features (sepal length/width, petal length/width).", file=file)
     
 print("Pros and Cons for each test written to pros_cons_analysis.txt")
+
+
+## Conclusion - write a conclusion to the analysis.txt file.
+
+with open("analysis.txt", "a") as file:
+    print("\n\tConclusion.", file=file)
+    
