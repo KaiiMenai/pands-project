@@ -117,32 +117,6 @@ print("Background Intro appended to analysis.md")
 
 # Basic data checks - check for missing values, duplicates, and data types
 # Using the 'with' statement to handle file operations
-
-with open("basic_data_explore.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
-    print("\tBasic data checks:", file=file)
-    print("The shape of the dataset:", file=file)
-    print(iris_df.shape, file=file)
-    print("The first 5 rows of the dataset:", file=file)
-    print(iris_df.head(), file=file) # This will print the first 5 rows of the dataset.
-    print("The last 5 rows of the dataset:", file=file)
-    print(iris_df.tail(), file=file) # This will print the last 5 rows of the dataset.
-    print("The column names of the dataset:", file=file)
-    print(iris_df.columns, file=file) # This will print the column names of the dataset.
-
-print("Basic data checks have been written to basic_data_explore.txt")
-
-with open("basic_data_explore.txt", "a") as file:
-    print("The number of rows and columns in the dataset:", file=file)
-    print(iris_df.info(), file=file) # This will print the number of rows and columns in the dataset.
-    print("The number of missing values in the dataset:", file=file)
-    print(iris_df.isnull().sum(), file=file) # This will print the number of missing values in the dataset.
-    print("The number of duplicate rows in the dataset:", file=file)
-    print(iris_df.duplicated().sum(), file=file) # This will print the number of duplicate rows in the dataset.
-    print("The data types of each column in the dataset:", file=file)
-    print(iris_df.dtypes, file=file) # This will print the data types of each column in the dataset.print("This is the initial content of the file.", file=file)
-
-print("Basic data checks have been appended to basic_data_explore.txt")
-
 # Write observations from the basic data checks to a text file.
 
 with open("analysis.md", "a") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
@@ -187,62 +161,9 @@ print("Basic data checks explanation has been appended to analysis.md")
 
 data = iris_df.drop_duplicates(subset="class",) # This will remove any duplicate rows in the dataset, based on the class(species) column.
 
-# Summarise each variable in the dataset and check for outliers - export to a single text file.
+# Summarise each variable in the dataset and check for outliers - export to the md file.
 
-with open("summary_statistics.txt", "w") as file:  # New file for summary stats
-    # Summary statistics for each species
-    print("\n\tValue counts for each of the species:", file=file)
-    print(iris_df['class'].value_counts(), file=file)  # Count of each species in the dataset
-    print("\n\tSummary statistics for the whole dataset:", file=file)
-    print(iris_df.describe(), file=file)  # Summary statistics for the entire dataset
-    print("\n\tSummary statistics for each species:", file=file)
-
-    # Separate the dataset by species
-    setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
-    versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
-    virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
-
-    # Display the statistics for each species
-    print("\tSetosa Statistics:", file=file)
-    print(setosa_stats, file=file)
-
-    print("\n\tVersicolor Statistics:", file=file)
-    print(versicolor_stats, file=file)
-
-    print("\n\tVirginica Statistics:", file=file)
-    print(virginica_stats, file=file)
-
-print("Summary statistics for each species has been written to summary_statistics.txt")
-
-with open("summary_statistics.txt", "a") as file:  # Append to summary stats file
-    # Checking for outliers in the dataset
-
-    # Function to detect outliers using the inter-quartile range method
-    def detect_outliers(df, column):
-        Q1 = df[column].quantile(0.25)  # First quartile
-        Q3 = df[column].quantile(0.75)  # Third quartile
-        IQR = Q3 - Q1  # Interquartile range
-        lower_bound = Q1 - 1.5 * IQR
-        upper_bound = Q3 + 1.5 * IQR
-        outliers = df[(df[column] < lower_bound) | (df[column] > upper_bound)]
-        return outliers
-    # Check for outliers in each numeric column for each species
-    numeric_columns = iris_df.select_dtypes(include=[np.number]).columns
-
-    print("\nOutliers detected for each species:", file=file)
-    for species in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
-        print(f"\nOutliers for {species}:", file=file)
-        species_data = iris_df[iris_df['class'] == species]
-        for column in numeric_columns:
-            outliers = detect_outliers(species_data, column)
-            if not outliers.empty:
-                print(f"  Column '{column}': {len(outliers)} outliers", file=file)
-            else:
-                print(f"  Column '{column}': No outliers detected", file=file)
-
-print("Checks for data outliers has been appended to summary_statistics.txt")
-
-# Write summary stats observations to the analysis.txt file.
+# Write summary stats observations to the analysis.md file.
 
 with open("analysis.md", "a") as file:
     print("\nDuplicates were removed from the data using the drop_duplicates function.", file=file)
@@ -261,27 +182,45 @@ with open("analysis.md", "a") as file:
     )
     print("", file=file)
     print(textwrap.fill(iris_summary_text, width=210), file=file)
+# Checking for outliers in the dataset
+# Function to detect outliers using the inter-quartile range method
+    def detect_outliers(df, column):
+        Q1 = df[column].quantile(0.25)# First quartile
+        Q3 = df[column].quantile(0.75)# Third quartile
+        IQR = Q3 - Q1# Interquartile range
+        lower_bound = Q1 - 1.5 * IQR
+        upper_bound = Q3 + 1.5 * IQR
+        outliers = df[(df[column] < lower_bound) | (df[column] > upper_bound)]
+        return outliers
+# Check for outliers in each numeric column for each species
+    numeric_columns = iris_df.select_dtypes(include=[np.number]).columns
+    print("\nOutliers detected for each species:", file=file)
+    for species in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
+        print(f"\nOutliers for {species}:", file=file)
+        species_data = iris_df[iris_df['class'] == species]
+        for column in numeric_columns:
+            outliers = detect_outliers(species_data, column)
+            if not outliers.empty:
+                print(f"  Column '{column}': {len(outliers)} outliers", file=file)
+            else:
+                print(f"  Column '{column}': No outliers detected", file=file)
     print("\nIn the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.", file=file)
-    print("\n\tSummary statistics for each species:", file=file)
-    # Separate the dataset by species
-    setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
-    versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
-    virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
-    # Display the statistics for each species
-    print("\nSetosa Statistics:", file=file)
-    print(setosa_stats, file=file)
-    print("\nVersicolor Statistics:", file=file)
-    print(versicolor_stats, file=file)
-    print("\nVirginica Statistics:", file=file)
-    print(virginica_stats, file=file)
 
 print("Summary Stats has been appended to analysis.md")
+print("Checks for data outliers has been appended to analysis.md")
 
 # Now to explain what the summary stats are and what they mean - this will be done in the analysis.txt file.
 
 with open("analysis.md", "a") as file:
     print("\n## Individual Species Observations", file=file)
+# Separate the dataset by species
+    setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
+    versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
+    virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
+# Display the statistics for each species
     print("\n### Iris Setosa", file=file)
+    print("Setosa Statistics:", file=file)
+    print(setosa_stats, file=file)
     setosa_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
     " The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
@@ -290,8 +229,10 @@ with open("analysis.md", "a") as file:
     )
     print("", file=file)
     print(textwrap.fill(setosa_stats_summary_text, width=210), file=file)
-    
+    print("", file=file)
     print("\n### Iris Versicolor", file=file)
+    print("Versicolor Statistics:", file=file)
+    print(versicolor_stats, file=file)
     versicolor_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
     " The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
@@ -300,8 +241,10 @@ with open("analysis.md", "a") as file:
     )
     print("", file=file)
     print(textwrap.fill(versicolor_stats_summary_text, width=210), file=file)
-    
+    print("", file=file)
     print("\n### Iris Virginica", file=file)
+    print("\nVirginica Statistics:", file=file)
+    print(virginica_stats, file=file)    
     virginica_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
     " The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
