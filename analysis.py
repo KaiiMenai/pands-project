@@ -306,10 +306,10 @@ plt.show()
 
 with open("analysis.txt", "a") as file:
     print("\n\Histograms by Feature.", file=file)
-    print("\n ", file=file)
+    print("\nThe histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
     print("\n",  file=file)
     print(".", file=file)
-    print("(https://www.nickmccullum.com/python-visualization/boxplot/ , https://www.ncl.ac.uk/webtemplate/ask-assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plots.html).", file=file)
+    print("", file=file)
 
 # Scatter plots - plot and save scatter plots for each pair of variables in the dataset as a png file.
 
