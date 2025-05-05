@@ -205,7 +205,7 @@ with open("analysis.txt", "a") as file:
     print("")
     print("\nIn the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.", file=file)
     print("\nSummary statistics for each species:", file=file)
-        # Separate the dataset by species
+    # Separate the dataset by species
     setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
     versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
     virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
@@ -220,7 +220,7 @@ with open("analysis.txt", "a") as file:
     
 print("Summary Stats has been appended to analysis.txt")
 
-# Now to explain what the summary stats are and what they mean - tis will be done in the analysis.txt file.
+# Now to explain what the summary stats are and what they mean - this will be done in the analysis.txt file.
 
 with open("analysis.txt", "a") as file:
     print("\n\tIris Setosa.", file=file)
@@ -254,6 +254,15 @@ plt.tight_layout()
 # Save the figure as a PNG file
 plt.savefig('boxplots_by_species.png')
 plt.show()
+
+# Describe what the boxplot shows in the analysis.txt file.
+
+with open("analysis.txt", "a") as file:
+    print("\n\tBoxplots by Species.", file=file)
+    print("\nBoxplots were plotted for each of the four measured features (sepal length/width and petal length/width), the data in each of these four plots is separated by species.", file=file)
+    print("\n",  file=file)
+    print("The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm from the mean.", file=file)
+    print("Petal length had a mean of", file=file)
 
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
 # Set up the figure
