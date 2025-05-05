@@ -66,23 +66,9 @@ print(iris_df) # This will print the dataframe into the terminal and also gi ve 
 
 with open("analysis.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
     print("\tData Analysis conducted on the Iris Dataset", file=file)
-    print("\n\Summary.", file=file)
-    print("The analysis used as a source for this document (analysis.py) was conducted using Python and the Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn libraries.", file=file)
-    print("The dataset was imported from the UCI Machine Learning Repository and is a well-known dataset for classification tasks.", file=file)
-    print("The dataset contains 150 samples of iris flowers, with 5 columns: sepal length, sepal width, petal length, petal width, and species (class).", file=file)
-    print("The dataset was used to conduct exploratory data analysis (EDA) and visualisation, as well as some machine learning tasks.", file=file)
-    print(".", file=file)
-    
-    print("The dataset was also used to conduct some linear regression tasks, and the results were saved as a PNG file.", file=file)
-    print("The dataset was also used to conduct some clustering tasks, and the results were saved as a PNG file.", file=file)
-    print("The dataset was also used to conduct some PCA tasks, and the results were saved as a PNG file.", file=file)
-    print("The dataset was also used to conduct some K-means clustering tasks, and the results were saved as a PNG file.", file=file)
-    print("The dataset was also used to conduct some pairplot tasks, and the results were saved as a PNG file.", file=file)
-    print("The dataset was also used to conduct some correlation matrix tasks, and the results were saved as a PNG file.", file=file)
-    print("The dataset was also used to conduct some scatterplot tasks, and the results were saved as a PNG file.", file=file)
-    print("The dataset was also used to conduct some boxplot tasks, and the results were saved as a PNG file.", file=file)
-    print("The dataset was also used to conduct some histogram tasks, and the results were saved as a PNG file.", file=file)
-    print("The dataset was also used to conduct some linear regression tasks, and the results were saved as a PNG file.", file=file)
+    print("\n\tSummary.", file=file)
+    print("The analysis used as a source for this document (analysis.py) was conducted using Python and the Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn libraries. The dataset was imported from the UCI Machine Learning Repository and is a well-known dataset for classification tasks.", file=file)
+    print("The dataset contained 150 samples of iris flowers, with 5 columns: sepal length, sepal width, petal length, petal width, and species (class). The dataset was used to conduct exploratory data analysis (EDA) and visualisation, as well as some machine learning tasks. Histogram, boxplot, scatterplot, PCA, pairplot, K-means clustering, correlation matrix, and linear regression analysis were conducted on the dataset, and the results of each were saved as a PNG file.", file=file)
 
 with open("analysis.txt", "a") as file:
     print("\n\tBackground.", file=file)
