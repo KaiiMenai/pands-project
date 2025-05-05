@@ -624,5 +624,19 @@ print("Pros and Cons for each test written to pros_cons_analysis.txt")
 
 with open("analysis.txt", "a") as file:
     print("\n\tConclusion.", file=file)
-    
+    print("\nThe analysis of the Iris dataset has provided valuable insights into the relationships between features (sepal length/width, petal length/width) and the target variable (species).", file=file)
+    print("The dataset was found to be balanced, with 50 samples for each of the three species (Setosa, Versicolor, Virginica).", file=file)
+    print("The summary statistics showed that there were no missing values in the dataset, and the features had different means and standard deviations.", file=file)
+    print("The box plots and histograms provided visualisations of the distribution of features by species, and the scatter plots showed the relationships between features and the target variable.", file=file)
+    print("For a number of plots (histograms, scatter plots, linear regression, box plots) the Setosa species clearly clusters separately to the Versicolor and Virginica species, for both sepal and petal features. For petal features, all species separated from one another (with some minor overlap visible between the Versicolor and Virginica species), indicating that petal features were more distinguishable between species, and thus would be more useful in classification.", file=file)
+    print("The PCA and K-means clustering techniques were used to reduce the dimensionality of the data and identify clusters in the data, respectively.", file=file)
+    print("Following the principal component analysis (PCA) the observations about petal features being more distinguishable between species, commpared to sepal features was solidified as it was found that PC1 (first principal component) was responsible for 72.8 % of the variability seen within the data, the PC1 was referring to the petal length and width features.", file=file)
+    print("The feature correlation matrix heat map also displayed the difference between species based onn petal features, where petal length vs petal width resulted in r = 0.96 indicating that the petal length and width showed a strong positive correlation and that their measurements often varied together.", file=file)
+    print("The Logistic Regression (classification techniques) were used to predict the species of iris flowers based on their features, and the Linear Regression (regression techniques) were used to predict continuous values based on features.", file=file)
+    print("For the linear regression (LRM) analysis, petal length vs petal width gave an R^2 value of 0.93, indicating that most of the variance in petal width can be explained by petal length. Some predictions were made for petal width following an 80 - 20 split in the data for training and testing, respectively. The analysis has also shown that the dataset is suitable for classification and regression tasks, and the techniques used have provided valuable insights into the relationships between features and the target variable.", file=file)
+    print("The analysis has demonstrated that the features (sepal length/width, petal length/width) are valuable for classification of iris species, and the techniques used have provided valuable insights into the relationships between features and the target variable.", file=file)
+    print("However, in order to have a more reliable method for predicting the species using a linear regression (or logistic regression) model, a larger sample population is essential in order to accurately visualise and calculate the nuances between such species based on their features.", file=file)
+    print("\nIn terms of model accuracy, reliability, and consistent repeatability the size of the dataset may be considered a limiting factor. However, the data does efficiently demonstrate what a linear based dataset can show through various forms of analysis.", file=file)
+    print("", file=file)
+
 # END
