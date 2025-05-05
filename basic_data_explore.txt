@@ -1,4 +1,4 @@
-Basic data checks:
+	Basic data checks:
 The shape of the dataset:
 (150, 5)
 The first 5 rows of the dataset:

@@ -639,6 +639,8 @@ with open("analysis.txt", "a") as file:
     print("\nIn terms of model accuracy, reliability, and consistent repeatability the size of the dataset may be considered a limiting factor. However, the data does efficiently demonstrate what a linear based dataset can show through various forms of analysis.", file=file)
     print("", file=file)
 
+print("Conclusion appended to analysis.txt")
+
 # References - add references to the analysis.txt file.
 
 with open("analysis.txt", "a") as file:
@@ -707,5 +709,7 @@ with open("analysis.txt", "a") as file:
     print("\nUCI Machine Learning Repository (2025) ‘Iris Dataset’. Available at: https://archive.ics.uci.edu/dataset/53/iris", file=file)
     print("\nWV State University (no date) ‘Scholarly vs. non-scholarly articles’. Available at: https://wvstateu.libguides.com/c.php?g=813217&p=5816022", file=file)
     print("\nWikipedia (no date) ‘Linear discriminant analysis’. Available at: https://en.wikipedia.org/wiki/Linear_discriminant_analysis", file=file)
+
+print("References appended to analysis.txt")
 
 # END
