@@ -36,6 +36,7 @@ The shape of the dataset:
 (150, 5)
 
 The dataset contains 150 rows of data and 5 columns. The 5 columns are the species of isis flower (here noted as 'class'), and sepal length, sepal width, petal length, and petal width.
+
 The first and last five rows of the dataset are printed below, as well as the column names within the dataset.
 
 The first 5 rows of the dataset:

@@ -66,7 +66,7 @@ print(iris_df) # This will print the dataframe into the terminal and also gi ve 
 #with open("append_example.txt", "r") as file:    print(file.read())
 
 with open("analysis.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
-    print("\tData Analysis conducted on the Iris Dataset", file=file)
+    print("Data Analysis conducted on the Iris Dataset", file=file)
     print("\n\tSummary.", file=file)
     summary_text = (
     "The analysis used as a source for this document (analysis.py) was conducted using Python and the Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn libraries. The dataset was imported from the UCI Machine Learning Repository and is a well-known dataset for classification tasks."
@@ -233,10 +233,11 @@ print("Checks for data outliers has been appended to summary_statistics.txt")
 with open("analysis.txt", "a") as file:
     print("\nDuplicates were removed from the data using the drop_duplicates function.", file=file)
     print("The code used for this was: \tdata = iris_df.drop_duplicates(subset="'class'".)", file=file)
+    print("", file=file)
     print("Value counts for each of the species:", file=file)
     print(iris_df['class'].value_counts(), file=file)
     print("\nIt can be seen that there are 50 samples for each of the three classes (species) of iris flower: Setosa, Versicolor, and Virginica.", file=file)
-    print("\n\tSummary statistics for the whole dataset:", file=file)
+    print("\nSummary statistics for the whole dataset:", file=file)
     print(iris_df.describe(), file=file)
     iris_summary_text = (
     "The summary statistics for the whole dataset shows that there are 150 samples in the dataset for each of the variables, the value displayed is the non-missing values, and thus it can be verified that the dataset does not have any missing values. "
