@@ -1,5 +1,5 @@
 # analysis.py
-# This program will import and analyse the data from the iris dataset. 
+# This program will import and analyse the data from the iris dataset.
 # Figures will be output and saved as appropriate.
 # author: Kyra Menai Hamilton
 
@@ -12,15 +12,19 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import sklearn as skl
 import textwrap
+from sklearn.cluster import KMeans 
 from sklearn.decomposition import PCA
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import mean_squared_error, r2_score
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import r2_score
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
 
 # Into terminal: pip install ucimlrepo
 
@@ -46,22 +50,22 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 # iris_df.to_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
 # print("Iris dataset has been successfully exported to a CSV!") # Output - Iris dataset has been successfully exported to a CSV!
 
-# now to retrieve dataset for making plots and analysis
+# Now to retrieve dataset for making plots and analysis
 # Import the dataset from the CSV file
+
 iris_df = pd.read_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv')
 
 print(iris_df) # This will print the dataframe into the terminal and also gi ve a brief summary of (150 rows x 5 columns).
 
-    # printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
-
+# printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
     # FOR SAVING AS A TXT FILE AND APPENDING AS WE GO ON 
-    ## First, create a file with some initial content
-    ## Now, append to the file
+    # First, create a file with some initial content
+    # Now, append to the file
 #with open("append_example.txt", "a") as file:
 #    print("\nThis content is being appended to the file.", file=file)
 #    print("Appended on: 2023-09-02", file=file)
 #print("Additional content has been appended to append_example.txt")
-    ## Check the final content
+    # Check the final content
 #print("\nFinal content of the file:")
 #with open("append_example.txt", "r") as file:    print(file.read())
 
@@ -115,7 +119,7 @@ with open("basic_data_explore.txt", "w") as file: # The (file=file) argument is 
     print(iris_df.tail(), file=file) # This will print the last 5 rows of the dataset.
     print("The column names of the dataset:", file=file)
     print(iris_df.columns, file=file) # This will print the column names of the dataset.
-    
+
 print("Basic data checks have been written to basic_data_explore.txt")
 
 with open("basic_data_explore.txt", "a") as file:
@@ -519,7 +523,6 @@ print("Principal Component Analysis (PCA) observations appended to analysis.md")
 
 # - Clustering analysis (e. K-means clustering) is used to group similar data points together.
 # In this case, K-means clustering is used to group the iris dataset into three clusters (corresponding to the three species).
-from sklearn.cluster import KMeans 
 
 # Perform K-means clustering
 kmeans = KMeans(n_clusters=3, random_state=42)  # 3 clusters for the 3 species
@@ -930,7 +933,8 @@ print("References appended to analysis.md")
 
 with open("analysis.md", "a") as file:
     print("\n# END OF ANALYSIS DOCUMENT", file=file)
-
+    print("", file=file)
+    
 print("End of Document appended to analysis.md")
 
 # END
