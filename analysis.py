@@ -87,7 +87,7 @@ with open("analysis.md", "w") as file:
     )
     print("", file=file)
     print(textwrap.fill(summary_text, width=210), file=file)
-    print("\n\tPlease Note: Some observations taken from my own work for the Principles of Data Analytics Module, with wording changed to match what was required for this project. Link: https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb", file=file)
+    print("\n*Please Note: Some observations taken from my own work for the Principles of Data Analytics Module, with wording changed to match what was required for this project. Link: https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb*", file=file)
 
 print("Summary of file made in the analysis.md")
 
@@ -167,7 +167,7 @@ data = iris_df.drop_duplicates(subset="class",) # This will remove any duplicate
 
 with open("analysis.md", "a") as file:
     print("\nDuplicates were removed from the data using the drop_duplicates function.", file=file)
-    print("The code used for this was: \tdata = iris_df.drop_duplicates(subset="'class'".)", file=file)
+    print("The code used for this was: ```data = iris_df.drop_duplicates(subset="'class'".)```", file=file)
     print("", file=file)
     print("Value counts for each of the species:", file=file)
     print(iris_df['class'].value_counts(), file=file)
@@ -219,6 +219,7 @@ with open("analysis.md", "a") as file:
     virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
 # Display the statistics for each species
     print("\n### Iris Setosa", file=file)
+    print("", file=file)
     print("Setosa Statistics:", file=file)
     print(setosa_stats, file=file)
     setosa_stats_summary_text = (
@@ -229,8 +230,8 @@ with open("analysis.md", "a") as file:
     )
     print("", file=file)
     print(textwrap.fill(setosa_stats_summary_text, width=210), file=file)
-    print("", file=file)
     print("\n### Iris Versicolor", file=file)
+    print("", file=file)
     print("Versicolor Statistics:", file=file)
     print(versicolor_stats, file=file)
     versicolor_stats_summary_text = (
@@ -241,8 +242,8 @@ with open("analysis.md", "a") as file:
     )
     print("", file=file)
     print(textwrap.fill(versicolor_stats_summary_text, width=210), file=file)
-    print("", file=file)
     print("\n### Iris Virginica", file=file)
+    print("", file=file)
     print("\nVirginica Statistics:", file=file)
     print(virginica_stats, file=file)    
     virginica_stats_summary_text = (
@@ -253,7 +254,6 @@ with open("analysis.md", "a") as file:
     )
     print("", file=file)
     print(textwrap.fill(virginica_stats_summary_text, width=210), file=file)
-    print("", file=file)
 
 print("Summary Stats for each species has been appended to analysis.md")
 
@@ -287,7 +287,6 @@ with open("analysis.md", "a") as file:
     print("\n## Boxplots by Feature", file=file)
     print("", file=file)
     print("![Boxplots](boxplots_by_species.png)", file=file)
-    print("", file=file)
     boxplot_text = (
     "Boxplots were plotted for each of the four measured features (sepal length/width and petal length/width), the data in each of these four plots is separated by species. Boxplots make visualising range, potential outliers, the inter-quartile range, and the median of the data more easily."
     " There were nine outliers in total within the dataset between the four sepal/petal features. The Setosa species had three outliers in the data for petal length, and two outliers in the data for petal width. The Virginica species had one outlier for sepal length and two outliers for sepal width. The Versicolor species had the fewest number of outliers with only one outlier throughout the whole dataset, this outlier was for petal length."
@@ -341,7 +340,6 @@ with open("analysis.md", "a") as file:
     print("\n## Histograms by Feature", file=file)
     print("", file=file)
     print("![Histograms](histograms_by_species.png)", file=file)
-    print("", file=file)
     histogram_text = (
     "The histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica."
     " From the histogram plot for sepal length by species, the Setosa species showed a normal distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species has a broad range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species with the largest range in length of sepals and longest average sepal length is the Virginica species."
@@ -425,7 +423,7 @@ plt.savefig('correlation_matrix_by_feature.png')
 plt.show()
 
 with open("analysis.md", "a") as file:
-    print("\n\t## Correlation Matrix", file=file)
+    print("\n## Correlation Matrix", file=file)
     print("", file=file)
     print("![Correlation_Matrix](correlation_matrix_by_feature.png)", file=file)
     print("", file=file)
@@ -685,12 +683,12 @@ with open("analysis.md", "a") as file:
 print("Logistic regression reasoning has been appended to analysis.md")
 
 with open("analysis.md", "a") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
-    print("\n\tLogistic Regression for Species Classification Results:", file=file) # How to do it - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
+    print("\nLogistic Regression for Species Classification Results:", file=file) # How to do it - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
     print(f"Accuracy: {accuracy:.4f}", file=file)
-    print("\n\tClassification Report:", file=file)
+    print("\nClassification Report:", file=file)
     print(classification_report(y_species_test, y_species_pred, target_names=le.classes_), file=file)
     # Example prediction - predict species based on sepal and petal measurements.
-    print("\n\tExample Prediction (measurements in cm).", file=file)
+    print("Example Prediction (measurements in cm).", file=file)
     example_data = pd.DataFrame([[5.1, 3.5, 1.4, 0.2]], 
                                 columns=['sepal length', 'sepal width', 'petal length', 'petal width'])  # Match feature names to those in the training set
     predicted_species = model_species.predict(example_data)
@@ -709,7 +707,6 @@ with open("analysis.md", "a") as file:
     print(textwrap.fill(log_regression1_text, width=210), file=file)
     print("", file=file)
     print(textwrap.fill(log_regression2_text, width=210), file=file)
-    print("", file=file)
 
 print("Logistic Regression observations appended to analysis.md")
 
@@ -739,7 +736,6 @@ with open("analysis.md", "a") as file:
     )
     print("", file=file)
     print(textwrap.fill(con_matrix_text, width=210), file=file)
-    print("", file=file)
 
 print("Confusion Matrix observations appended to analysis.md")
 
@@ -834,7 +830,6 @@ print("Conclusion appended to analysis.md")
 # References - add references to the analysis.txt file.
 
 with open("analysis.md", "a") as file:
-    print("\n", file=file)
     print("\n## References", file=file)
     print("\n\tAcademic Sources", file=file)
     print("\nAnderson, E. (1935) ‘The irises of the Gaspé peninsula’, Bulletin of the American Iris Society, 59, pp. 2–5.", file=file)
