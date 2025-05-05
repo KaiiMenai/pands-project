@@ -156,50 +156,33 @@ On average, Setosa was found to have the shortest sepal length and widest sepal 
 
 	Histograms by Feature.
 
-The histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.
-From the histogram plot for sepal length by species, the Setosa species showed a normal distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species has a broad range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species with the largest range in length of sepals and longest average sepal length is the Virginica species.
-For sepal width, it can be seen that overall, the data shows a normal distribution. Contrary to what was observed for sepal length, the narrowest sepal width is the Versicolor species, with the Virginica species being in the middle of the range. The Setosa species had the greatest width and the broadest range in values for sepal width.
-Similar to what was observed for sepal length, for petal length Setosa was the species with the shortest average length and the smallest range in measurements. An average petal length of approximately 4.5 cm was observed for the Versicolor species and demonstrated a normal distribution. The Virginica species had, on average, the longest petal lengths, similar to what was observed for sepal lengths.
-Setosa species had the narrowest petal width on average. The species with the mid-width measurement was the Versicolor species, with values between 1.0 cm and 2.0 cm. The widest petal widths were observed in the Virginica species.
-It was observed that the sepal width and petal width for the Setosa species were contrary to one another. For the petal measurements of length and width, the Setosa species was the shortest and narrowest and the values for this species also separated away from the other two species.
+The histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.From the histogram plot for sepal length by species, the Setosa species showed a normal
+distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species has a broad range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species
+with the largest range in length of sepals and longest average sepal length is the Virginica species.For sepal width, it can be seen that overall, the data shows a normal distribution. Contrary to what was
+observed for sepal length, the narrowest sepal width is the Versicolor species, with the Virginica species being in the middle of the range. The Setosa species had the greatest width and the broadest range in
+values for sepal width.Similar to what was observed for sepal length, for petal length Setosa was the species with the shortest average length and the smallest range in measurements. An average petal length of
+approximately 4.5 cm was observed for the Versicolor species and demonstrated a normal distribution. The Virginica species had, on average, the longest petal lengths, similar to what was observed for sepal
+lengths.Setosa species had the narrowest petal width on average. The species with the mid-width measurement was the Versicolor species, with values between 1.0 cm and 2.0 cm. The widest petal widths were
+observed in the Virginica species.It was observed that the sepal width and petal width for the Setosa species were contrary to one another. For the petal measurements of length and width, the Setosa species was
+the shortest and narrowest and the values for this species also separated away from the other two species.
 
 	Scatterplots.
-
-The plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.
-
-
 
 
 
 	Pairplot.
 
-The plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.
-
-
-
 
 
 	Correlation Matrix.
-
-The plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.
-
-
 
 
 
 	Principal Component Analysis (PCA).
 
-The plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.
-
-
-
 
 
 	K-means Clustering.
-
-The plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.
-
-
 
 
 
@@ -273,7 +256,6 @@ petal length/width) are valuable for classification of iris species, and the tec
 have a more reliable method for predicting the species using a linear regression (or logistic regression) model, a larger sample population is essential in order to accurately visualise and calculate the
 nuances between such species based on their features.In terms of model accuracy, reliability, and consistent repeatability the size of the dataset may be considered a limiting factor. However, the data does
 efficiently demonstrate what a linear based dataset can show through various forms of analysis.
-
 
 
 

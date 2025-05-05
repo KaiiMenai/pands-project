@@ -327,12 +327,16 @@ plt.show()
 
 with open("analysis.txt", "a") as file:
     print("\n\tHistograms by Feature.", file=file)
-    print("\nThe histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
-    print("From the histogram plot for sepal length by species, the Setosa species showed a normal distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species has a broad range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species with the largest range in length of sepals and longest average sepal length is the Virginica species.",  file=file)
-    print("For sepal width, it can be seen that overall, the data shows a normal distribution. Contrary to what was observed for sepal length, the narrowest sepal width is the Versicolor species, with the Virginica species being in the middle of the range. The Setosa species had the greatest width and the broadest range in values for sepal width.", file=file)
-    print("Similar to what was observed for sepal length, for petal length Setosa was the species with the shortest average length and the smallest range in measurements. An average petal length of approximately 4.5 cm was observed for the Versicolor species and demonstrated a normal distribution. The Virginica species had, on average, the longest petal lengths, similar to what was observed for sepal lengths.", file=file)
-    print("Setosa species had the narrowest petal width on average. The species with the mid-width measurement was the Versicolor species, with values between 1.0 cm and 2.0 cm. The widest petal widths were observed in the Virginica species.", file=file)
-    print("It was observed that the sepal width and petal width for the Setosa species were contrary to one another. For the petal measurements of length and width, the Setosa species was the shortest and narrowest and the values for this species also separated away from the other two species.", file=file)
+    histogram_text = (
+    "The histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica."
+    "From the histogram plot for sepal length by species, the Setosa species showed a normal distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species has a broad range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species with the largest range in length of sepals and longest average sepal length is the Virginica species."
+    "For sepal width, it can be seen that overall, the data shows a normal distribution. Contrary to what was observed for sepal length, the narrowest sepal width is the Versicolor species, with the Virginica species being in the middle of the range. The Setosa species had the greatest width and the broadest range in values for sepal width."
+    "Similar to what was observed for sepal length, for petal length Setosa was the species with the shortest average length and the smallest range in measurements. An average petal length of approximately 4.5 cm was observed for the Versicolor species and demonstrated a normal distribution. The Virginica species had, on average, the longest petal lengths, similar to what was observed for sepal lengths."
+    "Setosa species had the narrowest petal width on average. The species with the mid-width measurement was the Versicolor species, with values between 1.0 cm and 2.0 cm. The widest petal widths were observed in the Virginica species."
+    "It was observed that the sepal width and petal width for the Setosa species were contrary to one another. For the petal measurements of length and width, the Setosa species was the shortest and narrowest and the values for this species also separated away from the other two species."
+    )
+    print("", file=file)
+    print(textwrap.fill(histogram_text, width=210), file=file)
 
 print("Histogram observations appended to analysis.txt")
 
@@ -363,11 +367,11 @@ plt.show()
 
 with open("analysis.txt", "a") as file:
     print("\n\tScatterplots.", file=file)
-    print("\nThe plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
-    print("",  file=file)
-    print("",  file=file)
-    print("",  file=file)
-    print("",  file=file)
+    scatter_plot_text = (
+    ""
+    )
+    print("", file=file)
+    print(textwrap.fill(scatter_plot_text, width=210), file=file)
 
 print("Scatter plot observations appended to analysis.txt")
 
@@ -384,11 +388,11 @@ plt.show()
 
 with open("analysis.txt", "a") as file:
     print("\n\tPairplot.", file=file)
-    print("\nThe plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
-    print("",  file=file)
-    print("",  file=file)
-    print("",  file=file)
-    print("",  file=file)
+    pairplot_text = (
+    ""
+    )
+    print("", file=file)
+    print(textwrap.fill(pairplot_text, width=210), file=file)
 
 print("Pairplot observations appended to analysis.txt")
 
@@ -401,11 +405,11 @@ plt.show()
 
 with open("analysis.txt", "a") as file:
     print("\n\tCorrelation Matrix.", file=file)
-    print("\nThe plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
-    print("",  file=file)
-    print("",  file=file)
-    print("",  file=file)
-    print("",  file=file)
+    corr_matrix_text = (
+    ""
+    )
+    print("", file=file)
+    print(textwrap.fill(corr_matrix_text, width=210), file=file)
 
 print("Correlation Matrix observations appended to analysis.txt")
 
@@ -434,11 +438,11 @@ plt.show()
 
 with open("analysis.txt", "a") as file:
     print("\n\tPrincipal Component Analysis (PCA).", file=file)
-    print("\nThe plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
-    print("",  file=file)
-    print("",  file=file)
-    print("",  file=file)
-    print("",  file=file)
+    pca_text = (
+    ""
+    )
+    print("", file=file)
+    print(textwrap.fill(pca_text, width=210), file=file)
 
 print("Principal Component Analysis (PCA) observations appended to analysis.txt")
 
@@ -475,11 +479,11 @@ plt.show()
 
 with open("analysis.txt", "a") as file:
     print("\n\tK-means Clustering.", file=file)
-    print("\nThe plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
-    print("",  file=file)
-    print("",  file=file)
-    print("",  file=file)
-    print("",  file=file)
+    k_means_text = (
+    ""
+    )
+    print("", file=file)
+    print(textwrap.fill(k_means_text, width=210), file=file)
 
 print("K-means Clustering observations appended to analysis.txt")
 
@@ -776,7 +780,6 @@ with open("analysis.txt", "a") as file:
     )
     print("", file=file)
     print(textwrap.fill(conclusion_text, width=210), file=file)
-    print("", file=file)
 
 print("Conclusion appended to analysis.txt")
 
