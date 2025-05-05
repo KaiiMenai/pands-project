@@ -381,6 +381,14 @@ pairplot._legend.set_title('Species')
 plt.savefig('pairplot_by_species.png')
 plt.show()
 
+with open("analysis.txt", "a") as file:
+    print("\n\tPairplot.", file=file)
+    print("\nThe plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
+    print("",  file=file)
+    print("",  file=file)
+    print("",  file=file)
+    print("",  file=file)
+
 # - Correlation matrix
 corr_matrix = iris_df.iloc[:, :4].corr()
 sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
