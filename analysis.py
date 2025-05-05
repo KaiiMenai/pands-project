@@ -360,6 +360,16 @@ plt.tight_layout()
 plt.savefig('scatterplot_by_species.png')
 plt.show()
 
+with open("analysis.txt", "a") as file:
+    print("\n\tScatterplots.", file=file)
+    print("\nThe plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
+    print("",  file=file)
+    print("",  file=file)
+    print("",  file=file)
+    print("",  file=file)
+
+print("Scatter plot observations appended to analysis.txt")
+
 # Other analysis types that may be appropriate - for each ensure that the figure is saved as a png file.
 # - Pair plots
 
