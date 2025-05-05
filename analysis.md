@@ -120,10 +120,31 @@ average, how much the values deviate from the mean. Sepal length had a mean of 5
 length, the mean was 3.76 cm with a std of 1.76 cm, thus most values for petal length deviated by 1.76 cm (+/-). Petal width had a mean of 1.20 cm with a std of 0.76 cm, the width of petals deviated by +/- 0.76
 cm.  The measurement with the largest deviation from the mean is the petal length (std = 1.76), this suggests that petal lengths vary more widely across samples compared to the other features.
 
+Outliers detected for each species:
+
+Outliers for Iris-setosa:
+  Column 'sepal length': No outliers detected
+  Column 'sepal width': No outliers detected
+  Column 'petal length': 4 outliers
+  Column 'petal width': 2 outliers
+
+Outliers for Iris-versicolor:
+  Column 'sepal length': No outliers detected
+  Column 'sepal width': No outliers detected
+  Column 'petal length': 1 outliers
+  Column 'petal width': No outliers detected
+
+Outliers for Iris-virginica:
+  Column 'sepal length': 1 outliers
+  Column 'sepal width': 3 outliers
+  Column 'petal length': No outliers detected
+  Column 'petal width': No outliers detected
+
 In the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.
 
-	Summary statistics for each species:
+## Individual Species Observations
 
+### Iris Setosa
 Setosa Statistics:
        sepal length  sepal width  petal length  petal width
 count      50.00000    50.000000     50.000000     50.00000
@@ -135,6 +156,13 @@ min         4.30000     2.300000      1.000000      0.10000
 75%         5.20000     3.675000      1.575000      0.30000
 max         5.80000     4.400000      1.900000      0.60000
 
+The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
+number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
+sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean. The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
+from the mean. Petal length had a mean of XXXXXXXX
+
+
+### Iris Versicolor
 Versicolor Statistics:
        sepal length  sepal width  petal length  petal width
 count     50.000000    50.000000     50.000000    50.000000
@@ -146,6 +174,14 @@ min        4.900000     2.000000      3.000000     1.000000
 75%        6.300000     3.000000      4.600000     1.500000
 max        7.000000     3.400000      5.100000     1.800000
 
+The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
+number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
+sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean. The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
+from the mean. Petal length had a mean of XXXXXXXX
+
+
+### Iris Virginica
+
 Virginica Statistics:
        sepal length  sepal width  petal length  petal width
 count      50.00000    50.000000     50.000000     50.00000
@@ -156,24 +192,6 @@ min         4.90000     2.200000      4.500000      1.40000
 50%         6.50000     3.000000      5.550000      2.00000
 75%         6.90000     3.175000      5.875000      2.30000
 max         7.90000     3.800000      6.900000      2.50000
-
-## Individual Species Observations
-
-### Iris Setosa
-
-The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
-number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
-sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean. The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
-from the mean. Petal length had a mean of XXXXXXXX
-
-### Iris Versicolor
-
-The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
-number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
-sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean. The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
-from the mean. Petal length had a mean of XXXXXXXX
-
-### Iris Virginica
 
 The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
 number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
