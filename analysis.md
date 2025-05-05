@@ -1,6 +1,6 @@
 # Data Analysis conducted on the Iris Dataset
 
-## Summary.
+## Summary
 
 The analysis used as a source for this document (analysis.py) was conducted using Python and the Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn libraries. The dataset was imported from the UCI Machine
 Learning Repository and is a well-known dataset for classification tasks. The dataset contained 150 samples of iris flowers, with 5 columns: sepal length, sepal width, petal length, petal width, and species
@@ -9,7 +9,7 @@ correlation matrix, and linear regression analysis were conducted on the dataset
 
 	Please Note: Some observations taken from my own work for the Principles of Data Analytics Module, with wording changed to match what was required for this project. Link: https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb
 
-## Background.
+## Background
 
 Originally sourced by Anderson (1935), the Iris dataset has been used numerous times, with several different iterations available online. Some of these sources contain differing (and often noted as incorrect)
 data points, as noted in the UCI Machine Learning Repository (https://archive.ics.uci.edu/dataset/53/iris). The dataset contained 150 samples of Iris flower, each with five noted variables, four numeric (sepal
@@ -31,6 +31,8 @@ classification, where the goal is to predict an iris flower's species based on i
 measurements for the entire plant, this focus reflects the expert judgment of Fisher and Anderson, who selected petal and sepal dimensions as meaningful discriminative features. This in turn highlights the
 importance of domain expertise in data preparation and model design, suggesting that more efficient analysis and models are built when field experts are involved (Domingos, 2012; Kuhn, and Johnson, 2013).
 Despite its age and simplicity, the Iris dataset remains a central teaching tool for introducing classification problems in machine learning.
+
+## Exploratory Data Analysis
 
 The shape of the dataset:
 (150, 5)
@@ -155,23 +157,23 @@ min         4.90000     2.200000      4.500000      1.40000
 75%         6.90000     3.175000      5.875000      2.30000
 max         7.90000     3.800000      6.900000      2.50000
 
-## Individual Species Observations.
+## Individual Species Observations
 
-### Iris Setosa.
-
-The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
-number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
-sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean. The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
-from the mean. Petal length had a mean of XXXXXXXX
-
-### Iris Versicolor.
+### Iris Setosa
 
 The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
 number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
 sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean. The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
 from the mean. Petal length had a mean of XXXXXXXX
 
-### Iris Virginica.
+### Iris Versicolor
+
+The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
+number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
+sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean. The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
+from the mean. Petal length had a mean of XXXXXXXX
+
+### Iris Virginica
 
 The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
 number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
@@ -179,7 +181,7 @@ sepal length the mean was AAA cm and the std was AAA, therefore most values devi
 from the mean. Petal length had a mean of XXXXXXXX
 
 
-## Boxplots by Feature.
+## Boxplots by Feature
 
 ![Boxplots](boxplots_by_species.png)
 
@@ -193,7 +195,7 @@ length/width), however, there were instances where the feature measurements conv
 indicating that these feature measurements may be valuable for classification of Iris species. (https://www.nickmccullum.com/python-visualization/boxplot/ , https://www.ncl.ac.uk/webtemplate/ask-
 assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plots.html).
 
-## Histograms by Feature.
+## Histograms by Feature
 
 ![Histograms](histograms_by_species.png)
 
@@ -208,28 +210,28 @@ lengths. Setosa species had the narrowest petal width on average. The species wi
 observed in the Virginica species. It was observed that the sepal width and petal width for the Setosa species were contrary to one another. For the petal measurements of length and width, the Setosa species
 was the shortest and narrowest and the values for this species also separated away from the other two species.
 
-## Scatterplots.
+## Scatterplots
 
 ![Scatterplots](scatterplot_by_species.png)
 
 
 
 
-## Pairplot.
+## Pairplot
 
 ![Pairplot](pairplot_by_species.png)
 
 
 
 
-	## Correlation Matrix.
+	## Correlation Matrix
 
 ![Correlation_Matrix](correlation_matrix_by_feature.png)
 
 
 
 
-## Principal Component Analysis (PCA).
+## Principal Component Analysis (PCA)
 
 A way to conduct relationship investigations is through Principal Component Analysis (PCA) - I did this for my PhD research and found it was a great way to clearly look at multiple data aspects at once
 (https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html).An important note of PCA is that the data needs to be standardised for it. When standardising data, it's important that it is
@@ -241,7 +243,7 @@ that PC1 strongly correlated with petal features, suggesting that petal length a
 length and width, these were responsible for 23 % of the variance in the data. These results demonstrate that the first two components explain 95.8 % of the variance within the dataset.With so much variance
 seen in PC1 for the petal features, it could indicate that these are good determining factors for use in species identification.
 
-## K-means Clustering.
+## K-means Clustering
 
 
 
@@ -285,7 +287,7 @@ is seen most clearly in the petal length/width. As the iris dataset is balanced,
 reliability, the model should be rerun a number of times using different splits of the data, this is called cross-validation.
 
 
-## Confusion Matrix.
+## Confusion Matrix
 
 A confusion matrix was plotted to visualise the results. The confusion matrix is a performance evaluation tool for classification models. It provides a summary of the prediction results by comparing the actual
 values (rows) against the predicted values (columns). The confusion matrix helps with understanding how well the logistic regression model classifies the different species of iris and whether there are any
@@ -296,7 +298,7 @@ values from the diagonal are those denoting Misclassifications, where the actual
 classification, the classification report and confusion matrix aid in giving a clearer picture of the data and the accuracy of predictions made with the model.
 
 
-## Conclusion.
+## Conclusion
 
 The analysis of the Iris dataset has provided valuable insights into the relationships between features (sepal length/width, petal length/width) and the target variable (species). The dataset was found to be
 balanced, with 50 samples for each of the three species (Setosa, Versicolor, Virginica). The summary statistics showed that there were no missing values in the dataset, and the features had different means and
@@ -318,7 +320,7 @@ the data does efficiently demonstrate what a linear based dataset can show throu
 
 
 
-## References.
+## References
 
 	Academic Sources
 
@@ -450,4 +452,4 @@ WV State University (no date) ‘Scholarly vs. non-scholarly articles’. Available 
 
 Wikipedia (no date) ‘Linear discriminant analysis’. Available at: https://en.wikipedia.org/wiki/Linear_discriminant_analysis
 
-END OF ANALYSIS DOCUMENT
+# END OF ANALYSIS DOCUMENT
