@@ -59,9 +59,11 @@ from sklearn.metrics import confusion_matrix
 # Import the dataset from the CSV file
 
 iris_df = pd.read_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv')
-print(iris_df)# This will print the df into the terminal and also give a brief summary of it (150 rows x 5 columns).
+print(iris_df)
+# This will print df into terminal & also give brief summary (150 rs x 5 cols).
 
-# printing output directly to a txt file: https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
+# printing output directly to a txt file:
+# https://labex.io/tutorials/python-how-to-redirect-the-print-function-to-a-file-in-python-398057
 #    FOR SAVING AS A TXT FILE AND APPENDING AS WE GO ON
 #    First, create a file with some initial content
 #    Now, append to the file
@@ -73,7 +75,10 @@ print(iris_df)# This will print the df into the terminal and also give a brief s
 # print("\nFinal content of the file:")
 # with open("append_example.txt", "r") as file:    print(file.read())
 
-with open("analysis.md", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
+# The (file=file) argument is important as it makes sure Python knows
+# to write the file and not in the terminal.
+
+with open("analysis.md", "w") as file:
     print("# Data Analysis conducted on the Iris Dataset", file=file)
     print("\n## Summary", file=file)
     summary_text = (
