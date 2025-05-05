@@ -245,12 +245,36 @@ print("Summary Stats has been appended to analysis.txt")
 
 with open("analysis.txt", "a") as file:
     print("\n\tIris Setosa.", file=file)
-    print("\nThe mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class')).", file=file)
-    print("\nThe standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean.",  file=file)
-    print("The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm from the mean.", file=file)
-    print("Petal length had a mean of", file=file)
+    setosa_stats_summary_text = (
+    "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
+    "The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
+    "The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm from the mean."
+    "Petal length had a mean of XXXXXXXX"
+    )
+    print("", file=file)
+    print(textwrap.fill(setosa_stats_summary_text, width=210), file=file)
+    print("", file=file)
+    print("\n\tIris Versicolor.", file=file)
+    versicolor_stats_summary_text = (
+    "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
+    "The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
+    "The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm from the mean."
+    "Petal length had a mean of XXXXXXXX"
+    )
+    print("", file=file)
+    print(textwrap.fill(versicolor_stats_summary_text, width=210), file=file)
+    print("", file=file)
+    print("\n\tIris Virginica.", file=file)
+    virginica_stats_summary_text = (
+    "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
+    "The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
+    "The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm from the mean."
+    "Petal length had a mean of XXXXXXXX"
+    )
+    print("", file=file)
+    print(textwrap.fill(virginica_stats_summary_text, width=210), file=file)
 
-print("Summary Stats explanation has been appended to analysis.txt")
+print("Summary Stats for each species has been appended to analysis.txt")
 
 # Here good to do boxplots to illustrate the outliers in the dataset.
 # Box plots - plot and save box plots for each variable in the dataset and save as a png file. https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.savefig.html and https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.savefig.html and https://stackoverflow.com/questions/7906365/matplotlib-savefig-plots-different-from-show 
@@ -280,11 +304,15 @@ plt.show()
 
 with open("analysis.txt", "a") as file:
     print("\n\tBoxplots by Feature.", file=file)
-    print("\nBoxplots were plotted for each of the four measured features (sepal length/width and petal length/width), the data in each of these four plots is separated by species. Boxplots make visualising range, potential outliers, the inter-quartile range, and the median of the data more easily.", file=file)
-    print("There were nine outliers in total within the dataset between the four sepal/petal features. The Setosa species had three outliers in the data for petal length, and two outliers in the data for petal width. The Virginica species had one outlier for sepal length and two outliers for sepal width. The Versicolor species had the fewest number of outliers with only one outlier throughout the whole dataset, this outlier was for petal length.",  file=file)
-    print("On average, Setosa was found to have the shortest sepal length and widest sepal width. Setosa was also found to have the shortest petal length measurements and narrowest petal width. For Versicolor and Virginica, there were some differences visible in the measurements for the four features (sepal length/width, petal length/width), however, there were instances where the feature measurements converged, particularly for sepal length and sepal width. Petal length and petal width displayed differences between species, indicating that these feature measurements may be valuable for classification of Iris species.", file=file)
-    print("(https://www.nickmccullum.com/python-visualization/boxplot/ , https://www.ncl.ac.uk/webtemplate/ask-assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plots.html).", file=file)
-
+    boxplot_text = (
+    "Boxplots were plotted for each of the four measured features (sepal length/width and petal length/width), the data in each of these four plots is separated by species. Boxplots make visualising range, potential outliers, the inter-quartile range, and the median of the data more easily."
+    "There were nine outliers in total within the dataset between the four sepal/petal features. The Setosa species had three outliers in the data for petal length, and two outliers in the data for petal width. The Virginica species had one outlier for sepal length and two outliers for sepal width. The Versicolor species had the fewest number of outliers with only one outlier throughout the whole dataset, this outlier was for petal length."
+    "On average, Setosa was found to have the shortest sepal length and widest sepal width. Setosa was also found to have the shortest petal length measurements and narrowest petal width. For Versicolor and Virginica, there were some differences visible in the measurements for the four features (sepal length/width, petal length/width), however, there were instances where the feature measurements converged, particularly for sepal length and sepal width. Petal length and petal width displayed differences between species, indicating that these feature measurements may be valuable for classification of Iris species."
+    "(https://www.nickmccullum.com/python-visualization/boxplot/ , https://www.ncl.ac.uk/webtemplate/ask-assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plots.html)."
+    )
+    print("", file=file)
+    print(textwrap.fill(boxplot_text, width=210), file=file)
+    
 print("Boxplot observations appended to analysis.txt")
 
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
