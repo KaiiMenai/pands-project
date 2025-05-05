@@ -658,6 +658,7 @@ print("Conclusion appended to analysis.txt")
 # References - add references to the analysis.txt file.
 
 with open("analysis.txt", "a") as file:
+    print("\n", file=file)
     print("\n\tReferences.", file=file)
     print("\n\tAcademic Sources", file=file)
     print("\nAnderson, E. (1935) ‘The irises of the Gaspé peninsula’, Bulletin of the American Iris Society, 59, pp. 2–5.", file=file)
@@ -726,5 +727,10 @@ with open("analysis.txt", "a") as file:
     print("\nWikipedia (no date) ‘Linear discriminant analysis’. Available at: https://en.wikipedia.org/wiki/Linear_discriminant_analysis", file=file)
 
 print("References appended to analysis.txt")
+
+with open("analysis.txt", "a") as file:
+    print("\nEND OF ANALYSIS DOCUMENT", file=file)
+
+print("End of Document appended to analysis.txt")
 
 # END
