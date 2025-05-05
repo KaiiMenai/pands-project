@@ -427,6 +427,14 @@ plt.title("Principal Component Analysis of the Iris Dataset")
 plt.savefig('pca_by_species.png')
 plt.show()
 
+with open("analysis.txt", "a") as file:
+    print("\n\tPrincipal Component Analysis (PCA).", file=file)
+    print("\nThe plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
+    print("",  file=file)
+    print("",  file=file)
+    print("",  file=file)
+    print("",  file=file)
+
 # - Clustering analysis (e. K-means clustering) is used to group similar data points together.
 # In this case, K-means clustering is used to group the iris dataset into three clusters (corresponding to the three species).
 from sklearn.cluster import KMeans 
@@ -458,6 +466,13 @@ plt.legend(title="Species")
 plt.savefig('kmeans_clustering_by_species.png')
 plt.show()
 
+with open("analysis.txt", "a") as file:
+    print("\n\tK-means Clustering.", file=file)
+    print("\nThe plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
+    print("",  file=file)
+    print("",  file=file)
+    print("",  file=file)
+    print("",  file=file)
 
 # This dataset has previously been used for machine learning and classification tasks, so it may be useful to explore some of those techniques as well.
 # - Linear Regression
