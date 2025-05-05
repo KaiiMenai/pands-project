@@ -42,20 +42,22 @@ The dataset contains 150 rows of data and 5 columns. The 5 columns are the speci
 The first and last five rows of the dataset are printed below, as well as the column names within the dataset.
 
 The first 5 rows of the dataset:
-   sepal length  sepal width  petal length  petal width        class
-0           5.1          3.5           1.4          0.2  Iris-setosa
-1           4.9          3.0           1.4          0.2  Iris-setosa
-2           4.7          3.2           1.3          0.2  Iris-setosa
-3           4.6          3.1           1.5          0.2  Iris-setosa
-4           5.0          3.6           1.4          0.2  Iris-setosa
+|    |   sepal length |   sepal width |   petal length |   petal width | class       |
+|---:|---------------:|--------------:|---------------:|--------------:|:------------|
+|  0 |            5.1 |           3.5 |            1.4 |           0.2 | Iris-setosa |
+|  1 |            4.9 |           3   |            1.4 |           0.2 | Iris-setosa |
+|  2 |            4.7 |           3.2 |            1.3 |           0.2 | Iris-setosa |
+|  3 |            4.6 |           3.1 |            1.5 |           0.2 | Iris-setosa |
+|  4 |            5   |           3.6 |            1.4 |           0.2 | Iris-setosa |
 
 The last 5 rows of the dataset:
-     sepal length  sepal width  petal length  petal width           class
-145           6.7          3.0           5.2          2.3  Iris-virginica
-146           6.3          2.5           5.0          1.9  Iris-virginica
-147           6.5          3.0           5.2          2.0  Iris-virginica
-148           6.2          3.4           5.4          2.3  Iris-virginica
-149           5.9          3.0           5.1          1.8  Iris-virginica
+|     |   sepal length |   sepal width |   petal length |   petal width | class          |
+|----:|---------------:|--------------:|---------------:|--------------:|:---------------|
+| 145 |            6.7 |           3   |            5.2 |           2.3 | Iris-virginica |
+| 146 |            6.3 |           2.5 |            5   |           1.9 | Iris-virginica |
+| 147 |            6.5 |           3   |            5.2 |           2   | Iris-virginica |
+| 148 |            6.2 |           3.4 |            5.4 |           2.3 | Iris-virginica |
+| 149 |            5.9 |           3   |            5.1 |           1.8 | Iris-virginica |
 
 The column names of the dataset:
 Index(['sepal length', 'sepal width', 'petal length', 'petal width', 'class'], dtype='object')
@@ -65,23 +67,25 @@ The number of rows and columns in the dataset:
 None
 
 The number of missing values in the dataset:
-sepal length    0
-sepal width     0
-petal length    0
-petal width     0
-class           0
-dtype: int64
+|              |   0 |
+|:-------------|----:|
+| sepal length |   0 |
+| sepal width  |   0 |
+| petal length |   0 |
+| petal width  |   0 |
+| class        |   0 |
 
 The number of duplicate rows in the dataset:
 3
 
 The data types of each column in the dataset:
-sepal length    float64
-sepal width     float64
-petal length    float64
-petal width     float64
-class            object
-dtype: object
+|              | 0       |
+|:-------------|:--------|
+| sepal length | float64 |
+| sepal width  | float64 |
+| petal length | float64 |
+| petal width  | float64 |
+| class        | object  |
 
 Missing values were checked for in the dataset, there were none. If there were missing values, the dataset would need to be cleaned and sorted further before any analysis could be conducted. There were no
 missing values in this dataset, so further cleaning was unnecessary. From the information table, it can be seen that where one column has categorical (object) data (class column - also referred to as species
@@ -148,15 +152,16 @@ In the Summary Statistics for each species, the count shows that there are 50 sa
 ### Iris Setosa
 
 Setosa Statistics:
-       sepal length  sepal width  petal length  petal width
-count      50.00000    50.000000     50.000000     50.00000
-mean        5.00600     3.418000      1.464000      0.24400
-std         0.35249     0.381024      0.173511      0.10721
-min         4.30000     2.300000      1.000000      0.10000
-25%         4.80000     3.125000      1.400000      0.20000
-50%         5.00000     3.400000      1.500000      0.20000
-75%         5.20000     3.675000      1.575000      0.30000
-max         5.80000     4.400000      1.900000      0.60000
+|       |   sepal length |   sepal width |   petal length |   petal width |
+|:------|---------------:|--------------:|---------------:|--------------:|
+| count |       50       |     50        |      50        |      50       |
+| mean  |        5.006   |      3.418    |       1.464    |       0.244   |
+| std   |        0.35249 |      0.381024 |       0.173511 |       0.10721 |
+| min   |        4.3     |      2.3      |       1        |       0.1     |
+| 25%   |        4.8     |      3.125    |       1.4      |       0.2     |
+| 50%   |        5       |      3.4      |       1.5      |       0.2     |
+| 75%   |        5.2     |      3.675    |       1.575    |       0.3     |
+| max   |        5.8     |      4.4      |       1.9      |       0.6     |
 
 The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
 number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
@@ -166,15 +171,16 @@ from the mean. Petal length had a mean of XXXXXXXX
 ### Iris Versicolor
 
 Versicolor Statistics:
-       sepal length  sepal width  petal length  petal width
-count     50.000000    50.000000     50.000000    50.000000
-mean       5.936000     2.770000      4.260000     1.326000
-std        0.516171     0.313798      0.469911     0.197753
-min        4.900000     2.000000      3.000000     1.000000
-25%        5.600000     2.525000      4.000000     1.200000
-50%        5.900000     2.800000      4.350000     1.300000
-75%        6.300000     3.000000      4.600000     1.500000
-max        7.000000     3.400000      5.100000     1.800000
+|       |   sepal length |   sepal width |   petal length |   petal width |
+|:------|---------------:|--------------:|---------------:|--------------:|
+| count |      50        |     50        |      50        |     50        |
+| mean  |       5.936    |      2.77     |       4.26     |      1.326    |
+| std   |       0.516171 |      0.313798 |       0.469911 |      0.197753 |
+| min   |       4.9      |      2        |       3        |      1        |
+| 25%   |       5.6      |      2.525    |       4        |      1.2      |
+| 50%   |       5.9      |      2.8      |       4.35     |      1.3      |
+| 75%   |       6.3      |      3        |       4.6      |      1.5      |
+| max   |       7        |      3.4      |       5.1      |      1.8      |
 
 The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
 number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
@@ -185,15 +191,16 @@ from the mean. Petal length had a mean of XXXXXXXX
 
 
 Virginica Statistics:
-       sepal length  sepal width  petal length  petal width
-count      50.00000    50.000000     50.000000     50.00000
-mean        6.58800     2.974000      5.552000      2.02600
-std         0.63588     0.322497      0.551895      0.27465
-min         4.90000     2.200000      4.500000      1.40000
-25%         6.22500     2.800000      5.100000      1.80000
-50%         6.50000     3.000000      5.550000      2.00000
-75%         6.90000     3.175000      5.875000      2.30000
-max         7.90000     3.800000      6.900000      2.50000
+|       |   sepal length |   sepal width |   petal length |   petal width |
+|:------|---------------:|--------------:|---------------:|--------------:|
+| count |       50       |     50        |      50        |      50       |
+| mean  |        6.588   |      2.974    |       5.552    |       2.026   |
+| std   |        0.63588 |      0.322497 |       0.551895 |       0.27465 |
+| min   |        4.9     |      2.2      |       4.5      |       1.4     |
+| 25%   |        6.225   |      2.8      |       5.1      |       1.8     |
+| 50%   |        6.5     |      3        |       5.55     |       2       |
+| 75%   |        6.9     |      3.175    |       5.875    |       2.3     |
+| max   |        7.9     |      3.8      |       6.9      |       2.5     |
 
 The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
 number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For

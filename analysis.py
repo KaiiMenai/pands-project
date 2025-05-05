@@ -131,18 +131,18 @@ with open("analysis.md", "a") as file: # The (file=file) argument is important t
     print("\nThe last 5 rows of the dataset:", file=file)
     print(iris_df.tail().to_markdown(), file=file) # last 5 rows.
     print("\nThe column names of the dataset:", file=file)
-    print(iris_df.columns.to_markdown(), file=file) # column names.
+    print(iris_df.columns, file=file) # column names.
     print("\nThese print checks were conducted to ensure that the data was correctly imported and in the correct format.", file=file)
 
 print("Basic data explanation written to analysis.md")
 
 with open("analysis.md", "a") as file:
     print("The number of rows and columns in the dataset:", file=file)
-    print(iris_df.info().to_markdown(), file=file) # number of rows and columns.
+    print(iris_df.info(), file=file) # number of rows and columns.
     print("\nThe number of missing values in the dataset:", file=file)
     print(iris_df.isnull().sum().to_markdown(), file=file) # number of missing values.
     print("\nThe number of duplicate rows in the dataset:", file=file)
-    print(iris_df.duplicated().sum().to_markdown(), file=file) # number of duplicate rows.
+    print(iris_df.duplicated().sum(), file=file) # number of duplicate rows.
     print("\nThe data types of each column in the dataset:", file=file)
     print(iris_df.dtypes.to_markdown(), file=file)
     eda_text = (
