@@ -1,6 +1,6 @@
-Data Analysis conducted on the Iris Dataset
+# Data Analysis conducted on the Iris Dataset
 
-	Summary.
+	## Summary.
 
 The analysis used as a source for this document (analysis.py) was conducted using Python and the Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn libraries. The dataset was imported from the UCI Machine
 Learning Repository and is a well-known dataset for classification tasks. The dataset contained 150 samples of iris flowers, with 5 columns: sepal length, sepal width, petal length, petal width, and species
@@ -9,7 +9,7 @@ correlation matrix, and linear regression analysis were conducted on the dataset
 
 	Please Note: Some observations taken from my own work for the Principles of Data Analytics Module, with wording changed to match what was required for this project. Link: https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb
 
-	Background.
+	## Background.
 
 Originally sourced by Anderson (1935), the Iris dataset has been used numerous times, with several different iterations available online. Some of these sources contain differing (and often noted as incorrect)
 data points, as noted in the UCI Machine Learning Repository (https://archive.ics.uci.edu/dataset/53/iris). The dataset contained 150 samples of Iris flower, each with five noted variables, four numeric (sepal
@@ -120,7 +120,7 @@ cm.  The measurement with the largest deviation from the mean is the petal lengt
 
 In the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.
 
-	Summary statistics for each species:
+	## Summary statistics for each species:
 
 Setosa Statistics:
        sepal length  sepal width  petal length  petal width
@@ -155,21 +155,21 @@ min         4.90000     2.200000      4.500000      1.40000
 75%         6.90000     3.175000      5.875000      2.30000
 max         7.90000     3.800000      6.900000      2.50000
 
-	Iris Setosa.
+	### Iris Setosa.
 
 The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
 number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
 sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean. The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
 from the mean. Petal length had a mean of XXXXXXXX
 
-	Iris Versicolor.
+	### Iris Versicolor.
 
 The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
 number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
 sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean. The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
 from the mean. Petal length had a mean of XXXXXXXX
 
-	Iris Virginica.
+	### Iris Virginica.
 
 The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
 number of values (50 in this case, as it is done by species('class')). The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
@@ -177,7 +177,10 @@ sepal length the mean was AAA cm and the std was AAA, therefore most values devi
 from the mean. Petal length had a mean of XXXXXXXX
 
 
-	Boxplots by Feature.
+	## Boxplots by Feature.
+
+![Boxplots](boxplots_by_species.png)
+
 
 Boxplots were plotted for each of the four measured features (sepal length/width and petal length/width), the data in each of these four plots is separated by species. Boxplots make visualising range, potential
 outliers, the inter-quartile range, and the median of the data more easily. There were nine outliers in total within the dataset between the four sepal/petal features. The Setosa species had three outliers in
@@ -187,9 +190,11 @@ have the shortest petal length measurements and narrowest petal width. For Versi
 length/width), however, there were instances where the feature measurements converged, particularly for sepal length and sepal width. Petal length and petal width displayed differences between species,
 indicating that these feature measurements may be valuable for classification of Iris species. (https://www.nickmccullum.com/python-visualization/boxplot/ , https://www.ncl.ac.uk/webtemplate/ask-
 assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plots.html).
+
+	## Histograms by Feature.
+
 ![Histograms](histograms_by_species.png)
 
-	Histograms by Feature.
 
 The histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica. From the histogram plot for sepal length by species, the Setosa species showed a normal
 distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species has a broad range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species
@@ -201,19 +206,28 @@ lengths. Setosa species had the narrowest petal width on average. The species wi
 observed in the Virginica species. It was observed that the sepal width and petal width for the Setosa species were contrary to one another. For the petal measurements of length and width, the Setosa species
 was the shortest and narrowest and the values for this species also separated away from the other two species.
 
-	Scatterplots.
+	## Scatterplots.
+
+![Scatterplots](scatterplot_by_species.png)
 
 
 
-	Pairplot.
+
+	## Pairplot.
+
+![Pairplot](pairplot_by_species.png)
 
 
 
-	Correlation Matrix.
+
+	## Correlation Matrix.
+
+![Correlation_Matrix](correlation_matrix_by_feature.png)
 
 
 
-	Principal Component Analysis (PCA).
+
+	## Principal Component Analysis (PCA).
 
 A way to conduct relationship investigations is through Principal Component Analysis (PCA) - I did this for my PhD research and found it was a great way to clearly look at multiple data aspects at once
 (https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html).An important note of PCA is that the data needs to be standardised for it. When standardising data, it's important that it is
@@ -225,11 +239,11 @@ that PC1 strongly correlated with petal features, suggesting that petal length a
 length and width, these were responsible for 23 % of the variance in the data. These results demonstrate that the first two components explain 95.8 % of the variance within the dataset.With so much variance
 seen in PC1 for the petal features, it could indicate that these are good determining factors for use in species identification.
 
-	K-means Clustering.
+	## K-means Clustering.
 
 
 
-	Logistic Regression Model
+	## Logistic Regression Model
 
 Although a linear regression model has previously been used to analyse the data, it is possible to predict a species based on the measurements taken from a flower through using a logistic regression model.
 Using a Logistic Regression Model on the iris dataset is appropriate due to the relatively small size of the dataset (Log Regression Models work well with small, linearly separable datasets). The model is good
@@ -269,7 +283,7 @@ is seen most clearly in the petal length/width. As the iris dataset is balanced,
 reliability, the model should be rerun a number of times using different splits of the data, this is called cross-validation.
 
 
-	Confusion Matrix.
+	## Confusion Matrix.
 
 A confusion matrix was plotted to visualise the results. The confusion matrix is a performance evaluation tool for classification models. It provides a summary of the prediction results by comparing the actual
 values (rows) against the predicted values (columns). The confusion matrix helps with understanding how well the logistic regression model classifies the different species of iris and whether there are any
@@ -280,7 +294,7 @@ values from the diagonal are those denoting Misclassifications, where the actual
 classification, the classification report and confusion matrix aid in giving a clearer picture of the data and the accuracy of predictions made with the model.
 
 
-	Conclusion.
+	## Conclusion.
 
 The analysis of the Iris dataset has provided valuable insights into the relationships between features (sepal length/width, petal length/width) and the target variable (species). The dataset was found to be
 balanced, with 50 samples for each of the three species (Setosa, Versicolor, Virginica). The summary statistics showed that there were no missing values in the dataset, and the features had different means and
@@ -306,27 +320,27 @@ the data does efficiently demonstrate what a linear based dataset can show throu
 
 	Academic Sources
 
-Anderson, E. (1935) ï¿½The irises of the Gaspï¿½ peninsulaï¿½, Bulletin of the American Iris Society, 59, pp. 2ï¿½5.
+Anderson, E. (1935) ‘The irises of the Gaspé peninsula’, Bulletin of the American Iris Society, 59, pp. 2–5.
 
-Cheeseman, P., Kelly, J., Self, M. and Taylor, W. (1988) AUTOCLASS II conceptual clustering system finds 3 classes in the data, MLC Proceedings, pp. 54ï¿½64. Available at: https://cdn.aaai.org/AAAI/1988/AAAI88-108.pdf
+Cheeseman, P., Kelly, J., Self, M. and Taylor, W. (1988) AUTOCLASS II conceptual clustering system finds 3 classes in the data, MLC Proceedings, pp. 54–64. Available at: https://cdn.aaai.org/AAAI/1988/AAAI88-108.pdf
 
-Dasarathy, B.V. (1980) ï¿½Nosing around the neighborhood: a new system structure and classification rule for recognition in partially exposed environmentsï¿½, IEEE Transactions on Pattern Analysis and Machine Intelligence, PAMI-2(1), pp. 67ï¿½71. Available at: https://www.academia.edu/30910064/Nosing_Around_the_Neighborhood_A_New_System_Structure_and_Classification_Rule_for_Recognition_in_Partially_Exposed_Environments
+Dasarathy, B.V. (1980) ‘Nosing around the neighborhood: a new system structure and classification rule for recognition in partially exposed environments’, IEEE Transactions on Pattern Analysis and Machine Intelligence, PAMI-2(1), pp. 67–71. Available at: https://www.academia.edu/30910064/Nosing_Around_the_Neighborhood_A_New_System_Structure_and_Classification_Rule_for_Recognition_in_Partially_Exposed_Environments
 
-Domingos, P. (2012) ï¿½A few useful things to know about machine learningï¿½, Communications of the ACM, 55(10), pp. 78ï¿½87. Available at: https://dl.acm.org/doi/10.1145/2347736.2347755
+Domingos, P. (2012) ‘A few useful things to know about machine learning’, Communications of the ACM, 55(10), pp. 78–87. Available at: https://dl.acm.org/doi/10.1145/2347736.2347755
 
 Duda, R.O. and Hart, P.E. (1973) Pattern Classification and Scene Analysis. New York: John Wiley & Sons. Available at: https://www.semanticscholar.org/paper/Pattern-classification-and-scene-analysis-Duda-Hart/b07ce649d6f6eb636872527104b0209d3edc8188
 
-Fisher, R.A. (1936) ï¿½The use of multiple measurements in taxonomic problemsï¿½, Annual Eugenics, 7(Part II), pp. 179ï¿½188. Available at: https://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x
+Fisher, R.A. (1936) ‘The use of multiple measurements in taxonomic problems’, Annual Eugenics, 7(Part II), pp. 179–188. Available at: https://onlinelibrary.wiley.com/doi/10.1111/j.1469-1809.1936.tb02137.x
 
 Fisher, R.A. (1950) Contributions to Mathematical Statistics. New York: Wiley & Co.
 
-Gates, G.W. (1972) ï¿½The reduced nearest neighbor ruleï¿½, IEEE Transactions on Information Theory, 18(3), pp. 431ï¿½433. Available at: https://ieeexplore.ieee.org/document/1054809
+Gates, G.W. (1972) ‘The reduced nearest neighbor rule’, IEEE Transactions on Information Theory, 18(3), pp. 431–433. Available at: https://ieeexplore.ieee.org/document/1054809
 
 Hamilton, K.M. (2022) Drug resistance and susceptibility in sheep nematodes: fitness and the role of anthelmintic combinations in resistance management. PhD Thesis. University College Dublin, Teagasc, and AgResearch.
 
 James, G., Witten, D., Hastie, T. and Tibshirani, R. (2013) An Introduction to Statistical Learning. New York: Springer. Available at: https://link.springer.com/book/10.1007/978-1-0716-1418-1
 
-Jolliffe, I.T. and Cadima, J. (2016) ï¿½Principal component analysis: a review and recent developmentsï¿½, Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 374(2065), pp. 20150202. Available at: https://pubmed.ncbi.nlm.nih.gov/26953178/
+Jolliffe, I.T. and Cadima, J. (2016) ‘Principal component analysis: a review and recent developments’, Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences, 374(2065), pp. 20150202. Available at: https://pubmed.ncbi.nlm.nih.gov/26953178/
 
 Kuhn, M. and Johnson, K. (2013) Applied Predictive Modeling. Springer. Available at: https://link.springer.com/book/10.1007/978-1-4614-6849-3
 
@@ -334,104 +348,104 @@ Kuhn, M. and Johnson, K. (2013) Applied Predictive Modeling. Springer. Available
 
 	Information Sources (Non-Academic)
 
-Analytics Vidhya (2020) ï¿½Confusion matrix in machine learningï¿½. Available at: https://www.analyticsvidhya.com/blog/2020/04/confusion-matrix-machine-learning/
+Analytics Vidhya (2020) ‘Confusion matrix in machine learning’. Available at: https://www.analyticsvidhya.com/blog/2020/04/confusion-matrix-machine-learning/
 
-Analytics Vidhya (2024) ï¿½Pair plots in machine learningï¿½. Available at: https://www.analyticsvidhya.com/blog/2024/02/pair-plots-in-machine-learning/
+Analytics Vidhya (2024) ‘Pair plots in machine learning’. Available at: https://www.analyticsvidhya.com/blog/2024/02/pair-plots-in-machine-learning/
 
-Built In (no date) ï¿½Seaborn pairplotï¿½. Available at: https://builtin.com/articles/seaborn-pairplot
+Built In (no date) ‘Seaborn pairplot’. Available at: https://builtin.com/articles/seaborn-pairplot
 
-Bytemedirk (no date) ï¿½Mastering iris dataset analysis with Pythonï¿½. Available at: https://bytemedirk.medium.com/mastering-iris-dataset-analysis-with-python-9e040a088ef4
+Bytemedirk (no date) ‘Mastering iris dataset analysis with Python’. Available at: https://bytemedirk.medium.com/mastering-iris-dataset-analysis-with-python-9e040a088ef4
 
-Datacamp (no date) ï¿½Simple linear regression tutorialï¿½. Available at: https://www.datacamp.com/tutorial/simple-linear-regression
+Datacamp (no date) ‘Simple linear regression tutorial’. Available at: https://www.datacamp.com/tutorial/simple-linear-regression
 
-Datatab (no date) ï¿½Linear regression tutorialï¿½. Available at: https://datatab.net/tutorial/linear-regression
+Datatab (no date) ‘Linear regression tutorial’. Available at: https://datatab.net/tutorial/linear-regression
 
-GeeksforGeeks (no date) ï¿½Exploratory data analysis on iris datasetï¿½. Available at: https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
+GeeksforGeeks (no date) ‘Exploratory data analysis on iris dataset’. Available at: https://www.geeksforgeeks.org/exploratory-data-analysis-on-iris-dataset/
 
-GeeksforGeeks (no date) ï¿½How to show first/last n rows of a dataframeï¿½. Available at: https://stackoverflow.com/questions/58260771/how-to-show-firstlast-n-rows-of-a-dataframe
+GeeksforGeeks (no date) ‘How to show first/last n rows of a dataframe’. Available at: https://stackoverflow.com/questions/58260771/how-to-show-firstlast-n-rows-of-a-dataframe
 
-GeeksforGeeks (no date) ï¿½Iris datasetï¿½. Available at: https://www.geeksforgeeks.org/iris-dataset/
+GeeksforGeeks (no date) ‘Iris dataset’. Available at: https://www.geeksforgeeks.org/iris-dataset/
 
-GeeksforGeeks (no date) ï¿½Interpretations of histogramï¿½. Available at: https://www.geeksforgeeks.org/interpretations-of-histogram/
+GeeksforGeeks (no date) ‘Interpretations of histogram’. Available at: https://www.geeksforgeeks.org/interpretations-of-histogram/
 
-GeeksforGeeks (no date) ï¿½ML mathematical explanation of RMSE and R-squared errorï¿½. Available at: https://www.geeksforgeeks.org/ml-mathematical-explanation-of-rmse-and-r-squared-error/
+GeeksforGeeks (no date) ‘ML mathematical explanation of RMSE and R-squared error’. Available at: https://www.geeksforgeeks.org/ml-mathematical-explanation-of-rmse-and-r-squared-error/
 
-GeeksforGeeks (no date) ï¿½Python basics of pandas using iris datasetï¿½. Available at: https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/
+GeeksforGeeks (no date) ‘Python basics of pandas using iris dataset’. Available at: https://www.geeksforgeeks.org/python-basics-of-pandas-using-iris-dataset/
 
-Gist (no date) ï¿½Iris dataset CSVï¿½. Available at: https://gist.githubusercontent.com/
+Gist (no date) ‘Iris dataset CSV’. Available at: https://gist.githubusercontent.com/
 
-How.dev (no date) ï¿½How to perform the ANOVA test in Pythonï¿½. Available at: https://how.dev/answers/how-to-perform-the-anova-test-in-python
+How.dev (no date) ‘How to perform the ANOVA test in Python’. Available at: https://how.dev/answers/how-to-perform-the-anova-test-in-python
 
-IBM (no date) ï¿½Introduction to linear discriminant analysisï¿½. Available at: https://www.ibm.com/think/topics/linear-discriminant-analysis
+IBM (no date) ‘Introduction to linear discriminant analysis’. Available at: https://www.ibm.com/think/topics/linear-discriminant-analysis
 
-IBM (no date) ï¿½Linear regressionï¿½. Available at: https://www.ibm.com/think/topics/linear-regression
+IBM (no date) ‘Linear regression’. Available at: https://www.ibm.com/think/topics/linear-regression
 
-IBM (no date) ï¿½Logistic regressionï¿½. Available at: https://www.ibm.com/think/topics/logistic-regression
+IBM (no date) ‘Logistic regression’. Available at: https://www.ibm.com/think/topics/logistic-regression
 
-Investopedia (no date) ï¿½R-squaredï¿½. Available at: https://www.investopedia.com/terms/r/r-squared.asp
+Investopedia (no date) ‘R-squared’. Available at: https://www.investopedia.com/terms/r/r-squared.asp
 
-Kachiann (no date) ï¿½A beginners guide to machine learning with Python: Iris flower predictionï¿½. Available at: https://medium.com/@kachiann/a-beginners-guide-to-machine-learning-with-python-iris-flower-prediction-61814e095268
+Kachiann (no date) ‘A beginners guide to machine learning with Python: Iris flower prediction’. Available at: https://medium.com/@kachiann/a-beginners-guide-to-machine-learning-with-python-iris-flower-prediction-61814e095268
 
-Kulkarni, M. (no date) ï¿½Heatmap analysis using Python seaborn and matplotlibï¿½. Available at: https://medium.com/@kulkarni.madhwaraj/heatmap-analysis-using-python-seaborn-and-matplotlib-f6f5d7da2f64
+Kulkarni, M. (no date) ‘Heatmap analysis using Python seaborn and matplotlib’. Available at: https://medium.com/@kulkarni.madhwaraj/heatmap-analysis-using-python-seaborn-and-matplotlib-f6f5d7da2f64
 
-Medium (no date) ï¿½Exploratory data analysis of iris datasetï¿½. Available at: https://medium.com/@nirajan.acharya777/exploratory-data-analysis-of-iris-dataset-9c0df76771df
+Medium (no date) ‘Exploratory data analysis of iris dataset’. Available at: https://medium.com/@nirajan.acharya777/exploratory-data-analysis-of-iris-dataset-9c0df76771df
 
-Medium (no date) ï¿½Pairplot visualizationï¿½. Available at: https://medium.com/analytics-vidhya/pairplot-visualization-16325cd725e6
+Medium (no date) ‘Pairplot visualization’. Available at: https://medium.com/analytics-vidhya/pairplot-visualization-16325cd725e6
 
-Medium (no date) ï¿½Regression model evaluation metricsï¿½. Available at: https://medium.com/%40brandon93.w/regression-model-evaluation-metrics-r-squared-adjusted-r-squared-mse-rmse-and-mae-24dcc0e4cbd3
+Medium (no date) ‘Regression model evaluation metrics’. Available at: https://medium.com/%40brandon93.w/regression-model-evaluation-metrics-r-squared-adjusted-r-squared-mse-rmse-and-mae-24dcc0e4cbd3
 
 Medium (2023) 'Scikit-learn, the iris dataset, and machine learning: the journey to a new skill'. Medium. Available at: https://3tw.medium.com/scikit-learn-the-iris-dataset-and-machine-learning-the-journey-to-a-new-skill-c8d2f537e087
 
-Mizanur (no date) ï¿½Cleaning your data: handling missing and duplicate valuesï¿½. Available at: https://mizanur.io/cleaning-your-data-handling-missing-and-duplicate-values/
+Mizanur (no date) ‘Cleaning your data: handling missing and duplicate values’. Available at: https://mizanur.io/cleaning-your-data-handling-missing-and-duplicate-values/
 
-Newcastle University (no date) ï¿½Box and whisker plotsï¿½. Available at: https://www.ncl.ac.uk/webtemplate/ask-assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plots.html
+Newcastle University (no date) ‘Box and whisker plots’. Available at: https://www.ncl.ac.uk/webtemplate/ask-assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plots.html
 
-Nick McCullum (no date) ï¿½Python visualization: boxplotï¿½. Available at: https://www.nickmccullum.com/python-visualization/boxplot/
+Nick McCullum (no date) ‘Python visualization: boxplot’. Available at: https://www.nickmccullum.com/python-visualization/boxplot/
 
-Numpy (no date) ï¿½numpy.polyfitï¿½. Available at: https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html
+Numpy (no date) ‘numpy.polyfit’. Available at: https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html
 
-Pandas (no date) ï¿½pandas.read_csvï¿½. Available at: https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
+Pandas (no date) ‘pandas.read_csv’. Available at: https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html
 
-Python Documentation (no date) ï¿½Built-in typesï¿½. Available at: https://docs.python.org/3/library/stdtypes.html
+Python Documentation (no date) ‘Built-in types’. Available at: https://docs.python.org/3/library/stdtypes.html
 
-ResearchGate (no date) ï¿½Classification of Iris Flower Dataset using Different Algorithmsï¿½. Available at: https://www.researchgate.net/publication/367220930_Classification_of_Iris_Flower_Dataset_using_Different_Algorithms
+ResearchGate (no date) ‘Classification of Iris Flower Dataset using Different Algorithms’. Available at: https://www.researchgate.net/publication/367220930_Classification_of_Iris_Flower_Dataset_using_Different_Algorithms
 
-RSS (no date) ï¿½Common statistical termsï¿½. Available at: https://rss.org.uk/resources/statistical-explainers/common-statistical-terms/
+RSS (no date) ‘Common statistical terms’. Available at: https://rss.org.uk/resources/statistical-explainers/common-statistical-terms/
 
-Scikit-learn (no date) ï¿½Classification reportï¿½. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
+Scikit-learn (no date) ‘Classification report’. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
 
-Scikit-learn (no date) ï¿½LabelEncoderï¿½. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html
+Scikit-learn (no date) ‘LabelEncoder’. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html
 
-Scikit-learn (no date) ï¿½LinearRegressionï¿½. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
+Scikit-learn (no date) ‘LinearRegression’. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html
 
-Scikit-learn (no date) ï¿½LogisticRegressionï¿½. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+Scikit-learn (no date) ‘LogisticRegression’. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
 
-Scikit-learn (no date) ï¿½PCA example with iris datasetï¿½. Available at: https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html
+Scikit-learn (no date) ‘PCA example with iris dataset’. Available at: https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html
 
-Scikit-learn Documentation (2021) ï¿½Plot Iris Dataset Exampleï¿½. Available at: https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
+Scikit-learn Documentation (2021) ‘Plot Iris Dataset Example’. Available at: https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html
 
-Seaborn (no date) ï¿½Pairplotï¿½. Available at: https://seaborn.pydata.org/generated/seaborn.pairplot.html
+Seaborn (no date) ‘Pairplot’. Available at: https://seaborn.pydata.org/generated/seaborn.pairplot.html
 
-Seaborn (no date) ï¿½Regplotï¿½. Available at: https://seaborn.pydata.org/generated/seaborn.regplot.html
+Seaborn (no date) ‘Regplot’. Available at: https://seaborn.pydata.org/generated/seaborn.regplot.html
 
-Seaborn (no date) ï¿½Scatterplotï¿½. Available at: https://seaborn.pydata.org/generated/seaborn.scatterplot.html
+Seaborn (no date) ‘Scatterplot’. Available at: https://seaborn.pydata.org/generated/seaborn.scatterplot.html
 
-Slidescope (no date) ï¿½ANOVA example using Python pandas on iris datasetï¿½. Available at: https://slidescope.com/anova-example-using-python-pandas-on-iris-dataset/#:~:text=We%20then%20convert%20the%20dataset,p-value%20for%20the%20test
+Slidescope (no date) ‘ANOVA example using Python pandas on iris dataset’. Available at: https://slidescope.com/anova-example-using-python-pandas-on-iris-dataset/#:~:text=We%20then%20convert%20the%20dataset,p-value%20for%20the%20test
 
-Stack Overflow (no date) ï¿½How to show first/last n rows of a dataframeï¿½. Available at: https://stackoverflow.com/questions/58260771/how-to-show-firstlast-n-rows-of-a-dataframe
+Stack Overflow (no date) ‘How to show first/last n rows of a dataframe’. Available at: https://stackoverflow.com/questions/58260771/how-to-show-firstlast-n-rows-of-a-dataframe
 
-Toxigon (no date) ï¿½Best practices for data cleaning and preprocessingï¿½. Available at: https://toxigon.com/best-practices-for-data-cleaning-and-preprocessing
+Toxigon (no date) ‘Best practices for data cleaning and preprocessing’. Available at: https://toxigon.com/best-practices-for-data-cleaning-and-preprocessing
 
-Toxigon (no date) ï¿½Guide to data cleaningï¿½. Available at: https://toxigon.com/guide-to-data-cleaning
+Toxigon (no date) ‘Guide to data cleaning’. Available at: https://toxigon.com/guide-to-data-cleaning
 
-Toxigon (no date) ï¿½Introduction to seaborn for data visualizationï¿½. Available at: https://toxigon.com/introduction-to-seaborn-for-data-visualization
+Toxigon (no date) ‘Introduction to seaborn for data visualization’. Available at: https://toxigon.com/introduction-to-seaborn-for-data-visualization
 
-Toxigon (no date) ï¿½Seaborn data visualization guideï¿½. Available at: https://toxigon.com/seaborn-data-visualization-guide
+Toxigon (no date) ‘Seaborn data visualization guide’. Available at: https://toxigon.com/seaborn-data-visualization-guide
 
-UCI Machine Learning Repository (2025) ï¿½Iris Datasetï¿½. Available at: https://archive.ics.uci.edu/dataset/53/iris
+UCI Machine Learning Repository (2025) ‘Iris Dataset’. Available at: https://archive.ics.uci.edu/dataset/53/iris
 
-WV State University (no date) ï¿½Scholarly vs. non-scholarly articlesï¿½. Available at: https://wvstateu.libguides.com/c.php?g=813217&p=5816022
+WV State University (no date) ‘Scholarly vs. non-scholarly articles’. Available at: https://wvstateu.libguides.com/c.php?g=813217&p=5816022
 
-Wikipedia (no date) ï¿½Linear discriminant analysisï¿½. Available at: https://en.wikipedia.org/wiki/Linear_discriminant_analysis
+Wikipedia (no date) ‘Linear discriminant analysis’. Available at: https://en.wikipedia.org/wiki/Linear_discriminant_analysis
 
 END OF ANALYSIS DOCUMENT

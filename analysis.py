@@ -67,7 +67,7 @@ print(iris_df) # This will print the dataframe into the terminal and also gi ve 
 
 with open("analysis.md", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
     print("# Data Analysis conducted on the Iris Dataset", file=file)
-    print("\n\t## Summary.", file=file)
+    print("\n## Summary.", file=file)
     summary_text = (
     "The analysis used as a source for this document (analysis.py) was conducted using Python and the Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn libraries. The dataset was imported from the UCI Machine Learning Repository and is a well-known dataset for classification tasks."
     " The dataset contained 150 samples of iris flowers, with 5 columns: sepal length, sepal width, petal length, petal width, and species (class). The dataset was used to conduct exploratory data analysis (EDA) and visualisation, as well as some machine learning tasks. Histogram, boxplot, scatterplot, PCA, pairplot, K-means clustering, correlation matrix, and linear regression analysis were conducted on the dataset, and the results of each were saved as a PNG file."
@@ -79,7 +79,7 @@ with open("analysis.md", "w") as file: # The (file=file) argument is important t
 print("Summary of file made in the analysis.md")
 
 with open("analysis.md", "a") as file:
-    print("\n\t## Background.", file=file)
+    print("\n## Background.", file=file)
     background1_text = (
     "Originally sourced by Anderson (1935), the Iris dataset has been used numerous times, with several different iterations available online. Some of these sources contain differing (and often noted as incorrect) data points, as noted in the UCI Machine Learning Repository (https://archive.ics.uci.edu/dataset/53/iris). The dataset contained 150 samples of Iris flower, each with five noted variables, four numeric (sepal and petal feature measurements), and one categorical (the three species), giving a total of 750 sample points throughout the entire dataset."
     " Fisher (1936) made the Iris dataset well known through his paper titled 'The Use of Multiple Measurements in Taxonomic Problems.' In the paper, the multivariate Iris dataset was used as an example of linear discriminant analysis. That is, a statistical method used to find a linear combination of features that can either characterise or separate two or more classes of objects or events (https://en.wikipedia.org/wiki/Linear_discriminant_analysis; https://www.ibm.com/think/topics/linear-discriminant-analysis)."
@@ -248,7 +248,7 @@ with open("analysis.md", "a") as file:
     print("", file=file)
     print(textwrap.fill(iris_summary_text, width=210), file=file)
     print("\nIn the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.", file=file)
-    print("\n\t## Summary statistics for each species:", file=file)
+    print("\n\tSummary statistics for each species:", file=file)
     # Separate the dataset by species
     setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
     versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
@@ -266,7 +266,8 @@ print("Summary Stats has been appended to analysis.md")
 # Now to explain what the summary stats are and what they mean - this will be done in the analysis.txt file.
 
 with open("analysis.md", "a") as file:
-    print("\n\t### Iris Setosa.", file=file)
+    print("\n## Individual Species Observations.", file=file)
+    print("\n### Iris Setosa.", file=file)
     setosa_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
     " The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
@@ -276,7 +277,7 @@ with open("analysis.md", "a") as file:
     print("", file=file)
     print(textwrap.fill(setosa_stats_summary_text, width=210), file=file)
     
-    print("\n\t### Iris Versicolor.", file=file)
+    print("\n### Iris Versicolor.", file=file)
     versicolor_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
     " The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
@@ -286,7 +287,7 @@ with open("analysis.md", "a") as file:
     print("", file=file)
     print(textwrap.fill(versicolor_stats_summary_text, width=210), file=file)
     
-    print("\n\t### Iris Virginica.", file=file)
+    print("\n### Iris Virginica.", file=file)
     virginica_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
     " The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
@@ -326,7 +327,7 @@ plt.show()
 # Describe what the boxplot shows in the analysis.txt file.
 
 with open("analysis.md", "a") as file:
-    print("\n\t## Boxplots by Feature.", file=file)
+    print("\n## Boxplots by Feature.", file=file)
     print("", file=file)
     print("![Boxplots](boxplots_by_species.png)", file=file)
     print("", file=file)
@@ -380,7 +381,7 @@ plt.savefig('histograms_by_species.png')
 plt.show()
 
 with open("analysis.md", "a") as file:
-    print("\n\t## Histograms by Feature.", file=file)
+    print("\n## Histograms by Feature.", file=file)
     print("", file=file)
     print("![Histograms](histograms_by_species.png)", file=file)
     print("", file=file)
@@ -423,7 +424,7 @@ plt.savefig('scatterplot_by_species.png')
 plt.show()
 
 with open("analysis.md", "a") as file:
-    print("\n\t## Scatterplots.", file=file)
+    print("\n## Scatterplots.", file=file)
     print("", file=file)
     print("![Scatterplots](scatterplot_by_species.png)", file=file)
     print("", file=file)
@@ -447,7 +448,7 @@ plt.savefig('pairplot_by_species.png')
 plt.show()
 
 with open("analysis.md", "a") as file:
-    print("\n\t## Pairplot.", file=file)
+    print("\n## Pairplot.", file=file)
     print("", file=file)
     print("![Pairplot](pairplot_by_species.png)", file=file)
     print("", file=file)
@@ -503,7 +504,7 @@ plt.savefig('pca_by_species.png')
 plt.show()
 
 with open("analysis.md", "a") as file:
-    print("\n\t## Principal Component Analysis (PCA).", file=file)
+    print("\n## Principal Component Analysis (PCA).", file=file)
     pca_text = (
     "A way to conduct relationship investigations is through Principal Component Analysis (PCA) - I did this for my PhD research and found it was a great way to clearly look at multiple data aspects at once (https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html)."
     "An important note of PCA is that the data needs to be standardised for it. When standardising data, it's important that it is scaled correctly, otherwise the results will appear skewed and purely incorrect.The analysis can then be run again. The standardised PCA analysis can then be viewed in a plot."
@@ -547,7 +548,7 @@ plt.savefig('kmeans_clustering_by_species.png')
 plt.show()
 
 with open("analysis.md", "a") as file:
-    print("\n\t## K-means Clustering.", file=file)
+    print("\n## K-means Clustering.", file=file)
     k_means_text = (
     ""
     )
@@ -654,6 +655,7 @@ plt.tight_layout()
 plt.savefig('linear_regression_and_r2_by_species.png')  # Save the plot as a PNG file
 plt.show()
 
+# INSERT LINEAR OBSERVATION HERE
 
 # - Logistic Regression - model taken from my PoDA project, but adapted for this dataset. (https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb)
 
@@ -693,7 +695,7 @@ with open("logistic_regression.txt", "w") as file: # The (file=file) argument is
 print("Logistic regression results have been written to logistic_regression.txt")
 
 with open("analysis.md", "a") as file:
-    print("\n\t## Logistic Regression Model", file=file)
+    print("\n## Logistic Regression Model", file=file)
     log_reason_text = (
     "Although a linear regression model has previously been used to analyse the data, it is possible to predict a species based on the measurements taken from a flower through using a logistic regression model."
     " Using a Logistic Regression Model on the iris dataset is appropriate due to the relatively small size of the dataset (Log Regression Models work well with small, linearly separable datasets)."
@@ -750,7 +752,7 @@ plt.savefig('confusion_matrix_species.png')  # Save the plot as a PNG file
 plt.show()
 
 with open("analysis.md", "a") as file:
-    print("\n\t## Confusion Matrix.", file=file)
+    print("\n## Confusion Matrix.", file=file)
     con_matrix_text = (
     "A confusion matrix was plotted to visualise the results. The confusion matrix is a performance evaluation tool for classification models. It provides a summary of the prediction results by comparing the actual values (rows) against the predicted values (columns)."
     " The confusion matrix helps with understanding how well the logistic regression model classifies the different species of iris and whether there are any species that are more prone to misclassification (https://www.analyticsvidhya.com/blog/2020/04/confusion-matrix-machine-learning/)."
@@ -836,7 +838,7 @@ print("Pros and Cons for each test written to pros_cons_analysis.txt")
 ## Conclusion - write a conclusion to the analysis.txt file.
 
 with open("analysis.md", "a") as file:
-    print("\n\t## Conclusion.", file=file)
+    print("\n## Conclusion.", file=file)
     conclusion_text = (
     "The analysis of the Iris dataset has provided valuable insights into the relationships between features (sepal length/width, petal length/width) and the target variable (species)."
     " The dataset was found to be balanced, with 50 samples for each of the three species (Setosa, Versicolor, Virginica). The summary statistics showed that there were no missing values in the dataset, and the features had different means and standard deviations. The box plots and histograms provided visualisations of the distribution of features by species, and the scatter plots showed the relationships between features and the target variable."
@@ -856,7 +858,7 @@ print("Conclusion appended to analysis.md")
 
 with open("analysis.md", "a") as file:
     print("\n", file=file)
-    print("\n\tReferences.", file=file)
+    print("\n## References.", file=file)
     print("\n\tAcademic Sources", file=file)
     print("\nAnderson, E. (1935) ‘The irises of the Gaspé peninsula’, Bulletin of the American Iris Society, 59, pp. 2–5.", file=file)
     print("\nCheeseman, P., Kelly, J., Self, M. and Taylor, W. (1988) AUTOCLASS II conceptual clustering system finds 3 classes in the data, MLC Proceedings, pp. 54–64. Available at: https://cdn.aaai.org/AAAI/1988/AAAI88-108.pdf", file=file)
