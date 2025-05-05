@@ -11,6 +11,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import sklearn as skl
+import textwrap
 from sklearn.decomposition import PCA
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -648,6 +649,20 @@ with open("analysis.txt", "a") as file:
     print("A linearly separable dataset is one that shows clear distinctions between classes, for the iris dataset that class difference is seen most clearly in the petal length/width. As the iris dataset is balanced, with an equal number \nof samples for each class (50), the risk of bias in the model is reduced. In order to improve accuracy and reliability, the model should be rerun a number of times using different splits of the data, this is called cross-validation.", file=file)
 
 print("Logistic Regression observations appended to analysis.txt")
+
+with open("analysis.txt", "a") as file:
+    log_regression1_text = (
+    "For the iris dataset, the Logistic Regression Model achieves high accuracy (~97%), this is due to the simplicity and linear separability of the iris dataset. Accuracy for the Logistic Regression Model is calculated as the ratio of correct predictions to total predictions. The columns for precision and recall measure class specific performance in the model, and the f1-score column gives a balances metric for imbalanced classes (not a problem here as the iris dataset is balanced). In the support column, it can be seen that the Verginica species has a value of 9, demonstrating a slightly lower recall, this is likely due to the overlap with Versicolor. As seen throughout previous testing on the dataset, the majority of the confusion in the dataset occurs between the Bersicolor and Virginica species."
+    )
+    log_regression2_text = (
+    "Initially upon looking at the Classification Report, it could be assumed that the results do not highlight anything. This report provides detailed insights into the performance of the model for each species, showing areas where the model performs well or struggles. However, due to the size of the dataset (150 samples), and then the test set being even smaller (30 samples), it makes it easier for the model to achieve perfect accuracy, this model produced an accuracy of 1.0 (perfect accuracy). A linearly separable dataset is one that shows clear distinctions between classes, for the iris dataset that class difference is seen most clearly in the petal length/width. As the iris dataset is balanced, with an equal number of samples for each class (50), the risk of bias in the model is reduced. In order to improve accuracy and reliability, the model should be rerun a number of times using different splits of the data, this is called cross-validation."
+    )
+    print()
+    print(textwrap.fill(log_regression1_text, width=200), file=file)
+    print()
+    print(textwrap.fill(log_regression1_text, width=200), file=file)
+
+print("Modified Logistic Regression observations appended to analysis.txt")
 
 # Confusion matrix
 # Generate the confusion matrix
