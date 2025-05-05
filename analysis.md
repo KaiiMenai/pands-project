@@ -7,7 +7,7 @@ Learning Repository and is a well-known dataset for classification tasks. The da
 (class). The dataset was used to conduct exploratory data analysis (EDA) and visualisation, as well as some machine learning tasks. Histogram, boxplot, scatterplot, PCA, pairplot, K-means clustering,
 correlation matrix, and linear regression analysis were conducted on the dataset, and the results of each were saved as a PNG file.
 
-	Please Note: Some observations taken from my own work for the Principles of Data Analytics Module, with wording changed to match what was required for this project. Link: https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb
+*Please Note: Some observations taken from my own work for the Principles of Data Analytics Module, with wording changed to match what was required for this project. Link: https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb*
 
 ## Background
 
@@ -89,7 +89,7 @@ for this dataset)  and the four other columns (sepal length, sepal width, petal 
 null~ entries in the dataset.
 
 Duplicates were removed from the data using the drop_duplicates function.
-The code used for this was: 	data = iris_df.drop_duplicates(subset=class.)
+The code used for this was: ```data = iris_df.drop_duplicates(subset=class.)```
 
 Value counts for each of the species:
 class
@@ -145,6 +145,7 @@ In the Summary Statistics for each species, the count shows that there are 50 sa
 ## Individual Species Observations
 
 ### Iris Setosa
+
 Setosa Statistics:
        sepal length  sepal width  petal length  petal width
 count      50.00000    50.000000     50.000000     50.00000
@@ -161,8 +162,8 @@ number of values (50 in this case, as it is done by species('class')). The stand
 sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean. The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
 from the mean. Petal length had a mean of XXXXXXXX
 
-
 ### Iris Versicolor
+
 Versicolor Statistics:
        sepal length  sepal width  petal length  petal width
 count     50.000000    50.000000     50.000000    50.000000
@@ -179,8 +180,8 @@ number of values (50 in this case, as it is done by species('class')). The stand
 sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean. The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
 from the mean. Petal length had a mean of XXXXXXXX
 
-
 ### Iris Virginica
+
 
 Virginica Statistics:
        sepal length  sepal width  petal length  petal width
@@ -198,11 +199,9 @@ number of values (50 in this case, as it is done by species('class')). The stand
 sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean. The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
 from the mean. Petal length had a mean of XXXXXXXX
 
-
 ## Boxplots by Feature
 
 ![Boxplots](boxplots_by_species.png)
-
 
 Boxplots were plotted for each of the four measured features (sepal length/width and petal length/width), the data in each of these four plots is separated by species. Boxplots make visualising range, potential
 outliers, the inter-quartile range, and the median of the data more easily. There were nine outliers in total within the dataset between the four sepal/petal features. The Setosa species had three outliers in
@@ -216,7 +215,6 @@ assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plo
 ## Histograms by Feature
 
 ![Histograms](histograms_by_species.png)
-
 
 The histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica. From the histogram plot for sepal length by species, the Setosa species showed a normal
 distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species has a broad range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species
@@ -242,7 +240,7 @@ was the shortest and narrowest and the values for this species also separated aw
 
 
 
-	## Correlation Matrix
+## Correlation Matrix
 
 ![Correlation_Matrix](correlation_matrix_by_feature.png)
 
@@ -292,10 +290,10 @@ consideration. The iris dataset is relatively small, and when it is split on a s
 into multiple species creates a condensed dataset  and may, not be representative of the wider population. (https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html;
 https://www.ibm.com/think/topics/logistic-regression)
 
-	Logistic Regression for Species Classification Results:
+Logistic Regression for Species Classification Results:
 Accuracy: 1.0000
 
-	Classification Report:
+Classification Report:
                  precision    recall  f1-score   support
 
     Iris-setosa       1.00      1.00      1.00        10
@@ -306,8 +304,7 @@ Iris-versicolor       1.00      1.00      1.00         9
       macro avg       1.00      1.00      1.00        30
    weighted avg       1.00      1.00      1.00        30
 
-
-	Example Prediction (measurements in cm).
+Example Prediction (measurements in cm).
 
 Predicted species for [5.1, 3.5, 1.4, 0.2]: Iris-setosa
 
@@ -322,7 +319,6 @@ achieve perfect accuracy, this model produced an accuracy of 1.0 (perfect accura
 is seen most clearly in the petal length/width. As the iris dataset is balanced, with an equal number of samples for each class (50), the risk of bias in the model is reduced. In order to improve accuracy and
 reliability, the model should be rerun a number of times using different splits of the data, this is called cross-validation.
 
-
 ## Confusion Matrix
 
 A confusion matrix was plotted to visualise the results. The confusion matrix is a performance evaluation tool for classification models. It provides a summary of the prediction results by comparing the actual
@@ -332,7 +328,6 @@ important to understand what it shows. The rows within the matrix represent the 
 output). The matrix contains a number of values, on the diagonal line (from top left to bottom right) the values denote the Correct Predictions, where the actual and predicted classes (species) match. All other
 values from the diagonal are those denoting Misclassifications, where the actual and predicted species differ. Although the Logistic Regression Model gives a value for Accuracy (1.000) for species
 classification, the classification report and confusion matrix aid in giving a clearer picture of the data and the accuracy of predictions made with the model.
-
 
 ## Conclusion
 
@@ -353,8 +348,6 @@ classification and regression tasks, and the techniques used have provided valua
 However, in order to have a more reliable method for predicting the species using a linear regression (or logistic regression) model, a larger sample population is essential in order to accurately visualise and
 calculate the nuances between such species based on their features. In terms of model accuracy, reliability, and consistent repeatability the size of the dataset may be considered a limiting factor. However,
 the data does efficiently demonstrate what a linear based dataset can show through various forms of analysis.
-
-
 
 ## References
 
