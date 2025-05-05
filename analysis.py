@@ -569,7 +569,6 @@ with open("logistic_regression.txt", "w") as file: # The (file=file) argument is
 
 print("Logistic regression results have been written to logistic_regression.txt")
 
-
 # Discuss the pros and cons of each technique and how they may be applied to this dataset. - do this in a text file called 'analysis.txt'.
 
 with open("pros_cons_analysis.txt", "w") as file: 
@@ -638,7 +637,6 @@ with open("pros_cons_analysis.txt", "w") as file:
     print("\n\tApplication: Can be used to predict the probability of a specific species based on features (sepal length/width, petal length/width).", file=file)
     
 print("Pros and Cons for each test written to pros_cons_analysis.txt")
-
 
 ## Conclusion - write a conclusion to the analysis.txt file.
 
