@@ -101,15 +101,16 @@ Name: count, dtype: int64
 It can be seen that there are 50 samples for each of the three classes (species) of iris flower: Setosa, Versicolor, and Virginica.
 
 Summary statistics for the whole dataset:
-       sepal length  sepal width  petal length  petal width
-count    150.000000   150.000000    150.000000   150.000000
-mean       5.843333     3.054000      3.758667     1.198667
-std        0.828066     0.433594      1.764420     0.763161
-min        4.300000     2.000000      1.000000     0.100000
-25%        5.100000     2.800000      1.600000     0.300000
-50%        5.800000     3.000000      4.350000     1.300000
-75%        6.400000     3.300000      5.100000     1.800000
-max        7.900000     4.400000      6.900000     2.500000
+|   sepal length |   sepal width |   petal length |   petal width |
+|---------------:|--------------:|---------------:|--------------:|
+|     150        |    150        |      150       |    150        |
+|       5.84333  |      3.054    |        3.75867 |      1.19867  |
+|       0.828066 |      0.433594 |        1.76442 |      0.763161 |
+|       4.3      |      2        |        1       |      0.1      |
+|       5.1      |      2.8      |        1.6     |      0.3      |
+|       5.8      |      3        |        4.35    |      1.3      |
+|       6.4      |      3.3      |        5.1     |      1.8      |
+|       7.9      |      4.4      |        6.9     |      2.5      |
 
 The summary statistics for the whole dataset shows that there are 150 samples in the dataset for each of the variables, the value displayed is the non-missing values, and thus it can be verified that the
 dataset does not have any missing values. The Mean, Standard Deviation (std), Minimum (min) and Maximum (max), and the Lower, Median, and Higher Inter-quartile Ranges (25%, 50%, and 75%, respectively) values
