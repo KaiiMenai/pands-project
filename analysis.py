@@ -396,6 +396,14 @@ plt.title("Feature Correlation Matrix")
 plt.savefig('correlation_matrix_by_feature.png')
 plt.show()
 
+with open("analysis.txt", "a") as file:
+    print("\n\tCorrelation Matrix.", file=file)
+    print("\nThe plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
+    print("",  file=file)
+    print("",  file=file)
+    print("",  file=file)
+    print("",  file=file)
+
 # - PCA (Principal Component Analysis)
 
 X = iris_df.iloc[:, :4] # The first four columns are the features (sepal length, sepal width, petal length, petal width)
