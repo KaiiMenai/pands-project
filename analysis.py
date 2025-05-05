@@ -311,8 +311,10 @@ with open("analysis.txt", "a") as file:
     print("\nFor sepal width, it can be seen that overall, the data shows a normal distribution. Contrary to what was observed for sepal length, the narrowest sepal width is the Versicolor species, with the Virginica species being in the middle of the range. The Setosa species had the greatest width and the broadest range in values for sepal width.", file=file)
     print("\nSimilar to what was observed for sepal length, for petal length Setosa was the species with the shortest average length and the smallest range in measurements. An average petal length of approximately 4.5 cm was observed for the Versicolor species and demonstrated a normal distribution. The Virginica species had, on average, the longest petal lengths, similar to what was observed for sepal lengths.", file=file)
     print("\nSetosa species had the narrowest petal width on average. The species with the mid-width measurement was the Versicolor species, with values between 1.0 cm and 2.0 cm. The widest petal widths were observed in the Virginica species.", file=file)
-    print("\n", file=file)
-    
+    print("\n It was observed that the sepal width and petal width for the Setosa species were contrary to one another. For the petal measurements of length and width, the Setosa species was the shortest and narrowest and the values for this species also separated away from the other two species.", file=file)
+
+print("Histogram observations appended to analysis.txt")
+
 # Scatter plots - plot and save scatter plots for each pair of variables in the dataset as a png file.
 
 # Create a figure with two subplots
