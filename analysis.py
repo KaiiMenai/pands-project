@@ -305,7 +305,7 @@ plt.savefig('histograms_by_species.png')
 plt.show()
 
 with open("analysis.txt", "a") as file:
-    print("\n\Histograms by Feature.", file=file)
+    print("\n\tHistograms by Feature.", file=file)
     print("\nThe histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
     print("\nFrom the histogram plot for sepal length by species, the Setosa species showed a normal distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species has a broad range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species with the largest range in length of sepals and longest average sepal length is the Virginica species.",  file=file)
     print("\nFor sepal width, it can be seen that overall, the data shows a normal distribution. Contrary to what was observed for sepal length, the narrowest sepal width is the Versicolor species, with the Virginica species being in the middle of the range. The Setosa species had the greatest width and the broadest range in values for sepal width.", file=file)
