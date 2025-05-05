@@ -206,7 +206,9 @@ The plots are all colour coded by species; blue for Setosa, orange for Versicolo
 	Logistic Regression Model
 
 Although a linear regression model has previously been used to analyse the data, it is possible to predict a species based on the measurements taken from a flower through using a logistic regression model.
-Using a Logistic Regression Model on the iris dataset is appropriate due to the relatively small size of the dataset (Log Regression Models work well with small, linearly separable datasets). The model is good for multi-class classification, as seen in the dataset with the 'species' classifications. When looking at the results of the logistic regression model, there are some things that should be taken into consideration. The iris dataset is relatively small, and when it is split on a species level, it has even fewer values. Although Logistic Regression Models work well on small datasets, splitting the dataset into multiple species creates a condensed dataset and may, not be representative of the wider population. (https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html; https://www.ibm.com/think/topics/logistic-regression)
+Using a Logistic Regression Model on the iris dataset is appropriate due to the relatively small size of the dataset (Log Regression Models work well with small, linearly separable datasets). The model is good for multi-class classification, as seen in 
+the dataset with the 'species' classifications. When looking at the results of the logistic regression model, there are some things that should be taken into consideration. The iris dataset is relatively small, and when it is split on a species level, 
+it has even fewer values. Although Logistic Regression Models work well on small datasets, splitting the dataset into multiple species creates a condensed dataset and may, not be representative of the wider population. (https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html; https://www.ibm.com/think/topics/logistic-regression)
 
 	Logistic Regression for Species Classification Results:
 Accuracy: 1.0000
@@ -227,14 +229,14 @@ Iris-versicolor       1.00      1.00      1.00         9
 
 Predicted species for [5.1, 3.5, 1.4, 0.2]: Iris-setosa
 
-For the iris dataset, the Logistic Regression Model achieves high accuracy (~97%), this is due to the simplicity and linear separability of the iris dataset.
-Accuracy for the Logistic Regression Model is calculated as the ratio of correct predictions to total predictions. The columns for precision and recall measure class specific performance in the model, and the f1-score column gives a balances metric for imbalanced classes (not a problem here as the iris dataset is balanced).
-In the support column, it can be seen that the Verginica species has a value of 9, demonstrating a slightly lower recall, this is likely due to the overlap with Versicolor.
-As seen throughout previous testing on the dataset, the majority of the confusion in the dataset occurs between the Versicolor and Virginica species.
-Initially upon looking at the Classification Report, it could be assumed that the results do not highlight anything. This report provides detailed insights into the performance of the model for each species, showing areas where the model performs well or struggles.
-However, due to the size of the dataset (150 samples), and then the test set being even smaller (30 samples), it makes it easier for the model to achieve perfect accuracy, this model produced an accuracy of 1.0 (perfect accuracy).
-A linearly separable dataset is one that shows clear distinctions between classes, for the iris dataset that class difference is seen most clearly in the petal length/width.
-As the iris dataset is balanced, with an equal number of samples for each class (50), the risk of bias in the model is reduced. In order to improve accuracy and reliability, the model should be rerun a number of times using different splits of the data, this is called cross-validation.
+For the iris dataset, the Logistic Regression Model achieves high accuracy (~97%), this is due to the simplicity and linear separability of the iris dataset. Accuracy for the Logistic Regression Model is calculated as the ratio 
+of correct predictions to total predictions. The columns for precision and recall measure class specific performance in the model, and the f1-score column gives a balances metric for imbalanced classes (not a problem here as the iris dataset is balanced).
+In the support column, it can be seen that the Verginica species has a value of 9, demonstrating a slightly lower recall, this is likely due to the overlap with Versicolor. As seen throughout previous testing on the dataset, 
+the majority of the confusion in the dataset occurs between the Versicolor and Virginica species.
+Initially upon looking at the Classification Report, it could be assumed that the results do not highlight anything. This report provides detailed insights into the performance of the model for each species, showing areas where the model performs 
+well or struggles. However, due to the size of the dataset (150 samples), and then the test set being even smaller (30 samples), it makes it easier for the model to achieve perfect accuracy, this model produced an accuracy of 1.0 (perfect accuracy).
+A linearly separable dataset is one that shows clear distinctions between classes, for the iris dataset that class difference is seen most clearly in the petal length/width. As the iris dataset is balanced, with an equal number 
+of samples for each class (50), the risk of bias in the model is reduced. In order to improve accuracy and reliability, the model should be rerun a number of times using different splits of the data, this is called cross-validation.
 
 	Confusion Matrix.
 
