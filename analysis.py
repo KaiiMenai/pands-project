@@ -80,17 +80,25 @@ print("Summary of file made in the analysis.txt")
 
 with open("analysis.txt", "a") as file:
     print("\n\tBackground.", file=file)
-    background_text = (
+    background1_text = (
     "Originally sourced by Anderson (1935), the Iris dataset has been used numerous times, with several different iterations available online. Some of these sources contain differing (and often noted as incorrect) data points, as noted in the UCI Machine Learning Repository (https://archive.ics.uci.edu/dataset/53/iris). The dataset contained 150 samples of Iris flower, each with five noted variables, four numeric (sepal and petal feature measurements), and one categorical (the three species), giving a total of 750 sample points throughout the entire dataset."
     " Fisher (1936) made the Iris dataset well known through his paper titled 'The Use of Multiple Measurements in Taxonomic Problems.' In the paper, the multivariate Iris dataset was used as an example of linear discriminant analysis. That is, a statistical method used to find a linear combination of features that can either characterise or separate two or more classes of objects or events (https://en.wikipedia.org/wiki/Linear_discriminant_analysis; https://www.ibm.com/think/topics/linear-discriminant-analysis)."
-    " Anderson (1935) originally collected the iris samples to study species variation and hybidisation. Anderson (1935) used the dataset to quantify the morphological differences and variation between Iris species, focussing on the evolution of the Versicolor species, and how it may have come about as a hybrid of the Setosa and Virginica Iris species. An interesting point about the dataset is that two of the three species, Iris Versicolor and Iris Virginica, were collected from the same pasture, on the same day, and measured using the same equipment. This is noteworthy for analysis, as Virginica and Versicolor often appear to converge and are not as easily separable as the Setosa species (histograms, scatter plots, etc.)."
+    )
+    background2_text = (
+    "Anderson (1935) originally collected the iris samples to study species variation and hybidisation. Anderson (1935) used the dataset to quantify the morphological differences and variation between Iris species, focussing on the evolution of the Versicolor species, and how it may have come about as a hybrid of the Setosa and Virginica Iris species. An interesting point about the dataset is that two of the three species, Iris Versicolor and Iris Virginica, were collected from the same pasture, on the same day, and measured using the same equipment. This is noteworthy for analysis, as Virginica and Versicolor often appear to converge and are not as easily separable as the Setosa species (histograms, scatter plots, etc.)."
     " The Iris dataset has been extensively used as a training dataset, a learning dataset, and for developing machine learning techniques. The scikit-learn library in Python uses the Iris dataset for demonstration purposes and explains how algorithms can learn from data samples (features) to predict class labels (https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html; https://archive.ics.uci.edu/dataset/53/iris)."
-    " The Iris dataset also highlights the distinction between supervised and unsupervised learning. Supervised learning uses labeled data to train models for classification or regression, while unsupervised learning explores patterns or clusters in unlabeled data (https://www.ibm.com/think/topics/linear-discriminant-analysis). The iris dataset gives an example of supervised learning problems, particularly multi-class classification, where the goal is to predict an iris flower's species based on its measurements."
+    )
+    background3_text = (
+    "The Iris dataset also highlights the distinction between supervised and unsupervised learning. Supervised learning uses labeled data to train models for classification or regression, while unsupervised learning explores patterns or clusters in unlabeled data (https://www.ibm.com/think/topics/linear-discriminant-analysis). The iris dataset gives an example of supervised learning problems, particularly multi-class classification, where the goal is to predict an iris flower's species based on its measurements."
     " Although the dataset only includes flower measurements (sepal length/width and petal length/width) and not measurements for the entire plant, this focus reflects the expert judgment of Fisher and Anderson, who selected petal and sepal dimensions as meaningful discriminative features. This in turn highlights the importance of domain expertise in data preparation and model design, suggesting that more efficient analysis and models are built when field experts are involved (Domingos, 2012; Kuhn, and Johnson, 2013)."
     " Despite its age and simplicity, the Iris dataset remains a central teaching tool for introducing classification problems in machine learning."
     )
     print("", file=file)
-    print(textwrap.fill(background_text, width=210), file=file)
+    print(textwrap.fill(background1_text, width=210), file=file)
+    print("", file=file)
+    print(textwrap.fill(background2_text, width=210), file=file)
+    print("", file=file)
+    print(textwrap.fill(background3_text, width=210), file=file)
 
 print("Background Intro appended to analysis.txt")
 
@@ -128,6 +136,7 @@ with open("analysis.txt", "a") as file: # The (file=file) argument is important 
     print("\nThe shape of the dataset:", file=file)
     print(iris_df.shape, file=file)
     print("\nThe dataset contains 150 rows of data and 5 columns. The 5 columns are the species of isis flower (here noted as 'class'), and sepal length, sepal width, petal length, and petal width.", file=file)
+    print("", file=file)
     print("The first and last five rows of the dataset are printed below, as well as the column names within the dataset.", file=file)
     print("\nThe first 5 rows of the dataset:", file=file)
     print(iris_df.head(), file=file) # first 5 rows.
