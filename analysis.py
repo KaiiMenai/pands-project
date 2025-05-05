@@ -657,10 +657,10 @@ with open("analysis.txt", "a") as file:
     log_regression2_text = (
     "Initially upon looking at the Classification Report, it could be assumed that the results do not highlight anything. This report provides detailed insights into the performance of the model for each species, showing areas where the model performs well or struggles. However, due to the size of the dataset (150 samples), and then the test set being even smaller (30 samples), it makes it easier for the model to achieve perfect accuracy, this model produced an accuracy of 1.0 (perfect accuracy). A linearly separable dataset is one that shows clear distinctions between classes, for the iris dataset that class difference is seen most clearly in the petal length/width. As the iris dataset is balanced, with an equal number of samples for each class (50), the risk of bias in the model is reduced. In order to improve accuracy and reliability, the model should be rerun a number of times using different splits of the data, this is called cross-validation."
     )
-    print()
-    print(textwrap.fill(log_regression1_text, width=200), file=file)
-    print()
-    print(textwrap.fill(log_regression1_text, width=200), file=file)
+    print("", file=file)
+    print(textwrap.fill(log_regression1_text, width=210), file=file)
+    print("", file=file)
+    print(textwrap.fill(log_regression2_text, width=210), file=file)
 
 print("Modified Logistic Regression observations appended to analysis.txt")
 
