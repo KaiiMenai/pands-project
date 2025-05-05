@@ -141,18 +141,37 @@ max         7.90000     3.800000      6.900000      2.50000
 
 	Iris Setosa.
 
-The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class')).
+The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
+number of values (50 in this case, as it is done by species('class')).The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
+sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean.The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
+from the mean.Petal length had a mean of XXXXXXXX
 
-The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean.
-The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm from the mean.
-Petal length had a mean of
+
+	Iris Versicolor.
+
+The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
+number of values (50 in this case, as it is done by species('class')).The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
+sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean.The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
+from the mean.Petal length had a mean of XXXXXXXX
+
+
+	Iris Virginica.
+
+The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the
+number of values (50 in this case, as it is done by species('class')).The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For
+sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean.The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm
+from the mean.Petal length had a mean of XXXXXXXX
 
 	Boxplots by Feature.
 
-Boxplots were plotted for each of the four measured features (sepal length/width and petal length/width), the data in each of these four plots is separated by species. Boxplots make visualising range, potential outliers, the inter-quartile range, and the median of the data more easily.
-There were nine outliers in total within the dataset between the four sepal/petal features. The Setosa species had three outliers in the data for petal length, and two outliers in the data for petal width. The Virginica species had one outlier for sepal length and two outliers for sepal width. The Versicolor species had the fewest number of outliers with only one outlier throughout the whole dataset, this outlier was for petal length.
-On average, Setosa was found to have the shortest sepal length and widest sepal width. Setosa was also found to have the shortest petal length measurements and narrowest petal width. For Versicolor and Virginica, there were some differences visible in the measurements for the four features (sepal length/width, petal length/width), however, there were instances where the feature measurements converged, particularly for sepal length and sepal width. Petal length and petal width displayed differences between species, indicating that these feature measurements may be valuable for classification of Iris species.
-(https://www.nickmccullum.com/python-visualization/boxplot/ , https://www.ncl.ac.uk/webtemplate/ask-assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plots.html).
+Boxplots were plotted for each of the four measured features (sepal length/width and petal length/width), the data in each of these four plots is separated by species. Boxplots make visualising range, potential
+outliers, the inter-quartile range, and the median of the data more easily.There were nine outliers in total within the dataset between the four sepal/petal features. The Setosa species had three outliers in
+the data for petal length, and two outliers in the data for petal width. The Virginica species had one outlier for sepal length and two outliers for sepal width. The Versicolor species had the fewest number of
+outliers with only one outlier throughout the whole dataset, this outlier was for petal length.On average, Setosa was found to have the shortest sepal length and widest sepal width. Setosa was also found to
+have the shortest petal length measurements and narrowest petal width. For Versicolor and Virginica, there were some differences visible in the measurements for the four features (sepal length/width, petal
+length/width), however, there were instances where the feature measurements converged, particularly for sepal length and sepal width. Petal length and petal width displayed differences between species,
+indicating that these feature measurements may be valuable for classification of Iris species.(https://www.nickmccullum.com/python-visualization/boxplot/ , https://www.ncl.ac.uk/webtemplate/ask-
+assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plots.html).
 
 	Histograms by Feature.
 
