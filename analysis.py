@@ -70,6 +70,7 @@ with open("analysis.txt", "w") as file: # The (file=file) argument is important 
     print("\n\tSummary.", file=file)
     print("The analysis used as a source for this document (analysis.py) was conducted using Python and the Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn libraries. The dataset was imported from the UCI Machine Learning Repository and is a well-known dataset for classification tasks.", file=file)
     print("The dataset contained 150 samples of iris flowers, with 5 columns: sepal length, sepal width, petal length, petal width, and species (class). The dataset was used to conduct exploratory data analysis (EDA) and visualisation, as well as some machine learning tasks. Histogram, boxplot, scatterplot, PCA, pairplot, K-means clustering, correlation matrix, and linear regression analysis were conducted on the dataset, and the results of each were saved as a PNG file.", file=file)
+    print("\tPlease Note: Some observations taken from my own work for the Principles of Data Analytics Module, with wording changed to match what was required for this project. Link: https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb", file=file)
 
 print("Summary of file made in the analysis.txt")
 
@@ -215,15 +216,17 @@ with open("analysis.txt", "a") as file:
     print("The code used for this was: \tdata = iris_df.drop_duplicates(subset="'class'".)", file=file)
     print("Value counts for each of the species:", file=file)
     print(iris_df['class'].value_counts(), file=file)
-    print("\nIt can be seen that there are 50 samples for each of the three classes (species) of iris, setosa, versicolor, and virginica.", file=file)
+    print("\nIt can be seen that there are 50 samples for each of the three classes (species) of iris flower: Setosa, Versicolor, and Virginica.", file=file)
     print("\n\tSummary statistics for the whole dataset:", file=file)
     print(iris_df.describe(), file=file)
-    print("\nThe summary statistics for the whole dataset shows that there are 150 samples in the dataset for each of the variables, the value displayed is the non-missing values, and thus it can be verified that the dataset does not have any missing values. ", file=file) # Summary statistics observations taken from my own work for Principles of Data Analytics, with wording changed to match what was required for this project. https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb
-    print("\tPlease Note: Summary statistics observations taken from my own work for the Principles of Data Analytics Module, with wording changed to match what was required for this project. Link: https://github.com/KaiiMenai/poda-tasks/blob/main/tasks.ipynb", file=file)
-    print("The Mean, Standard Deviation (std), Minimum (min) and Maximum (max), and the Lower, Median, and Higher Inter-quartile Ranges (25%, 50%, and 75%, respectively) values are displayed for all four features (sepal length, sepal width, petal length, and petal width).", file=file)
-    print("The Mean was calculated by dividing the sum of all the values (per feature) by the number of values (150 in this case). The mean for sepal length was 5.84 cm, sepal width was 3.05 cm, petal length was 3.76 cm, and for petal width was 1.20 cm. ", file=file)
-    print("\nThe Standard Deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. Sepal length had a mean of 5.84 cm with a std of 0.83, therefore the majority of values deviate by 0.83 cm (+/-) from the mean. \nThe mean for sepal width was 3.05 cm with a std of 0.43 cm, the sepal widths deviated by +/- 0.43 cm from the mean. The feature, sepal width, had less variability (std = 0.43) compared to that of sepal length (std = 0.83). \nFor petal length, the mean was 3.76 cm with a std of 1.76 cm, thus most values for petal length deviated by 1.76 cm (+/-). Petal width had a mean of 1.20 cm with a std of 0.76 cm, the width of petals deviated by +/- 0.76 cm. \nThe measurement with the largest deviation from the mean is the petal length (std = 1.76), this suggests that petal lengths vary more widely across samples compared to the other features.", file=file)
-    print("")
+    iris_summary_text = (
+    "The summary statistics for the whole dataset shows that there are 150 samples in the dataset for each of the variables, the value displayed is the non-missing values, and thus it can be verified that the dataset does not have any missing values. "
+    "The Mean, Standard Deviation (std), Minimum (min) and Maximum (max), and the Lower, Median, and Higher Inter-quartile Ranges (25%, 50%, and 75%, respectively) values are displayed for all four features (sepal length, sepal width, petal length, and petal width)."
+    "The Mean was calculated by dividing the sum of all the values (per feature) by the number of values (150 in this case). The mean for sepal length was 5.84 cm, sepal width was 3.05 cm, petal length was 3.76 cm, and for petal width was 1.20 cm. "
+    "The Standard Deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. Sepal length had a mean of 5.84 cm with a std of 0.83, therefore the majority of values deviate by 0.83 cm (+/-) from the mean. \nThe mean for sepal width was 3.05 cm with a std of 0.43 cm, the sepal widths deviated by +/- 0.43 cm from the mean. The feature, sepal width, had less variability (std = 0.43) compared to that of sepal length (std = 0.83). \nFor petal length, the mean was 3.76 cm with a std of 1.76 cm, thus most values for petal length deviated by 1.76 cm (+/-). Petal width had a mean of 1.20 cm with a std of 0.76 cm, the width of petals deviated by +/- 0.76 cm. \nThe measurement with the largest deviation from the mean is the petal length (std = 1.76), this suggests that petal lengths vary more widely across samples compared to the other features."
+    )
+    print("", file=file)
+    print(textwrap.fill(iris_summary_text, width=210), file=file)
     print("\nIn the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.", file=file)
     print("\n\tSummary statistics for each species:", file=file)
     # Separate the dataset by species
@@ -253,7 +256,7 @@ with open("analysis.txt", "a") as file:
     )
     print("", file=file)
     print(textwrap.fill(setosa_stats_summary_text, width=210), file=file)
-    print("", file=file)
+    
     print("\n\tIris Versicolor.", file=file)
     versicolor_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
@@ -263,7 +266,7 @@ with open("analysis.txt", "a") as file:
     )
     print("", file=file)
     print(textwrap.fill(versicolor_stats_summary_text, width=210), file=file)
-    print("", file=file)
+    
     print("\n\tIris Virginica.", file=file)
     virginica_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
@@ -273,6 +276,7 @@ with open("analysis.txt", "a") as file:
     )
     print("", file=file)
     print(textwrap.fill(virginica_stats_summary_text, width=210), file=file)
+    print("", file=file)
 
 print("Summary Stats for each species has been appended to analysis.txt")
 
