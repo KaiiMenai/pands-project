@@ -624,6 +624,15 @@ with open("analysis.txt", "a") as file: # The (file=file) argument is important 
 
 print("Logistic regression results have been written to analysis.txt")
 
+with open("analysis.txt", "a") as file:
+    print("\n\tCorrelation Matrix.", file=file)
+    print("\nThe plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica.", file=file)
+    print("",  file=file)
+    print("",  file=file)
+    print("",  file=file)
+    print("",  file=file)
+
+print("Logistic regression observations have been appended to analysis.txt")
 
 # Discuss the pros and cons of each technique and how they may be applied to this dataset. - do this in a text file called 'analysis.txt'.
 
