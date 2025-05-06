@@ -244,7 +244,7 @@ with open("analysis.md", "a") as file:
     print(textwrap.fill(versicolor_stats_summary_text, width=210), file=file)
     print("\n### Iris Virginica", file=file)
     print("", file=file)
-    print("\nVirginica Statistics:", file=file)
+    print("Virginica Statistics:", file=file)
     print(virginica_stats.to_markdown(), file=file)    
     virginica_stats_summary_text = (
     "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
@@ -383,11 +383,16 @@ with open("analysis.md", "a") as file:
     print("", file=file)
     print("![Scatterplots](scatterplot_by_species.png)", file=file)
     print("", file=file)
-    scatter_plot_text = (
-    ""
+    scatter_plot_text1 = (
+    "The PNG contains two plots one for sepal features (sepal length vs sepal width) and one for petal features (petal length vs petal width). The scatter plots display Setosa in blue, Versicolor in orange, and Virginica in green. Setosa shows a clearly separate grouping for sepal features, whereas Versicolor and Virginica show a high level of overlap in their plotted values fpr the sepal features. There is however, more clear separation between Versicolor and Virginica for the petal features, Setosa once again, clearly separates into a group from the other two species."
+    )
+    scatter_plot_text2 = (
+    "From the scatter plots, it suggests that it may be easier to discern if measurements are for Setosa, as it separates out more than the other two species, Versicolor and Virginica. It may be more difficult to differentiate between Virginica and Versicolor as many of the values look to be of similar value ranges and overlap for sepal length vs sepal width. This suggests that the features most useful in differentiating between species are the petal length and width."
     )
     print("", file=file)
-    print(textwrap.fill(scatter_plot_text, width=210), file=file)
+    print(textwrap.fill(scatter_plot_text1, width=210), file=file)
+    print("", file=file)
+    print(textwrap.fill(scatter_plot_text2, width=210), file=file)
 
 print("Scatter plot observations appended to analysis.md")
 

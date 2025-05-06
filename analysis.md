@@ -242,13 +242,13 @@ was the shortest and narrowest and the values for this species also separated aw
 
 
 ## Pairplot
+
 A pairplot was used to visualise comparisons between pairs of features, sepal length vs, sepal width, sepal length vs petal length, sepal length vs petal width, petal length vs petal width etc. for the three
 species of iris flower (Setosa in blue, Versicolor in orange, Verginica in green). Pairwise analysis outputs multiple sub-plots that are plotted in a matrix format; row name gives the x axis, column name gives
 the y axis, and univariate distributions (histograms) are plotted on the diagonal from top left to bottom right for each feature (https://medium.com/analytics-vidhya/pairplot-visualization-16325cd725e6;
 https://www.analyticsvidhya.com/blog/2024/02/pair-plots-in-machine-learning/; https://seaborn.pydata.org/generated/seaborn.pairplot.html; https://builtin.com/articles/seaborn-pairplot).
 
 ![Pairplot](pairplot_by_species.png)
-
 
 The pairplot displays a good overall view of the relationships between the feature variables, and due to each species having a different colour, it is easy to identify whether or not the species separate out
 from one another. For different pairs of features following the pairwise pairplot comparison(s) there are different levels of overlap and / or separation seen. For sepal width vs sepal length, a high level of
@@ -284,7 +284,6 @@ seen in PC1 for the petal features, it could indicate that these are good determ
 
 
 ### Linear Regression
-
 
 A linear regression model was fitted to the iris dataset. The data was initially split into sepal feature and petal feature data.
 
