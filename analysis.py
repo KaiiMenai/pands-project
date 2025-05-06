@@ -382,7 +382,6 @@ with open("analysis.md", "a") as file:
     print("\n## Scatterplots", file=file)
     print("", file=file)
     print("![Scatterplots](scatterplot_by_species.png)", file=file)
-    print("", file=file)
     scatter_plot_text1 = (
     "The PNG contains two plots one for sepal features (sepal length vs sepal width) and one for petal features (petal length vs petal width). The scatter plots display Setosa in blue, Versicolor in orange, and Virginica in green. Setosa shows a clearly separate grouping for sepal features, whereas Versicolor and Virginica show a high level of overlap in their plotted values fpr the sepal features. There is however, more clear separation between Versicolor and Virginica for the petal features, Setosa once again, clearly separates into a group from the other two species."
     )
