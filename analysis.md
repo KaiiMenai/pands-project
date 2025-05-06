@@ -292,7 +292,6 @@ A linear regression model was fitted to the iris dataset. The data was initially
 
 ![Linear Regression for Sepal Length vs Sepal Width](lrm_sepal_length_vs_width.png)
 
-
 The sepal length vs sepal width plot displays a single regression line fitted across all data points. This plot displays the relationship between sepal length and sepal width for the iris flower species, Setosa
 (in blue), Versicolor (in orange), and Virginica (in green).
 
@@ -307,7 +306,6 @@ https://www.datacamp.com/tutorial/simple-linear-regression, https://www.ibm.com/
 ## Linear Regression for Petal Length vs Petal Width
 
 ![Linear Regression for Petal Length vs Petal Width](lrm_petal_length_vs_width.png)
-
 
 The petal length vs petal width plot displays the relationships between petal length and petal width for the iris flower species, Setosa (in blue), Versicolor (in orange), and Virginica (in green). Compared to
 the sepal features plot, the petal measurements plot displayed distinct clustering for each individual species.

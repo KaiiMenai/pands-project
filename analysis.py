@@ -552,7 +552,6 @@ with open("analysis.md", "a") as file:
     print("\n### Linear Regression for Sepal Length vs Sepal Width", file=file)
     print("", file=file)
     print("![Linear Regression for Sepal Length vs Sepal Width](lrm_sepal_length_vs_width.png)", file=file)
-    print("", file=file)
     lrm_sepal_length_vs_width1_text = (
     "The sepal length vs sepal width plot displays a single regression line fitted across all data points. This plot displays the relationship between sepal length and sepal width for the iris flower species, Setosa (in blue), Versicolor (in orange), and Virginica (in green). "
     )
@@ -596,7 +595,6 @@ with open("analysis.md", "a") as file:
     print("\n## Linear Regression for Petal Length vs Petal Width", file=file)
     print("", file=file)
     print("![Linear Regression for Petal Length vs Petal Width](lrm_petal_length_vs_width.png)", file=file)
-    print("", file=file)
     lrm_petal_length_vs_width1_text = (
     "The petal length vs petal width plot displays the relationships between petal length and petal width for the iris flower species, Setosa (in blue), Versicolor (in orange), and Virginica (in green). Compared to the sepal features plot, the petal measurements plot displayed distinct clustering for each individual species."
     )
@@ -606,7 +604,7 @@ with open("analysis.md", "a") as file:
     lrm_petal_length_vs_width3_text = (
     "Compared to what was observed for sepal feature relationships, for petal features, Versicolor and Virginica were more distinctly clustered and separate from each other (https://www.investopedia.com/terms/r/r-squared.asp, https://www.datacamp.com/tutorial/simple-linear-regression, https://www.ibm.com/think/topics/linear-regression, https://datatab.net/tutorial/linear-regression)."
     )
-    lrm_petal_length_vs_width3_text = (
+    lrm_petal_length_vs_width4_text = (
     "Setosa clearly separated from the other two species in both plots, making it easier to classify regardless of feature used for classification."
     )
     print("", file=file)
@@ -675,7 +673,6 @@ with open("analysis.md", "a") as file:
     print("\n## Linear Regression and R^2 by Species", file=file)
     print("", file=file)
     print("![Linear Regression & R2 by species](linear_regression_and_r2_by_species.png)", file=file)
-    print("", file=file)
     linear_regression_and_r2_by_species1_text = (
     "For both plots the species are colour coded (Setosa is blue, Versicolor is orange, Verginica is green)."
     )
