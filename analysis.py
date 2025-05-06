@@ -518,6 +518,15 @@ print("K-means Clustering observations appended to analysis.md")
 # This dataset has previously been used for machine learning and classification tasks, so it may be useful to explore some of those techniques as well.
 # - Linear Regression
 
+with open("analysis.md", "a") as file:
+    print("\n### Linear Regression", file=file)
+    print("", file=file)
+    overall_lrm_text = (
+    "A linear regression model was fitted to the iris dataset. The data was initially split into sepal feature and petal feature data."
+    )
+    print("", file=file)
+    print(textwrap.fill(overall_lrm_text, width=210), file=file)
+
 # Sepal Length vs Sepal Width
 plt.figure(figsize=(10, 6))
 X_sepal = iris_df[['sepal length']]
@@ -539,6 +548,29 @@ plt.tight_layout()
 plt.savefig('lrm_sepal_length_vs_width.png')  # Save the plot as a PNG file
 plt.show()
 
+with open("analysis.md", "a") as file:
+    print("\n### Linear Regression for Sepal Length vs Sepal Width", file=file)
+    print("", file=file)
+    print("![Linear Regression for Sepal Length vs Sepal Width](lrm_sepal_length_vs_width.png)", file=file)
+    print("", file=file)
+    lrm_sepal_length_vs_width1_text = (
+    "The sepal length vs sepal width plot displays a single regression line fitted across all data points. This plot displays the relationship between sepal length and sepal width for the iris flower species, Setosa (in blue), Versicolor (in orange), and Virginica (in green). "
+    )
+    lrm_sepal_length_vs_width2_text = (
+    "The line shows the linear relationship between the length and width of the sepal features. Due to the near 'flat' elevation of the regression line a weak relationship between the features is observed. In the top left of the plot the R<sup>2</sup> value is displayed, the value explains the variance in sepal width based on sepal length. The R<sup>2</sup> value is 0.01, a low value, as such it indicates that sepal length is not a strong predictor for sepal width, thus other factors may influence the relationship between these features. "
+    )
+    lrm_sepal_length_vs_width3_text = (
+    "Similarly to observations from the boxplots and histograms, the Setosa species appears to cluster together in a distinctly separate group to the Versicolor and Virginica which overlap significantly in sepal measurements. Indicating that it would be harder to distinguish between these species based solely on sepal measurements (https://www.investopedia.com/terms/r/r-squared.asp, https://www.datacamp.com/tutorial/simple-linear-regression, https://www.ibm.com/think/topics/linear-regression, https://datatab.net/tutorial/linear-regression)."
+    )
+    print("", file=file)
+    print(textwrap.fill(lrm_sepal_length_vs_width1_text, width=210), file=file)
+    print("", file=file)
+    print(textwrap.fill(lrm_sepal_length_vs_width2_text, width=210), file=file)
+    print("", file=file)
+    print(textwrap.fill(lrm_sepal_length_vs_width3_text, width=210), file=file)
+
+print("Linear Regression for Sepal Length vs Sepal Width observations appended to analysis.md")
+
 # Petal Length vs Petal Width
 plt.figure(figsize=(10, 6))
 X_petal = iris_df[['petal length']]
@@ -559,6 +591,32 @@ plt.text(0.05, 0.95, f'R² = {r2_petal:.2f}', transform=plt.gca().transAxes, fon
 plt.tight_layout()
 plt.savefig('lrm_petal_length_vs_width.png')  # Save the plot as a PNG file
 plt.show()
+
+with open("analysis.md", "a") as file:
+    print("\n## Linear Regression for Petal Length vs Petal Width", file=file)
+    print("", file=file)
+    print("![Linear Regression for Petal Length vs Petal Width](lrm_petal_length_vs_width.png)", file=file)
+    print("", file=file)
+    lrm_petal_length_vs_width1_text = (
+    "The petal length vs petal width plot displays the relationships between petal length and petal width for the iris flower species, Setosa (in blue), Versicolor (in orange), and Virginica (in green). Compared to the sepal features plot, the petal measurements plot displayed distinct clustering for each individual species."
+    )
+    lrm_petal_length_vs_width2_text = (
+    "The regression line was fitted across all data points, representing the overall linear relationship between petal length and width. The line had a sharp angle with data points clustered close to the line. The R<sup>2</sup> value was 0.93, indicating that most of the variance for petal width was explained by petal length. Suggesting that petal length was a strong predictor of petal width. The Setosa species had smaller petal widths and lengths and clearly separated from Versicolor and Virginica. "
+    )
+    lrm_petal_length_vs_width3_text = (
+    "Compared to what was observed for sepal feature relationships, for petal features, Versicolor and Virginica were more distinctly clustered and separate from each other (https://www.investopedia.com/terms/r/r-squared.asp, https://www.datacamp.com/tutorial/simple-linear-regression, https://www.ibm.com/think/topics/linear-regression, https://datatab.net/tutorial/linear-regression)."
+    )
+    lrm_petal_length_vs_width3_text = (
+    "Setosa clearly separated from the other two species in both plots, making it easier to classify regardless of feature used for classification."
+    )
+    print("", file=file)
+    print(textwrap.fill(lrm_petal_length_vs_width1_text, width=210), file=file)
+    print("", file=file)
+    print(textwrap.fill(lrm_petal_length_vs_width2_text, width=210), file=file)
+    print("", file=file)
+    print(textwrap.fill(lrm_petal_length_vs_width3_text, width=210), file=file)
+    print("", file=file)
+    print(textwrap.fill(lrm_petal_length_vs_width4_text, width=210), file=file)
 
 # Linear Regression and R² values for Sepal Length vs Sepal Width and Petal Length vs Petal Width
 # The R² value indicates how well the model explains the variance in the data.
