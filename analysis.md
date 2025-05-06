@@ -189,7 +189,6 @@ from the mean. Petal length had a mean of XXXXXXXX
 
 ### Iris Virginica
 
-
 Virginica Statistics:
 |       |   sepal length |   sepal width |   petal length |   petal width |
 |:------|---------------:|--------------:|---------------:|--------------:|
@@ -239,7 +238,14 @@ was the shortest and narrowest and the values for this species also separated aw
 ![Scatterplots](scatterplot_by_species.png)
 
 
+The PNG contains two plots one for sepal features (sepal length vs sepal width) and one for petal features (petal length vs petal width). The scatter plots display Setosa in blue, Versicolor in orange, and
+Virginica in green. Setosa shows a clearly separate grouping for sepal features, whereas Versicolor and Virginica show a high level of overlap in their plotted values fpr the sepal features. There is however,
+more clear separation between Versicolor and Virginica for the petal features, Setosa once again, clearly separates into a group from the other two species.
 
+From the scatter plots, as Setosa separates from the other two iris species, Versicolor and Virginica, it may be easier to discern of measurements are for the Setosa species. Due to the overlap between the
+Versicolor and Virginica species, it may be more difficult to differentiate between these species (this would also be reflective of the fact that both were collected from the same pasture on the same day). The
+Virginica and Versicolor species appeared to be of similar value ranges and overlap for sepal length vs sepal width. This would suggest that the petal length and petal width features would be the most useful in
+differentiating between species.
 
 ## Pairplot
 
