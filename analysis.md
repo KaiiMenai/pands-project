@@ -363,16 +363,3 @@ Logistic Regression for Species Classification Results:
 Accuracy: 1.0000
 
 Classification Report:
-                 precision    recall  f1-score   support
-
-    Iris-setosa       1.00      1.00      1.00        10
-Iris-versicolor       1.00      1.00      1.00         9
- Iris-virginica       1.00      1.00      1.00        11
-
-       accuracy                           1.00        30
-      macro avg       1.00      1.00      1.00        30
-   weighted avg       1.00      1.00      1.00        30
-
-Example Prediction (measurements in cm).
-
-Predicted species for [5.1, 3.5, 1.4, 0.2]: Iris-setosa
