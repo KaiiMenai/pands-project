@@ -627,7 +627,7 @@ plt.savefig('lrm_petal_length_vs_width.png')  # Save the plot as a PNG file
 plt.show()
 
 with open("analysis.md", "a") as file:
-    print("\n## Linear Regression for Petal Length vs Petal Width", file=file)
+    print("\n### Linear Regression for Petal Length vs Petal Width", file=file)
     print("", file=file)
     print("![Linear Regression for Petal Length vs Petal Width](lrm_petal_length_vs_width.png)", file=file)
     lrm_petal_length_vs_width1_text = (
@@ -705,7 +705,7 @@ plt.savefig('linear_regression_and_r2_by_species.png')  # Save the plot as a PNG
 plt.show()
 
 with open("analysis.md", "a") as file:
-    print("\n## Linear Regression and R^2 by Species", file=file)
+    print("\n### Linear Regression and R<sup>2</sup> by Species", file=file)
     print("", file=file)
     print("![Linear Regression & R2 by species](linear_regression_and_r2_by_species.png)", file=file)
     linear_regression_and_r2_by_species1_text = (
@@ -748,20 +748,6 @@ y_species_pred = model_species.predict(X_species_test)
 
 # Calculate accuracy - here the predicted species (y_species_pred) with the actual species (y_species_test) are compared, to see how many were predicted correctly.
 accuracy = accuracy_score(y_species_test, y_species_pred)
-
-with open("logistic_regression.txt", "w") as file: # The (file=file) argument is important to remember as it makes sure Python knows to write to the file and not the terminal.
-    print("Logistic Regression for Species Classification Results:", file=file) # How to do it - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
-    print(f"Accuracy: {accuracy:.4f}", file=file)
-    print("\nClassification Report:", file=file)
-    print(classification_report(y_species_test, y_species_pred, target_names=le.classes_), file=file)
-    # Example prediction - predict species based on sepal and petal measurements.
-    print("\nExample Prediction (measurements in cm).", file=file)
-    example_data = pd.DataFrame([[5.1, 3.5, 1.4, 0.2]], 
-                                columns=['sepal length', 'sepal width', 'petal length', 'petal width'])  # Match feature names to those in the training set
-    predicted_species = model_species.predict(example_data)
-    print(f"\nPredicted species for {example_data.iloc[0].tolist()}: {le.inverse_transform(predicted_species)[0]}", file=file) # This will print the last 5 rows of the dataset.
-
-print("Logistic regression results have been written to logistic_regression.txt")
 
 with open("analysis.md", "a") as file:
     print("\n## Logistic Regression Model", file=file)
