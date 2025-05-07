@@ -226,10 +226,11 @@ with open("analysis.md", "a") as file:
     print("Setosa Statistics:", file=file)
     print(setosa_stats.to_markdown(), file=file)
     setosa_stats_summary_text = (
-    "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
-    " The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
-    " The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm from the mean."
-    " Petal length had a mean of XXXXXXXX"
+    "The mean for sepal length was 5.006 cm, sepal width was 3.418 cm, petal length was 1.464 cm, and for petal width the mean was 0.244 cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class')). "
+    "The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was 5.006 cm and the std was 0.35249, therefore most values deviated by 0.35249 cm (+/-) from the mean. The mean for sepal width was 3.418 cm and the std was 0.381024, so most values deviated by +/- 0.381024 cm from the mean."
+    "Petal length had a mean of 1.464 cm and the std was 0.173511, therefore most values deviated by +/- 0.173511 cm from the mean. For petal width, a mean of 0.244 cm and the std of 0.10721 was calculated, therefore most values deviated by +/- 0.10721 cm from the mean. "
+    "The median for sepal length was 5.0 cm, for sepal width it was 3.4 cm, for petal length it was 1.5 cm, and for petal width it was 0.2 cm. The median is the middle value of the data when sorted in increasing (ascending) order, therefore half of the values are above and half are below the median."
+    "The upper and lower inter-quartile ranges (IQR) are the 25 % and 75 % values of the data, respectively. The IQR is a measure of the spread of the data, that is, how much the values deviate from the mean. For sepal length, the IQR was 0.3 cm, for sepal width it was 0.2 cm, for petal length it was 0.4 cm, and for petal width it was 0.2 cm."
     )
     print("", file=file)
     print(textwrap.fill(setosa_stats_summary_text, width=210), file=file)
@@ -238,10 +239,11 @@ with open("analysis.md", "a") as file:
     print("Versicolor Statistics:", file=file)
     print(versicolor_stats.to_markdown(), file=file)
     versicolor_stats_summary_text = (
-    "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
-    " The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
-    " The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm from the mean."
-    " Petal length had a mean of XXXXXXXX"
+    "The mean for sepal length was 5.936 cm, sepal width was 2.77 cm, petal length was 4.26 cm, and for petal width the mean was 1.326 cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class')). "
+    "For sepal length the mean was 5.936 cm and the std was 0.516171, therefore most values deviated by 0.516171 cm (+/-) from the mean. The mean for sepal width was 2.77 cm and the std was 0.313798, so most values deviated by +/- 0.313798 cm from the mean. "
+    "Petal length had a mean of 4.26 cm and the std was 0.469911, therefore most values deviated by +/- 0.469911 cm from the mean. For petal width, a mean of 1.326 cm and the std of 0.197753 was calculated, therefore most values deviated by +/- 0.197753 cm from the mean. "
+    "The median for sepal length was 5.9 cm, for sepal width it was 2.8 cm, for petal length it was 4.6 cm, and for petal width it was 1.3 cm. "
+    "The upper and lower inter-quartile ranges (IQR) for sepal length was 0.4 cm, for sepal width it was 0.2 cm, for petal length it was 0.4 cm, and for petal width it was 0.2 cm."
     )
     print("", file=file)
     print(textwrap.fill(versicolor_stats_summary_text, width=210), file=file)
@@ -250,10 +252,11 @@ with open("analysis.md", "a") as file:
     print("Virginica Statistics:", file=file)
     print(virginica_stats.to_markdown(), file=file)    
     virginica_stats_summary_text = (
-    "The mean for sepal length was AAA cm, sepal width was BBB cm, petal length was CCC cm, and for petal width the mean was DDD cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class'))."
-    " The standard deviation (std) is a measure of the spread of the data, that is, on average, how much the values deviate from the mean. For sepal length the mean was AAA cm and the std was AAA, therefore most values deviated by AAA cm (+/-) from the mean."
-    " The mean for sepal width was BBB cm and the std was BBB, so most values deviated by +/- BBB cm from the mean."
-    " Petal length had a mean of XXXXXXXX"
+    "The mean for sepal length was 6.588 cm, sepal width was 2.974 cm, petal length was 5.552 cm, and for petal width the mean was 2.026 cm. The mean was calculated by dividing the sum of all the values (per feature) by the number of values (50 in this case, as it is done by species('class')). "
+    "For sepal length the mean was 6.588 cm and the std was 0.63588, therefore most values deviated by 0.63588 cm (+/-) from the mean. The mean for sepal width was 2.974 cm and the std was 0.322497, so most values deviated by +/- 0.322497 cm from the mean. "
+    "Petal length had a mean of 5.552 cm and the std was 0.551895, therefore most values deviated by +/- 0.551895 cm from the mean. For petal width, a mean of 2.026 cm and the std of 0.27465 was calculated, therefore most values deviated by +/- 0.27465 cm from the mean. "
+    "The median for sepal length was 6.5 cm, for sepal width it was 3.0 cm, for petal length it was 5.55 cm, and for petal width it was 2.0 cm. "
+    "The upper and lower inter-quartile ranges (IQR) for sepal length was 0.5 cm, for sepal width it was 0.2 cm, for petal length it was 0.5 cm, and for petal width it was 0.2 cm."
     )
     print("", file=file)
     print(textwrap.fill(virginica_stats_summary_text, width=210), file=file)
