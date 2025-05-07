@@ -763,8 +763,8 @@ with open("analysis.md", "a") as file: # The (file=file) argument is important t
     print("\nClassification Report:", file=file)
     report_dict = classification_report(y_species_test, y_species_pred, target_names=le.classes_)
     df = pd.DataFrame(report_dict).transpose()
-    file.write(df.to_markdown())
-    file.write('\n')
+    print(df.to_markdown(), file=file) # This will print the last 5 rows of the dataset.
+    print("", file=file)
     # Example prediction - predict species based on sepal and petal measurements.
     print("Example Prediction (measurements in cm).", file=file)
     example_data = pd.DataFrame([[5.1, 3.5, 1.4, 0.2]], 
