@@ -324,6 +324,9 @@ pairplot-comprehensive-guide?utm_source=chatgpt.com; https://toxigon.com/seaborn
 
 ## Principal Component Analysis (PCA)
 
+![Principal Component Analysis](pca_by_species.png)
+
+
 A way to conduct relationship investigations is through Principal Component Analysis (PCA) - I did this for my PhD research and found it was a great way to clearly look at multiple data aspects at once
 (https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html).An important note of PCA is that the data needs to be standardised for it. When standardising data, it's important that it is
 scaled correctly, otherwise the results will appear skewed and purely incorrect.The analysis can then be run again. The standardised PCA analysis can then be viewed in a plot.The Principal Component Analysis
@@ -426,6 +429,9 @@ is seen most clearly in the petal length/width. As the iris dataset is balanced,
 reliability, the model should be rerun a number of times using different splits of the data, this is called cross-validation.
 
 ## Confusion Matrix
+
+![Confusion Matrix for Species Classification](confusion_matrix_species.png)
+
 
 A confusion matrix was plotted to visualise the results. The confusion matrix is a performance evaluation tool for classification models. It provides a summary of the prediction results by comparing the actual
 values (rows) against the predicted values (columns). The confusion matrix helps with understanding how well the logistic regression model classifies the different species of iris and whether there are any
