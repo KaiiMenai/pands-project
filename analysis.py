@@ -487,6 +487,9 @@ plt.show()
 
 with open("analysis.md", "a") as file:
     print("\n## Principal Component Analysis (PCA)", file=file)
+    print("", file=file)
+    print("![Principal Component Analysis](pca_by_species.png)", file=file)
+    print("", file=file)
     pca_text = (
     "A way to conduct relationship investigations is through Principal Component Analysis (PCA) - I did this for my PhD research and found it was a great way to clearly look at multiple data aspects at once (https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html)."
     "An important note of PCA is that the data needs to be standardised for it. When standardising data, it's important that it is scaled correctly, otherwise the results will appear skewed and purely incorrect.The analysis can then be run again. The standardised PCA analysis can then be viewed in a plot."
@@ -813,12 +816,15 @@ plt.show()
 
 with open("analysis.md", "a") as file:
     print("\n## Confusion Matrix", file=file)
+    print("", file=file)
+    print("![Confusion Matrix for Species Classification](confusion_matrix_species.png)", file=file)
+    print("", file=file)
     con_matrix_text = (
-    "A confusion matrix was plotted to visualise the results. The confusion matrix is a performance evaluation tool for classification models. It provides a summary of the prediction results by comparing the actual values (rows) against the predicted values (columns)."
-    " The confusion matrix helps with understanding how well the logistic regression model classifies the different species of iris and whether there are any species that are more prone to misclassification (https://www.analyticsvidhya.com/blog/2020/04/confusion-matrix-machine-learning/)."
-    " To interpret the matrix, the structure and values within the matrix are important to understand what it shows. The rows within the matrix represent the Actual Classes (actual species of iris), whilst the columns represent the Predicted Classes (predicted species from the model output)."
-    " The matrix contains a number of values, on the diagonal line (from top left to bottom right) the values denote the Correct Predictions, where the actual and predicted classes (species) match. All other values from the diagonal are those denoting Misclassifications, where the actual and predicted species differ."
-    " Although the Logistic Regression Model gives a value for Accuracy (1.000) for species classification, the classification report and confusion matrix aid in giving a clearer picture of the data and the accuracy of predictions made with the model."
+    "A confusion matrix was plotted to visualise the results. The confusion matrix is a performance evaluation tool for classification models. It provides a summary of the prediction results by comparing the actual values (rows) against the predicted values (columns). "
+    "The confusion matrix helps with understanding how well the logistic regression model classifies the different species of iris and whether there are any species that are more prone to misclassification (https://www.analyticsvidhya.com/blog/2020/04/confusion-matrix-machine-learning/). "
+    "To interpret the matrix, the structure and values within the matrix are important to understand what it shows. The rows within the matrix represent the Actual Classes (actual species of iris), whilst the columns represent the Predicted Classes (predicted species from the model output). "
+    "The matrix contains a number of values, on the diagonal line (from top left to bottom right) the values denote the Correct Predictions, where the actual and predicted classes (species) match. All other values from the diagonal are those denoting Misclassifications, where the actual and predicted species differ. "
+    "Although the Logistic Regression Model gives a value for Accuracy (1.000) for species classification, the classification report and confusion matrix aid in giving a clearer picture of the data and the accuracy of predictions made with the model."
     )
     print("", file=file)
     print(textwrap.fill(con_matrix_text, width=210), file=file)
