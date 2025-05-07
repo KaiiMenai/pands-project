@@ -343,16 +343,19 @@ seen in PC1 for the petal features, it could indicate that these are good determ
 ## K-means Clustering
 
 ![K-means Clustering](kmeans_clustering_by_species.png)
+
+The K-means clustering algorithm was used to group the iris dataset into three clusters, corresponding to the three species of iris flowers. The K-means algorithm works by separating the data into K-clusters,
+where each data point belongs to the cluster with the nearest mean. In this case, K was set to 3, as there are three species of iris flowers in the dataset. The resulting clusters were visualised using a
+scatter plot, with different colors representing different clusters. The K-means clustering results show that the algorithm was able to separate the three species of iris flowers quite well, with some overlap
+between Versicolor and Virginica species.
 | class           |   0 |   1 |   2 |
 |:----------------|----:|----:|----:|
 | Iris-setosa     |   0 |  50 |   0 |
 | Iris-versicolor |   3 |   0 |  47 |
 | Iris-virginica  |  36 |   0 |  14 |
 
-The K-means clustering algorithm was used to group the iris dataset into three clusters, corresponding to the three species of iris flowers. The K-means algorithm works by separating the data into K-clusters,
-where each data point belongs to the cluster with the nearest mean. In this case, K was set to 3, as there are three species of iris flowers in the dataset. The resulting clusters were visualised using a
-scatter plot, with different colors representing different clusters. The K-means clustering results show that the algorithm was able to separate the three species of iris flowers quite well, with some overlap
-between Versicolor and Virginica species.
+From the table above, it can be seen that the K-means clustering algorithm was able to separate the three species of iris flowers. The algorithm correctly classified 50 samples of Setosa, 47 samples of
+Versicolor, and 36 samples of Virginica. There were some misclassifications, with 14 samples of Verginica grouped with Versicolor (Cluster 2) and 3 samples of Versicolor grouped with Virginica (Cluster 0).
 
 ## Linear Regression
 
