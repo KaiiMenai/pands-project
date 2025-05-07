@@ -330,21 +330,31 @@ and width) may be a useful determining factor for classification. The value for 
 ![Principal Component Analysis](pca_by_species.png)
 
 
-A way to conduct relationship investigations is through Principal Component Analysis (PCA) - I did this for my PhD research and found it was a great way to clearly look at multiple data aspects at once
-(https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html).An important note of PCA is that the data needs to be standardised for it. When standardising data, it's important that it is
-scaled correctly, otherwise the results will appear skewed and purely incorrect.The analysis can then be run again. The standardised PCA analysis can then be viewed in a plot.The Principal Component Analysis
+A way to conduct relationship investigations is through Principal Component Analysis (PCA) - *I did this for my PhD research and found it was a great way to clearly look at multiple data aspects at once*
+(https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html). An important note of PCA is that the data needs to be standardised for it. When standardising data, it's important that it is
+scaled correctly, otherwise the results will appear skewed and purely incorrect.The analysis can then be run again. The standardised PCA analysis can then be viewed in a plot. The Principal Component Analysis
 (PCA) transforms the original variables (sepal length, sepal width, petal length, petal width) into a new set of variables that are linear combinations of the original data, known as principal components
 (Jolliffe and Cadima, 2016). The first principal component (PC1) captures the maximum variance within the data, whilst the second principal component (PC2) captures the remaining variance that is perpendicular
 (orthogonal) to PC1. Any components following the first and second capture the remaining variance, again perpendicular to all previous components (Jolliffe and Cadima, 2016). Insights following the PCA show
 that PC1 strongly correlated with petal features, suggesting that petal length and petal width are responsible for the majority, 72.8 %, of the variance within the data. PC2 captured the variance for the sepal
-length and width, these were responsible for 23 % of the variance in the data. These results demonstrate that the first two components explain 95.8 % of the variance within the dataset.With so much variance
+length and width, these were responsible for 23 % of the variance in the data. These results demonstrate that the first two components explain 95.8 % of the variance within the dataset. With so much variance
 seen in PC1 for the petal features, it could indicate that these are good determining factors for use in species identification.
 
 ## K-means Clustering
 
+![K-means Clustering](kmeans_clustering_by_species.png)
+| class           |   0 |   1 |   2 |
+|:----------------|----:|----:|----:|
+| Iris-setosa     |   0 |  50 |   0 |
+| Iris-versicolor |   3 |   0 |  47 |
+| Iris-virginica  |  36 |   0 |  14 |
 
+The K-means clustering algorithm was used to group the iris dataset into three clusters, corresponding to the three species of iris flowers. The K-means algorithm works by separating the data into K-clusters,
+where each data point belongs to the cluster with the nearest mean. In this case, K was set to 3, as there are three species of iris flowers in the dataset. The resulting clusters were visualised using a
+scatter plot, with different colors representing different clusters. The K-means clustering results show that the algorithm was able to separate the three species of iris flowers quite well, with some overlap
+between Versicolor and Virginica species.
 
-### Linear Regression
+## Linear Regression
 
 A linear regression model was fitted to the iris dataset. The data was initially split into sepal feature and petal feature data.
 

@@ -535,9 +535,8 @@ with open("analysis.md", "a") as file:
     print("\n## K-means Clustering", file=file)    
     print("", file=file)
     print("![K-means Clustering](kmeans_clustering_by_species.png)", file=file)
-    # Suppose df is your DataFrame
-    markdown_table = df.to_markdown(index=False)
-    file.write(markdown_table)
+    ct = pd.crosstab(iris_df['class'], iris_df['cluster'])
+    file.write(ct.to_markdown())
     file.write('\n')
     k_means_text = (
     "The K-means clustering algorithm was used to group the iris dataset into three clusters, corresponding to the three species of iris flowers. The K-means algorithm works by separating the data into K-clusters, where each data point belongs to the cluster with the nearest mean. In this case, K was set to 3, as there are three species of iris flowers in the dataset. The resulting clusters were visualised using a scatter plot, with different colors representing different clusters. The K-means clustering results show that the algorithm was able to separate the three species of iris flowers quite well, with some overlap between Versicolor and Virginica species."
