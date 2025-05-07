@@ -376,7 +376,7 @@ Similarly to observations from the boxplots and histograms, the Setosa species a
 measurements. Indicating that it would be harder to distinguish between these species based solely on sepal measurements (https://www.investopedia.com/terms/r/r-squared.asp,
 https://www.datacamp.com/tutorial/simple-linear-regression, https://www.ibm.com/think/topics/linear-regression, https://datatab.net/tutorial/linear-regression).
 
-## Linear Regression for Petal Length vs Petal Width
+### Linear Regression for Petal Length vs Petal Width
 
 ![Linear Regression for Petal Length vs Petal Width](lrm_petal_length_vs_width.png)
 
@@ -393,7 +393,7 @@ regression).
 
 Setosa clearly separated from the other two species in both plots, making it easier to classify regardless of feature used for classification.
 
-## Linear Regression and R^2 by Species
+### Linear Regression and R<sup>2</sup> by Species
 
 ![Linear Regression & R2 by species](linear_regression_and_r2_by_species.png)
 
