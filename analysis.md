@@ -313,14 +313,17 @@ of the Setosa species with Versicolor and Virginica only displaying slight overl
 separately from the other two, and there was only a small level of overlap in the Versicolor and Virginica species. Similarly to that of petal width vs sepal length, petal width vs sepal width demonstrated
 clustering of the Setosa species with Versicolor and Virginica only overlapping a very small amount. Petal width vs petal length demonstrated the most distinct separation between all species, there was a small
 level of overlap between Versicolor and Virginica, however, these features offered the best clustering of the data (https://seaborn.pydata.org/generated/seaborn.pairplot.html; https://toxigon.com/seaborn-
-pairplot-comprehensive-guide?utm_source=chatgpt.com; https://toxigon.com/seaborn-pairplot-guide?utm_source=chatgpt.com; https://builtin.com/articles/seaborn-pairplot).
+pairplot-comprehensive-guide; https://toxigon.com/seaborn-pairplot-guide; https://builtin.com/articles/seaborn-pairplot).
 
 ## Correlation Matrix
 
 ![Correlation_Matrix](correlation_matrix_by_feature.png)
 
 
-
+A correlation matrix helps to give a visual representation of the relationship between the features in the dataset. From the plot, it can be seen that the warmer the colour/higher the number and closer to 1 in
+the range (-0.4 - 1), the greater the correlation with the corresponding feature analysed. The petal measurements (length/width) show a strong positive correlation (r = 0.96). This indicates that petal length
+and petal width vary together, as they often showed a positive correlation within the dataset. The positive correlation between the petal measurements also adds weight to the theory that petal features (length
+and width) may be a useful determining factor for classification. The value for sepal width is often below 0 (-0.11, -0.42, -0.36), indicating that it has the lowest correlation with other features.
 
 ## Principal Component Analysis (PCA)
 
@@ -368,8 +371,8 @@ The petal length vs petal width plot displays the relationships between petal le
 the sepal features plot, the petal measurements plot displayed distinct clustering for each individual species.
 
 The regression line was fitted across all data points, representing the overall linear relationship between petal length and width. The line had a sharp angle with data points clustered close to the line. The
-R<sup>2</sup> value was 0.93, indicating that most of the variance for petal width was explained by petal length. Suggesting that petal length was a strong predictor of petal width. The Setosa species had
-smaller petal widths and lengths and clearly separated from Versicolor and Virginica.
+R<sup>2</sup> value was 0.93, indicating that most of the variance for petal width was explained by petal length. Suggesting that petal length was a strong predictor of petal width, this reflects what was seen
+as a result of the Correlation Matrix. The Setosa species had smaller petal widths and lengths and clearly separated from Versicolor and Virginica.
 
 Compared to what was observed for sepal feature relationships, for petal features, Versicolor and Virginica were more distinctly clustered and separate from each other
 (https://www.investopedia.com/terms/r/r-squared.asp, https://www.datacamp.com/tutorial/simple-linear-regression, https://www.ibm.com/think/topics/linear-regression, https://datatab.net/tutorial/linear-
