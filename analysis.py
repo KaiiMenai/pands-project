@@ -761,18 +761,16 @@ with open("analysis.md", "a") as file: # The (file=file) argument is important t
     print("\nLogistic Regression for Species Classification Results:", file=file) # How to do it - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
     print(f"Accuracy: {accuracy:.4f}", file=file)
     print("\nClassification Report:", file=file)
-    print(classification_report(y_species_test, y_species_pred, target_names=le.classes_), file=file)
     report_dict = classification_report(
     y_species_test, y_species_pred, target_names=le.classes_, output_dict=True
     )
     df = pd.DataFrame(report_dict).transpose()
     file.write(df.to_markdown())
-    
     # Example prediction - predict species based on sepal and petal measurements.
-    print("Example Prediction (measurements in cm).", file=file)
     example_data = pd.DataFrame([[5.1, 3.5, 1.4, 0.2]], 
                                 columns=['sepal length', 'sepal width', 'petal length', 'petal width'])  # Match feature names to those in the training set
     predicted_species = model_species.predict(example_data)
+    print("Example Prediction (measurements in cm).", file=file)
     print(f"- Predicted species for {example_data.iloc[0].tolist()}: {le.inverse_transform(predicted_species)[0]}", file=file) # This will print the last 5 rows of the dataset.
 
 print("Logistic regression results have been written to analysis.md")
