@@ -535,14 +535,18 @@ with open("analysis.md", "a") as file:
     print("\n## K-means Clustering", file=file)    
     print("", file=file)
     print("![K-means Clustering](kmeans_clustering_by_species.png)", file=file)
-    ct = pd.crosstab(iris_df['class'], iris_df['cluster'])
-    file.write(ct.to_markdown())
-    file.write('\n')
-    k_means_text = (
+    k_means1_text = (
     "The K-means clustering algorithm was used to group the iris dataset into three clusters, corresponding to the three species of iris flowers. The K-means algorithm works by separating the data into K-clusters, where each data point belongs to the cluster with the nearest mean. In this case, K was set to 3, as there are three species of iris flowers in the dataset. The resulting clusters were visualised using a scatter plot, with different colors representing different clusters. The K-means clustering results show that the algorithm was able to separate the three species of iris flowers quite well, with some overlap between Versicolor and Virginica species."
     )
     print("", file=file)
-    print(textwrap.fill(k_means_text, width=210), file=file)
+    print(textwrap.fill(k_means1_text, width=210), file=file)ct = pd.crosstab(iris_df['class'], iris_df['cluster'])
+    file.write(ct.to_markdown())
+    file.write('\n')
+    k_means2_text = (
+    "From the table above, it can be seen that the K-means clustering algorithm was able to separate the three species of iris flowers. The algorithm correctly classified 50 samples of Setosa, 47 samples of Versicolor, and 36 samples of Virginica. There were some misclassifications, with 14 samples of Verginica grouped with Versicolor (Cluster 2) and 3 samples of Versicolor grouped with Virginica (Cluster 0)."
+    )
+    print("", file=file)
+    print(textwrap.fill(k_means2_text, width=210), file=file)
 
 print("K-means Clustering observations appended to analysis.md")
 
