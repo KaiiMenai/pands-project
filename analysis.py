@@ -761,10 +761,13 @@ with open("analysis.md", "a") as file: # The (file=file) argument is important t
     print("\nLogistic Regression for Species Classification Results:", file=file) # How to do it - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
     print(f"Accuracy: {accuracy:.4f}", file=file)
     print("\nClassification Report:", file=file)
-    report_dict = classification_report(y_species_test, y_species_pred, target_names=le.classes_)
+    print(classification_report(y_species_test, y_species_pred, target_names=le.classes_), file=file)
+    report_dict = classification_report(
+    y_species_test, y_species_pred, target_names=le.classes_, output_dict=True
+    )
     df = pd.DataFrame(report_dict).transpose()
-    file.write(df.to_markdown()) # This will print the last 5 rows of the dataset.
-    print("", file=file)
+    file.write(df.to_markdown())
+    file.write('\n')
     # Example prediction - predict species based on sepal and petal measurements.
     print("Example Prediction (measurements in cm).", file=file)
     example_data = pd.DataFrame([[5.1, 3.5, 1.4, 0.2]], 
