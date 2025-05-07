@@ -370,8 +370,7 @@ Classification Report:
 | Iris-virginica  |           1 |        1 |          1 |        11 |
 | accuracy        |           1 |        1 |          1 |         1 |
 | macro avg       |           1 |        1 |          1 |        30 |
-| weighted avg    |           1 |        1 |          1 |        30 |Example Prediction (measurements in cm).
-- Predicted species for [5.1, 3.5, 1.4, 0.2]: Iris-setosa
+| weighted avg    |           1 |        1 |          1 |        30 |Example Prediction (measurements in cm).- Predicted species for [5.1, 3.5, 1.4, 0.2]: Iris-setosa
 
 For the iris dataset, the Logistic Regression Model achieves high accuracy (~ 97 %), this is due to the simplicity and linear separability of the iris dataset. Accuracy for the Logistic Regression Model is
 calculated as the ratio of correct predictions to total predictions. The columns for precision and recall measure class specific performance in the model, and the f1-score column gives a balances metric for
