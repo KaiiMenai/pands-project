@@ -772,8 +772,7 @@ with open("analysis.md", "a") as file: # The (file=file) argument is important t
     predicted_species = model_species.predict(example_data)
     
     print("", file=file)
-    print("Example Prediction (measurements in cm).", file=file)
-    print(f"- Predicted species for {example_data.iloc[0].tolist()}: {le.inverse_transform(predicted_species)[0]}", file=file) # This will print the last 5 rows of the dataset.
+    print(f"- Predicted species for (example prediction measurements in cm) {example_data.iloc[0].tolist()}: {le.inverse_transform(predicted_species)[0]}", file=file) # This will print the last 5 rows of the dataset.
 
 print("Logistic regression results have been written to analysis.md")
 
