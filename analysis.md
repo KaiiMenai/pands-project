@@ -127,23 +127,56 @@ cm.  The measurement with the largest deviation from the mean is the petal lengt
 
 Outliers detected for each species:
 
-Outliers for Iris-setosa:
-  Column 'sepal length': No outliers detected
-  Column 'sepal width': No outliers detected
-  Column 'petal length': 4 outliers
-  Column 'petal width': 2 outliers
+### Outliers for Iris-setosa:
 
-Outliers for Iris-versicolor:
-  Column 'sepal length': No outliers detected
-  Column 'sepal width': No outliers detected
-  Column 'petal length': 1 outliers
-  Column 'petal width': No outliers detected
+#### Column 'sepal length': No outliers detected
 
-Outliers for Iris-virginica:
-  Column 'sepal length': 1 outliers
-  Column 'sepal width': 3 outliers
-  Column 'petal length': No outliers detected
-  Column 'petal width': No outliers detected
+#### Column 'sepal width': No outliers detected
+
+#### Column 'petal length': 4 outliers
+|   sepal length |   sepal width |   petal length |   petal width | class       |
+|---------------:|--------------:|---------------:|--------------:|:------------|
+|            4.3 |           3   |            1.1 |           0.1 | Iris-setosa |
+|            4.6 |           3.6 |            1   |           0.2 | Iris-setosa |
+|            4.8 |           3.4 |            1.9 |           0.2 | Iris-setosa |
+|            5.1 |           3.8 |            1.9 |           0.4 | Iris-setosa |
+
+#### Column 'petal width': 2 outliers
+|   sepal length |   sepal width |   petal length |   petal width | class       |
+|---------------:|--------------:|---------------:|--------------:|:------------|
+|            5.1 |           3.3 |            1.7 |           0.5 | Iris-setosa |
+|            5   |           3.5 |            1.6 |           0.6 | Iris-setosa |
+
+### Outliers for Iris-versicolor:
+
+#### Column 'sepal length': No outliers detected
+
+#### Column 'sepal width': No outliers detected
+
+#### Column 'petal length': 1 outliers
+|   sepal length |   sepal width |   petal length |   petal width | class           |
+|---------------:|--------------:|---------------:|--------------:|:----------------|
+|            5.1 |           2.5 |              3 |           1.1 | Iris-versicolor |
+
+#### Column 'petal width': No outliers detected
+
+### Outliers for Iris-virginica:
+
+#### Column 'sepal length': 1 outliers
+|   sepal length |   sepal width |   petal length |   petal width | class          |
+|---------------:|--------------:|---------------:|--------------:|:---------------|
+|            4.9 |           2.5 |            4.5 |           1.7 | Iris-virginica |
+
+#### Column 'sepal width': 3 outliers
+|   sepal length |   sepal width |   petal length |   petal width | class          |
+|---------------:|--------------:|---------------:|--------------:|:---------------|
+|            7.7 |           3.8 |            6.7 |           2.2 | Iris-virginica |
+|            6   |           2.2 |            5   |           1.5 | Iris-virginica |
+|            7.9 |           3.8 |            6.4 |           2   | Iris-virginica |
+
+#### Column 'petal length': No outliers detected
+
+#### Column 'petal width': No outliers detected
 
 In the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.
 

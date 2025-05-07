@@ -196,14 +196,17 @@ with open("analysis.md", "a") as file:
     numeric_columns = iris_df.select_dtypes(include=[np.number]).columns
     print("\nOutliers detected for each species:", file=file)
     for species in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
-        print(f"\nOutliers for {species}:", file=file)
+        print(f"\n### Outliers for {species}:", file=file)  # Markdown heading
         species_data = iris_df[iris_df['class'] == species]
         for column in numeric_columns:
             outliers = detect_outliers(species_data, column)
             if not outliers.empty:
-                print(f"  Column '{column}': {len(outliers)} outliers", file=file)
+                print(f"\n#### Column '{column}': {len(outliers)} outliers", file=file)
+                # Write the outlier rows as a markdown table
+                file.write(outliers.to_markdown(index=False))
+                file.write('\n')
             else:
-                print(f"  Column '{column}': No outliers detected", file=file)
+                print(f"\n#### Column '{column}': No outliers detected", file=file)
     print("\nIn the Summary Statistics for each species, the count shows that there are 50 samples in the dataset for each, the values displayed is the non-missing value, suggesting that there are no missing values present in the dataset.", file=file)
 
 print("Summary Stats has been appended to analysis.md")
