@@ -767,7 +767,7 @@ with open("analysis.md", "a") as file: # The (file=file) argument is important t
     )
     df = pd.DataFrame(report_dict).transpose()
     file.write(df.to_markdown())
-    file.write('\n')
+    
     # Example prediction - predict species based on sepal and petal measurements.
     print("Example Prediction (measurements in cm).", file=file)
     example_data = pd.DataFrame([[5.1, 3.5, 1.4, 0.2]], 
