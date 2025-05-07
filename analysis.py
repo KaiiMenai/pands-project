@@ -950,7 +950,7 @@ with open("analysis.md", "a") as file:
     print("\nNick McCullum. (no date). *Python visualization: boxplot*. Available at: https://www.nickmccullum.com/python-visualization/boxplot/", file=file)
     print("\nNumpy. (no date). *numpy.polyfit*. Available at: https://numpy.org/doc/stable/reference/generated/numpy.polyfit.html", file=file)
     print("\nPandas. (no date). *pandas.read_csv*. Available at: https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html", file=file)
-    print("\nPython Documentation. (no date). *Built-in *. Available at: https://docs.python.org/3/library/stdtypes.html", file=file)
+    print("\nPython Documentation. (no date). *Built-in Types*. Available at: https://docs.python.org/3/library/stdtypes.html", file=file)
     print("\nResearchGate. (no date). *Classification of Iris Flower Dataset using Different Algorithms*. Available at: https://www.researchgate.net/publication/367220930_Classification_of_Iris_Flower_Dataset_using_Different_Algorithms", file=file)
     print("\nRSS. (no date). *Common statistical terms*. Available at: https://rss.org.uk/resources/statistical-explainers/common-statistical-terms/", file=file)
     print("\nScikit-learn. (no date). *Classification report*. Available at: https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html", file=file)
