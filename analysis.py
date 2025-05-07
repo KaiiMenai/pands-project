@@ -491,9 +491,9 @@ with open("analysis.md", "a") as file:
     print("![Principal Component Analysis](pca_by_species.png)", file=file)
     print("", file=file)
     pca_text = (
-    "A way to conduct relationship investigations is through Principal Component Analysis (PCA) - I did this for my PhD research and found it was a great way to clearly look at multiple data aspects at once (https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html)."
-    "An important note of PCA is that the data needs to be standardised for it. When standardising data, it's important that it is scaled correctly, otherwise the results will appear skewed and purely incorrect.The analysis can then be run again. The standardised PCA analysis can then be viewed in a plot."
-    "The Principal Component Analysis (PCA) transforms the original variables (sepal length, sepal width, petal length, petal width) into a new set of variables that are linear combinations of the original data, known as principal components (Jolliffe and Cadima, 2016). The first principal component (PC1) captures the maximum variance within the data, whilst the second principal component (PC2) captures the remaining variance that is perpendicular (orthogonal) to PC1. Any components following the first and second capture the remaining variance, again perpendicular to all previous components (Jolliffe and Cadima, 2016). Insights following the PCA show that PC1 strongly correlated with petal features, suggesting that petal length and petal width are responsible for the majority, 72.8 %, of the variance within the data. PC2 captured the variance for the sepal length and width, these were responsible for 23 % of the variance in the data. These results demonstrate that the first two components explain 95.8 % of the variance within the dataset."
+    "A way to conduct relationship investigations is through Principal Component Analysis (PCA) - *I did this for my PhD research and found it was a great way to clearly look at multiple data aspects at once* (https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html). "
+    "An important note of PCA is that the data needs to be standardised for it. When standardising data, it's important that it is scaled correctly, otherwise the results will appear skewed and purely incorrect.The analysis can then be run again. The standardised PCA analysis can then be viewed in a plot. "
+    "The Principal Component Analysis (PCA) transforms the original variables (sepal length, sepal width, petal length, petal width) into a new set of variables that are linear combinations of the original data, known as principal components (Jolliffe and Cadima, 2016). The first principal component (PC1) captures the maximum variance within the data, whilst the second principal component (PC2) captures the remaining variance that is perpendicular (orthogonal) to PC1. Any components following the first and second capture the remaining variance, again perpendicular to all previous components (Jolliffe and Cadima, 2016). Insights following the PCA show that PC1 strongly correlated with petal features, suggesting that petal length and petal width are responsible for the majority, 72.8 %, of the variance within the data. PC2 captured the variance for the sepal length and width, these were responsible for 23 % of the variance in the data. These results demonstrate that the first two components explain 95.8 % of the variance within the dataset. "
     "With so much variance seen in PC1 for the petal features, it could indicate that these are good determining factors for use in species identification."
     )
     print("", file=file)
@@ -521,7 +521,7 @@ plt.figure(figsize=(8, 6))
 sns.scatterplot(
     x=iris_df['sepal length'], 
     y=iris_df['sepal width'], 
-    hue=iris_df['class'], 
+    hue=iris_df['cluster_species'], 
     s=100
 )
 plt.title("K-means Clustering of Iris Dataset")
@@ -532,9 +532,15 @@ plt.savefig('kmeans_clustering_by_species.png')
 plt.show()
 
 with open("analysis.md", "a") as file:
-    print("\n## K-means Clustering", file=file)
+    print("\n## K-means Clustering", file=file)    
+    print("", file=file)
+    print("![K-means Clustering](kmeans_clustering_by_species.png)", file=file)
+    # Suppose df is your DataFrame
+    markdown_table = df.to_markdown(index=False)
+    file.write(markdown_table)
+    file.write('\n')
     k_means_text = (
-    ""
+    "The K-means clustering algorithm was used to group the iris dataset into three clusters, corresponding to the three species of iris flowers. The K-means algorithm works by separating the data into K-clusters, where each data point belongs to the cluster with the nearest mean. In this case, K was set to 3, as there are three species of iris flowers in the dataset. The resulting clusters were visualised using a scatter plot, with different colors representing different clusters. The K-means clustering results show that the algorithm was able to separate the three species of iris flowers quite well, with some overlap between Versicolor and Virginica species."
     )
     print("", file=file)
     print(textwrap.fill(k_means_text, width=210), file=file)
@@ -545,7 +551,7 @@ print("K-means Clustering observations appended to analysis.md")
 # - Linear Regression
 
 with open("analysis.md", "a") as file:
-    print("\n### Linear Regression", file=file)
+    print("\n## Linear Regression", file=file)
     overall_lrm_text = (
     "A linear regression model was fitted to the iris dataset. The data was initially split into sepal feature and petal feature data."
     )
@@ -832,73 +838,6 @@ with open("analysis.md", "a") as file:
 print("Confusion Matrix observations appended to analysis.md")
 
 # Discuss the pros and cons of each technique and how they may be applied to this dataset. - do this in a text file called 'analysis.txt'.
-
-with open("pros_cons_analysis.txt", "w") as file: 
-    print("The pros and cons of each technique and how they may be applied to this dataset.", file=file) 
-    print("\nWhy do any of these techniques?", file=file)
-    print("\n\t- Basic EDA (Exploratory Data Analysis) to understand the data and its distribution.", file=file)
-    print("\n\t- Visualisation to identify patterns and relationships between features (sepal length/width, petal length/width) and their relationships with the target variable (species).", file=file)
-    print("\n\t- PCA to reduce dimensionality and visualise the data in a lower-dimensional space.", file=file)
-    print("\n\t- Scatter plots to visualise the relationship between features (sepal length/width, petal length/width) and the target variable (species).", file=file)
-    print("\n\t- Box plots to identify outliers and understand the distribution of features (sepal length/width, petal length/width) by species.", file=file)
-    print("\n\t- Clustering to group similar data points and identify potential clusters in the data.", file=file)
-    print("\n\t- Pair plots to visualise the relationships between all pairs of features and the target variable (species).", file=file)
-    print("\n\t- K-means clustering to group similar data points and identify potential clusters in the data.", file=file)
-    print("\n\t- Classification techniques to predict the species of iris flowers based on their features (sepal length/width, petal length/width).", file=file)
-    print("\n\t- Regression techniques to predict continuous values based on features (sepal length/width, petal length/width).", file=file)
-    print("\n\t- Linear Regression to model the relationship between features and a continuous target variable (species).", file=file)
-    print("\n\t- Logistic Regression to model the relationship between features and a binary or categorical target variable (species).", file=file)
-    print("\n", file=file)
-    print("\nEach technique used and short notes on them.", file=file)
-    print("\n", file=file)
-    print("\nExploratory Data Analysis (EDA):", file=file)
-    print("\n\tPros: Helps understand the data, identify patterns, and detect any outliers.", file=file)
-    print("\n\tCons: May not provide insights into relationships between features and the target variable.", file=file)
-    print("\n\tApplication: Can be used to visualise the distribution of features (sepal length/width, petal length/width) and their relationships with the target variable (species).", file=file)
-    print("\n", file=file)
-    print("\nScatter Plots:", file=file)
-    print("\n\tPros: Visualises the relationship between features and the target variable, helps identify patterns and relationships.", file=file)
-    print("\n\tCons: May not work well with high-dimensional data, may not capture complex relationships.", file=file)
-    print("\n\tApplication: Can be used to visualise the relationship between features (sepal length/width, petal length/width) and the target variable (species).", file=file)
-    print("\n", file=file)
-    print("\nBox Plots:", file=file)
-    print("\n\tPros: Helps identify outliers, visualises the distribution of features by species.", file=file)
-    print("\n\tCons: May not work well with high-dimensional data, may not capture complex relationships.", file=file)
-    print("\n\tApplication: Can be used to visualise the distribution of features (sepal length/width, petal length/width) by species.", file=file)
-    print("\n", file=file)
-    print("\nCorrelation Matrix:", file=file)
-    print("\n\tPros: Helps identify relationships between features, visualises the correlation between features and the target variable.", file=file)
-    print("\n\tCons: May not work well with high-dimensional data, may not capture complex relationships.", file=file)
-    print("\n\tApplication: Can be used to visualise the correlation between features (sepal length/width, petal length/width) and the target variable (species).", file=file)
-    print("\n", file=file)
-    print("\nPrincipal Component Analysis (PCA):", file=file)
-    print("\n\tPros: Reduces the complexity of the data, helps visualise high-dimensional data, captures any variance in the data.", file=file)
-    print("\n\tCons: May lose some information, sensitive to scaling, may not be interpretable.", file=file)
-    print("\n\tApplication: Can be used to visualise the data in a lower-dimensional space, identify clusters, and reduce noise.", file=file)
-    print("\n", file=file)
-    print("\nK-means Clustering:", file=file)
-    print("\n\tPros: Groups similar data points together, helps identify patterns and relationships in the data.", file=file)
-    print("\n\tCons: Sensitive to the choice of parameters, may not work well with non-spherical clusters.", file=file)
-    print("\n\tApplication: Can be used to identify clusters in the data, which may correspond to different iris flower species.", file=file)
-    print("\n", file=file)
-    print("\nClassification:", file=file)
-    print("\n\tPros: Can be used to predict categorical outcomes (i.e. species), interpretable results.", file=file)
-    print("\n\tCons: Sensitive to the choice of parameters, may not work well with imbalanced data (luckily the iris dataset is balanced).", file=file)
-    print("\n\tApplication: Can be used to predict the iris flower species based on their features.", file=file)
-    print("\n", file=file)
-    print("\nRegression:", file=file)
-    print("\n", file=file)
-    print("\nLinear Regression:", file=file)
-    print("\n\tPros: Simple to implement, interpretable coefficients, works well for linear relationships (iris dataset is linear).", file=file)
-    print("\n\tCons: Assumes linear relationship between features and target, sensitive to outliers, may not perform well with non-linear data.", file=file)
-    print("\n\tApplication: Can be used to predict continuous values (e.g., sepal width / petal width) based on other features (sepal length, petal length).", file=file)
-    print("\n", file=file)
-    print("\nLogistic Regression:", file=file)
-    print("\n\tPros: Simple to implement, interpretable coefficients, works well for binary classification.", file=file)
-    print("\n\tCons: Assumes linear relationship between features and log-odds, may not perform well with non-linear data.", file=file)
-    print("\n\tApplication: Can be used to predict the probability of a specific species based on features (sepal length/width, petal length/width).", file=file)
-    
-print("Pros and Cons for each test written to pros_cons_analysis.txt")
 
 ## Conclusion - write a conclusion to the analysis.txt file.
 
