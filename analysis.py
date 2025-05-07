@@ -455,7 +455,7 @@ with open("analysis.md", "a") as file:
     print("![Correlation_Matrix](correlation_matrix_by_feature.png)", file=file)
     print("", file=file)
     corr_matrix_text = (
-    ""
+    "A correlation matrix helps to give a visual representation of the relationship between the features in the dataset. From the plot, it can be seen that the warmer the colour/higher the number and closer to 1 in the range (-0.4 - 1), the greater the correlation with the corresponding feature analysed. The petal measurements (length/width) show a strong positive correlation (r = 0.96). This indicates that petal length and petal width vary together, as they often showed a positive correlation within the dataset. The positive correlation between the petal measurements also adds weight to the theory that petal features (length and width) may be a useful determining factor for classification. The value for sepal width is often below 0 (-0.11, -0.42, -0.36), indicating that it has the lowest correlation with other features."
     )
     print("", file=file)
     print(textwrap.fill(corr_matrix_text, width=210), file=file)
@@ -624,7 +624,7 @@ with open("analysis.md", "a") as file:
     "The petal length vs petal width plot displays the relationships between petal length and petal width for the iris flower species, Setosa (in blue), Versicolor (in orange), and Virginica (in green). Compared to the sepal features plot, the petal measurements plot displayed distinct clustering for each individual species."
     )
     lrm_petal_length_vs_width2_text = (
-    "The regression line was fitted across all data points, representing the overall linear relationship between petal length and width. The line had a sharp angle with data points clustered close to the line. The R<sup>2</sup> value was 0.93, indicating that most of the variance for petal width was explained by petal length. Suggesting that petal length was a strong predictor of petal width. The Setosa species had smaller petal widths and lengths and clearly separated from Versicolor and Virginica. "
+    "The regression line was fitted across all data points, representing the overall linear relationship between petal length and width. The line had a sharp angle with data points clustered close to the line. The R<sup>2</sup> value was 0.93, indicating that most of the variance for petal width was explained by petal length. Suggesting that petal length was a strong predictor of petal width, this reflects what was seen as a result of the Correlation Matrix. The Setosa species had smaller petal widths and lengths and clearly separated from Versicolor and Virginica. "
     )
     lrm_petal_length_vs_width3_text = (
     "Compared to what was observed for sepal feature relationships, for petal features, Versicolor and Virginica were more distinctly clustered and separate from each other (https://www.investopedia.com/terms/r/r-squared.asp, https://www.datacamp.com/tutorial/simple-linear-regression, https://www.ibm.com/think/topics/linear-regression, https://datatab.net/tutorial/linear-regression)."
