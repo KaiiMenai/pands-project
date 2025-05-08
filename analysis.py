@@ -344,8 +344,25 @@ plt.show()
 
 fig, axes = plt.subplots(2, 2, figsize=(12, 10))
 features = ['sepal length', 'sepal width', 'petal length', 'petal width']
-titles = ['Sepal Length by Species', 'Sepal Width by Species', 
-          'Petal Length by Species', 'Petal Width by Species']
+titles = [
+    "Sepal Length Distribution by Species",
+    "Sepal Width Distribution by Species",
+    "Petal Length Distribution by Species",
+    "Petal Width Distribution by Species"
+]
+
+for ax, feature, title in zip(axes.flatten(), features, titles):
+    sns.histplot(data=iris_df, x=feature, hue='class', kde=False, ax=ax, bins=15)
+    ax.set_title(title)
+    ax.set_xlabel(f"{feature.title()} (cm)")    # Format y-axis label
+    ax.set_ylabel("Frequency")  # Update y-axis label for clarity - this is how often the value was recorded
+    sns.move_legend(ax, "upper right", title="Species") # legend title is species and upper right is location
+    
+# Adjust layout for better spacing
+plt.tight_layout()
+# Save the figure for histogram as a PNG file and show
+plt.savefig('histograms_by_species2.png')
+plt.show()
 
 with open("analysis.md", "a") as file:
     print("\n## Histograms by Feature", file=file)
