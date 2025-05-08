@@ -361,7 +361,7 @@ for ax, feature, title in zip(axes.flatten(), features, titles):
 # Adjust layout for better spacing
 plt.tight_layout()
 # Save the figure for histogram as a PNG file and show
-plt.savefig('histograms_by_species2.png')
+plt.savefig('histograms_by_species.png')
 plt.show()
 
 with open("analysis.md", "a") as file:
