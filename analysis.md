@@ -264,12 +264,11 @@ assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plo
 
 ![Histograms](histograms_by_species.png)
 
-The histogram plots are all colour coded by species; green for Setosa, orange for Versicolor, and blue for Virginica. For some reason the colours are different to those used in the boxplots, this is not an
-issue, but it is worth noting. The histograms show the frequency of measurements for each feature (sepal length/width and petal length/width) by species. The x-axis shows the range of values for each feature,
-while the y-axis shows the frequency of measurements for each feature.From the histogram plot of the frequency of measurements for sepal length by species of iris flower, the Setosa species showed a normal
-distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species had a broad range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species
-with the largest range in length of sepals and longest average sepal length is the Virginica species. A number of the Versicolor and Virginica species samples overlapped in terms of frequency of measurements
-for sepal length, with some small overlap in values also seen for the Setosa iris species.
+The histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica. The histograms show the frequency of measurements for each feature (sepal length/width and
+petal length/width) by species. The x-axis shows the range of values for each feature, while the y-axis shows the frequency of measurements for each feature.From the histogram plot of the frequency of
+measurements for sepal length by species of iris flower, the Setosa species showed a normal distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species had a broad
+range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species with the largest range in length of sepals and longest average sepal length is the Virginica species. A number of
+the Versicolor and Virginica species samples overlapped in terms of frequency of measurements for sepal length, with some small overlap in values also seen for the Setosa iris species.
 
 Contrary to what was observed for sepal length, the narrowest sepal width is the Versicolor species, with the Virginica species being in the middle of the range. The Setosa species had the widest sepals and the
 broadest range in values for sepal width. The data for sepal width overlaps between the three species, with some overlap in values between the Setosa and Versicolor species. The data for sepal width is not
@@ -470,8 +469,8 @@ principal component analysis (PCA) the observations about petal features being m
 component) was responsible for 72.8 % of the variability seen within the data, the PC1 was referring to the petal length and width features. The feature correlation matrix heat map also displayed the difference
 between species based onn petal features, where petal length vs petal width resulted in r = 0.96 indicating that the petal length and width showed a strong positive correlation and that their measurements often
 varied together. The Logistic Regression (classification techniques) were used to predict the species of iris flowers based on their features, and the Linear Regression (regression techniques) were used to
-predict continuous values based on features.For the linear regression (LRM) analysis, petal length vs petal width gave an R^2 value of 0.93, indicating that most of the variance in petal width can be explained
-by petal length. Some predictions were made for petal width following an 80 - 20 split in the data for training and testing, respectively.
+predict continuous values based on features.For the linear regression (LRM) analysis, petal length vs petal width gave an R<sup>2</sup> value of 0.93, indicating that most of the variance in petal width can be
+explained by petal length. Some predictions were made for petal width following an 80 : 20 split in the data for training and testing, respectively.
 
 The analysis has shown that the dataset is suitable for classification and regression tasks, and the techniques used have provided valuable insights into the relationships between features and the target
 variable. The analysis has demonstrated that the features (sepal length/width, petal length/width) are valuable for classification of iris species, and the techniques used have provided valuable insights into
