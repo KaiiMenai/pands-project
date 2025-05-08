@@ -1,5 +1,7 @@
 # Project for the Programming and Scripting Module
 
+***author: Kyra Menai Hamilton***
+
 ## Background
 
 The iris dataset (originally sourced by Anderson in 1935) is a well examined and thoroughly evaluated dataset of three species of iris flower (Setosa, Versicolor, Virginica) totalling 150 samples measuring four key features (sepal length/width, petal length/width) that aid in differentiation between the species. Not only highlighting the importance of field expert knowledge when designing a research project and its analysis, but also highlighting that there can be overlap between different species within the same genus (highlighted by the repeated overlap for Versicolor and Virginica for some features). In 1936, Fisher used the dataset as an example of linear discriminant analysis, used for finding a linear combination of features that chan characterise or separate classes or objects (specifically two or more). Throughout the decades, the iris dataset has been used thoroughly as an example dataset for machine learning and algorithm development and is stored as an open access dataset in the UCI Machine Learning Repository.
@@ -419,3 +421,5 @@ UCI Machine Learning Repository. (2025). *Iris Dataset*. Available at: https://a
 WV State University. (no date). *Scholarly vs. non-scholarly articles*. Available at: https://wvstateu.libguides.com/c.php?g=813217&p=5816022
 
 Wikipedia. (no date). *Linear discriminant analysis*. Available at: https://en.wikipedia.org/wiki/Linear_discriminant_analysis
+
+# END OF README
