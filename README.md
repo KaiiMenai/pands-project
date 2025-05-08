@@ -20,12 +20,68 @@ To further analyse the variation within the data and to see where most of the di
 
 Finally **logistic regression** was conducted on the dataset to see whether it could be used to predict a species of iris flower based purely on inputted values. The outcome for the accuracy of this potential model was 1.0, a perfect model, giving a high level of accuracy for any predictions made. This accuracy result is likely due to the simplicity and linear separability of the iris dataset. A **confusion matrix** was plotted to aid in visualising the performance of the **logistic regression model**, aiding in seeing clearly where discrepancies would be in the species predicted.
 
-## Explain what the code does for the important tests
-
-
-# Conclusion
+## Conclusion
 
 Assessing species-feature relationships aided in understanding where in the dataset the majority of the variance came from, which features had influence over one another, and which of the measured features would be the most useful as tools for differentiation. A number of these answers are the same. Most of the variance in the dataset comes from the petal length and petal width features, the petal length and width features also influenced one another, and these features were also shown to be the most useful in differentiating between and predicting the species of iris flower.
+
+## Explain what the code does for the important tests
+
+### Packages
+
+### Data import
+
+```ruby
+iris = fetch_ucirepo(id=53)
+# data - extracting x and y (as pandas dataframes)
+x = iris.data.features
+y = iris.data.targets
+
+print(iris.metadata) # metadata - print was to check
+print(iris.variables) # variable information - print was to check
+```
+
+Combine the features and targets into a single df to export as CSV
+```ruby
+iris_df = pd.concat([x, y], axis=1)
+```
+
+Exporting the DataFrame (df) to a CSV file
+```ruby
+iris_df.to_csv
+   ('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
+ print("Iris dataset has been successfully exported to a CSV!")
+# Output - Iris dataset has been successfully exported to a CSV!
+```
+
+Now to retrieve dataset for making plots and analysis
+Import the dataset from the CSV file
+
+```ruby
+iris_df = pd.read_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv')
+print(iris_df)
+```
+
+### EDA
+
+### Boxplots
+
+### Histograms
+
+### Scatterplots
+
+### Pairplots
+
+### Correlation Matrix
+
+### PCA
+
+### K-means
+
+### LRM
+
+### Log
+
+### Confusion
 
 ## References
 
