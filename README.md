@@ -38,7 +38,7 @@ This project focused on using the data in a number of different statistical test
 
 Initial exploratory data analysis described the shape of the dataset (150 samples 5 variables). A check on first and last five rows of the dataset was conduced, and the presence of missing values was checked (none were found). The summary statistics were initially conducted on the dataset as a whole, before being split by species for a more granular analysis. For the overall summary statistics it was found that petal length had the largest standard deviation (difference from mean value) of 1.76 respectively, suggesting that they varied more widely across samples compared to sepal features, indicating that maybe this would be useful feature to investigate further to see where these differences were.
 
-
+Boxplots were plotted for each of the four features with the samples separated by species
 
 ## Conclusion
 
