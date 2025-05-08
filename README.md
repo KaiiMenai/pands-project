@@ -72,17 +72,17 @@ This was modified for each species so that the species could be separated from o
     virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
 ```
 
-Class distributions were also explored using ```df['species'].value_counts()``` to see if the data was evenly distributed between the three species. 50 samples were seen for each of the species, Setosa, Virginica, and Versicolor.
+Class distributions were also explored using ```iris_df['class'].value_counts()``` to see if the data was evenly distributed between the three species. 50 samples were seen for each of the species, Setosa, Virginica, and Versicolor.
 
 ### Boxplots
 
 Boxplots were plotted for each of the four species and the data within colour coded by species.
-These were plotted using ```sns.boxplot(x='species', y=feature, hue='species', data=df, ax=ax)```, and plot size was determined by ```plt.figure(figsize=(12, 8))```.
+These were plotted using ```sns.boxplot(x='class', y=feature, hue='class', data=iris_df, ax=ax)```, and plot size was determined by ```plt.figure(figsize=(12, 8))```.
 
 - ```sns.boxplot``` refers to the plot to be made,
 - ```for i, feature in enumerate(features):``` separates by feature and labels the figure appropriately in ```ax.set_title(titles[i])```,
 - where ```data=iris_df``` was the iris dataframe,
-- ```x='species'``` where the data will be separated by species,
+- ```x='class'``` where the data will be separated by species,
 - the ```y=feature``` is plotted against the species
 - ```hue="class"``` he data will be colour coded by species, and
 - ```ax=ax``` referred to the subplot.
@@ -90,7 +90,7 @@ These were plotted using ```sns.boxplot(x='species', y=feature, hue='species', d
 ### Histograms
 
 Histograms were plotted for each of the features.
-All plots were put into one "figure" saved as a PNG to make the data easier to read and compare using ```fig, axes = plt.subplots(2, 2, figsize=(12, 10))```.
+All plots were put into one "file" saved as a PNG to make the data easier to read and compare using ```fig, axes = plt.subplots(2, 2, figsize=(12, 10))```.
 Each of the four histograms was plotted using ```sns.histplot(data=iris_df, x="feature", hue="class", kde=False, ax=axes[0, 0], bins=15)```.
 Similarly to the boxplots the breakdown of the code is as follows:
 
@@ -101,6 +101,17 @@ Similarly to the boxplots the breakdown of the code is as follows:
 - ```ax=axes[0, 0]``` referred to the subplot.
 
 ### Scatterplots
+
+Both scatterplots were put into one "file" saved as a PNG to make the data easier to read and compare using ```fig, axes = plt.subplots(1, 2, figsize=(20, 8))```.
+
+Both scatterplots were plotted using the code ```sns.scatterplot(ax=axes[0], data=iris_df, x='feature1', y='feature2', hue='class', s=100)```.
+
+- where ```sns.scatterplot``` refers to the plot to be run,
+- ```ax=axes[0]``` refers to the subplot,
+- ```data=df``` was the iris dataframe,
+- ```x="feature1"``` where ```"feature1"``` was sepal length or petal length,
+- ```y="feature2"``` where ```"feature2"``` was sepal width or petal width, and
+- ```hue="class"``` colours the plot points by species.
 
 ### Pairplots
 
@@ -155,6 +166,18 @@ X_scaled = scaler.fit_transform(X)
 
 ### K-means
 
+K-means cluster analysis to look for underlying patterns or clustering within the data.
+
+```ruby
+kmeans = KMeans(n_clusters=3, random_state=42)
+iris_df['cluster'] = kmeans.fit_predict(iris_df.iloc[:, :4])
+```
+
+- ```kmeans``` is the test to be run,
+- ```n_clusters = 3``` refers to the number of clusters (the 3 species)
+- ```iris_df['cluster']``` instructs to split the dataset into clusters, and
+- ```kmeans.fit_predict(iris_df.iloc[:, :4])``` asks to fit the first 4 columns (features).
+
 ### LRM
 
 The packages used to conduct the Logistic Regression and get R<sup>2</sup> were:
@@ -178,7 +201,7 @@ r2_feature = r2_score(y_feature, y_feature_pred)
 ```
 
 - where ```X_feature``` refers to the input variable ```iris_df[['feature1']]``` which would be sepal length or petal length,
-- ```Xyfeature``` refers to the input variable ```iris_df['feature2']``` which would be sepal width or petal width,
+- ```y_feature``` refers to the input variable ```iris_df['feature2']``` which would be sepal width or petal width,
 - ```model_feature = LinearRegression()``` refers to the model that is being run in this case it is ```LinearRegression()```,
 - ```model_feature.fit(X_feature, y_feature``` states the model to be fit,
 - ```y_feature_pred = model_feature.predict(X_feature)``` where ```y_feature_pred``` was sepal width or petal width to be predicted from the ```(X_feature)``` of sepal length or petal length, and
