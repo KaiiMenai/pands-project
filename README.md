@@ -1,28 +1,5 @@
 # Project for the Programming and Scripting Module
 
-## What is it all about?
-
-The iris dataset has been a tool used for machine learning and for learning the basics of data analytics and programming.
-This repository will be used to save the iris dataset as a csv and then also run analysis in a separate python file.
-
-
-## Problem statement - DELETE
-This project concerns the well-known Fisher’s Iris data set [3]. You must research the data set
-and write documentation and code (in Python [1]) to investigate it. An online search for
-information on the data set will convince you that many people have investigated it
-previously. You are expected to be able to break this project into several smaller tasks that
-are easier to solve, and to plug these together after they have been completed.
-You might do that for this project as follows:
-
-1. Research the data set online and write a summary about it in your README.
-2. Download the data set and add it to your repository.
-3. Write a program called analysis.py that:
-    1. Outputs a summary of each variable to a single text file,
-    2. Saves a histogram of each variable to png files, and
-    3. Outputs a scatter plot of each pair of variables.
-    4. Performs any other analysis you think is appropriate.
-
-
 ## Background
 
 The iris dataset (originally sourced by Anderson in 1935) is a well examined and thoroughly evaluated dataset of three species of iris flower (Setosa, Versicolor, Virginica) totalling 150 samples measuring four key features (sepal length/width, petal length/width) that aid in differentiation between the species. Not only highlighting the importance of field expert knowledge when designing a research project and its analysis, but also highlighting that there can be overlap between different species within the same genus (highlighted by the repeated overlap for Versicolor and Virginica for some features). In 1936, Fisher used the dataset as an example of linear discriminant analysis, used for finding a linear combination of features that chan characterise or separate classes or objects (specifically two or more). Throughout the decades, the iris dataset has been used thoroughly as an example dataset for machine learning and algorithm development and is stored as an open access dataset in the UCI Machine Learning Repository.
