@@ -34,7 +34,9 @@ The iris dataset (originally sourced by Anderson in 1935) is a well examined and
 
 ## Overview of project
 
-This project focused on using the data in a number of different statistical tests 
+This project focused on using the data in a number of different statistical tests to see what patterns were visible in the data, whether there were indeed differences between the species, and what pairs of features had influence over the other. #
+
+Initial exploratory data analysis described the shape of the dataset (150 samples 5 variables). A check on first and last five rows of the dataset was conduced, and the presence of missing values was checked (none were found). The summary statistics were initially conducted on the dataset as a whole, before being split by species for a more granular analysis. For the overall summary statistics it was found that petal length 
 
 ## Conclusion
 
