@@ -23,8 +23,6 @@ You might do that for this project as follows:
     4. Performs any other analysis you think is appropriate.
 
 
-## Explain what the code does for the important tests
-
 ## Background
 
 The iris dataset (originally sourced by Anderson in 1935) is a well examined and thoroughly evaluated dataset of three species of iris flower (Setosa, Versicolor, Virginica) totalling 150 samples measuring four key features (sepal length/width, petal length/width) that aid in differentiation between the species. Not only highlighting the importance of field expert knowledge when designing a research project and its analysis, but also highlighting that there can be overlap between different species within the same genus (highlighted by the repeated overlap for Versicolor and Virginica for some features). In 1936, Fisher used the dataset as an example of linear discriminant analysis, used for finding a linear combination of features that chan characterise or separate classes or objects (specifically two or more). Throughout the decades, the iris dataset has been used thoroughly as an example dataset for machine learning and algorithm development and is stored as an open access dataset in the UCI Machine Learning Repository.
@@ -44,6 +42,9 @@ To further analyse the variation within the data and to see where most of the di
 **Linear regression** was used to test this further. Looking at feature vs feature and then also separating the analysis on a more granular scale to look specifically at the species results. Petal features have significant influence over one another (R<sup>2</sup> = 0.93).
 
 Finally **logistic regression** was conducted on the dataset to see whether it could be used to predict a species of iris flower based purely on inputted values. The outcome for the accuracy of this potential model was 1.0, a perfect model, giving a high level of accuracy for any predictions made. This accuracy result is likely due to the simplicity and linear separability of the iris dataset. A **confusion matrix** was plotted to aid in visualising the performance of the **logistic regression model**, aiding in seeing clearly where discrepancies would be in the species predicted.
+
+## Explain what the code does for the important tests
+
 
 # Conclusion
 
