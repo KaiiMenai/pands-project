@@ -28,9 +28,15 @@ The iris dataset contains 150 samples of 3 species, there are 50 samples for eac
 
 ## Explain what the code does for the important tests
 
-# References
+## Background
 
-## Academic Sources
+## Overview of project
+
+## Conclusion
+
+## References
+
+### Academic Sources
 
 Anderson, E. (1935). *The irises of the Gaspé peninsula*, Bulletin of the American Iris Society, 59, pp. 2–5.
 
@@ -56,7 +62,7 @@ Jolliffe, I.T. and Cadima, J. (2016). *Principal component analysis: a review an
 
 Kuhn, M. and Johnson, K. (2013). *Applied Predictive Modeling*. Springer. Available at: https://link.springer.com/book/10.1007/978-1-4614-6849-3
 
-## Information Sources (Non-Academic)
+### Information Sources (Non-Academic)
 
 Analytics Vidhya. (2020). *Confusion matrix in machine learning*. Available at: https://www.analyticsvidhya.com/blog/2020/04/confusion-matrix-machine-learning/
 
