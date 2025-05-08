@@ -22,9 +22,6 @@ You might do that for this project as follows:
     3. Outputs a scatter plot of each pair of variables.
     4. Performs any other analysis you think is appropriate.
 
-## Basic Data Checks
-
-The iris dataset contains 150 samples of 3 species, there are 50 samples for each of the species. Each sample has 4 measurements taken (other than species/class), these are: petal length, petal width, sepal length, and sepal width.
 
 ## Explain what the code does for the important tests
 
