@@ -335,7 +335,7 @@ with open("analysis.md", "a") as file:
     print("", file=file)
     print("![Histograms](histograms_by_species.png)", file=file)
     histogram1_text = (
-    "The histogram plots are all colour coded by species; green for Setosa, orange for Versicolor, and blue for Virginica. For some reason the colours are different to those used in the boxplots, this is not an issue, but it is worth noting. The histograms show the frequency of measurements for each feature (sepal length/width and petal length/width) by species. The x-axis shows the range of values for each feature, while the y-axis shows the frequency of measurements for each feature."
+    "The histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica. The histograms show the frequency of measurements for each feature (sepal length/width and petal length/width) by species. The x-axis shows the range of values for each feature, while the y-axis shows the frequency of measurements for each feature."
     "From the histogram plot of the frequency of measurements for sepal length by species of iris flower, the Setosa species showed a normal distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species had a broad range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species with the largest range in length of sepals and longest average sepal length is the Virginica species. A number of the Versicolor and Virginica species samples overlapped in terms of frequency of measurements for sepal length, with some small overlap in values also seen for the Setosa iris species. "
     )
     histogram2_text = (
