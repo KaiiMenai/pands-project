@@ -1,5 +1,9 @@
 # Data Analysis conducted on the Iris Dataset
 
+
+## *author: Kyra Menai Hamilton*
+
+
 ## Summary
 
 The analysis used as a source for this document (analysis.py) was conducted using Python and the Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn libraries. The dataset was imported from the UCI Machine
