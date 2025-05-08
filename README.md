@@ -28,6 +28,30 @@ Assessing species-feature relationships aided in understanding where in the data
 
 ### Packages
 
+The packages used for this analysis and saving and exporting of files is as follows: 
+
+```ruby
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import sklearn as skl
+import textwrap
+from sklearn.cluster import KMeans
+from sklearn.decomposition import PCA
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import r2_score
+from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LinearRegression
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+```
+
 ### Data import
 
 ```ruby
@@ -228,7 +252,40 @@ axes[0].text(0.05, 0.95, f'R² = {r2_feature:.2f}', transform=axes[0].transAxes,
 
 ### Log
 
+```ruby
+X_species = iris_df[['sepal length', 'sepal width', 'petal length', 'petal width']]
+y_species = iris_df['class']
+le = LabelEncoder()
+y_species = le.fit_transform(y_species) # setosa = 0, versicolor = 1, virginica = 2
+X_species_train, X_species_test, y_species_train, y_species_test = train_test_split(X_species, y_species, test_size=0.2, random_state=42)
+
+# Create and fit the model
+model_species = LogisticRegression(max_iter=200)
+model_species.fit(X_species_train, y_species_train)
+y_species_pred = model_species.predict(X_species_test)
+accuracy = accuracy_score(y_species_test, y_species_pred)
+```
+
+- ```X_species``` is the features within the dataset (sepal length.width, petal length/width),
+- the ```y_species``` is the species (class) of iris flower,
+- in ```y_species = le.fit_transform(y_species)``` the ```y_species``` is transformed into numerical values (Setosa = 0, Versicolor = 1, Virginica = 2).
+- ```X_species_train, X_species_test, y_species_train, y_species_test = train_test_split(X_species, y_species, test_size=0.2, random_state=42)``` splits the data into test (0.2 / 20 %) and train data,
+- the model was fitted using ```model_species.fit(X_species_train, y_species_train)```, and
+- the model accuracy was checked using ```accuracy = accuracy_score(y_species_test, y_species_pred)```.
+
 ### Confusion
+
+A confusion matrix was conducted ```cm = confusion_matrix(y_species_test, y_species_pred)``` and plotted to visualise the results of the Logistic Regression using:
+
+```ruby
+sns.heatmap(cm, annot=True, cmap='Blues', fmt='d', 
+            xticklabels=le.classes_, yticklabels=le.classes_)
+```
+
+- ```sns.heatmap``` refers to the plot to be made,
+- ```cm``` is what is to be plotted,
+- ```cmap='Blues'``` gives the colours for the heatmap, and
+- ```xticklabels=le.classes_``` and ```yticklabels=le.classes_``` are the predicted (x) and actual (y) classes plotted against one another.
 
 ## References
 
