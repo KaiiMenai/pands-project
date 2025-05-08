@@ -54,6 +54,8 @@ from sklearn.metrics import confusion_matrix
 
 ### Data import
 
+Sourcing the dataframe from the UCI Repository.
+
 ```ruby
 iris = fetch_ucirepo(id=53)
 # data - extracting x and y (as pandas dataframes)
@@ -64,12 +66,14 @@ print(iris.metadata) # metadata - print was to check
 print(iris.variables) # variable information - print was to check
 ```
 
-Combine the features and targets into a single df to export as CSV
+The features and targets needed to be combined into a single dataframe so that it could be exported as a CSV file.
+
 ```ruby
 iris_df = pd.concat([x, y], axis=1)
 ```
 
-Exporting the DataFrame (df) to a CSV file
+Exporting the dataframe into a CSV file to make the dataset more easily accessible and useful.
+
 ```ruby
 iris_df.to_csv
    ('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv', index=False)
@@ -77,8 +81,7 @@ iris_df.to_csv
 # Output - Iris dataset has been successfully exported to a CSV!
 ```
 
-Now to retrieve dataset for making plots and analysis
-Import the dataset from the CSV file
+For retrieving dataset to making plots and for analysis the dataset needed to be imported into Python from the CSV file.
 
 ```ruby
 iris_df = pd.read_csv('D:/Data_Analytics/Modules/PandS/pands-project/iris.csv')
@@ -87,7 +90,7 @@ print(iris_df)
 
 ### EDA
 
-Summary statistics for the whole dataset and for each species was done using the ```df.describe()``` function. 
+Summary statistics for the whole dataset and for each species was done using the ```df.describe()``` function.
 This was modified for each species so that the species could be separated from one another:
 
 ```ruby
