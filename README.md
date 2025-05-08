@@ -34,13 +34,21 @@ The iris dataset (originally sourced by Anderson in 1935) is a well examined and
 
 ## Overview of project
 
-This project focused on using the data in a number of different statistical tests to see what patterns were visible in the data, whether there were indeed differences between the species, and what pairs of features had influence over the other. #
+This project focused on using the data in a number of different statistical tests to see what patterns were visible in the data, whether there were indeed differences between the species, and what pairs of features had influence over the other.
 
-Initial exploratory data analysis described the shape of the dataset (150 samples 5 variables). A check on first and last five rows of the dataset was conduced, and the presence of missing values was checked (none were found). The summary statistics were initially conducted on the dataset as a whole, before being split by species for a more granular analysis. For the overall summary statistics it was found that petal length had the largest standard deviation (difference from mean value) of 1.76 respectively, suggesting that they varied more widely across samples compared to sepal features, indicating that maybe this would be useful feature to investigate further to see where these differences were.
+Initial **exploratory data analysis** described the shape of the dataset (150 samples 5 variables). A check on **first and last five rows** of the dataset was conduced, and the presence of missing values was checked (none were found). The **summary statistics** were initially conducted on the dataset as a whole, before being split by species for a more granular analysis. For the overall **summary statistics** it was found that petal length had the largest **standard deviation** (difference from mean value) of 1.76 respectively, suggesting that they varied more widely across samples compared to sepal features, indicating that maybe this would be useful feature to investigate further to see where these differences were.
 
-Boxplots were plotted for each of the four features with the samples separated by species
+**Boxplots** and **histograms** were plotted for each of the four features with the samples separated by species. **Boxplots** helped with finding outliers in the data, whilst the Histograms showed the frequency of specific measurements for each feature. Both of these plots highlighted that the measurements for the Setosa species of iris flower separated from the other two species for all four of the features. Versicolor and Virginica overlap considerably for the sepal features (length/width), however, species separation was seen for all 3 species for the petal features (length/width) suggesting that these would be useful features in differentiating between species. The **scatterplots** showed similar results.
 
-## Conclusion
+**Pairwise comparison (pairplot)** was also conducted on the data in order do get an overall quick analysis of the relationship between different pairs of features. Petal length vs. petal width again showed the most distinct clustering of the data by species, adding weight to the theory that the petal features would be useful in differentiating between iris species. This is further highlighted by the **correlation matrix** where a strong positive correlation is shown between petal length and petal width ( r = 0.96).
+
+To further analyse the variation within the data and to see where most of the differences between features for the species originates **principal component analysis (PCA)**. It was found that most variance within the data was seen between the petal features (the first principal components (PC1)). K-means clustering was conducted to check if there were indeed patterns within the iris dataset.
+
+**Linear regression** was used to test this further. Looking at feature vs feature and then also separating the analysis on a more granular scale to look specifically at the species results. Petal features have significant influence over one another (R<sup>2</sup> = 0.93).
+
+Finally **logistic regression** was conducted on the dataset to see whether it could be used to predict a species of iris flower based purely on inputted values. The outcome for the accuracy of this potential model was 1.0, a perfect model, giving a high level of accuracy for any predictions made. This accuracy result is likely due to the simplicity and linear separability of the iris dataset. A **confusion matrix** was plotted to aid in visualising the performance of the **logistic regression model**, aiding in seeing clearly where discrepancies would be in the species predicted.
+
+# Conclusion
 
 ## References
 
