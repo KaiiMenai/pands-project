@@ -63,21 +63,145 @@ print(iris_df)
 
 ### EDA
 
+Summary statistics for the whole dataset and for each species was done using the ```df.describe()``` function. 
+This was modified for each species so that the species could be separated from one another:
+
+```ruby
+    setosa_stats = iris_df[iris_df['class'] == 'Iris-setosa'].describe()
+    versicolor_stats = iris_df[iris_df['class'] == 'Iris-versicolor'].describe()
+    virginica_stats = iris_df[iris_df['class'] == 'Iris-virginica'].describe()
+```
+
+Class distributions were also explored using ```df['species'].value_counts()``` to see if the data was evenly distributed between the three species. 50 samples were seen for each of the species, Setosa, Virginica, and Versicolor.
+
 ### Boxplots
 
+Boxplots were plotted for each of the four species and the data within colour coded by species.
+These were plotted using ```sns.boxplot(x='species', y=feature, hue='species', data=df, ax=ax)```, and plot size was determined by ```plt.figure(figsize=(12, 8))```.
+
+- ```sns.boxplot``` refers to the plot to be made,
+- ```for i, feature in enumerate(features):``` separates by feature and labels the figure appropriately in ```ax.set_title(titles[i])```,
+- where ```data=iris_df``` was the iris dataframe,
+- ```x='species'``` where the data will be separated by species,
+- the ```y=feature``` is plotted against the species
+- ```hue="class"``` he data will be colour coded by species, and
+- ```ax=ax``` referred to the subplot.
+
 ### Histograms
+
+Histograms were plotted for each of the features.
+All plots were put into one "figure" saved as a PNG to make the data easier to read and compare using ```fig, axes = plt.subplots(2, 2, figsize=(12, 10))```.
+Each of the four histograms was plotted using ```sns.histplot(data=iris_df, x="feature", hue="class", kde=False, ax=axes[0, 0], bins=15)```.
+Similarly to the boxplots the breakdown of the code is as follows:
+
+- ```sns.histplot``` refers to the plot to be made,
+- where ```data=iris_df``` was the iris dataframe,
+- ```x="feature"``` where ```"feature"``` was sepal length/width or petal length/width,
+- ```hue="class"``` would colour code the plot points by species (referred to in the dataframe as class), and
+- ```ax=axes[0, 0]``` referred to the subplot.
 
 ### Scatterplots
 
 ### Pairplots
 
+For the Pairwise plot, the pairplot from the package ```seaborn``` was used:
+
+```ruby
+import seaborn as sns
+pairplot = sns.pairplot(dataframe, hue='class', height=desired height for plot) 
+```
+
+- Where ```dataframe``` is the data to be plotted,
+- ```class``` is the categorical variable, and
+- ```height``` is the desired height of the subplot.
+
 ### Correlation Matrix
 
+```ruby
+corr_matrix = df.iloc[:, :4].corr() :
+```
+
+- where ```df.iloc[:, :4]:``` selects the first four columns of the df (dataframe), these were assumed to be numerical features (sepal length, sepal width, petal length, and petal width).
+- in this code, ```:``` selects all rows, and ```:4``` selects columns from index 0 to 3 (exclusive).
+- ```.corr():``` calculates the correlation matrix for the selected columns.
+
+The correlation matrix shows the pairwise correlation coefficients between the features, with values ranging from:
+
+-  1: Perfect positive correlation.
+-  0: No correlation.
+- -1: Perfect negative correlation.
+
+```ruby
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm') :
+```
+
+- where ```sns.heatmap(corr_matrix, ...):``` is what creates a heatmap visualisation of the correlation matrix using Seaborn.
+- ```annot=True:``` shows the correlation values (numerical) inside each cell of the heatmap.
+- ```cmap='coolwarm':``` specifies the colour map for the heatmap.
+
+In the plot,
+
+- cool colours (**blues**) represent **negative** correlations, and
+- warm colours (**reds**) represent **positive** correlations.
+
 ### PCA
+
+Principal Component Analysis (PCS) was conducted on the data. The data needed to be standardised for the analysis and this was done through a scaled transformation of the data:
+
+```ruby
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+```
 
 ### K-means
 
 ### LRM
+
+The packages used to conduct the Logistic Regression and get R<sup>2</sup> were:
+
+```ruby
+from sklearn.metrics import r2_score
+from sklearn.linear_model import LinearRegression
+```
+
+All plots (two subplots for sepal features and petal features) were placed into one "figure" using ```fig, axes = plt.subplots(1, 2, figsize=(20, 8))```.
+The input code has been split for easier explanation.
+
+```ruby
+# Feature1 vs Feature2
+X_feature = iris_df[['feature1']]
+y_feature = iris_df['feature2']
+model_feature = LinearRegression()
+model_feature.fit(X_feature, y_feature)
+y_feature_pred = model_feature.predict(X_feature)
+r2_feature = r2_score(y_feature, y_feature_pred)
+```
+
+- where ```X_feature``` refers to the input variable ```iris_df[['feature1']]``` which would be sepal length or petal length,
+- ```Xyfeature``` refers to the input variable ```iris_df['feature2']``` which would be sepal width or petal width,
+- ```model_feature = LinearRegression()``` refers to the model that is being run in this case it is ```LinearRegression()```,
+- ```model_feature.fit(X_feature, y_feature``` states the model to be fit,
+- ```y_feature_pred = model_feature.predict(X_feature)``` where ```y_feature_pred``` was sepal width or petal width to be predicted from the ```(X_feature)``` of sepal length or petal length, and
+- ```r2_feature = r2_score(y_feature, y_feature_pred)``` would give the ```r2_feature``` of the model based on the actual ```y_feature``` compared to the ```y_feature_pred``` values.
+
+```ruby
+sns.scatterplot(ax=axes[0], data=iris_df, x='feature1', y='feature2', hue='species', s=100)
+sns.regplot(ax=axes[0], data=iris_df, x='feature1', y='feature2', scatter=False, color='red')
+axes[0].set_title('Feature1 vs Feature2 by Species')
+axes[0].set_xlabel('Feature1 (cm)')
+axes[0].set_ylabel('Feature2 (cm)')
+axes[0].legend(title='Species')
+axes[0].grid(True)
+axes[0].text(0.05, 0.95, f'R² = {r2_feature:.2f}', transform=axes[0].transAxes, fontsize=12, verticalalignment='top', bbox=dict(boxstyle="round", facecolor="white", alpha=0.5))
+```
+
+- where ```sns.scatterplot``` refers to the plot to be run,
+- where ```sns.regplot``` refers to the regression line,
+- ```ax=axes[0]``` refers to the subplot,
+- ```data=df``` was the iris dataframe,
+- ```x="feature1"``` where ```"feature1"``` was sepal length or petal length,
+- ```y="feature2"``` where ```"feature2"``` was sepal width or petal width, and
+- ```hue="class"``` would colour code the plot points by species.
 
 ### Log
 
