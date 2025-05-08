@@ -1,8 +1,6 @@
 # Data Analysis conducted on the Iris Dataset
 
-
-## *author: Kyra Menai Hamilton*
-
+***author: Kyra Menai Hamilton***
 
 ## Summary
 
