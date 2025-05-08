@@ -5,7 +5,7 @@
 ## Summary
 
 The analysis used as a source for this document (analysis.py) was conducted using Python and the Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn libraries. The dataset was imported from the UCI Machine
-Learning Repository and is a well-known dataset for classification tasks. The dataset contained 150 samples of iris flowers, with 5 columns: sepal length, sepal width, petal length, petal width, and species
+Learning Repository and is a well-known dataset for classification tasks. The dataset contained 150 samples of Iris flowers, with 5 columns: sepal length, sepal width, petal length, petal width, and species
 (class). The dataset was used to conduct exploratory data analysis (EDA) and visualisation, as well as some machine learning tasks. Histogram, boxplot, scatterplot, PCA, pairplot, K-means clustering,
 correlation matrix, and linear regression analysis were conducted on the dataset, and the results of each were saved as a PNG file.
 
@@ -20,7 +20,7 @@ titled 'The Use of Multiple Measurements in Taxonomic Problems.' In the paper, t
 linear combination of features that can either characterise or separate two or more classes of objects or events (https://en.wikipedia.org/wiki/Linear_discriminant_analysis;
 https://www.ibm.com/think/topics/linear-discriminant-analysis).
 
-Anderson (1935) originally collected the iris samples to study species variation and hybidisation. Anderson (1935) used the dataset to quantify the morphological differences and variation between Iris species,
+Anderson (1935) originally collected the Iris samples to study species variation and hybidisation. Anderson (1935) used the dataset to quantify the morphological differences and variation between Iris species,
 focussing on the evolution of the Versicolor species, and how it may have come about as a hybrid of the Setosa and Virginica Iris species. An interesting point about the dataset is that two of the three
 species, Iris Versicolor and Iris Virginica, were collected from the same pasture, on the same day, and measured using the same equipment. This is noteworthy for analysis, as Virginica and Versicolor often
 appear to converge and are not as easily separable as the Setosa species (histograms, scatter plots, etc.). The Iris dataset has been extensively used as a training dataset, a learning dataset, and for
@@ -28,8 +28,8 @@ developing machine learning techniques. The scikit-learn library in Python uses 
 labels (https://scikit-learn.org/stable/auto_examples/datasets/plot_iris_dataset.html; https://archive.ics.uci.edu/dataset/53/iris).
 
 The Iris dataset also highlights the distinction between supervised and unsupervised learning. Supervised learning uses labeled data to train models for classification or regression, while unsupervised learning
-explores patterns or clusters in unlabeled data (https://www.ibm.com/think/topics/linear-discriminant-analysis). The iris dataset gives an example of supervised learning problems, particularly multi-class
-classification, where the goal is to predict an iris flower's species based on its measurements. Although the dataset only includes flower measurements (sepal length/width and petal length/width) and not
+explores patterns or clusters in unlabeled data (https://www.ibm.com/think/topics/linear-discriminant-analysis). The Iris dataset gives an example of supervised learning problems, particularly multi-class
+classification, where the goal is to predict an Iris flower's species based on its measurements. Although the dataset only includes flower measurements (sepal length/width and petal length/width) and not
 measurements for the entire plant, this focus reflects the expert judgment of Fisher and Anderson, who selected petal and sepal dimensions as meaningful discriminative features. This in turn highlights the
 importance of domain expertise in data preparation and model design, suggesting that more efficient analysis and models are built when field experts are involved (Domingos, 2012; Kuhn, and Johnson, 2013).
 Despite its age and simplicity, the Iris dataset remains a central teaching tool for introducing classification problems in machine learning.
@@ -104,7 +104,7 @@ Iris-versicolor    50
 Iris-virginica     50
 Name: count, dtype: int64
 
-It can be seen that there are 50 samples for each of the three classes (species) of iris flower: Setosa, Versicolor, and Virginica.
+It can be seen that there are 50 samples for each of the three classes (species) of Iris flower: Setosa, Versicolor, and Virginica.
 
 Summary statistics for the whole dataset:
 |       |   sepal length |   sepal width |   petal length |   petal width |
@@ -268,14 +268,14 @@ assets/external/maths-resources/statistics/data-presentation/box-and-whisker-plo
 
 The histogram plots are all colour coded by species; blue for Setosa, orange for Versicolor, and green for Virginica. The histograms show the frequency of measurements for each feature (sepal length/width and
 petal length/width) by species. The x-axis shows the range of values for each feature, while the y-axis shows the frequency of measurements for each feature.From the histogram plot of the frequency of
-measurements for sepal length by species of iris flower, the Setosa species showed a normal distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species had a broad
+measurements for sepal length by species of Iris flower, the Setosa species showed a normal distribution, with the majority of sepals being approximately 5.0 cm in length. The Versicolor species had a broad
 range of sepal lengths, with the most sepals being approximately 5.5 cm in length. The species with the largest range in length of sepals and longest average sepal length is the Virginica species. A number of
-the Versicolor and Virginica species samples overlapped in terms of frequency of measurements for sepal length, with some small overlap in values also seen for the Setosa iris species.
+the Versicolor and Virginica species samples overlapped in terms of frequency of measurements for sepal length, with some small overlap in values also seen for the Setosa Iris species.
 
 Contrary to what was observed for sepal length, the narrowest sepal width is the Versicolor species, with the Virginica species being in the middle of the range. The Setosa species had the widest sepals and the
 broadest range in values for sepal width. The data for sepal width overlaps between the three species, with some overlap in values between the Setosa and Versicolor species. The data for sepal width is not
-normally distributed, as there are two peaks in the data, one at 2.5 cm and one at 3.5 cm. This suggests that there may be two different groups of iris flowers within the dataset. Of course, as the dataset has
-been colour coded and visually distinguishable in the histograms because of these colours, we know that there are three species of iris flower within the dataset.
+normally distributed, as there are two peaks in the data, one at 2.5 cm and one at 3.5 cm. This suggests that there may be two different groups of Iris flowers within the dataset. Of course, as the dataset has
+been colour coded and visually distinguishable in the histograms because of these colours, we know that there are three species of Iris flower within the dataset.
 
 Similar to sepal length, for petal length Setosa was the species with the shortest average length and the smallest range in measurements. An average petal length of approximately 4.5 cm was observed for the
 Versicolor species and demonstrated a normal distribution. The Virginica species had, on average, the longest petal lengths, similar to what was observed for sepal lengths.
@@ -292,7 +292,7 @@ The PNG contains two plots one for sepal features (sepal length vs sepal width) 
 Virginica in green. Setosa shows a clearly separate grouping for sepal features, whereas Versicolor and Virginica show a high level of overlap in their plotted values fpr the sepal features. There is however,
 more clear separation between Versicolor and Virginica for the petal features, Setosa once again, clearly separates into a group from the other two species.
 
-From the scatter plots, as Setosa separates from the other two iris species, Versicolor and Virginica, it may be easier to discern of measurements are for the Setosa species. Due to the overlap between the
+From the scatter plots, as Setosa separates from the other two Iris species, Versicolor and Virginica, it may be easier to discern of measurements are for the Setosa species. Due to the overlap between the
 Versicolor and Virginica species, it may be more difficult to differentiate between these species (this would also be reflective of the fact that both were collected from the same pasture on the same day). The
 Virginica and Versicolor species appeared to be of similar value ranges and overlap for sepal length vs sepal width. This would suggest that the petal length and petal width features would be the most useful in
 differentiating between species.
@@ -300,7 +300,7 @@ differentiating between species.
 ## Pairplot
 
 A pairplot was used to visualise comparisons between pairs of features, sepal length vs, sepal width, sepal length vs petal length, sepal length vs petal width, petal length vs petal width etc. for the three
-species of iris flower (Setosa in blue, Versicolor in orange, Verginica in green). Pairwise analysis outputs multiple sub-plots that are plotted in a matrix format; row name gives the x axis, column name gives
+species of Iris flower (Setosa in blue, Versicolor in orange, Verginica in green). Pairwise analysis outputs multiple sub-plots that are plotted in a matrix format; row name gives the x axis, column name gives
 the y axis, and univariate distributions (histograms) are plotted on the diagonal from top left to bottom right for each feature (https://medium.com/analytics-vidhya/pairplot-visualization-16325cd725e6;
 https://www.analyticsvidhya.com/blog/2024/02/pair-plots-in-machine-learning/; https://seaborn.pydata.org/generated/seaborn.pairplot.html; https://builtin.com/articles/seaborn-pairplot).
 
@@ -345,7 +345,7 @@ seen in PC1 for the petal features, it could indicate that these are good determ
 
 ![K-means Clustering](kmeans_clustering_by_species.png)
 
-The K-means clustering algorithm was used to group the iris dataset into three clusters, corresponding to the three species of iris flowers. The K-means algorithm works by separating the data into K-clusters,
+The K-means clustering algorithm was used to group the Iris dataset into three clusters, corresponding to the three species of Iris flowers. The K-means algorithm works by separating the data into K-clusters,
 where each data point belongs to the cluster with the nearest mean. In this case, K was set to 3, as there are three species of iris flowers in the dataset. The resulting clusters were visualised using a
 scatter plot, with different colors representing different clusters. The K-means clustering results show that the algorithm was able to separate the three species of iris flowers quite well, with some overlap
 between Versicolor and Virginica species.
@@ -355,18 +355,18 @@ between Versicolor and Virginica species.
 | Iris-versicolor |   3 |   0 |  47 |
 | Iris-virginica  |  36 |   0 |  14 |
 
-From the table above, it can be seen that the K-means clustering algorithm was able to separate the three species of iris flowers. The algorithm correctly classified 50 samples of Setosa, 47 samples of
+From the table above, it can be seen that the K-means clustering algorithm was able to separate the three species of Iris flowers. The algorithm correctly classified 50 samples of Setosa, 47 samples of
 Versicolor, and 36 samples of Virginica. There were some misclassifications, with 14 samples of Verginica grouped with Versicolor (Cluster 2) and 3 samples of Versicolor grouped with Virginica (Cluster 0).
 
 ## Linear Regression
 
-A linear regression model was fitted to the iris dataset. The data was initially split into sepal feature and petal feature data.
+A linear regression model was fitted to the Iris dataset. The data was initially split into sepal feature and petal feature data.
 
 ### Linear Regression for Sepal Length vs Sepal Width
 
 ![Linear Regression for Sepal Length vs Sepal Width](lrm_sepal_length_vs_width.png)
 
-The sepal length vs sepal width plot displays a single regression line fitted across all data points. This plot displays the relationship between sepal length and sepal width for the iris flower species, Setosa
+The sepal length vs sepal width plot displays a single regression line fitted across all data points. This plot displays the relationship between sepal length and sepal width for the Iris flower species, Setosa
 (in blue), Versicolor (in orange), and Virginica (in green).
 
 The line shows the linear relationship between the length and width of the sepal features. Due to the near 'flat' elevation of the regression line a weak relationship between the features is observed. In the
@@ -381,7 +381,7 @@ https://www.datacamp.com/tutorial/simple-linear-regression, https://www.ibm.com/
 
 ![Linear Regression for Petal Length vs Petal Width](lrm_petal_length_vs_width.png)
 
-The petal length vs petal width plot displays the relationships between petal length and petal width for the iris flower species, Setosa (in blue), Versicolor (in orange), and Virginica (in green). Compared to
+The petal length vs petal width plot displays the relationships between petal length and petal width for the Iris flower species, Setosa (in blue), Versicolor (in orange), and Virginica (in green). Compared to
 the sepal features plot, the petal measurements plot displayed distinct clustering for each individual species.
 
 The regression line was fitted across all data points, representing the overall linear relationship between petal length and width. The line had a sharp angle with data points clustered close to the line. The
@@ -414,9 +414,9 @@ https://www.geeksforgeeks.org/ml-mathematical-explanation-of-rmse-and-r-squared-
 ## Logistic Regression Model
 
 Although a linear regression model has previously been used to analyse the data, it is possible to predict a species based on the measurements taken from a flower through using a logistic regression model.
-Using a Logistic Regression Model on the iris dataset is appropriate due to the relatively small size of the dataset (Log Regression Models work well with small, linearly separable datasets). The model is good
+Using a Logistic Regression Model on the Iris dataset is appropriate due to the relatively small size of the dataset (Log Regression Models work well with small, linearly separable datasets). The model is good
 for multi-class classification, as seen in the dataset with the 'species' classifications. When looking at the results of the logistic regression model, there are some things that should be taken into
-consideration. The iris dataset is relatively small, and when it is split on a species level, it has even fewer values. Although Logistic Regression Models work well on small datasets, splitting the dataset
+consideration. The Iris dataset is relatively small, and when it is split on a species level, it has even fewer values. Although Logistic Regression Models work well on small datasets, splitting the dataset
 into multiple species creates a condensed dataset  and may, not be representative of the wider population. (https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html;
 https://www.ibm.com/think/topics/logistic-regression)
 
@@ -434,15 +434,15 @@ Classification Report:
 | weighted avg    |           1 |        1 |          1 |        30 |
 - Predicted species for (example prediction measurements in cm) [5.1, 3.5, 1.4, 0.2]: Iris-setosa
 
-For the iris dataset, the Logistic Regression Model achieves high accuracy (~ 97 %), this is due to the simplicity and linear separability of the iris dataset. Accuracy for the Logistic Regression Model is
+For the Iris dataset, the Logistic Regression Model achieves high accuracy (~ 97 %), this is due to the simplicity and linear separability of the Iris dataset. Accuracy for the Logistic Regression Model is
 calculated as the ratio of correct predictions to total predictions. The columns for precision and recall measure class specific performance in the model, and the f1-score column gives a balances metric for
-imbalanced classes (not a problem here as the iris dataset is balanced). In the support column, it can be seen that the Verginica species has a value of 9, demonstrating a slightly lower recall, this is likely
+imbalanced classes (not a problem here as the Iris dataset is balanced). In the support column, it can be seen that the Verginica species has a value of 9, demonstrating a slightly lower recall, this is likely
 due to the overlap with Versicolor. As seen throughout previous testing on the dataset, the majority of the confusion in the dataset occurs between the Versicolor and Virginica species.
 
 Initially upon looking at the Classification Report, it could be assumed that the results do not highlight anything. This report provides detailed insights into the performance of the model for each species,
 showing areas where the model performs well or struggles. However, due to the size of the dataset (150 samples), and then the test set being even smaller (30 samples), it makes it easier for the model to
-achieve perfect accuracy, this model produced an accuracy of 1.0 (perfect accuracy). A linearly separable dataset is one that shows clear distinctions between classes, for the iris dataset that class difference
-is seen most clearly in the petal length/width. As the iris dataset is balanced, with an equal number of samples for each class (50), the risk of bias in the model is reduced. In order to improve accuracy and
+achieve perfect accuracy, this model produced an accuracy of 1.0 (perfect accuracy). A linearly separable dataset is one that shows clear distinctions between classes, for the Iris dataset that class difference
+is seen most clearly in the petal length/width. As the Iris dataset is balanced, with an equal number of samples for each class (50), the risk of bias in the model is reduced. In order to improve accuracy and
 reliability, the model should be rerun a number of times using different splits of the data, this is called cross-validation.
 
 ## Confusion Matrix
@@ -451,9 +451,9 @@ reliability, the model should be rerun a number of times using different splits 
 
 
 A confusion matrix was plotted to visualise the results. The confusion matrix is a performance evaluation tool for classification models. It provides a summary of the prediction results by comparing the actual
-values (rows) against the predicted values (columns). The confusion matrix helps with understanding how well the logistic regression model classifies the different species of iris and whether there are any
+values (rows) against the predicted values (columns). The confusion matrix helps with understanding how well the logistic regression model classifies the different species of Iris and whether there are any
 species that are more prone to misclassification (https://www.analyticsvidhya.com/blog/2020/04/confusion-matrix-machine-learning/). To interpret the matrix, the structure and values within the matrix are
-important to understand what it shows. The rows within the matrix represent the Actual Classes (actual species of iris), whilst the columns represent the Predicted Classes (predicted species from the model
+important to understand what it shows. The rows within the matrix represent the Actual Classes (actual species of Iris), whilst the columns represent the Predicted Classes (predicted species from the model
 output). The matrix contains a number of values, on the diagonal line (from top left to bottom right) the values denote the Correct Predictions, where the actual and predicted classes (species) match. All other
 values from the diagonal are those denoting Misclassifications, where the actual and predicted species differ. Although the Logistic Regression Model gives a value for Accuracy (1.000) for species
 classification, the classification report and confusion matrix aid in giving a clearer picture of the data and the accuracy of predictions made with the model.
@@ -470,12 +470,12 @@ and thus would be more useful in classification. The PCA and K-means clustering 
 principal component analysis (PCA) the observations about petal features being more distinguishable between species, commpared to sepal features was solidified as it was found that PC1 (first principal
 component) was responsible for 72.8 % of the variability seen within the data, the PC1 was referring to the petal length and width features. The feature correlation matrix heat map also displayed the difference
 between species based onn petal features, where petal length vs petal width resulted in r = 0.96 indicating that the petal length and width showed a strong positive correlation and that their measurements often
-varied together. The Logistic Regression (classification techniques) were used to predict the species of iris flowers based on their features, and the Linear Regression (regression techniques) were used to
+varied together. The Logistic Regression (classification techniques) were used to predict the species of Iris flowers based on their features, and the Linear Regression (regression techniques) were used to
 predict continuous values based on features.For the linear regression (LRM) analysis, petal length vs petal width gave an R<sup>2</sup> value of 0.93, indicating that most of the variance in petal width can be
 explained by petal length. Some predictions were made for petal width following an 80 : 20 split in the data for training and testing, respectively.
 
 The analysis has shown that the dataset is suitable for classification and regression tasks, and the techniques used have provided valuable insights into the relationships between features and the target
-variable. The analysis has demonstrated that the features (sepal length/width, petal length/width) are valuable for classification of iris species, and the techniques used have provided valuable insights into
+variable. The analysis has demonstrated that the features (sepal length/width, petal length/width) are valuable for classification of Iris species, and the techniques used have provided valuable insights into
 the relationships between features and the target variable. However, in order to have a more reliable method for predicting the species using a linear regression (or logistic regression) model, a larger sample
 population is essential in order to accurately visualise and calculate the nuances between such species based on their features. In terms of model accuracy, reliability, and consistent repeatability the size of
 the dataset may be considered a limiting factor. However, the data does efficiently demonstrate what a linear based dataset can show through various forms of analysis.
