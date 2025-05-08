@@ -28,7 +28,7 @@ Assessing species-feature relationships aided in understanding where in the data
 
 ### Packages
 
-The packages used for this analysis and saving and exporting of files is as follows: 
+The packages used for this analysis and saving and exporting of files is as follows:
 
 ```ruby
 import pandas as pd
