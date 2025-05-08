@@ -80,6 +80,9 @@ print(iris_df)
 
 with open("analysis.md", "w") as file:
     print("# Data Analysis conducted on the Iris Dataset", file=file)
+    print("", file=file)
+    print("\n## *author: Kyra Menai Hamilton*", file=file)
+    print("", file=file)
     print("\n## Summary", file=file)
     summary_text = (
     "The analysis used as a source for this document (analysis.py) was conducted using Python and the Pandas, Numpy, Matplotlib, Seaborn, and Scikit-learn libraries. The dataset was imported from the UCI Machine Learning Repository and is a well-known dataset for classification tasks. "
