@@ -342,6 +342,11 @@ plt.tight_layout()
 plt.savefig('histograms_by_species.png')
 plt.show()
 
+fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+features = ['sepal length', 'sepal width', 'petal length', 'petal width']
+titles = ['Sepal Length by Species', 'Sepal Width by Species', 
+          'Petal Length by Species', 'Petal Width by Species']
+
 with open("analysis.md", "a") as file:
     print("\n## Histograms by Feature", file=file)
     print("", file=file)
