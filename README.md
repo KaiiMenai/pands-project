@@ -48,7 +48,7 @@ Finally **logistic regression** was conducted on the dataset to see whether it c
 
 # Conclusion
 
-Assessing species-feature relationships aided in 
+Assessing species-feature relationships aided in understanding where in the dataset the majority of the variance came from, which features had influence over one another, and which of the measured features would be the most useful as tools for differentiation. A number of these answers are the same. Most of the variance in the dataset comes from the petal length and petal width features, the petal length and width features also influenced one another, and these features were also shown to be the most useful in differentiating between and predicting the species of iris flower.
 
 ## References
 
