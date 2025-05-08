@@ -306,41 +306,7 @@ print("Boxplot observations appended to analysis.md")
 
 # Histograms - plot and save histograms for each variable in the dataset as a png file.
 # Set up the figure
-fig, axes = plt.subplots(2, 2, figsize=(12, 10))
-
-# Plot histogram for Sepal Length
-sns.histplot(data=iris_df, x="sepal length", hue="class", kde=False, ax=axes[0, 0], bins=15)
-axes[0, 0].set_title("Sepal Length Distribution by Species")
-axes[0, 0].set_xlabel("Sepal Length (cm)")
-axes[0, 0].set_ylabel("Frequency")
-axes[0, 0].legend(title="Species", loc='upper right')
-
-# Plot histogram for Sepal Width
-sns.histplot(data=iris_df, x="sepal width", hue="class", kde=False, ax=axes[0, 1], bins=15)
-axes[0, 1].set_title("Sepal Width Distribution by Species")
-axes[0, 1].set_xlabel("Sepal Width (cm)")
-axes[0, 1].set_ylabel("Frequency")
-axes[0, 1].legend(title="Species", loc='upper right')
-
-# Plot histogram for Petal Length
-sns.histplot(data=iris_df, x="petal length", hue="class", kde=False, ax=axes[1, 0], bins=15)
-axes[1, 0].set_title("Petal Length Distribution by Species")
-axes[1, 0].set_xlabel("Petal Length (cm)")
-axes[1, 0].set_ylabel("Frequency")
-axes[1, 0].legend(title="Species", loc='upper right')
-
-# Plot histogram for Petal Width
-sns.histplot(data=iris_df, x="petal width", hue="class", kde=False, ax=axes[1, 1], bins=15)
-axes[1, 1].set_title("Petal Width Distribution by Species")
-axes[1, 1].set_xlabel("Petal Width (cm)")
-axes[1, 1].set_ylabel("Frequency")
-axes[1, 1].legend(title="Species", loc='upper right')
-
-# Adjust layout for better spacing
-plt.tight_layout()
-# Save the figure for histogram as a PNG file and show
-plt.savefig('histograms_by_species.png')
-plt.show()
+# Plot histogram for flower features by species
 
 fig, axes = plt.subplots(2, 2, figsize=(12, 10))
 features = ['sepal length', 'sepal width', 'petal length', 'petal width']
