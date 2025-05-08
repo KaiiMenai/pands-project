@@ -30,6 +30,8 @@ The iris dataset contains 150 samples of 3 species, there are 50 samples for eac
 
 ## Background
 
+The iris dataset (originally sourced by Anderson in 1935) is a well examined and thoroughly evaluated dataset of three species of iris flower (Setosa, Versicolor, Virginica) totalling 150 samples measuring four key features (sepal length/width, petal length/width) that aid in differentiation between the species. Not only highlighting the importance of field expert knowledge when designing a research project and its analysis, but also highlighting that there can be overlap between different species within the same genus (highlighted by the repeated overlap for Versicolor and Virginica for some features).
+
 ## Overview of project
 
 ## Conclusion
