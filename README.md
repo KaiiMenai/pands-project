@@ -4,7 +4,12 @@
 
 ## Background
 
-The Iris dataset (originally sourced by Anderson in 1935) is a well examined and thoroughly evaluated dataset of three species of Iris flower (Setosa, Versicolor, Virginica) totalling 150 samples measuring four key features (sepal length/width, petal length/width) that aid in differentiation between the species. Not only highlighting the importance of field expert knowledge when designing a research project and its analysis, but also highlighting that there can be overlap between different species within the same genus (highlighted by the repeated overlap for Versicolor and Virginica for some features). In 1936, Fisher used the dataset as an example of linear discriminant analysis, used for finding a linear combination of features that chan characterise or separate classes or objects (specifically two or more). Throughout the decades, the Iris dataset has been used thoroughly as an example dataset for machine learning and algorithm development and is stored as an open access dataset in the UCI Machine Learning Repository.
+The Iris dataset (originally sourced by Anderson in 1935) is a well examined and thoroughly evaluated dataset of three species of Iris flower (Setosa, Versicolor, Virginica) totalling 150 samples measuring four key features (sepal length/width, petal length/width) that aid in differentiation between the species. Not only highlighting the importance of field expert knowledge when designing a research project and its analysis, but also highlighting that there can be overlap between different species within the same genus (highlighted by the repeated overlap for Versicolor and Virginica for some features). A visual example of the Iris species collected for this dataset is included below.
+
+![Iris Species](iris_species.png)
+Species of Iris in the dataset. (Source: https://3tw.medium.com/scikit-learn-the-iris-dataset-and-machine-learning-the-journey-to-a-new-skill-c8d2f537e087)
+
+In 1936, Fisher used the dataset as an example of linear discriminant analysis, used for finding a linear combination of features that chan characterise or separate classes or objects (specifically two or more). Throughout the decades, the Iris dataset has been used thoroughly as an example dataset for machine learning and algorithm development and is stored as an open access dataset in the UCI Machine Learning Repository.
 
 ## Overview of project
 
@@ -33,6 +38,5 @@ A detailed code explanation is provided in the code_explained.md - https://githu
 ## References
 
 For a full list of the references used for this project please see references.md - https://github.com/KaiiMenai/pands-project/blob/main/references.md
-
 
 # END OF README
